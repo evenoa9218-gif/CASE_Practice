@@ -124,7 +124,10 @@ details.prob>summary:hover{color:var(--gold)}
 <script type="text/babel" data-presets="react">
 const { useState, useEffect, useRef, useCallback } = React;
 
-const SUBJECT = "공법";
+const SUBJECTS = [
+  {id:"공법", label:"공법"},
+  {id:"형사법", label:"형사법"},
+];
 const ROUNDS = [1,2,3,4];
 const URLQ = new URLSearchParams(location.search);
 const INCOMING_ISSUE = URLQ.get("issue");
@@ -171,10 +174,26 @@ function pushFact(blocks, text){
   }
 }
 
+// 형사법처럼 지문보다 앞서 참조법령 전문이 나오는 문서(별도 표지 없이 바로
+// "「형법」 [시행 ...]" 이나 "제347조(사기)..." 로 시작) 대비: 맨 앞에서부터
+// 법조문처럼 보이는 문단이 연속되는 동안만 떼어내 조문 블록으로 처리한다.
+const STATUTE_PARA_RE = /^[「｢\[［].{1,20}[」｣\]］]|^제\s*\d+\s*조(?:의\s*\d+)?[(（]|^부\s*칙\s*[<〈]/;
+function peelLeadingStatutes(text){
+  const paras = text.split(/\n[ \t]*\n/).map(p=>p.trim()).filter(Boolean);
+  let i=0;
+  while(i<paras.length && STATUTE_PARA_RE.test(paras[i])) i++;
+  if(i===0) return {ref:"", rest:text};
+  return {ref:paras.slice(0,i).join('\n\n'), rest:paras.slice(i).join('\n\n')};
+}
+
 function splitProblemText(text){
   if(!text) return [];
-  const markers = [...text.matchAll(MARK_RE)];
   const blocks = [];
+  const {ref:leadingRef, rest:afterLeading} = peelLeadingStatutes(text);
+  if(leadingRef) blocks.push({type:'ref', text:leadingRef});
+  text = afterLeading;
+
+  const markers = [...text.matchAll(MARK_RE)];
   if(markers.length===0){
     pushFact(blocks, text.trim());
     return blocks;
@@ -211,6 +230,10 @@ function useTheme(){
 
 // ══════════════════════════════════════════════
 function App(){
+  const [subject,setSubject] = useState(()=>{
+    const s = localStorage.getItem('cp_subject');
+    return SUBJECTS.some(x=>x.id===s) ? s : SUBJECTS[0].id;
+  });
   const [ready,setReady] = useState(false);
   const [meta,setMeta]   = useState(null);
   const [exams,setExams] = useState([]);
@@ -234,26 +257,34 @@ function App(){
   const [fIssue,setFIssue]=useState(INCOMING_ISSUE);
   const [fDone,setFDone] = useState("all");
 
+  const changeSubject = s=>{
+    localStorage.setItem('cp_subject', s);
+    setSubject(s);
+    setReady(false); setMeta(null); setExams([]); setIssues([]); setByIssue({}); setCasebookToc(null);
+    setView("list"); setCurId(null); setFocusGroupKey(null);
+    setMode("exam"); setFType("all"); setFIssue(null); setFDone("all");
+  };
+
   useEffect(()=>{ (async()=>{
     try{
       const st = await Store.init({});
       setUid(st.uid);
-      const r = await fetch(`data/${SUBJECT}/index.json`);
-      if(!r.ok) throw new Error(`data/${SUBJECT}/index.json 로드 실패 (${r.status})`);
+      const r = await fetch(`data/${subject}/index.json`);
+      if(!r.ok) throw new Error(`data/${subject}/index.json 로드 실패 (${r.status})`);
       const j = await r.json();
       setMeta(j.meta); setExams(j.exams); setIssues(j.issues); setByIssue(j.byIssue);
-      fetch(`data/${SUBJECT}/casebook_toc.json`).then(r2=>r2.ok?r2.json():null)
+      fetch(`data/${subject}/casebook_toc.json`).then(r2=>r2.ok?r2.json():null)
         .then(tj=>tj && setCasebookToc(tj)).catch(()=>{});
       setReady(true);
     }catch(e){ setErr(e.message); }
-  })(); },[]);
+  })(); },[subject]);
 
   const reload = useCallback(async(u=uid,r=round)=>{
     if(!u) return;
-    setProg(await Store.getProgress(SUBJECT,r));
-    setRecords(await Store.getRecords({subject:SUBJECT}));
-  },[uid,round]);
-  useEffect(()=>{ if(uid) reload(uid,round); },[uid,round,reload]);
+    setProg(await Store.getProgress(subject,r));
+    setRecords(await Store.getRecords({subject}));
+  },[uid,round,subject]);
+  useEffect(()=>{ if(uid) reload(uid,round); },[uid,round,subject,reload]);
 
   if(err) return <div className="wrap"><div className="card" style={{borderColor:'var(--no)'}}>
     <b>불러오기 오류</b><div className="muted" style={{marginTop:8}}>{err}</div>
@@ -266,9 +297,14 @@ function App(){
   if(!uid) return (
     <div className="wrap" style={{maxWidth:430,paddingTop:70}}>
       <div className="card">
-        <h1 style={{margin:'0 0 4px',fontSize:20}}>사례형 연습 · {SUBJECT}</h1>
+        <h1 style={{margin:'0 0 4px',fontSize:20}}>사례형 연습 · {subject}</h1>
+        <div className="row" style={{marginBottom:11}}>
+          {SUBJECTS.map(s=>
+            <span key={s.id} className={"tag click"+(subject===s.id?" on":"")}
+              onClick={()=>changeSubject(s.id)}>{s.label}</span>)}
+        </div>
         <div className="muted" style={{marginBottom:16}}>
-          변호사시험 15회 + 모의고사 40회 · 문제 · 채점기준표 · 모범답안
+          {ready && meta ? `시험 ${meta.examCount}건 · 문제 · 채점기준표 · 모범답안` : "불러오는 중..."}
         </div>
         <input type="text" placeholder="사용자 ID" value={uidInput} style={{width:'100%',marginBottom:10}}
           onChange={e=>setUidInput(e.target.value)}
@@ -289,10 +325,13 @@ function App(){
     <div>
       <div className="hd">
         <div>
-          <h1>사례형 연습 · {SUBJECT}</h1>
+          <h1>사례형 연습 · {subject}</h1>
           <div className="sub">{uid} · {round}회독 · {Object.keys(prog).length}/{meta.examCount} 완료</div>
         </div>
         <div className="row">
+          <select className="btn" value={subject} onChange={e=>changeSubject(e.target.value)}>
+            {SUBJECTS.map(s=><option key={s.id} value={s.id}>{s.label}</option>)}
+          </select>
           <button className="btn ghost" onClick={toggleTheme} title="테마 전환">
             {theme==='light'?'🌙':'☀'}</button>
           <select className="btn" value={round} onChange={e=>setRound(Number(e.target.value))}>
@@ -310,7 +349,7 @@ function App(){
         </div>
 
         {view==="solve" && cur &&
-          <Solve exam={cur} issueMap={issueMap} round={round} focusIssue={mode==="issue"?fIssue:null}
+          <Solve exam={cur} subject={subject} issueMap={issueMap} round={round} focusIssue={mode==="issue"?fIssue:null}
             focusGroupKey={focusGroupKey}
             onBack={()=>{setView("list");setCurId(null);setFocusGroupKey(null);}}
             onSubmitted={()=>reload()} />}
@@ -533,7 +572,7 @@ function ExamCard({e,prog,issueMap,highlight,onPick}){
 }
 
 // ══════════════════════════════════════════════
-function Solve({exam,issueMap,round,focusIssue,focusGroupKey,onBack,onSubmitted}){
+function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSubmitted}){
   const [detail,setDetail] = useState(null);
   const [err,setErr]   = useState(null);
   const [page,setPage] = useState(0);            // 문항 그룹 인덱스
@@ -552,7 +591,7 @@ function Solve({exam,issueMap,round,focusIssue,focusGroupKey,onBack,onSubmitted}
     startRef.current=Date.now(); setElapsed(0);
     (async()=>{
       try{
-        const r = await fetch(`data/공법/exams/${encodeURIComponent(exam.id)}.json`);
+        const r = await fetch(`data/${subject}/exams/${encodeURIComponent(exam.id)}.json`);
         if(!r.ok) throw new Error("문제 상세 로드 실패");
         const j = await r.json();
         if(!alive) return;
@@ -599,11 +638,11 @@ function Solve({exam,issueMap,round,focusIssue,focusGroupKey,onBack,onSubmitted}
     }).filter(Boolean);
     if(!parts.length) return;
     await Store.record({
-      subject:"공법", mode:"case", examId:exam.id, label:exam.label,
+      subject, mode:"case", examId:exam.id, label:exam.label,
       round, issueIds:exam.issueIds, text:parts.join("\n\n"), seconds:elapsed,
     });
-    const p = await Store.getProgress("공법",round);
-    await Store.setProgress("공법",round,{...p,[exam.id]:{done:true,at:Date.now()}});
+    const p = await Store.getProgress(subject,round);
+    await Store.setProgress(subject,round,{...p,[exam.id]:{done:true,at:Date.now()}});
     setSaved(true); setReveal(true);
     onSubmitted && onSubmitted();
   };
