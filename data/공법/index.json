@@ -5439,6 +5439,32 @@
      "ask": "정보공개법 제9조 제1항 제6호 본문이 과잉금지원칙에 반하여 정보공개청구권을 침해하는지 검토"
     }
    ],
+   "groups": [
+    {
+     "key": "문제1",
+     "label": "문제1",
+     "count": 2,
+     "points": 35
+    },
+    {
+     "key": "문제2",
+     "label": "문제2",
+     "count": 2,
+     "points": 35
+    },
+    {
+     "key": "문제3",
+     "label": "문제3",
+     "count": 2,
+     "points": 30
+    },
+    {
+     "key": "문제4",
+     "label": "문제4",
+     "count": 4,
+     "points": 100
+    }
+   ],
    "totalPoints": 200,
    "hasRubric": false,
    "hasCasebook": true,
@@ -5532,6 +5558,20 @@
      "ask": "국회의원 丙의 면책특권 인정 여부 검토"
     }
    ],
+   "groups": [
+    {
+     "key": "문제1",
+     "label": "문제1",
+     "count": 5,
+     "points": 100
+    },
+    {
+     "key": "문제2",
+     "label": "문제2",
+     "count": 5,
+     "points": 100
+    }
+   ],
    "totalPoints": 200,
    "hasRubric": false,
    "hasCasebook": true,
@@ -5617,6 +5657,20 @@
      "no": "문제2-설문4",
      "points": 30,
      "ask": "A도지사가 취할 수 있는 지방자치법상 조치 및 그에 대한 B군수의 불복수단 검토"
+    }
+   ],
+   "groups": [
+    {
+     "key": "문제1",
+     "label": "문제1",
+     "count": 5,
+     "points": 100
+    },
+    {
+     "key": "문제2",
+     "label": "문제2",
+     "count": 4,
+     "points": 100
     }
    ],
    "totalPoints": 200,
@@ -5719,6 +5773,20 @@
      "ask": "무연고 사망자에 대한 해부용 제공 조항으로 제한되는 기본권 특정 및 침해 여부 검토"
     }
    ],
+   "groups": [
+    {
+     "key": "문제1",
+     "label": "문제1",
+     "count": 6,
+     "points": 100
+    },
+    {
+     "key": "문제2",
+     "label": "문제2",
+     "count": 5,
+     "points": 100
+    }
+   ],
    "totalPoints": 200,
    "hasRubric": false,
    "hasCasebook": true,
@@ -5809,6 +5877,20 @@
      "no": "문제2-설문4",
      "points": 30,
      "ask": "지방자치법 제22조 단서의 위헌 여부, 위임입법 한계 일탈 여부, 이 사건 고시의 직업의 자유 침해 여부"
+    }
+   ],
+   "groups": [
+    {
+     "key": "문제1",
+     "label": "문제1",
+     "count": 6,
+     "points": 100
+    },
+    {
+     "key": "문제2",
+     "label": "문제2",
+     "count": 4,
+     "points": 100
     }
    ],
    "totalPoints": 200,
@@ -5904,6 +5986,26 @@
      "no": "사례3-설문4-2",
      "points": 30,
      "ask": "감염병예방법 제46조 제2호 및 제81조 제10호가 丁의 기본권을 침해하는지"
+    }
+   ],
+   "groups": [
+    {
+     "key": "사례1-",
+     "label": "사례1-",
+     "count": 2,
+     "points": 35
+    },
+    {
+     "key": "사례2-",
+     "label": "사례2-",
+     "count": 4,
+     "points": 65
+    },
+    {
+     "key": "사례3-",
+     "label": "사례3-",
+     "count": 5,
+     "points": 100
     }
    ],
    "totalPoints": 200,
@@ -6011,6 +6113,26 @@
      "ask": "보상금액이 적다는 이유로 다투는 구제수단"
     }
    ],
+   "groups": [
+    {
+     "key": "사례1-",
+     "label": "사례1-",
+     "count": 3,
+     "points": 50
+    },
+    {
+     "key": "사례2-",
+     "label": "사례2-",
+     "count": 4,
+     "points": 50
+    },
+    {
+     "key": "사례3-",
+     "label": "사례3-",
+     "count": 6,
+     "points": 100
+    }
+   ],
    "totalPoints": 200,
    "hasRubric": false,
    "hasCasebook": true,
@@ -6083,6 +6205,26 @@
      "no": "사례3-설문4",
      "points": 30,
      "ask": "개정된 요양급여규칙을 적용하여 삭제한 것이 위법하다는 甲 주장의 당부"
+    }
+   ],
+   "groups": [
+    {
+     "key": "사례1-",
+     "label": "사례1-",
+     "count": 1,
+     "points": 30
+    },
+    {
+     "key": "사례2-",
+     "label": "사례2-",
+     "count": 2,
+     "points": 70
+    },
+    {
+     "key": "사례3-",
+     "label": "사례3-",
+     "count": 4,
+     "points": 100
     }
    ],
    "totalPoints": 200,
@@ -6175,6 +6317,20 @@
      "ask": "丙이 위헌결정 이후 기납부금액을 돌려받기 위해 제기할 수 있는 소송"
     }
    ],
+   "groups": [
+    {
+     "key": "사례1-",
+     "label": "사례1-",
+     "count": 5,
+     "points": 100
+    },
+    {
+     "key": "사례2-",
+     "label": "사례2-",
+     "count": 5,
+     "points": 100
+    }
+   ],
    "totalPoints": 200,
    "hasRubric": false,
    "hasCasebook": true,
@@ -6246,6 +6402,20 @@
      "no": "사례2-설문4",
      "points": 20,
      "ask": "석유정제업 등록 제한 규정이 乙의 직업의 자유를 침해하는지"
+    }
+   ],
+   "groups": [
+    {
+     "key": "사례1-",
+     "label": "사례1-",
+     "count": 3,
+     "points": 100
+    },
+    {
+     "key": "사례2-",
+     "label": "사례2-",
+     "count": 4,
+     "points": 100
     }
    ],
    "totalPoints": 200,
@@ -6344,6 +6514,20 @@
      "ask": "丙의 재산권침해 주장의 타당성"
     }
    ],
+   "groups": [
+    {
+     "key": "사례1-",
+     "label": "사례1-",
+     "count": 4,
+     "points": 100
+    },
+    {
+     "key": "사례2-",
+     "label": "사례2-",
+     "count": 7,
+     "points": 100
+    }
+   ],
    "totalPoints": 200,
    "hasRubric": false,
    "hasCasebook": true,
@@ -6431,6 +6615,38 @@
      "no": "사례5-문1",
      "points": 20,
      "ask": "법률이 이미 규율하는 사항에 대해 더 강화되거나 완화된 기준의 조례 제정 가능 여부"
+    }
+   ],
+   "groups": [
+    {
+     "key": "사례1-",
+     "label": "사례1-",
+     "count": 3,
+     "points": 50
+    },
+    {
+     "key": "사례2-",
+     "label": "사례2-",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "사례3-",
+     "label": "사례3-",
+     "count": 1,
+     "points": 30
+    },
+    {
+     "key": "사례4-",
+     "label": "사례4-",
+     "count": 4,
+     "points": 80
+    },
+    {
+     "key": "사례5-",
+     "label": "사례5-",
+     "count": 1,
+     "points": 20
     }
    ],
    "totalPoints": 200,
@@ -6529,6 +6745,20 @@
      "ask": "심판대상 규정이 乙의 기본권을 침해하여 위헌인지 여부"
     }
    ],
+   "groups": [
+    {
+     "key": "사례1-",
+     "label": "사례1-",
+     "count": 5,
+     "points": 100
+    },
+    {
+     "key": "사례2-",
+     "label": "사례2-",
+     "count": 6,
+     "points": 100
+    }
+   ],
    "totalPoints": 200,
    "hasRubric": false,
    "hasCasebook": true,
@@ -6617,6 +6847,20 @@
      "no": "사례2-문3-2",
      "points": 50,
      "ask": "퇴직연금 삭감조항 및 부칙 제2조가 기본권을 침해하여 위헌인지 여부"
+    }
+   ],
+   "groups": [
+    {
+     "key": "사례1-",
+     "label": "사례1-",
+     "count": 5,
+     "points": 100
+    },
+    {
+     "key": "사례2-",
+     "label": "사례2-",
+     "count": 5,
+     "points": 100
     }
    ],
    "totalPoints": 200,
@@ -6716,6 +6960,20 @@
      "no": "사례2-문4-4",
      "points": 5,
      "ask": "보충성"
+    }
+   ],
+   "groups": [
+    {
+     "key": "사례1-",
+     "label": "사례1-",
+     "count": 3,
+     "points": 100
+    },
+    {
+     "key": "사례2-",
+     "label": "사례2-",
+     "count": 9,
+     "points": 100
     }
    ],
    "totalPoints": 200,
@@ -6827,6 +7085,20 @@
      "ask": "이 사건 부칙조항이 헌법 제13조 제2항의 소급입법금지원칙에 위배되는지 검토"
     }
    ],
+   "groups": [
+    {
+     "key": "사례1-",
+     "label": "사례1-",
+     "count": 6,
+     "points": 100
+    },
+    {
+     "key": "사례2-",
+     "label": "사례2-",
+     "count": 6,
+     "points": 100
+    }
+   ],
    "totalPoints": 200,
    "hasRubric": true,
    "hasCasebook": false,
@@ -6928,6 +7200,20 @@
      "no": "사례2-문제4(2)",
      "points": 10,
      "ask": "위 법률조항들이 책임주의원칙에 위배되어 丙의 표현의 자유를 침해하는지 검토"
+    }
+   ],
+   "groups": [
+    {
+     "key": "사례1-",
+     "label": "사례1-",
+     "count": 5,
+     "points": 100
+    },
+    {
+     "key": "사례2-",
+     "label": "사례2-",
+     "count": 6,
+     "points": 100
     }
    ],
    "totalPoints": 200,
@@ -7042,6 +7328,20 @@
      "ask": "부당이득징수 법률조항이 명확성원칙에 위배된다는 甲 주장의 타당성 검토"
     }
    ],
+   "groups": [
+    {
+     "key": "사례1-",
+     "label": "사례1-",
+     "count": 8,
+     "points": 100
+    },
+    {
+     "key": "사례2-",
+     "label": "사례2-",
+     "count": 5,
+     "points": 100
+    }
+   ],
    "totalPoints": 200,
    "hasRubric": true,
    "hasCasebook": true,
@@ -7136,6 +7436,32 @@
      "ask": "집시법 조항이 포괄위임금지원칙에 위반되는지 검토"
     }
    ],
+   "groups": [
+    {
+     "key": "사례1(",
+     "label": "사례1(",
+     "count": 2,
+     "points": 35
+    },
+    {
+     "key": "사례2(",
+     "label": "사례2(",
+     "count": 1,
+     "points": 15
+    },
+    {
+     "key": "사례3(",
+     "label": "사례3(",
+     "count": 2,
+     "points": 50
+    },
+    {
+     "key": "사례4(",
+     "label": "사례4(",
+     "count": 5,
+     "points": 100
+    }
+   ],
    "totalPoints": 200,
    "hasRubric": true,
    "hasCasebook": true,
@@ -7222,6 +7548,20 @@
      "no": "사례2-문제4",
      "points": 30,
      "ask": "습지보전법상 임의적 매수권한 규정이 그 자체로 광업권자의 재산권을 침해하는지에 대한 乙 주장의 타당성 검토"
+    }
+   ],
+   "groups": [
+    {
+     "key": "사례1-",
+     "label": "사례1-",
+     "count": 4,
+     "points": 100
+    },
+    {
+     "key": "사례2-",
+     "label": "사례2-",
+     "count": 5,
+     "points": 100
     }
    ],
    "totalPoints": 200,
@@ -7315,6 +7655,20 @@
      "no": "사례2-문제5",
      "points": 20,
      "ask": "건설폐기물법 조항의 죄형법정주의(법률주의)·포괄위임금지원칙 위배 주장의 타당성 검토"
+    }
+   ],
+   "groups": [
+    {
+     "key": "사례1-",
+     "label": "사례1-",
+     "count": 5,
+     "points": 100
+    },
+    {
+     "key": "사례2-",
+     "label": "사례2-",
+     "count": 5,
+     "points": 100
     }
    ],
    "totalPoints": 200,
@@ -7414,6 +7768,32 @@
      "no": "헌법-4-(2)",
      "points": 20,
      "ask": "가축전염병예방법상 차량출입정보 수집 규정이 과잉금지원칙에 반하여 개인정보자기결정권을 침해하는지 검토"
+    }
+   ],
+   "groups": [
+    {
+     "key": "헌법행정",
+     "label": "헌법행정",
+     "count": 4,
+     "points": 50
+    },
+    {
+     "key": "행정법-",
+     "label": "행정법-",
+     "count": 5,
+     "points": 100
+    },
+    {
+     "key": "헌법-단",
+     "label": "헌법-단",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "헌법-4",
+     "label": "헌법-4",
+     "count": 2,
+     "points": 30
     }
    ],
    "totalPoints": 200,
@@ -7518,6 +7898,38 @@
      "ask": "이행강제금 부과가 이중처벌금지원칙에 위배되는지 검토"
     }
    ],
+   "groups": [
+    {
+     "key": "헌법-1",
+     "label": "헌법-1",
+     "count": 2,
+     "points": 20
+    },
+    {
+     "key": "헌법-2",
+     "label": "헌법-2",
+     "count": 1,
+     "points": 15
+    },
+    {
+     "key": "헌법-3",
+     "label": "헌법-3",
+     "count": 2,
+     "points": 35
+    },
+    {
+     "key": "헌법-4",
+     "label": "헌법-4",
+     "count": 2,
+     "points": 30
+    },
+    {
+     "key": "행정법-",
+     "label": "행정법-",
+     "count": 5,
+     "points": 100
+    }
+   ],
    "totalPoints": 200,
    "hasRubric": true,
    "hasCasebook": true,
@@ -7600,6 +8012,32 @@
      "no": "행정법-4",
      "points": 20,
      "ask": "청산금 부과에 대한 인용재결의 기속력을 다투는 행정심판법 제49조 제1항에 관한 헌법소원 청구이유 판단"
+    }
+   ],
+   "groups": [
+    {
+     "key": "헌법-1",
+     "label": "헌법-1",
+     "count": 1,
+     "points": 40
+    },
+    {
+     "key": "헌법-2",
+     "label": "헌법-2",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "헌법-3",
+     "label": "헌법-3",
+     "count": 2,
+     "points": 40
+    },
+    {
+     "key": "행정법-",
+     "label": "행정법-",
+     "count": 5,
+     "points": 100
     }
    ],
    "totalPoints": 200,
@@ -7693,6 +8131,38 @@
      "ask": "주택법상 매도청구권 규정이 甲의 재산권을 침해한다는 주장의 헌법적 타당성 검토"
     }
    ],
+   "groups": [
+    {
+     "key": "헌법-1",
+     "label": "헌법-1",
+     "count": 1,
+     "points": 30
+    },
+    {
+     "key": "헌법-2",
+     "label": "헌법-2",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "헌법-3",
+     "label": "헌법-3",
+     "count": 1,
+     "points": 30
+    },
+    {
+     "key": "헌법-4",
+     "label": "헌법-4",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "행정법-",
+     "label": "행정법-",
+     "count": 6,
+     "points": 100
+    }
+   ],
    "totalPoints": 200,
    "hasRubric": true,
    "hasCasebook": true,
@@ -7783,6 +8253,38 @@
      "no": "행정법-4",
      "points": 30,
      "ask": "음주운전 가중처벌조항(도로교통법 제148조의2 제1항)이 명확성원칙과 책임과 형벌간 비례원칙에 위반되는지에 관한 甲 주장의 헌법적 타당성 검토"
+    }
+   ],
+   "groups": [
+    {
+     "key": "헌법-1",
+     "label": "헌법-1",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "헌법-2",
+     "label": "헌법-2",
+     "count": 1,
+     "points": 30
+    },
+    {
+     "key": "헌법-3",
+     "label": "헌법-3",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "헌법-4",
+     "label": "헌법-4",
+     "count": 2,
+     "points": 30
+    },
+    {
+     "key": "행정법-",
+     "label": "행정법-",
+     "count": 5,
+     "points": 100
     }
    ],
    "totalPoints": 200,
@@ -7880,6 +8382,38 @@
      "ask": "식품표시광고법 조항이 甲의 표현의 자유를 침해하는지 판단"
     }
    ],
+   "groups": [
+    {
+     "key": "헌법-1",
+     "label": "헌법-1",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "헌법-2",
+     "label": "헌법-2",
+     "count": 1,
+     "points": 30
+    },
+    {
+     "key": "헌법-3",
+     "label": "헌법-3",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "헌법-4",
+     "label": "헌법-4",
+     "count": 1,
+     "points": 30
+    },
+    {
+     "key": "행정법-",
+     "label": "행정법-",
+     "count": 7,
+     "points": 100
+    }
+   ],
    "totalPoints": 200,
    "hasRubric": true,
    "hasCasebook": true,
@@ -7969,6 +8503,44 @@
      "no": "6-4",
      "points": 20,
      "ask": "경과규정을 두지 않은 것이 신뢰보호원칙에 위배된다는 주장에 대한 위헌법률심판제청신청의 당부"
+    }
+   ],
+   "groups": [
+    {
+     "key": "문1",
+     "label": "문1",
+     "count": 2,
+     "points": 20
+    },
+    {
+     "key": "문2",
+     "label": "문2",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "문3",
+     "label": "문3",
+     "count": 1,
+     "points": 25
+    },
+    {
+     "key": "문4",
+     "label": "문4",
+     "count": 1,
+     "points": 15
+    },
+    {
+     "key": "문5",
+     "label": "문5",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "문6",
+     "label": "문6",
+     "count": 4,
+     "points": 100
     }
    ],
    "totalPoints": 200,
@@ -8065,6 +8637,20 @@
      "no": "2-4",
      "points": 20,
      "ask": "이주대책대상자에서 세입자를 제외한 시행령 규정이 재산권을 침해하는지"
+    }
+   ],
+   "groups": [
+    {
+     "key": "문1",
+     "label": "문1",
+     "count": 7,
+     "points": 100
+    },
+    {
+     "key": "문2",
+     "label": "문2",
+     "count": 4,
+     "points": 100
     }
    ],
    "totalPoints": 200,
@@ -8169,6 +8755,20 @@
      "no": "2-6",
      "points": 10,
      "ask": "재외동포법 규정의 명확성원칙 위반 여부"
+    }
+   ],
+   "groups": [
+    {
+     "key": "문1",
+     "label": "문1",
+     "count": 6,
+     "points": 100
+    },
+    {
+     "key": "문2",
+     "label": "문2",
+     "count": 6,
+     "points": 100
     }
    ],
    "totalPoints": 200,
@@ -8280,6 +8880,20 @@
      "ask": "헌법소원심판청구의 청구기간 준수 여부"
     }
    ],
+   "groups": [
+    {
+     "key": "문1",
+     "label": "문1",
+     "count": 7,
+     "points": 100
+    },
+    {
+     "key": "문2",
+     "label": "문2",
+     "count": 6,
+     "points": 100
+    }
+   ],
    "totalPoints": 200,
    "hasRubric": true,
    "hasCasebook": true,
@@ -8366,6 +8980,20 @@
      "ask": "개정 조례 경과규정 미비가 신뢰보호원칙에 위배되는지"
     }
    ],
+   "groups": [
+    {
+     "key": "문1",
+     "label": "문1",
+     "count": 4,
+     "points": 100
+    },
+    {
+     "key": "문2",
+     "label": "문2",
+     "count": 5,
+     "points": 100
+    }
+   ],
    "totalPoints": 200,
    "hasRubric": true,
    "hasCasebook": true,
@@ -8450,6 +9078,20 @@
      "no": "2-5",
      "points": 20,
      "ask": "국립대학교의 기본권주체성 인정 여부 및 주장 가능한 기본권"
+    }
+   ],
+   "groups": [
+    {
+     "key": "문1",
+     "label": "문1",
+     "count": 4,
+     "points": 100
+    },
+    {
+     "key": "문2",
+     "label": "문2",
+     "count": 5,
+     "points": 100
     }
    ],
    "totalPoints": 200,
@@ -8540,6 +9182,38 @@
      "no": "5(별개 사례)-5",
      "points": 20,
      "ask": "주세법 제55조가 책임과 형벌 간 비례성원칙을 위반하여 위헌인지 검토"
+    }
+   ],
+   "groups": [
+    {
+     "key": "문1",
+     "label": "문1",
+     "count": 1,
+     "points": 35
+    },
+    {
+     "key": "문2",
+     "label": "문2",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "문3",
+     "label": "문3",
+     "count": 1,
+     "points": 25
+    },
+    {
+     "key": "문4",
+     "label": "문4",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "문5",
+     "label": "문5",
+     "count": 5,
+     "points": 100
     }
    ],
    "totalPoints": 200,
@@ -8641,6 +9315,38 @@
      "ask": "폐기물관리법 제25조 제1항의 포괄위임금지원칙 위반(위헌) 여부 검토"
     }
    ],
+   "groups": [
+    {
+     "key": "문1",
+     "label": "문1",
+     "count": 3,
+     "points": 30
+    },
+    {
+     "key": "문2",
+     "label": "문2",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "문3",
+     "label": "문3",
+     "count": 1,
+     "points": 30
+    },
+    {
+     "key": "문4",
+     "label": "문4",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "문5",
+     "label": "문5",
+     "count": 5,
+     "points": 100
+    }
+   ],
    "totalPoints": 200,
    "hasRubric": true,
    "hasCasebook": true,
@@ -8716,6 +9422,26 @@
      "no": "3(별개 사례)-4(2)",
      "points": 15,
      "ask": "교육감이 시정명령에 대해 대법원에 소를 제기할 수 있는지 검토"
+    }
+   ],
+   "groups": [
+    {
+     "key": "문1",
+     "label": "문1",
+     "count": 1,
+     "points": 30
+    },
+    {
+     "key": "문2",
+     "label": "문2",
+     "count": 1,
+     "points": 70
+    },
+    {
+     "key": "문3",
+     "label": "문3",
+     "count": 5,
+     "points": 100
     }
    ],
    "totalPoints": 200,
@@ -8810,6 +9536,44 @@
      "no": "6(별개 사례)-4(2)",
      "points": 10,
      "ask": "‘거짓이나 그 밖의 부정한 방법’ 개념의 명확성원칙 위반 주장 검토"
+    }
+   ],
+   "groups": [
+    {
+     "key": "문1",
+     "label": "문1",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "문2",
+     "label": "문2",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "문3",
+     "label": "문3",
+     "count": 1,
+     "points": 10
+    },
+    {
+     "key": "문4",
+     "label": "문4",
+     "count": 1,
+     "points": 30
+    },
+    {
+     "key": "문5",
+     "label": "문5",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "문6",
+     "label": "문6",
+     "count": 5,
+     "points": 100
     }
    ],
    "totalPoints": 200,
@@ -8919,6 +9683,38 @@
      "no": "5(별개 사례)-5",
      "points": 20,
      "ask": "출입국관리법 조항에 대한 헌법소원에서 외국인의 청구인능력 인정 여부"
+    }
+   ],
+   "groups": [
+    {
+     "key": "문1",
+     "label": "문1",
+     "count": 3,
+     "points": 30
+    },
+    {
+     "key": "문2",
+     "label": "문2",
+     "count": 2,
+     "points": 30
+    },
+    {
+     "key": "문3",
+     "label": "문3",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "문4",
+     "label": "문4",
+     "count": 2,
+     "points": 20
+    },
+    {
+     "key": "문5",
+     "label": "문5",
+     "count": 5,
+     "points": 100
     }
    ],
    "totalPoints": 200,
@@ -9033,6 +9829,38 @@
      "ask": "위헌법률심판제청신청 기각 후 헌법재판소법 제68조 제2항 헌법소원심판청구의 적법성 검토"
     }
    ],
+   "groups": [
+    {
+     "key": "문1",
+     "label": "문1",
+     "count": 3,
+     "points": 30
+    },
+    {
+     "key": "문2",
+     "label": "문2",
+     "count": 2,
+     "points": 20
+    },
+    {
+     "key": "문3",
+     "label": "문3",
+     "count": 3,
+     "points": 30
+    },
+    {
+     "key": "문4",
+     "label": "문4",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "문5",
+     "label": "문5",
+     "count": 5,
+     "points": 100
+    }
+   ],
    "totalPoints": 200,
    "hasRubric": true,
    "hasCasebook": true,
@@ -9111,6 +9939,50 @@
      "no": "설문4",
      "points": 20,
      "ask": "시설기준의 국가 기본권보호의무 위반 여부"
+    }
+   ],
+   "groups": [
+    {
+     "key": "문1",
+     "label": "문1",
+     "count": 1,
+     "points": 25
+    },
+    {
+     "key": "문2",
+     "label": "문2",
+     "count": 1,
+     "points": 55
+    },
+    {
+     "key": "문3",
+     "label": "문3",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "설문1",
+     "label": "설문1",
+     "count": 2,
+     "points": 30
+    },
+    {
+     "key": "설문2",
+     "label": "설문2",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "설문3",
+     "label": "설문3",
+     "count": 1,
+     "points": 30
+    },
+    {
+     "key": "설문4",
+     "label": "설문4",
+     "count": 1,
+     "points": 20
     }
    ],
    "totalPoints": 200,
@@ -9211,6 +10083,62 @@
      "ask": "배우자 금품수수 미신고 처벌조항의 헌법 제13조 제3항 위반 여부"
     }
    ],
+   "groups": [
+    {
+     "key": "문1",
+     "label": "문1",
+     "count": 2,
+     "points": 20
+    },
+    {
+     "key": "문2",
+     "label": "문2",
+     "count": 2,
+     "points": 50
+    },
+    {
+     "key": "문3",
+     "label": "문3",
+     "count": 1,
+     "points": 10
+    },
+    {
+     "key": "문4",
+     "label": "문4",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "설문1",
+     "label": "설문1",
+     "count": 1,
+     "points": 25
+    },
+    {
+     "key": "설문2",
+     "label": "설문2",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "설문3",
+     "label": "설문3",
+     "count": 1,
+     "points": 15
+    },
+    {
+     "key": "설문4",
+     "label": "설문4",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "설문5",
+     "label": "설문5",
+     "count": 1,
+     "points": 20
+    }
+   ],
    "totalPoints": 200,
    "hasRubric": true,
    "hasCasebook": true,
@@ -9297,6 +10225,32 @@
      "ask": "위헌결정 후 미납 부담금에 대한 체납처분 가부"
     }
    ],
+   "groups": [
+    {
+     "key": "설문1",
+     "label": "설문1",
+     "count": 2,
+     "points": 60
+    },
+    {
+     "key": "설문2",
+     "label": "설문2",
+     "count": 2,
+     "points": 40
+    },
+    {
+     "key": "설문3",
+     "label": "설문3",
+     "count": 2,
+     "points": 40
+    },
+    {
+     "key": "설문4",
+     "label": "설문4",
+     "count": 3,
+     "points": 60
+    }
+   ],
    "totalPoints": 200,
    "hasRubric": true,
    "hasCasebook": true,
@@ -9380,6 +10334,50 @@
      "no": "설문3-(2)",
      "points": 20,
      "ask": "현금청산 규정의 위헌 쟁점"
+    }
+   ],
+   "groups": [
+    {
+     "key": "문1",
+     "label": "문1",
+     "count": 1,
+     "points": 30
+    },
+    {
+     "key": "문2",
+     "label": "문2",
+     "count": 1,
+     "points": 25
+    },
+    {
+     "key": "문3",
+     "label": "문3",
+     "count": 1,
+     "points": 25
+    },
+    {
+     "key": "문4",
+     "label": "문4",
+     "count": 2,
+     "points": 20
+    },
+    {
+     "key": "설문1",
+     "label": "설문1",
+     "count": 1,
+     "points": 25
+    },
+    {
+     "key": "설문2",
+     "label": "설문2",
+     "count": 1,
+     "points": 30
+    },
+    {
+     "key": "설문3",
+     "label": "설문3",
+     "count": 2,
+     "points": 45
     }
    ],
    "totalPoints": 200,
@@ -9472,6 +10470,62 @@
      "no": "설문5",
      "points": 20,
      "ask": "명확성원칙 위반 여부"
+    }
+   ],
+   "groups": [
+    {
+     "key": "문1",
+     "label": "문1",
+     "count": 1,
+     "points": 10
+    },
+    {
+     "key": "문2",
+     "label": "문2",
+     "count": 2,
+     "points": 20
+    },
+    {
+     "key": "문3",
+     "label": "문3",
+     "count": 1,
+     "points": 50
+    },
+    {
+     "key": "문4",
+     "label": "문4",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "설문1",
+     "label": "설문1",
+     "count": 1,
+     "points": 25
+    },
+    {
+     "key": "설문2",
+     "label": "설문2",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "설문3",
+     "label": "설문3",
+     "count": 1,
+     "points": 15
+    },
+    {
+     "key": "설문4",
+     "label": "설문4",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "설문5",
+     "label": "설문5",
+     "count": 1,
+     "points": 20
     }
    ],
    "totalPoints": 200,
@@ -9567,6 +10621,56 @@
      "ask": "위헌법률심판제청신청의 재판의 전제성 인정 여부"
     }
    ],
+   "groups": [
+    {
+     "key": "문1",
+     "label": "문1",
+     "count": 2,
+     "points": 20
+    },
+    {
+     "key": "문2",
+     "label": "문2",
+     "count": 2,
+     "points": 60
+    },
+    {
+     "key": "문3",
+     "label": "문3",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "설문1",
+     "label": "설문1",
+     "count": 1,
+     "points": 15
+    },
+    {
+     "key": "설문2",
+     "label": "설문2",
+     "count": 1,
+     "points": 25
+    },
+    {
+     "key": "설문3",
+     "label": "설문3",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "설문4",
+     "label": "설문4",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "설문5",
+     "label": "설문5",
+     "count": 1,
+     "points": 20
+    }
+   ],
    "totalPoints": 200,
    "hasRubric": true,
    "hasCasebook": true,
@@ -9639,6 +10743,32 @@
      "no": "제2문의2-2",
      "points": 35,
      "ask": "丙의 무효등 확인소송의 승소가능성"
+    }
+   ],
+   "groups": [
+    {
+     "key": "문제1",
+     "label": "문제1",
+     "count": 1,
+     "points": 40
+    },
+    {
+     "key": "문제2",
+     "label": "문제2",
+     "count": 1,
+     "points": 30
+    },
+    {
+     "key": "문제3",
+     "label": "문제3",
+     "count": 1,
+     "points": 30
+    },
+    {
+     "key": "제2문",
+     "label": "제2문",
+     "count": 4,
+     "points": 100
     }
    ],
    "totalPoints": 200,
@@ -9735,6 +10865,32 @@
      "ask": "위반사실공표 근거 법률의 위헌성을 다툴 헌법소송 수단과 승소가능성"
     }
    ],
+   "groups": [
+    {
+     "key": "문제1",
+     "label": "문제1",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "문제2",
+     "label": "문제2",
+     "count": 1,
+     "points": 45
+    },
+    {
+     "key": "문제3",
+     "label": "문제3",
+     "count": 1,
+     "points": 35
+    },
+    {
+     "key": "제2문",
+     "label": "제2문",
+     "count": 7,
+     "points": 100
+    }
+   ],
    "totalPoints": 200,
    "hasRubric": true,
    "hasCasebook": true,
@@ -9822,6 +10978,32 @@
      "ask": "내부위임에 따른 문화재 현상변경 등 허가의 효력 유무"
     }
    ],
+   "groups": [
+    {
+     "key": "문제1",
+     "label": "문제1",
+     "count": 1,
+     "points": 50
+    },
+    {
+     "key": "문제2",
+     "label": "문제2",
+     "count": 1,
+     "points": 30
+    },
+    {
+     "key": "문제3",
+     "label": "문제3",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "제2문",
+     "label": "제2문",
+     "count": 6,
+     "points": 100
+    }
+   ],
    "totalPoints": 200,
    "hasRubric": true,
    "hasCasebook": true,
@@ -9903,6 +11085,26 @@
      "ask": "S수녀원의 헌법소원심판 청구인능력이 인정될 수 있는가"
     }
    ],
+   "groups": [
+    {
+     "key": "문제1",
+     "label": "문제1",
+     "count": 1,
+     "points": 30
+    },
+    {
+     "key": "문제2",
+     "label": "문제2",
+     "count": 2,
+     "points": 70
+    },
+    {
+     "key": "제2문",
+     "label": "제2문",
+     "count": 5,
+     "points": 100
+    }
+   ],
    "totalPoints": 200,
    "hasRubric": true,
    "hasCasebook": true,
@@ -9981,6 +11183,32 @@
      "no": "제2문-4",
      "points": 30,
      "ask": "甲주식회사가 취할 수 있는 가구제 수단과 그 인용가능성"
+    }
+   ],
+   "groups": [
+    {
+     "key": "문제1",
+     "label": "문제1",
+     "count": 2,
+     "points": 60
+    },
+    {
+     "key": "문제2",
+     "label": "문제2",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "문제3",
+     "label": "문제3",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "제2문",
+     "label": "제2문",
+     "count": 4,
+     "points": 100
     }
    ],
    "totalPoints": 200,
@@ -10064,6 +11292,38 @@
      "no": "제2문-2-(2)-2)",
      "points": 20,
      "ask": "살처분에 불복하기 위해 乙이 취할 수 있는 행정소송법상 수단"
+    }
+   ],
+   "groups": [
+    {
+     "key": "질문1",
+     "label": "질문1",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "질문2",
+     "label": "질문2",
+     "count": 1,
+     "points": 40
+    },
+    {
+     "key": "질문3",
+     "label": "질문3",
+     "count": 1,
+     "points": 30
+    },
+    {
+     "key": "질문4",
+     "label": "질문4",
+     "count": 1,
+     "points": 10
+    },
+    {
+     "key": "제2문",
+     "label": "제2문",
+     "count": 5,
+     "points": 100
     }
    ],
    "totalPoints": 200,
@@ -10165,6 +11425,26 @@
      "ask": "국가배상청구소송의 승소가능성"
     }
    ],
+   "groups": [
+    {
+     "key": "문1",
+     "label": "문1",
+     "count": 3,
+     "points": 60
+    },
+    {
+     "key": "문2",
+     "label": "문2",
+     "count": 5,
+     "points": 105
+    },
+    {
+     "key": "문3",
+     "label": "문3",
+     "count": 3,
+     "points": 35
+    }
+   ],
    "totalPoints": 200,
    "hasRubric": true,
    "hasCasebook": true,
@@ -10262,6 +11542,32 @@
      "ask": "토지소유자가 보상금을 증액받기 위하여 거쳐야 하는 절차"
     }
    ],
+   "groups": [
+    {
+     "key": "문1",
+     "label": "문1",
+     "count": 4,
+     "points": 70
+    },
+    {
+     "key": "문2",
+     "label": "문2",
+     "count": 2,
+     "points": 45
+    },
+    {
+     "key": "문3",
+     "label": "문3",
+     "count": 2,
+     "points": 60
+    },
+    {
+     "key": "문4",
+     "label": "문4",
+     "count": 3,
+     "points": 25
+    }
+   ],
    "totalPoints": 200,
    "hasRubric": true,
    "hasCasebook": true,
@@ -10355,6 +11661,44 @@
      "ask": "이행강제금 반복부과 규정(건축법 제80조제1항·제4항)의 위헌여부"
     }
    ],
+   "groups": [
+    {
+     "key": "설문1",
+     "label": "설문1",
+     "count": 2,
+     "points": 30
+    },
+    {
+     "key": "설문2",
+     "label": "설문2",
+     "count": 2,
+     "points": 70
+    },
+    {
+     "key": "문1",
+     "label": "문1",
+     "count": 2,
+     "points": 20
+    },
+    {
+     "key": "문2",
+     "label": "문2",
+     "count": 2,
+     "points": 30
+    },
+    {
+     "key": "문3",
+     "label": "문3",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "문4",
+     "label": "문4",
+     "count": 1,
+     "points": 30
+    }
+   ],
    "totalPoints": 200,
    "hasRubric": true,
    "hasCasebook": true,
@@ -10439,6 +11783,38 @@
      "no": "문3",
      "points": 25,
      "ask": "금융위원회의 규제권한 불행사의 위법성(국가배상청구소송)"
+    }
+   ],
+   "groups": [
+    {
+     "key": "설문1",
+     "label": "설문1",
+     "count": 2,
+     "points": 30
+    },
+    {
+     "key": "설문2",
+     "label": "설문2",
+     "count": 2,
+     "points": 70
+    },
+    {
+     "key": "문1",
+     "label": "문1",
+     "count": 2,
+     "points": 45
+    },
+    {
+     "key": "문2",
+     "label": "문2",
+     "count": 2,
+     "points": 30
+    },
+    {
+     "key": "문3",
+     "label": "문3",
+     "count": 1,
+     "points": 25
     }
    ],
    "totalPoints": 200,

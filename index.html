@@ -3,73 +3,112 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0b0e14">
+<meta name="theme-color" content="#ecf4fb">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>사례형 연습 — 변호사시험</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
 <script src="core/store.js"></script>
+<script>
+// 테마: MCQ와 동일한 토큰 체계. 기본 라이트.
+(function(){
+  var t = localStorage.getItem('cp_theme') || 'light';
+  document.documentElement.setAttribute('data-theme', t);
+})();
+</script>
 <style>
-:root{
-  --bg:#0b0e14; --panel:#141922; --panel2:#1b2130; --line:#2a3242;
-  --tx:#e8edf5; --tx2:#9aa8bd; --tx3:#6b7a92;
-  --gold:#d4a853; --blue:#5a9cc5; --green:#4caf7d; --red:#e2685f;
+/* ── MCQ(선택형 페이지)와 동일한 색 토큰 ─────────────── */
+:root[data-theme="dark"]{
+  --bg:#10192a; --sf:#172238; --sf2:#1d2d48; --bd:#284060; --bd2:#1e3254;
+  --gold:#7ab8d8; --gold2:#9acce8; --gf:#2e6282;
+  --tx:#cce6f8; --tx2:#6aa8cc; --tx3:#366078;
+  --hd:#0c1424; --ok:#4caf7d; --no:#e2685f; --shadow:0 1px 3px rgba(0,0,0,.4);
+}
+:root[data-theme="light"]{
+  --bg:#ecf4fb; --sf:#ffffff; --sf2:#dceef8; --bd:#b4d0e8; --bd2:#cce0f2;
+  --gold:#2464a0; --gold2:#2e74b5; --gf:#2a5f88;
+  --tx:#192233; --tx2:#3a5870; --tx3:#5878a0;
+  --hd:#16233a; --ok:#2e7d55; --no:#c4463c; --shadow:0 1px 3px rgba(30,60,100,.10);
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--tx);
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Malgun Gothic",sans-serif;
   line-height:1.7;-webkit-text-size-adjust:100%}
 #root{min-height:100vh}
-.loading{display:flex;align-items:center;justify-content:center;min-height:100vh;color:var(--blue)}
+.loading{display:flex;align-items:center;justify-content:center;min-height:100vh;color:var(--gold)}
 .wrap{max-width:1080px;margin:0 auto;padding:16px}
-.hd{display:flex;align-items:center;justify-content:space-between;gap:12px;
-  padding:12px 16px;background:var(--panel);border-bottom:1px solid var(--line);
-  position:sticky;top:0;z-index:20}
-.hd h1{margin:0;font-size:16px;letter-spacing:-.02em}
-.hd .sub{font-size:11.5px;color:var(--tx3)}
-.btn{background:var(--panel2);color:var(--tx);border:1px solid var(--line);
+
+.hd{background:var(--hd);color:#e8f2fb;padding:13px 18px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  position:sticky;top:0;z-index:30}
+.hd h1{margin:0;font-size:16.5px;letter-spacing:-.02em;font-weight:700}
+.hd .sub{font-size:11.5px;opacity:.72;margin-top:2px}
+
+.btn{background:var(--sf);color:var(--tx);border:1px solid var(--bd);
   border-radius:8px;padding:8px 13px;font-size:13px;cursor:pointer;font-family:inherit}
-.btn:hover{border-color:var(--blue)}
-.btn.pri{background:var(--blue);border-color:var(--blue);color:#08121a;font-weight:600}
-.btn:disabled{opacity:.45;cursor:default}
+.btn:hover{border-color:var(--gold)}
+.btn.pri{background:var(--gold);border-color:var(--gold);color:#fff;font-weight:600}
+.btn.pri:hover{background:var(--gold2)}
+.btn:disabled{opacity:.42;cursor:default}
+.btn.ghost{background:transparent;color:#cfe3f5;border-color:rgba(255,255,255,.22)}
+.btn.ghost:hover{border-color:#9acce8}
 select.btn{padding:7px 10px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;
-  padding:15px;margin-bottom:11px}
+
+.card{background:var(--sf);border:1px solid var(--bd);border-radius:12px;
+  padding:15px;margin-bottom:11px;box-shadow:var(--shadow)}
 .row{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
 .tag{display:inline-block;font-size:11px;padding:3px 9px;border-radius:999px;
-  background:var(--panel2);color:var(--tx2);border:1px solid var(--line)}
-.tag.on{background:var(--blue);color:#08121a;border-color:var(--blue);font-weight:600}
-.tag.gold{background:rgba(212,168,83,.15);color:var(--gold);border-color:rgba(212,168,83,.4)}
-.tag.green{background:rgba(76,175,125,.15);color:var(--green);border-color:rgba(76,175,125,.4)}
+  background:var(--sf2);color:var(--tx2);border:1px solid var(--bd2)}
+.tag.on{background:var(--gold);color:#fff;border-color:var(--gold);font-weight:600}
+.tag.gold{background:var(--sf2);color:var(--gold);border-color:var(--gold);font-weight:600}
+.tag.ok{background:var(--sf2);color:var(--ok);border-color:var(--ok)}
 .tag.click{cursor:pointer}
+.tag.click:hover{border-color:var(--gold)}
 .muted{color:var(--tx3);font-size:12px}
-.title{font-size:14.5px;font-weight:600;margin:0 0 8px}
-.pre{white-space:pre-wrap;word-break:break-word;font-size:14.5px;line-height:1.85}
-textarea{width:100%;background:var(--panel2);color:var(--tx);border:1px solid var(--line);
-  border-radius:10px;padding:14px;font-size:15px;line-height:1.85;font-family:inherit;
+.title{font-size:14.5px;font-weight:700;margin:0 0 9px;color:var(--tx)}
+.pre{white-space:pre-wrap;word-break:break-word;font-size:14.8px;line-height:1.9;
+  color:var(--tx)}
+
+textarea{width:100%;background:var(--sf);color:var(--tx);border:1px solid var(--bd);
+  border-radius:10px;padding:14px;font-size:15px;line-height:1.9;font-family:inherit;
   resize:vertical;min-height:300px}
-textarea:focus{outline:none;border-color:var(--blue)}
-input[type=text]{background:var(--panel2);color:var(--tx);border:1px solid var(--line);
+textarea:focus{outline:none;border-color:var(--gold)}
+input[type=text]{background:var(--sf);color:var(--tx);border:1px solid var(--bd);
   border-radius:8px;padding:10px 12px;font-size:14px;font-family:inherit}
+input[type=text]:focus{outline:none;border-color:var(--gold)}
+
 .grid{display:grid;gap:10px}
 @media(min-width:720px){.grid.c2{grid-template-columns:1fr 1fr}}
-.tabs{display:flex;gap:5px;border-bottom:1px solid var(--line);margin-bottom:14px;
-  overflow-x:auto}
-.tab{padding:9px 13px;font-size:13.5px;color:var(--tx2);cursor:pointer;
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--bd);margin-bottom:14px;overflow-x:auto}
+.tab{padding:10px 14px;font-size:13.5px;color:var(--tx2);cursor:pointer;
   border-bottom:2px solid transparent;white-space:nowrap}
-.tab.on{color:var(--gold);border-bottom-color:var(--gold);font-weight:600}
-.bar{height:6px;background:var(--panel2);border-radius:99px;overflow:hidden}
-.bar>i{display:block;height:100%;background:var(--blue)}
-.sticky-actions{position:sticky;bottom:0;background:linear-gradient(transparent,var(--bg) 22%);
-  padding:14px 0 8px;display:flex;gap:8px;flex-wrap:wrap}
+.tab:hover{color:var(--tx)}
+.tab.on{color:var(--gold);border-bottom-color:var(--gold);font-weight:700}
+.bar{height:6px;background:var(--sf2);border-radius:99px;overflow:hidden}
+.bar>i{display:block;height:100%;background:var(--gold)}
 .empty{text-align:center;color:var(--tx3);padding:44px 16px}
-.kv{display:flex;gap:10px;font-size:13px;padding:5px 0;border-bottom:1px solid var(--line)}
+.kv{display:flex;gap:10px;font-size:13px;padding:6px 0;border-bottom:1px solid var(--bd2)}
 .kv b{color:var(--tx2);font-weight:500;min-width:74px}
-.banner{background:rgba(90,156,197,.12);border:1px solid rgba(90,156,197,.35);
-  border-radius:10px;padding:10px 13px;margin-bottom:12px;font-size:13px}
+.banner{background:var(--sf2);border:1px solid var(--bd);border-radius:10px;
+  padding:11px 14px;margin-bottom:12px;font-size:13px}
+
+/* 문항 페이지 네비게이션 */
+.pager{display:flex;align-items:center;justify-content:space-between;gap:10px;
+  background:var(--sf);border:1px solid var(--bd);border-radius:12px;
+  padding:10px 13px;margin-bottom:11px;position:sticky;top:56px;z-index:20;
+  box-shadow:var(--shadow)}
+.pagedots{display:flex;gap:5px;flex-wrap:wrap;justify-content:center;flex:1}
+.dot{min-width:34px;text-align:center;font-size:12px;padding:5px 9px;border-radius:7px;
+  border:1px solid var(--bd);background:var(--sf2);color:var(--tx2);cursor:pointer}
+.dot.on{background:var(--gold);border-color:var(--gold);color:#fff;font-weight:700}
+.dot.filled{border-color:var(--ok);color:var(--ok)}
+.dot.on.filled{background:var(--ok);border-color:var(--ok);color:#fff}
+
+details.prob>summary{cursor:pointer;font-size:13.5px;color:var(--tx2);
+  padding:4px 0;user-select:none}
+details.prob>summary:hover{color:var(--gold)}
 </style>
 </head>
 <body>
@@ -80,74 +119,72 @@ const { useState, useEffect, useRef, useCallback } = React;
 
 const SUBJECT = "공법";
 const ROUNDS = [1,2,3,4];
-
-// 허브·암기장에서 넘어온 쟁점 필터 (?issue=PUB-0001)
 const URLQ = new URLSearchParams(location.search);
 const INCOMING_ISSUE = URLQ.get("issue");
 
-const fmtDate = ts => {
-  const d = new Date(ts), p = n => String(n).padStart(2,'0');
-  return `${d.getFullYear()}.${p(d.getMonth()+1)}.${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())}`;
-};
+const fmtDate = ts => { const d=new Date(ts), p=n=>String(n).padStart(2,'0');
+  return `${d.getFullYear()}.${p(d.getMonth()+1)}.${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())}`; };
 const mmss = s => `${String(Math.floor(s/60)).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`;
+
+function useTheme(){
+  const [theme,setTheme] = useState(()=>document.documentElement.getAttribute('data-theme')||'light');
+  const toggle = ()=>{
+    const n = theme==='light'?'dark':'light';
+    setTheme(n);
+    document.documentElement.setAttribute('data-theme', n);
+    localStorage.setItem('cp_theme', n);
+  };
+  return [theme, toggle];
+}
 
 // ══════════════════════════════════════════════
 function App(){
-  const [ready,setReady]   = useState(false);
-  const [meta,setMeta]     = useState(null);
-  const [exams,setExams]   = useState([]);
-  const [issues,setIssues] = useState([]);
+  const [ready,setReady] = useState(false);
+  const [meta,setMeta]   = useState(null);
+  const [exams,setExams] = useState([]);
+  const [issues,setIssues]=useState([]);
   const [byIssue,setByIssue]=useState({});
-  const [err,setErr]       = useState(null);
+  const [err,setErr]     = useState(null);
+  const [theme,toggleTheme] = useTheme();
 
-  const [uid,setUid]       = useState(null);
-  const [uidInput,setUidInput]=useState("");
+  const [uid,setUid] = useState(null);
+  const [uidInput,setUidInput] = useState("");
+  const [round,setRound] = useState(1);
+  const [prog,setProg] = useState({});
+  const [records,setRecords] = useState([]);
 
-  const [round,setRound]   = useState(1);
-  const [prog,setProg]     = useState({});
-  const [records,setRecords]=useState([]);
+  const [view,setView] = useState("list");
+  const [curId,setCurId] = useState(null);
+  const [mode,setMode]   = useState(INCOMING_ISSUE ? "issue" : "exam");  // exam | issue
+  const [fType,setFType] = useState("all");
+  const [fIssue,setFIssue]=useState(INCOMING_ISSUE);
+  const [fDone,setFDone] = useState("all");
 
-  const [view,setView]     = useState("list");
-  const [curId,setCurId]   = useState(null);
-  const [fType,setFType]   = useState("all");
-  const [fIssue,setFIssue] = useState(INCOMING_ISSUE);
-  const [fDone,setFDone]   = useState("all");
+  useEffect(()=>{ (async()=>{
+    try{
+      const st = await Store.init({});
+      setUid(st.uid);
+      const r = await fetch(`data/${SUBJECT}/index.json`);
+      if(!r.ok) throw new Error(`data/${SUBJECT}/index.json 로드 실패 (${r.status})`);
+      const j = await r.json();
+      setMeta(j.meta); setExams(j.exams); setIssues(j.issues); setByIssue(j.byIssue);
+      setReady(true);
+    }catch(e){ setErr(e.message); }
+  })(); },[]);
 
-  // 초기화: Store + 데이터
-  useEffect(()=>{
-    (async()=>{
-      try{
-        const st = await Store.init({});   // remoteUrl 넣으면 기기 간 동기화
-        setUid(st.uid);
-        const r = await fetch(`data/${SUBJECT}/index.json`);
-        if(!r.ok) throw new Error(`data/${SUBJECT}/index.json 로드 실패 (${r.status})`);
-        const j = await r.json();
-        setMeta(j.meta); setExams(j.exams); setIssues(j.issues); setByIssue(j.byIssue);
-        setReady(true);
-      }catch(e){ setErr(e.message); }
-    })();
-  },[]);
-
-  // 사용자 데이터
-  const reload = useCallback(async(u=uid, r=round)=>{
+  const reload = useCallback(async(u=uid,r=round)=>{
     if(!u) return;
-    setProg(await Store.getProgress(SUBJECT, r));
+    setProg(await Store.getProgress(SUBJECT,r));
     setRecords(await Store.getRecords({subject:SUBJECT}));
   },[uid,round]);
-
   useEffect(()=>{ if(uid) reload(uid,round); },[uid,round,reload]);
 
-  const login = async(id)=>{ Store.setUser(id); setUid(id); };
-  const logout = ()=>{ Store.setUser(null); setUid(null); setView("list"); setCurId(null); };
-
-  if(err) return <div className="wrap"><div className="card" style={{borderColor:'var(--red)'}}>
-    <b>불러오기 오류</b>
-    <div className="muted" style={{marginTop:8}}>{err}</div>
-    <div className="muted" style={{marginTop:10,lineHeight:1.7}}>
+  if(err) return <div className="wrap"><div className="card" style={{borderColor:'var(--no)'}}>
+    <b>불러오기 오류</b><div className="muted" style={{marginTop:8}}>{err}</div>
+    <div className="muted" style={{marginTop:10,lineHeight:1.75}}>
       파일을 직접 열면(<code>file://</code>) 브라우저 보안정책 때문에 데이터를 못 읽습니다.<br/>
-      이 폴더에서 <code>python -m http.server 8000</code> 실행 후 <code>http://localhost:8000</code> 으로 접속하세요.
+      이 폴더에서 <code>python -m http.server 8000</code> 실행 후 접속하세요.
     </div></div></div>;
-
   if(!ready) return <div className="loading">⚖ 불러오는 중...</div>;
 
   if(!uid) return (
@@ -159,12 +196,11 @@ function App(){
         </div>
         <input type="text" placeholder="사용자 ID" value={uidInput} style={{width:'100%',marginBottom:10}}
           onChange={e=>setUidInput(e.target.value)}
-          onKeyDown={e=>{ if(e.key==='Enter'&&uidInput.trim()) login(uidInput.trim()); }} />
+          onKeyDown={e=>{ if(e.key==='Enter'&&uidInput.trim()){ Store.setUser(uidInput.trim()); setUid(uidInput.trim()); } }} />
         <button className="btn pri" style={{width:'100%'}} disabled={!uidInput.trim()}
-          onClick={()=>login(uidInput.trim())}>시작하기</button>
-        <div className="muted" style={{marginTop:13,fontSize:11.5,lineHeight:1.65}}>
-          {Store.isRemote()? "기기 간 동기화 활성" : "이 기기에 저장됩니다"} ·
-          답안 전문은 기기 밖으로 나가지 않습니다
+          onClick={()=>{ Store.setUser(uidInput.trim()); setUid(uidInput.trim()); }}>시작하기</button>
+        <div className="muted" style={{marginTop:13,fontSize:11.5,lineHeight:1.7}}>
+          {Store.isRemote()? "기기 간 동기화 활성":"이 기기에 저장됩니다"} · 답안 전문은 기기 밖으로 나가지 않습니다
         </div>
       </div>
     </div>
@@ -181,27 +217,30 @@ function App(){
           <div className="sub">{uid} · {round}회독 · {Object.keys(prog).length}/{meta.examCount} 완료</div>
         </div>
         <div className="row">
+          <button className="btn ghost" onClick={toggleTheme} title="테마 전환">
+            {theme==='light'?'🌙':'☀'}</button>
           <select className="btn" value={round} onChange={e=>setRound(Number(e.target.value))}>
             {ROUNDS.map(r=><option key={r} value={r}>{r}회독</option>)}
           </select>
-          <button className="btn" onClick={logout}>나가기</button>
+          <button className="btn ghost" onClick={()=>{ Store.setUser(null); setUid(null); setCurId(null); }}>나가기</button>
         </div>
       </div>
 
       <div className="wrap">
         <div className="tabs">
-          {[["list","문제 목록"],["history","답안 이력"],["stats","진도·약점"]].map(([k,l])=>
+          {[["list","문제 풀기"],["history","답안 이력"],["stats","진도·약점"]].map(([k,l])=>
             <div key={k} className={"tab"+(view===k?" on":"")}
               onClick={()=>{setView(k);setCurId(null);}}>{l}</div>)}
         </div>
 
         {view==="solve" && cur &&
-          <Solve exam={cur} issueMap={issueMap} round={round}
+          <Solve exam={cur} issueMap={issueMap} round={round} focusIssue={mode==="issue"?fIssue:null}
             onBack={()=>{setView("list");setCurId(null);}}
-            onSubmitted={async()=>{ await reload(); }} />}
+            onSubmitted={()=>reload()} />}
 
         {view==="list" &&
-          <ExamList exams={exams} issues={issues} issueMap={issueMap} prog={prog}
+          <ExamList exams={exams} issues={issues} issueMap={issueMap} prog={prog} byIssue={byIssue}
+            mode={mode} setMode={setMode}
             fType={fType} setFType={setFType} fIssue={fIssue} setFIssue={setFIssue}
             fDone={fDone} setFDone={setFDone} incoming={INCOMING_ISSUE}
             onPick={id=>{setCurId(id);setView("solve");}} />}
@@ -209,153 +248,211 @@ function App(){
         {view==="history" &&
           <History records={records} issueMap={issueMap}
             onOpen={id=>{setCurId(id);setView("solve");}}
-            onDelete={async at=>{ await Store.deleteRecord(at); await reload(); }} />}
+            onDelete={async at=>{ await Store.deleteRecord(at); reload(); }} />}
 
         {view==="stats" &&
           <Stats exams={exams} issues={issues} prog={prog} records={records}
-            meta={meta} byIssue={byIssue}
-            onPickIssue={id=>{ setFIssue(id); setView("list"); }} />}
+            byIssue={byIssue}
+            onPickIssue={id=>{ setMode("issue"); setFIssue(id); setView("list"); }} />}
       </div>
     </div>
   );
 }
 
 // ══════════════════════════════════════════════
-function ExamList({exams,issues,issueMap,prog,fType,setFType,fIssue,setFIssue,
-                   fDone,setFDone,incoming,onPick}){
-  const [showAllIssues,setShowAllIssues] = useState(false);
+function ExamList({exams,issues,issueMap,prog,byIssue,mode,setMode,
+                   fType,setFType,fIssue,setFIssue,fDone,setFDone,incoming,onPick}){
+  const [showAll,setShowAll] = useState(false);
+  const [q,setQ] = useState("");
 
+  // ── 쟁점별 모드 ──
+  if(mode==="issue"){
+    const kw = q.trim();
+    const list = issues.filter(it=> !kw || it.label.includes(kw) || it.id.includes(kw));
+    const sel = fIssue ? issueMap[fIssue] : null;
+    const selExams = fIssue ? (byIssue[fIssue]||[]).map(id=>exams.find(e=>e.id===id)).filter(Boolean) : [];
+
+    return (
+      <div>
+        <ModeSwitch mode={mode} setMode={setMode} />
+        {incoming && fIssue===incoming && sel &&
+          <div className="banner"><b>{sel.label}</b> 쟁점으로 이동했습니다.
+            <span className="muted"> (다른 페이지에서 연결)</span></div>}
+
+        <div className="card">
+          <div className="title">쟁점 선택 <span className="muted" style={{fontWeight:400}}>— 한 쟁점만 골라 그 지문들만 풀 수 있습니다</span></div>
+          <input type="text" placeholder="쟁점 검색 (예: 과잉금지, 원고적격)" value={q}
+            onChange={e=>setQ(e.target.value)} style={{width:'100%',marginBottom:11}} />
+          <div className="row">
+            {(showAll? list : list.slice(0,40)).map(it=>
+              <span key={it.id} className={"tag click"+(fIssue===it.id?" on":"")} title={it.id}
+                onClick={()=>setFIssue(fIssue===it.id?null:it.id)}>{it.label} {it.examCount}</span>)}
+            {list.length>40 &&
+              <span className="tag click" onClick={()=>setShowAll(v=>!v)}>
+                {showAll?"접기":`+${list.length-40} 더보기`}</span>}
+          </div>
+        </div>
+
+        {!fIssue && <div className="empty">위에서 쟁점을 고르면 해당 지문 목록이 나옵니다.</div>}
+
+        {fIssue && sel &&
+          <div>
+            <div className="row" style={{margin:'14px 2px 9px',justifyContent:'space-between'}}>
+              <div className="row">
+                <b style={{fontSize:15}}>{sel.label}</b>
+                <span className="tag">{sel.path?.join(' › ')}</span>
+                <span className="muted">{selExams.length}개 지문</span>
+              </div>
+              <button className="btn" onClick={()=>setFIssue(null)}>다른 쟁점</button>
+            </div>
+            {selExams.map(e=>
+              <ExamCard key={e.id} e={e} prog={prog} issueMap={issueMap}
+                highlight={fIssue} onPick={onPick} />)}
+          </div>}
+      </div>
+    );
+  }
+
+  // ── 회차별 모드 ──
   let list = exams;
-  if(fType!=="all")  list = list.filter(e=>e.examType===fType);
-  if(fIssue)         list = list.filter(e=>e.issueIds.includes(fIssue));
-  if(fDone==="todo") list = list.filter(e=>!prog[e.id]);
-  if(fDone==="done") list = list.filter(e=>prog[e.id]);
-
-  const topIssues = showAllIssues ? issues : issues.slice(0,24);
+  if(fType!=="all")  list=list.filter(e=>e.examType===fType);
+  if(fDone==="todo") list=list.filter(e=>!prog[e.id]);
+  if(fDone==="done") list=list.filter(e=>prog[e.id]);
 
   return (
     <div>
-      {incoming && fIssue===incoming && issueMap[incoming] &&
-        <div className="banner">
-          <b>{issueMap[incoming].label}</b> 쟁점으로 필터링되었습니다.
-          <span className="muted"> (다른 페이지에서 이동)</span>
-          <button className="btn" style={{marginLeft:10,padding:'4px 10px'}}
-            onClick={()=>setFIssue(null)}>전체 보기</button>
-        </div>}
-
+      <ModeSwitch mode={mode} setMode={setMode} />
       <div className="card">
         <div className="row" style={{marginBottom:9}}>
           <span className="muted" style={{minWidth:44}}>구분</span>
           {[["all","전체"],["실제기출","변호사시험"],["모의고사","모의고사"]].map(([k,l])=>
             <span key={k} className={"tag click"+(fType===k?" on":"")} onClick={()=>setFType(k)}>{l}</span>)}
         </div>
-        <div className="row" style={{marginBottom:9}}>
+        <div className="row">
           <span className="muted" style={{minWidth:44}}>진행</span>
           {[["all","전체"],["todo","안 푼 것"],["done","푼 것"]].map(([k,l])=>
             <span key={k} className={"tag click"+(fDone===k?" on":"")} onClick={()=>setFDone(k)}>{l}</span>)}
         </div>
-        <div className="row" style={{alignItems:'flex-start'}}>
-          <span className="muted" style={{minWidth:44,paddingTop:3}}>쟁점</span>
-          <div className="row" style={{flex:1}}>
-            <span className={"tag click"+(!fIssue?" on":"")} onClick={()=>setFIssue(null)}>전체</span>
-            {topIssues.map(it=>
-              <span key={it.id} className={"tag click"+(fIssue===it.id?" on":"")}
-                title={it.id} onClick={()=>setFIssue(fIssue===it.id?null:it.id)}>
-                {it.label} {it.examCount}</span>)}
-            {issues.length>24 &&
-              <span className="tag click" onClick={()=>setShowAllIssues(v=>!v)}>
-                {showAllIssues? "접기" : `+${issues.length-24} 더보기`}</span>}
-          </div>
-        </div>
       </div>
-
       <div className="muted" style={{margin:'13px 2px 8px'}}>{list.length}건</div>
       {list.length===0 && <div className="empty">조건에 맞는 문제가 없습니다.</div>}
+      {list.map(e=><ExamCard key={e.id} e={e} prog={prog} issueMap={issueMap} onPick={onPick}/>)}
+    </div>
+  );
+}
 
-      {list.map(e=>(
-        <div key={e.id} className="card" style={{cursor:'pointer'}} onClick={()=>onPick(e.id)}>
-          <div className="row" style={{justifyContent:'space-between',marginBottom:5}}>
-            <div className="row">
-              <span className={"tag"+(e.examType==="실제기출"?" gold":"")}>
-                {e.examType==="실제기출"?"변호사시험":"모의고사"}</span>
-              <b style={{fontSize:15}}>{e.label}</b>
-              {prog[e.id] && <span className="tag green">완료</span>}
-            </div>
-            <div className="muted">{e.questions.length}문항{e.totalPoints>0?` · ${e.totalPoints}점`:""}</div>
-          </div>
-          {e.factSummary &&
-            <div className="muted" style={{fontSize:13,lineHeight:1.65,margin:'5px 0 9px'}}>{e.factSummary}</div>}
-          <div className="row">
-            {e.issueIds.slice(0,7).map(i=>
-              <span key={i} className="tag">{issueMap[i]?.label || i}</span>)}
-            {e.issueIds.length>7 && <span className="muted">+{e.issueIds.length-7}</span>}
-          </div>
-          <div className="row" style={{marginTop:9}}>
-            {e.hasRubric   && <span className="tag green">채점기준표</span>}
-            {e.hasCasebook && <span className="tag green">모범답안</span>}
-          </div>
+function ModeSwitch({mode,setMode}){
+  return (
+    <div className="row" style={{marginBottom:12}}>
+      {[["exam","회차별로 풀기"],["issue","쟁점별로 풀기"]].map(([k,l])=>
+        <span key={k} className={"tag click"+(mode===k?" on":"")}
+          style={{padding:'7px 15px',fontSize:12.5}} onClick={()=>setMode(k)}>{l}</span>)}
+    </div>
+  );
+}
+
+function ExamCard({e,prog,issueMap,highlight,onPick}){
+  return (
+    <div className="card" style={{cursor:'pointer'}} onClick={()=>onPick(e.id)}>
+      <div className="row" style={{justifyContent:'space-between',marginBottom:5}}>
+        <div className="row">
+          <span className={"tag"+(e.examType==="실제기출"?" gold":"")}>
+            {e.examType==="실제기출"?"변호사시험":"모의고사"}</span>
+          <b style={{fontSize:15}}>{e.label}</b>
+          {prog[e.id] && <span className="tag ok">완료</span>}
         </div>
-      ))}
+        <div className="muted">
+          {e.groups?.length||0}문 · {e.questions.length}설문{e.totalPoints>0?` · ${e.totalPoints}점`:""}
+        </div>
+      </div>
+      {e.factSummary &&
+        <div className="muted" style={{fontSize:13,lineHeight:1.7,margin:'5px 0 9px'}}>{e.factSummary}</div>}
+      <div className="row">
+        {e.issueIds.slice(0,8).map(i=>
+          <span key={i} className={"tag"+(highlight===i?" gold":"")}>{issueMap[i]?.label||i}</span>)}
+        {e.issueIds.length>8 && <span className="muted">+{e.issueIds.length-8}</span>}
+      </div>
+      <div className="row" style={{marginTop:9}}>
+        {e.hasRubric   && <span className="tag ok">채점기준표</span>}
+        {e.hasCasebook && <span className="tag ok">모범답안</span>}
+      </div>
     </div>
   );
 }
 
 // ══════════════════════════════════════════════
-function Solve({exam,issueMap,round,onBack,onSubmitted}){
+function Solve({exam,issueMap,round,focusIssue,onBack,onSubmitted}){
   const [detail,setDetail] = useState(null);
-  const [err,setErr]       = useState(null);
-  const [text,setText]     = useState("");
+  const [err,setErr]   = useState(null);
+  const [page,setPage] = useState(0);            // 문항 그룹 인덱스
+  const [answers,setAnswers] = useState({});     // {groupKey: text}
   const [reveal,setReveal] = useState(false);
-  const [pane,setPane]     = useState("rubric");
-  const [cbIdx,setCbIdx]   = useState(0);
-  const [elapsed,setElapsed]=useState(0);
-  const [saved,setSaved]   = useState(false);
+  const [pane,setPane] = useState("rubric");
+  const [cbIdx,setCbIdx] = useState(0);
+  const [elapsed,setElapsed] = useState(0);
+  const [saved,setSaved] = useState(false);
+  const [showProblem,setShowProblem] = useState(true);
   const startRef = useRef(Date.now());
 
   useEffect(()=>{
-    let alive = true;
-    setDetail(null); setErr(null); setReveal(false); setCbIdx(0); setSaved(false);
-    startRef.current = Date.now(); setElapsed(0);
+    let alive=true;
+    setDetail(null); setErr(null); setPage(0); setReveal(false); setCbIdx(0); setSaved(false);
+    startRef.current=Date.now(); setElapsed(0);
     (async()=>{
       try{
-        const d = await Store.getDraft(exam.id);
-        if(alive) setText(d || "");
         const r = await fetch(`data/공법/exams/${encodeURIComponent(exam.id)}.json`);
         if(!r.ok) throw new Error("문제 상세 로드 실패");
         const j = await r.json();
-        if(alive) setDetail(j);
+        if(!alive) return;
+        setDetail(j);
+        const groups = j.groups?.length ? j.groups : [{key:"전체",label:"전체",questions:j.questions||[]}];
+        const drafts = {};
+        for(const g of groups) drafts[g.key] = await Store.getDraft(`${exam.id}::${g.key}`) || "";
+        if(alive) setAnswers(drafts);
       }catch(e){ if(alive) setErr(e.message); }
     })();
-    return ()=>{ alive = false; };
+    return ()=>{ alive=false; };
   },[exam.id]);
 
   useEffect(()=>{
-    const t = setInterval(()=>setElapsed(Math.floor((Date.now()-startRef.current)/1000)),1000);
+    const t=setInterval(()=>setElapsed(Math.floor((Date.now()-startRef.current)/1000)),1000);
     return ()=>clearInterval(t);
   },[exam.id]);
 
-  useEffect(()=>{
-    const t = setTimeout(()=>{ Store.setDraft(exam.id, text); },600);
-    return ()=>clearTimeout(t);
-  },[text,exam.id]);
+  const groups = detail?.groups?.length ? detail.groups
+    : (detail ? [{key:"전체",label:"전체",questions:detail.questions||[],points:0}] : []);
+  const g = groups[page];
 
-  if(err) return <div className="card" style={{borderColor:'var(--red)'}}>{err}
+  const setAnswer = (key,val)=>{
+    setAnswers(a=>({...a,[key]:val})); setSaved(false);
+    clearTimeout(setAnswer._t);
+    setAnswer._t = setTimeout(()=>Store.setDraft(`${exam.id}::${key}`, val), 600);
+  };
+
+  if(err) return <div className="card" style={{borderColor:'var(--no)'}}>{err}
     <div><button className="btn" style={{marginTop:10}} onClick={onBack}>목록으로</button></div></div>;
-  if(!detail) return <div className="card">불러오는 중...</div>;
+  if(!detail || !g) return <div className="card">불러오는 중...</div>;
+
+  const filled = groups.filter(x=>(answers[x.key]||"").trim()).length;
+  const totalChars = Object.values(answers).reduce((s,t)=>s+(t||"").trim().length,0);
 
   const submit = async()=>{
-    if(!text.trim()) return;
+    const parts = groups.map(x=>{
+      const t=(answers[x.key]||"").trim();
+      return t? `【${x.label}】\n${t}` : null;
+    }).filter(Boolean);
+    if(!parts.length) return;
     await Store.record({
       subject:"공법", mode:"case", examId:exam.id, label:exam.label,
-      round, issueIds:exam.issueIds, text:text.trim(), seconds:elapsed,
+      round, issueIds:exam.issueIds, text:parts.join("\n\n"), seconds:elapsed,
     });
-    const prog = await Store.getProgress("공법", round);
-    await Store.setProgress("공법", round, {...prog, [exam.id]:{done:true, at:Date.now()}});
+    const p = await Store.getProgress("공법",round);
+    await Store.setProgress("공법",round,{...p,[exam.id]:{done:true,at:Date.now()}});
     setSaved(true); setReveal(true);
     onSubmitted && onSubmitted();
   };
 
-  const cb = detail.casebookAnswers || [];
+  const cb = detail.casebookAnswers||[];
 
   return (
     <div>
@@ -363,7 +460,7 @@ function Solve({exam,issueMap,round,onBack,onSubmitted}){
         <button className="btn" onClick={onBack}>← 목록</button>
         <div className="row">
           <span className="muted">경과 {mmss(elapsed)}</span>
-          <span className="muted">· {text.trim().length}자</span>
+          <span className="muted">· 작성 {filled}/{groups.length}문 · {totalChars}자</span>
         </div>
       </div>
 
@@ -374,35 +471,68 @@ function Solve({exam,issueMap,round,onBack,onSubmitted}){
           <b style={{fontSize:16}}>{exam.label}</b>
         </div>
         <div className="row">{exam.issueIds.map(i=>
-          <span key={i} className="tag" title={i}>{issueMap[i]?.label || i}</span>)}</div>
+          <span key={i} className={"tag"+(focusIssue===i?" gold":"")} title={i}>
+            {issueMap[i]?.label||i}</span>)}</div>
       </div>
 
-      <div className="card">
-        <div className="title">문제</div>
-        <div className="pre">{detail.problemText}</div>
-      </div>
-
-      {detail.questions?.length>0 &&
-        <div className="card">
-          <div className="title">문항 구성</div>
-          {detail.questions.map((q,i)=>
-            <div key={i} className="kv">
-              <b>{q.no}</b><span style={{flex:1}}>{q.ask}</span>
-              {q.points!=null && <span className="muted">{q.points}점</span>}
-            </div>)}
+      {/* 문항 페이지 네비게이션 */}
+      {groups.length>1 &&
+        <div className="pager">
+          <button className="btn" disabled={page===0} onClick={()=>setPage(p=>p-1)}>← 이전</button>
+          <div className="pagedots">
+            {groups.map((x,i)=>
+              <span key={x.key}
+                className={"dot"+(i===page?" on":"")+((answers[x.key]||"").trim()?" filled":"")}
+                onClick={()=>setPage(i)} title={`${x.label} (${x.questions.length}설문)`}>{x.label}</span>)}
+          </div>
+          <button className="btn" disabled={page===groups.length-1} onClick={()=>setPage(p=>p+1)}>다음 →</button>
         </div>}
 
+      {/* 현재 문의 설문 */}
       <div className="card">
-        <div className="title">답안 작성 {saved && <span className="tag green">기록됨</span>}</div>
-        <textarea value={text} onChange={e=>{setText(e.target.value); setSaved(false);}}
-          placeholder="여기에 답안을 작성하세요. 자동 임시저장됩니다." />
+        <div className="row" style={{justifyContent:'space-between',marginBottom:9}}>
+          <div className="title" style={{margin:0}}>{g.label}</div>
+          {g.points>0 && <span className="tag">{g.points}점</span>}
+        </div>
+        {g.questions.map((q,i)=>
+          <div key={i} className="kv">
+            <b>{q.no}</b><span style={{flex:1}}>{q.ask}</span>
+            {q.points!=null && <span className="muted">{q.points}점</span>}
+          </div>)}
       </div>
 
-      <div className="sticky-actions">
-        <button className="btn pri" onClick={submit} disabled={!text.trim()}>답안 제출 · 기록</button>
+      {/* 문제 지문 (접기 가능) */}
+      <div className="card">
+        <details className="prob" open={showProblem} onToggle={e=>setShowProblem(e.target.open)}>
+          <summary>문제 지문 {showProblem? "접기":"펼치기"}</summary>
+          <div className="pre" style={{marginTop:10}}>{detail.problemText}</div>
+        </details>
+      </div>
+
+      {/* 답안 작성 (문항별) */}
+      <div className="card">
+        <div className="title">
+          {g.label} 답안 작성 {saved && <span className="tag ok">기록됨</span>}
+        </div>
+        <textarea value={answers[g.key]||""} onChange={e=>setAnswer(g.key,e.target.value)}
+          placeholder={`${g.label}에 대한 답안을 작성하세요. 자동 임시저장됩니다.`} />
+        <div className="row" style={{marginTop:9,justifyContent:'space-between'}}>
+          <span className="muted">{(answers[g.key]||"").trim().length}자</span>
+          <div className="row">
+            {page>0 && <button className="btn" onClick={()=>setPage(p=>p-1)}>← 이전 문</button>}
+            {page<groups.length-1 && <button className="btn" onClick={()=>setPage(p=>p+1)}>다음 문 →</button>}
+          </div>
+        </div>
+      </div>
+
+      <div className="row" style={{margin:'14px 0 10px'}}>
+        <button className="btn pri" onClick={submit} disabled={filled===0}>
+          전체 답안 제출 · 기록 ({filled}/{groups.length}문)</button>
         <button className="btn" onClick={()=>setReveal(v=>!v)}>
-          {reveal? "모범답안 접기":"모범답안 보기"}</button>
-        <button className="btn" onClick={async()=>{ setText(""); await Store.clearDraft(exam.id); }}>비우기</button>
+          {reveal?"모범답안 접기":"모범답안 보기"}</button>
+        <button className="btn" onClick={async()=>{
+          setAnswer(g.key,""); await Store.clearDraft(`${exam.id}::${g.key}`);
+        }}>이 문 비우기</button>
       </div>
 
       {reveal &&
@@ -414,36 +544,29 @@ function Solve({exam,issueMap,round,onBack,onSubmitted}){
               <div className={"tab"+(pane==="casebook"?" on":"")} onClick={()=>setPane("casebook")}>
                 사례집 모범답안 ({cb.length})</div>}
           </div>
-
           {pane==="rubric" && (detail.rubricText
             ? <div className="pre">{detail.rubricText}</div>
             : <div className="empty">이 시험은 공식 채점기준표가 공개되지 않았습니다.<br/>
                 사례집 모범답안 탭을 참고하세요.</div>)}
-
           {pane==="casebook" && cb.length>0 &&
             <div>
               <div className="row" style={{marginBottom:11}}>
-                {cb.map((b,i)=>
-                  <span key={i} className={"tag click"+(cbIdx===i?" on":"")}
-                    onClick={()=>setCbIdx(i)}>{b.author} {b.caseNo}</span>)}
+                {cb.map((b,i)=><span key={i} className={"tag click"+(cbIdx===i?" on":"")}
+                  onClick={()=>setCbIdx(i)}>{b.author} {b.caseNo}</span>)}
               </div>
               <div className="muted" style={{marginBottom:9}}>{cb[cbIdx].header}</div>
               <div className="pre">{cb[cbIdx].answerText}</div>
             </div>}
-
-          {(detail.caseCitations?.length>0 || detail.statutes?.length>0) &&
-            <div style={{marginTop:15,paddingTop:13,borderTop:'1px solid var(--line)'}}>
+          {(detail.caseCitations?.length>0||detail.statutes?.length>0) &&
+            <div style={{marginTop:15,paddingTop:13,borderTop:'1px solid var(--bd2)'}}>
               {detail.caseCitations?.length>0 &&
                 <div style={{marginBottom:10}}>
                   <div className="muted" style={{marginBottom:6}}>관련 판례</div>
                   <div className="row">{detail.caseCitations.slice(0,25).map(c=>
-                    <span key={c} className="tag">{c}</span>)}</div>
-                </div>}
+                    <span key={c} className="tag">{c}</span>)}</div></div>}
               {detail.statutes?.length>0 &&
-                <div>
-                  <div className="muted" style={{marginBottom:6}}>관련 조문</div>
-                  <div className="row">{detail.statutes.map(s=><span key={s} className="tag">{s}</span>)}</div>
-                </div>}
+                <div><div className="muted" style={{marginBottom:6}}>관련 조문</div>
+                  <div className="row">{detail.statutes.map(s=><span key={s} className="tag">{s}</span>)}</div></div>}
             </div>}
         </div>}
     </div>
@@ -468,43 +591,35 @@ function History({records,issueMap,onOpen,onDelete}){
           </div>
           {a.issueIds?.length>0 &&
             <div className="row" style={{marginBottom:9}}>
-              {a.issueIds.slice(0,6).map(i=>
-                <span key={i} className="tag">{issueMap[i]?.label||i}</span>)}
+              {a.issueIds.slice(0,6).map(i=><span key={i} className="tag">{issueMap[i]?.label||i}</span>)}
             </div>}
-          <details>
-            <summary className="muted" style={{cursor:'pointer'}}>답안 전문 보기</summary>
-            <div className="pre" style={{marginTop:10,padding:12,background:'var(--panel2)',borderRadius:8}}>
-              {a.text}</div>
-          </details>
+          <details><summary className="muted" style={{cursor:'pointer'}}>답안 전문 보기</summary>
+            <div className="pre" style={{marginTop:10,padding:12,background:'var(--sf2)',borderRadius:8}}>
+              {a.text}</div></details>
           <div className="row" style={{marginTop:10}}>
             <button className="btn" onClick={()=>onOpen(a.examId)}>다시 풀기</button>
             <button className="btn" onClick={()=>{ if(confirm("이 기록을 지울까요?")) onDelete(a.at); }}>삭제</button>
           </div>
-        </div>
-      ))}
+        </div>))}
     </div>
   );
 }
 
 // ══════════════════════════════════════════════
-function Stats({exams,issues,prog,records,meta,byIssue,onPickIssue}){
-  const done = new Set(Object.keys(prog));
-  const real = exams.filter(e=>e.examType==="실제기출");
-  const mock = exams.filter(e=>e.examType==="모의고사");
-  const pct = (a,b)=> b? Math.round(a/b*100):0;
-  const rd = real.filter(e=>done.has(e.id)).length;
-  const md = mock.filter(e=>done.has(e.id)).length;
+function Stats({exams,issues,prog,records,byIssue,onPickIssue}){
+  const done=new Set(Object.keys(prog));
+  const real=exams.filter(e=>e.examType==="실제기출");
+  const mock=exams.filter(e=>e.examType==="모의고사");
+  const pct=(a,b)=>b?Math.round(a/b*100):0;
+  const rd=real.filter(e=>done.has(e.id)).length, md=mock.filter(e=>done.has(e.id)).length;
 
-  const stat = issues.map(it=>{
-    const all = byIssue[it.id] || [];
-    const d = all.filter(id=>done.has(id));
-    return {...it, all: all.length, done: d.length};
-  }).filter(s=>s.all>0)
-    .sort((a,b)=> (a.done/a.all)-(b.done/b.all) || b.all-a.all);
+  const stat=issues.map(it=>{
+    const all=byIssue[it.id]||[];
+    return {...it, all:all.length, done:all.filter(id=>done.has(id)).length};
+  }).filter(s=>s.all>0).sort((a,b)=>(a.done/a.all)-(b.done/b.all)||b.all-a.all);
 
-  const weak = stat.filter(s=>s.done===0 && s.all>=3);
-  const sec = records.reduce((s,a)=>s+a.seconds,0);
-  const chars = records.reduce((s,a)=>s+a.chars,0);
+  const weak=stat.filter(s=>s.done===0&&s.all>=3);
+  const sec=records.reduce((s,a)=>s+a.seconds,0), chars=records.reduce((s,a)=>s+a.chars,0);
 
   return (
     <div>
@@ -514,8 +629,7 @@ function Stats({exams,issues,prog,records,meta,byIssue,onPickIssue}){
           {[["변호사시험",rd,real.length],["모의고사",md,mock.length]].map(([l,d,t])=>
             <div key={l} style={{marginBottom:11}}>
               <div className="row" style={{justifyContent:'space-between',marginBottom:5}}>
-                <span>{l}</span><span className="muted">{d}/{t} ({pct(d,t)}%)</span>
-              </div>
+                <span>{l}</span><span className="muted">{d}/{t} ({pct(d,t)}%)</span></div>
               <div className="bar"><i style={{width:pct(d,t)+"%"}}/></div>
             </div>)}
         </div>
@@ -525,16 +639,17 @@ function Stats({exams,issues,prog,records,meta,byIssue,onPickIssue}){
           <div className="kv"><b>총 작성량</b><span>{chars.toLocaleString()}자</span></div>
           <div className="kv"><b>총 소요시간</b><span>{Math.floor(sec/3600)}시간 {Math.floor(sec%3600/60)}분</span></div>
           <div className="kv" style={{borderBottom:'none'}}><b>평균 작성량</b>
-            <span>{records.length? Math.round(chars/records.length).toLocaleString():0}자</span></div>
+            <span>{records.length?Math.round(chars/records.length).toLocaleString():0}자</span></div>
         </div>
       </div>
 
       {weak.length>0 &&
         <div className="card">
-          <div className="title">한 번도 안 푼 빈출 쟁점 <span className="muted" style={{fontWeight:400}}>— 3회 이상 출제</span></div>
+          <div className="title">한 번도 안 푼 빈출 쟁점
+            <span className="muted" style={{fontWeight:400}}> — 3회 이상 출제 · 클릭하면 그 쟁점만 풀기</span></div>
           <div className="row">
-            {weak.slice(0,20).map(s=>
-              <span key={s.id} className="tag click" style={{borderColor:'var(--red)',color:'var(--red)'}}
+            {weak.slice(0,24).map(s=>
+              <span key={s.id} className="tag click" style={{borderColor:'var(--no)',color:'var(--no)'}}
                 onClick={()=>onPickIssue(s.id)}>{s.label} {s.all}</span>)}
           </div>
         </div>}
@@ -545,12 +660,10 @@ function Stats({exams,issues,prog,records,meta,byIssue,onPickIssue}){
           <div key={s.id} style={{marginBottom:9,cursor:'pointer'}} onClick={()=>onPickIssue(s.id)}>
             <div className="row" style={{justifyContent:'space-between',marginBottom:4}}>
               <span style={{fontSize:13.5}}>{s.label}</span>
-              <span className="muted">{s.done}/{s.all}</span>
-            </div>
+              <span className="muted">{s.done}/{s.all}</span></div>
             <div className="bar"><i style={{width:pct(s.done,s.all)+"%",
-              background: s.done===0?"var(--red)": s.done<s.all?"var(--gold)":"var(--green)"}}/></div>
-          </div>
-        ))}
+              background:s.done===0?"var(--no)":s.done<s.all?"var(--gold2)":"var(--ok)"}}/></div>
+          </div>))}
       </div>
     </div>
   );
