@@ -144,6 +144,7 @@ function App(){
   const [exams,setExams] = useState([]);
   const [issues,setIssues]=useState([]);
   const [byIssue,setByIssue]=useState({});
+  const [casebookToc,setCasebookToc]=useState(null);
   const [err,setErr]     = useState(null);
   const [theme,toggleTheme] = useTheme();
 
@@ -155,6 +156,7 @@ function App(){
 
   const [view,setView] = useState("list");
   const [curId,setCurId] = useState(null);
+  const [focusGroupKey,setFocusGroupKey] = useState(null);
   const [mode,setMode]   = useState(INCOMING_ISSUE ? "issue" : "exam");  // exam | issue
   const [fType,setFType] = useState("all");
   const [fIssue,setFIssue]=useState(INCOMING_ISSUE);
@@ -168,6 +170,8 @@ function App(){
       if(!r.ok) throw new Error(`data/${SUBJECT}/index.json 로드 실패 (${r.status})`);
       const j = await r.json();
       setMeta(j.meta); setExams(j.exams); setIssues(j.issues); setByIssue(j.byIssue);
+      fetch(`data/${SUBJECT}/casebook_toc.json`).then(r2=>r2.ok?r2.json():null)
+        .then(tj=>tj && setCasebookToc(tj)).catch(()=>{});
       setReady(true);
     }catch(e){ setErr(e.message); }
   })(); },[]);
@@ -235,19 +239,21 @@ function App(){
 
         {view==="solve" && cur &&
           <Solve exam={cur} issueMap={issueMap} round={round} focusIssue={mode==="issue"?fIssue:null}
-            onBack={()=>{setView("list");setCurId(null);}}
+            focusGroupKey={focusGroupKey}
+            onBack={()=>{setView("list");setCurId(null);setFocusGroupKey(null);}}
             onSubmitted={()=>reload()} />}
 
         {view==="list" &&
           <ExamList exams={exams} issues={issues} issueMap={issueMap} prog={prog} byIssue={byIssue}
+            casebookToc={casebookToc}
             mode={mode} setMode={setMode}
             fType={fType} setFType={setFType} fIssue={fIssue} setFIssue={setFIssue}
             fDone={fDone} setFDone={setFDone} incoming={INCOMING_ISSUE}
-            onPick={id=>{setCurId(id);setView("solve");}} />}
+            onPick={(id,groupKey)=>{setCurId(id);setFocusGroupKey(groupKey||null);setView("solve");}} />}
 
         {view==="history" &&
           <History records={records} issueMap={issueMap}
-            onOpen={id=>{setCurId(id);setView("solve");}}
+            onOpen={id=>{setCurId(id);setFocusGroupKey(null);setView("solve");}}
             onDelete={async at=>{ await Store.deleteRecord(at); reload(); }} />}
 
         {view==="stats" &&
@@ -260,10 +266,11 @@ function App(){
 }
 
 // ══════════════════════════════════════════════
-function ExamList({exams,issues,issueMap,prog,byIssue,mode,setMode,
+function ExamList({exams,issues,issueMap,prog,byIssue,casebookToc,mode,setMode,
                    fType,setFType,fIssue,setFIssue,fDone,setFDone,incoming,onPick}){
   const [showAll,setShowAll] = useState(false);
   const [q,setQ] = useState("");
+  const [issueSub,setIssueSub] = useState(fIssue ? "tag" : "toc");
 
   // ── 쟁점별 모드 ──
   if(mode==="issue"){
@@ -279,36 +286,49 @@ function ExamList({exams,issues,issueMap,prog,byIssue,mode,setMode,
           <div className="banner"><b>{sel.label}</b> 쟁점으로 이동했습니다.
             <span className="muted"> (다른 페이지에서 연결)</span></div>}
 
-        <div className="card">
-          <div className="title">쟁점 선택 <span className="muted" style={{fontWeight:400}}>— 한 쟁점만 골라 그 지문들만 풀 수 있습니다</span></div>
-          <input type="text" placeholder="쟁점 검색 (예: 과잉금지, 원고적격)" value={q}
-            onChange={e=>setQ(e.target.value)} style={{width:'100%',marginBottom:11}} />
-          <div className="row">
-            {(showAll? list : list.slice(0,40)).map(it=>
-              <span key={it.id} className={"tag click"+(fIssue===it.id?" on":"")} title={it.id}
-                onClick={()=>setFIssue(fIssue===it.id?null:it.id)}>{it.label} {it.examCount}</span>)}
-            {list.length>40 &&
-              <span className="tag click" onClick={()=>setShowAll(v=>!v)}>
-                {showAll?"접기":`+${list.length-40} 더보기`}</span>}
-          </div>
+        <div className="row" style={{marginBottom:12}}>
+          {[["toc","사례집 목차로 풀기"],["tag","쟁점 검색"]].map(([k,l])=>
+            <span key={k} className={"tag click"+(issueSub===k?" on":"")}
+              style={{padding:'7px 15px',fontSize:12.5}} onClick={()=>setIssueSub(k)}>{l}</span>)}
         </div>
 
-        {!fIssue && <div className="empty">위에서 쟁점을 고르면 해당 지문 목록이 나옵니다.</div>}
+        {issueSub==="toc" &&
+          (casebookToc
+            ? <CasebookBrowser casebookToc={casebookToc} onPick={onPick} />
+            : <div className="empty">사례집 목차 데이터가 없습니다.</div>)}
 
-        {fIssue && sel &&
-          <div>
-            <div className="row" style={{margin:'14px 2px 9px',justifyContent:'space-between'}}>
-              <div className="row">
-                <b style={{fontSize:15}}>{sel.label}</b>
-                <span className="tag">{sel.path?.join(' › ')}</span>
-                <span className="muted">{selExams.length}개 지문</span>
-              </div>
-              <button className="btn" onClick={()=>setFIssue(null)}>다른 쟁점</button>
+        {issueSub==="tag" && <div>
+          <div className="card">
+            <div className="title">쟁점 선택 <span className="muted" style={{fontWeight:400}}>— 한 쟁점만 골라 그 지문들만 풀 수 있습니다</span></div>
+            <input type="text" placeholder="쟁점 검색 (예: 과잉금지, 원고적격)" value={q}
+              onChange={e=>setQ(e.target.value)} style={{width:'100%',marginBottom:11}} />
+            <div className="row">
+              {(showAll? list : list.slice(0,40)).map(it=>
+                <span key={it.id} className={"tag click"+(fIssue===it.id?" on":"")} title={it.id}
+                  onClick={()=>setFIssue(fIssue===it.id?null:it.id)}>{it.label} {it.examCount}</span>)}
+              {list.length>40 &&
+                <span className="tag click" onClick={()=>setShowAll(v=>!v)}>
+                  {showAll?"접기":`+${list.length-40} 더보기`}</span>}
             </div>
-            {selExams.map(e=>
-              <ExamCard key={e.id} e={e} prog={prog} issueMap={issueMap}
-                highlight={fIssue} onPick={onPick} />)}
-          </div>}
+          </div>
+
+          {!fIssue && <div className="empty">위에서 쟁점을 고르면 해당 지문 목록이 나옵니다.</div>}
+
+          {fIssue && sel &&
+            <div>
+              <div className="row" style={{margin:'14px 2px 9px',justifyContent:'space-between'}}>
+                <div className="row">
+                  <b style={{fontSize:15}}>{sel.label}</b>
+                  <span className="tag">{sel.path?.join(' › ')}</span>
+                  <span className="muted">{selExams.length}개 지문</span>
+                </div>
+                <button className="btn" onClick={()=>setFIssue(null)}>다른 쟁점</button>
+              </div>
+              {selExams.map(e=>
+                <ExamCard key={e.id} e={e} prog={prog} issueMap={issueMap}
+                  highlight={fIssue} onPick={onPick} />)}
+            </div>}
+        </div>}
       </div>
     );
   }
@@ -337,6 +357,66 @@ function ExamList({exams,issues,issueMap,prog,byIssue,mode,setMode,
       <div className="muted" style={{margin:'13px 2px 8px'}}>{list.length}건</div>
       {list.length===0 && <div className="empty">조건에 맞는 문제가 없습니다.</div>}
       {list.map(e=><ExamCard key={e.id} e={e} prog={prog} issueMap={issueMap} onPick={onPick}/>)}
+    </div>
+  );
+}
+
+function CasebookBrowser({casebookToc,onPick}){
+  const books = Object.keys(casebookToc);
+  const [book,setBook] = useState(books[0]);
+  const [openParts,setOpenParts] = useState(()=>new Set([0]));
+
+  useEffect(()=>{ setOpenParts(new Set([0])); },[book]);
+
+  const data = casebookToc[book];
+  if(!data) return null;
+
+  const toggle = pi => setOpenParts(s=>{
+    const n=new Set(s); n.has(pi)?n.delete(pi):n.add(pi); return n;
+  });
+
+  return (
+    <div>
+      <div className="row" style={{marginBottom:11,justifyContent:'space-between'}}>
+        <div className="row">
+          {books.map(b=>
+            <span key={b} className={"tag click"+(book===b?" on":"")} onClick={()=>setBook(b)}>{b}</span>)}
+        </div>
+        <span className="muted">{data.meta?.title}</span>
+      </div>
+      {data.parts.map((p,pi)=>{
+        const isOpen = openParts.has(pi);
+        return (
+          <div key={pi} className="card" style={{padding:0,overflow:'hidden'}}>
+            <div className="row click" style={{justifyContent:'space-between',padding:'11px 14px'}}
+              onClick={()=>toggle(pi)}>
+              <b style={{fontSize:14}}>{p.title}</b>
+              <span className="muted">{p.cases.length}개 사례 {isOpen?'▲':'▼'}</span>
+            </div>
+            {isOpen && <div style={{borderTop:'1px solid var(--bd2)'}}>
+              {p.cases.map(c=>{
+                const clickable = !!(c.examId && c.groupKey);
+                return (
+                  <div key={c.caseNo} className={"row"+(clickable?" click":"")}
+                    style={{justifyContent:'space-between',padding:'9px 14px',
+                      borderBottom:'1px solid var(--bd2)',flexWrap:'nowrap',
+                      opacity:clickable?1:.45,cursor:clickable?'pointer':'default'}}
+                    onClick={()=>clickable && onPick(c.examId,c.groupKey)}
+                    title={clickable?"":"연결된 문제를 찾지 못했습니다 (데이터 범위 밖이거나 인식 오류)"}>
+                    <div style={{minWidth:0,flex:1}}>
+                      <div style={{fontSize:13.5}}>
+                        <span className="muted">사례{c.caseNo}.</span> {c.source}
+                      </div>
+                      <div className="muted" style={{fontSize:12.5,marginTop:2}}>{c.label}</div>
+                    </div>
+                    {!clickable && <span className="tag">미연결</span>}
+                  </div>
+                );
+              })}
+            </div>}
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -381,7 +461,7 @@ function ExamCard({e,prog,issueMap,highlight,onPick}){
 }
 
 // ══════════════════════════════════════════════
-function Solve({exam,issueMap,round,focusIssue,onBack,onSubmitted}){
+function Solve({exam,issueMap,round,focusIssue,focusGroupKey,onBack,onSubmitted}){
   const [detail,setDetail] = useState(null);
   const [err,setErr]   = useState(null);
   const [page,setPage] = useState(0);            // 문항 그룹 인덱스
@@ -409,10 +489,14 @@ function Solve({exam,issueMap,round,focusIssue,onBack,onSubmitted}){
         const drafts = {};
         for(const g of groups) drafts[g.key] = await Store.getDraft(`${exam.id}::${g.key}`) || "";
         if(alive) setAnswers(drafts);
+        if(focusGroupKey){
+          const gi = groups.findIndex(g=>g.key===focusGroupKey);
+          if(alive && gi>=0) setPage(gi);
+        }
       }catch(e){ if(alive) setErr(e.message); }
     })();
     return ()=>{ alive=false; };
-  },[exam.id]);
+  },[exam.id,focusGroupKey]);
 
   useEffect(()=>{
     const t=setInterval(()=>setElapsed(Math.floor((Date.now()-startRef.current)/1000)),1000);
