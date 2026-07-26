@@ -109,6 +109,13 @@ input[type=text]:focus{outline:none;border-color:var(--gold)}
 details.prob>summary{cursor:pointer;font-size:13.5px;color:var(--tx2);
   padding:4px 0;user-select:none}
 details.prob>summary:hover{color:var(--gold)}
+
+/* 문제 화면: 지문/문제/조문 구분 */
+.factbox{background:var(--sf2);border:1px solid var(--bd2);border-radius:10px;
+  padding:14px 16px;margin-top:10px}
+.qtext{font-weight:700;margin-top:14px}
+.refbox{margin-top:14px;padding-top:12px;border-top:2px dashed var(--bd2);
+  font-size:12.5px;line-height:1.75;color:var(--tx2)}
 </style>
 </head>
 <body>
@@ -125,6 +132,71 @@ const INCOMING_ISSUE = URLQ.get("issue");
 const fmtDate = ts => { const d=new Date(ts), p=n=>String(n).padStart(2,'0');
   return `${d.getFullYear()}.${p(d.getMonth()+1)}.${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())}`; };
 const mmss = s => `${String(Math.floor(s/60)).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`;
+
+// 지문(사실관계) / 문제(설문) / 조문(참조조문 등)을 블록으로 나눠 가독성을 높인다.
+// 한 시험에 사례가 여러 개 이어 붙은 경우 "<문제>"·"[참조조문]" 류 표지가 사례마다
+// 반복되므로, 등장 순서대로 훑으며 지문↔문제↔조문을 번갈아 분리한다. 표지들 사이에
+// 다음 사례의 지문이 곧바로 이어 붙는 경우도 있어 완벽하진 않지만, 표지를 아예 못 찾으면
+// 안전하게 전체를 지문 한 덩어리로 둔다.
+const MARK_RE = /[<\[【]\s*(문\s*제|참조\s*조문|참고\s*조문|참조\s*법령|참고\s*법령|관련\s*법령|참고\s*자료|심판대상조문)\s*[>\]】]/g;
+const isNumberedPara = p => /^\(?\d+\)?[.．]/.test(p.trim());
+
+function splitQuestionRun(chunk){
+  const paras = chunk.split(/\n[ \t]*\n/).map(p=>p.trim()).filter(Boolean);
+  let j=0;
+  while(j<paras.length && isNumberedPara(paras[j])) j++;
+  return {question:paras.slice(0,j).join('\n\n'), rest:paras.slice(j).join('\n\n')};
+}
+
+// 지문 텍스트 안에 표지 없이 곧바로 번호매김 설문이 이어지는 경우(예: 첫 사례 앞)를 대비해
+// fact 블록을 넣을 때도 한 번은 암묵적 분리를 시도한다.
+function pushFact(blocks, text){
+  // 표지 없이 사례가 여러 개 이어 붙기도 하므로, 남은 텍스트에서 다음 번호매김
+  // 설문 구간을 못 찾을 때까지 반복해서 지문↔문제를 계속 갈라낸다.
+  let remaining = text;
+  while(remaining){
+    const paras = remaining.split(/\n[ \t]*\n/).map(p=>p.trim()).filter(Boolean);
+    if(!paras.length) return;
+    let i=0;
+    while(i<paras.length && !isNumberedPara(paras[i])) i++;
+    if(i>=paras.length){
+      blocks.push({type:'fact', text:paras.join('\n\n')});
+      return;
+    }
+    if(i>0) blocks.push({type:'fact', text:paras.slice(0,i).join('\n\n')});
+    const {question,rest} = splitQuestionRun(paras.slice(i).join('\n\n'));
+    if(question) blocks.push({type:'question', text:question});
+    if(!rest || rest===remaining) return; // 진행이 없으면 무한루프 방지
+    remaining = rest;
+  }
+}
+
+function splitProblemText(text){
+  if(!text) return [];
+  const markers = [...text.matchAll(MARK_RE)];
+  const blocks = [];
+  if(markers.length===0){
+    pushFact(blocks, text.trim());
+    return blocks;
+  }
+  let cursor = 0;
+  markers.forEach((m,k)=>{
+    const factText = text.slice(cursor,m.index).trim();
+    if(factText) pushFact(blocks, factText);
+    const chunkEnd = k+1<markers.length ? markers[k+1].index : text.length;
+    const chunk = text.slice(m.index+m[0].length, chunkEnd);
+    if(/문\s*제/.test(m[0])){
+      const {question,rest} = splitQuestionRun(chunk);
+      if(question) blocks.push({type:'question', text:question});
+      if(rest) pushFact(blocks, rest);
+    } else {
+      const t = chunk.trim();
+      if(t) blocks.push({type:'ref', text:t});
+    }
+    cursor = chunkEnd;
+  });
+  return blocks;
+}
 
 function useTheme(){
   const [theme,setTheme] = useState(()=>document.documentElement.getAttribute('data-theme')||'light');
@@ -589,7 +661,12 @@ function Solve({exam,issueMap,round,focusIssue,focusGroupKey,onBack,onSubmitted}
       <div className="card">
         <details className="prob" open={showProblem} onToggle={e=>setShowProblem(e.target.open)}>
           <summary>문제 지문 {showProblem? "접기":"펼치기"}</summary>
-          <div className="pre" style={{marginTop:10}}>{detail.problemText}</div>
+          <div>
+            {splitProblemText(detail.problemText).map((b,i)=>
+              <div key={i} className={"pre "+(b.type==='fact'?'factbox':b.type==='question'?'qtext':'refbox')}>
+                {b.text}
+              </div>)}
+          </div>
         </details>
       </div>
 
