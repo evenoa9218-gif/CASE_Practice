@@ -75,6 +75,16 @@ textarea{width:100%;background:var(--sf);color:var(--tx);border:1px solid var(--
   border-radius:10px;padding:14px;font-size:15px;line-height:1.9;font-family:inherit;
   resize:vertical;min-height:300px}
 textarea:focus{outline:none;border-color:var(--gold)}
+
+/* 답안 작성칸: 실제 답안지처럼 줄 표시 */
+textarea.answer-sheet{
+  line-height:28px;
+  padding:14px 14px 14px 14px;
+  background-image:repeating-linear-gradient(to bottom,
+    transparent 0, transparent 27px, var(--bd2) 27px, var(--bd2) 28px);
+  background-position:0 14px;
+  background-repeat:repeat;
+}
 input[type=text]{background:var(--sf);color:var(--tx);border:1px solid var(--bd);
   border-radius:8px;padding:10px 12px;font-size:14px;font-family:inherit}
 input[type=text]:focus{outline:none;border-color:var(--gold)}
@@ -775,13 +785,13 @@ function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSu
             <div className="title">
               {g.label} 답안 작성 {saved && <span className="tag ok">기록됨</span>}
             </div>
-            <textarea value={answers[g.key]||""} onChange={e=>setAnswer(g.key,e.target.value)}
+            <textarea className="answer-sheet" value={answers[g.key]||""} onChange={e=>setAnswer(g.key,e.target.value)}
               placeholder={`${g.label}에 대한 답안을 작성하세요. 자동 임시저장됩니다.`} />
             <div className="row" style={{marginTop:9,justifyContent:'space-between'}}>
               <span className="muted">{(answers[g.key]||"").trim().length}자</span>
               <div className="row">
-                {page>0 && <button className="btn" onClick={()=>setPage(p=>p-1)}>← 이전 문</button>}
-                {page<groups.length-1 && <button className="btn" onClick={()=>setPage(p=>p+1)}>다음 문 →</button>}
+                {page>0 && <button className="btn" onClick={()=>setPage(p=>p-1)}>← 이전 문제</button>}
+                {page<groups.length-1 && <button className="btn" onClick={()=>setPage(p=>p+1)}>다음 문제 →</button>}
               </div>
             </div>
           </div>
@@ -793,7 +803,7 @@ function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSu
               {reveal?"모범답안 접기":"모범답안 보기"}</button>
             <button className="btn" onClick={async()=>{
               setAnswer(g.key,""); await Store.clearDraft(`${exam.id}::${g.key}`);
-            }}>이 문 비우기</button>
+            }}>이 문제 비우기</button>
           </div>
 
           {reveal &&
