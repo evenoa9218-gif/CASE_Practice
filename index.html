@@ -78,6 +78,11 @@ select.btn{padding:7px 10px}
 .pre{white-space:pre-wrap;word-break:break-word;font-size:14.8px;line-height:1.9;
   color:var(--tx)}
 
+/* AI 채점 결과. 채점은 흘러들어오므로 길이가 계속 늘어난다 — 카드 안에서만
+   스크롤하게 두어 답안 칸이 밀려나지 않게 한다. */
+.grade-card{border-color:var(--gold);max-height:52vh;overflow-y:auto}
+.grade-err{color:var(--no);font-size:13.5px;margin-bottom:9px}
+
 textarea{width:100%;background:var(--sf);color:var(--tx);border:1px solid var(--bd);
   border-radius:10px;padding:14px;font-size:15px;line-height:1.9;font-family:inherit;
   resize:vertical;min-height:300px}
@@ -173,6 +178,10 @@ const SUBJECTS = [
   {id:"민사법", label:"민사법"},
 ];
 const ROUNDS = [1,2,3,4];
+
+// AI 채점 Worker 주소. 배포한 뒤 여기에 넣으면 채점 버튼이 켜진다.
+// 비워 두면 채점 기능만 숨고 나머지는 그대로 돌아간다. (worker/README.md 참고)
+const GRADER_URL = "";
 const SPLIT_MIN = 25, SPLIT_MAX = 75;   // 문제/답안 2단 폭 비율 한계(%)
 const URLQ = new URLSearchParams(location.search);
 const INCOMING_ISSUE = URLQ.get("issue");
@@ -668,6 +677,7 @@ function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSu
   const [reveal,setReveal] = useState(false);
   const [pane,setPane] = useState("rubric");
   const [cbIdx,setCbIdx] = useState(0);
+  const [grade,setGrade] = useState(null);   // {running, text, score, error}
   const [elapsed,setElapsed] = useState(0);
   const [saved,setSaved] = useState(false);
   const [showProblem,setShowProblem] = useState(true);
@@ -768,6 +778,55 @@ function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSu
     await Store.setProgress(subject,round,{...p,[exam.id]:{done:true,at:Date.now()}});
     setSaved(true); setReveal(true);
     onSubmitted && onSubmitted();
+  };
+
+  // AI 채점 — Worker가 SSE로 흘려보내는 피드백을 받아 쌓는다.
+  // 피드백 전문은 기기에만 남는다(원격에는 점수·시간만 간다).
+  const runGrade = async()=>{
+    const text = (answers[g.key]||"").trim();
+    if(!text || !GRADER_URL) return;
+    setGrade({running:true, text:"", score:null, error:null});
+    try{
+      const res = await fetch(GRADER_URL, {
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body: JSON.stringify({subject, examId:exam.id, groupKey:g.key, answer:text}),
+      });
+      if(!res.ok){
+        const msg = await res.json().catch(()=>({error:`서버 오류 ${res.status}`}));
+        setGrade({running:false, text:"", score:null, error:msg.error||`서버 오류 ${res.status}`});
+        return;
+      }
+      // SSE를 직접 읽는다. EventSource는 POST를 못 보낸다.
+      const reader = res.body.getReader(), dec = new TextDecoder();
+      let buf = "", acc = "", err = null;
+      for(;;){
+        const {value, done} = await reader.read();
+        if(done) break;
+        buf += dec.decode(value, {stream:true});
+        const lines = buf.split("\n\n"); buf = lines.pop();   // 마지막 조각은 미완성
+        for(const line of lines){
+          if(!line.startsWith("data: ")) continue;
+          let ev; try{ ev = JSON.parse(line.slice(6)); }catch{ continue; }
+          if(ev.t){ acc += ev.t; setGrade(s=>({...s, text:acc})); }
+          if(ev.error) err = ev.error;
+        }
+      }
+      // 총점은 마지막 줄의 [[SCORE:n]]에 온다. 꺼내고 화면에서는 지운다.
+      const m = acc.match(/\[\[SCORE:\s*(\d+)\s*\]\]/);
+      const score = m ? Number(m[1]) : null;
+      const body = acc.replace(/\[\[SCORE:[^\]]*\]\]/g, "").trim();
+      setGrade({running:false, text:body, score, error:err});
+      if(score !== null){
+        await Store.record({
+          subject, mode:"case", examId:exam.id, label:`${exam.label} ${g.label}`,
+          round, issueIds:exam.issueIds, score, maxScore:g.points,
+          text, feedback:body, seconds:elapsed,
+        });
+      }
+    }catch(e){
+      setGrade({running:false, text:"", score:null, error:`채점 요청 실패: ${e.message}`});
+    }
   };
 
   const cb = detail.casebookAnswers||[];
@@ -873,10 +932,36 @@ function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSu
               전체 답안 제출 · 기록 ({filled}/{groups.length}문)</button>
             <button className="btn" onClick={()=>setReveal(v=>!v)}>
               {reveal?"모범답안 접기":"모범답안 보기"}</button>
+            {GRADER_URL &&
+              <button className="btn" onClick={runGrade}
+                disabled={grade?.running || !(answers[g.key]||"").trim()}>
+                {grade?.running ? "채점 중…" : "AI 채점"}</button>}
             <button className="btn" onClick={async()=>{
               setAnswer(g.key,""); await Store.clearDraft(`${exam.id}::${g.key}`);
             }}>이 문제 비우기</button>
           </div>
+
+          {grade &&
+            <div className="card grade-card">
+              <div className="row" style={{justifyContent:'space-between',marginBottom:9}}>
+                <div className="row">
+                  <strong>AI 채점</strong>
+                  {grade.score!==null && grade.score!==undefined &&
+                    <span className="tag gold">{grade.score} / {g.points}점</span>}
+                  {grade.running && <span className="muted">답안을 읽는 중…</span>}
+                </div>
+                <button className="btn" onClick={()=>setGrade(null)}>닫기</button>
+              </div>
+              {grade.error && <div className="grade-err">{grade.error}</div>}
+              {grade.text
+                ? <div className="pre">{grade.text}</div>
+                : grade.running && <div className="muted">
+                    채점기준표와 대조하고 있습니다. 30초쯤 걸립니다.</div>}
+              {!grade.running && grade.text &&
+                <div className="muted" style={{marginTop:9}}>
+                  이 피드백은 이 기기에만 저장됩니다. AI 채점은 참고용이며 실제 채점과 다를 수 있습니다.
+                </div>}
+            </div>}
 
           {reveal &&
             <div className="card">

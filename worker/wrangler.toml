@@ -1,0 +1,21 @@
+name = "case-grader"
+main = "src/index.js"
+compatibility_date = "2026-07-01"
+# Anthropic SDK가 Node 내장 모듈(stream 등)을 쓴다.
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+# 채점 깊이. high가 기본이고, medium으로 낮추면 응답이 빨라지는 대신
+# 채점이 얕아진다. 비밀값이 아니므로 여기 둔다.
+GRADE_EFFORT = "high"
+
+# 분당 요청 제한. API 키는 Worker 안에 있지만 엔드포인트 자체는 공개라
+# 이게 없으면 한 사람이 계속 호출해 요금을 태울 수 있다.
+[[unsafe.bindings]]
+name = "GRADE_LIMIT"
+type = "ratelimit"
+namespace_id = "1001"
+simple = { limit = 10, period = 60 }
+
+# API 키는 여기 적지 않는다. 배포 후 아래로 넣는다:
+#   npx wrangler secret put ANTHROPIC_API_KEY
