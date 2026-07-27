@@ -6,6 +6,11 @@
 <meta name="theme-color" content="#ecf4fb">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<!-- Pretendard: 네 앱 공통 본문 폰트. dynamic-subset은 unicode-range로 쪼개져 있어
+     실제로 화면에 쓰인 글자 조각만 내려받는다(한글 전체 폰트는 1MB가 넘는다). -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <title>사례형 연습 — 변호사시험</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
@@ -24,17 +29,18 @@
   --bg:#10192a; --sf:#172238; --sf2:#1d2d48; --bd:#284060; --bd2:#1e3254;
   --gold:#7ab8d8; --gold2:#9acce8; --gf:#2e6282;
   --tx:#cce6f8; --tx2:#6aa8cc; --tx3:#366078;
-  --hd:#0c1424; --ok:#4caf7d; --no:#e2685f; --shadow:0 1px 3px rgba(0,0,0,.4);
+  --hd:#0c1424; --ok:#4ade80; --no:#f87171; --shadow:0 1px 3px rgba(0,0,0,.4);
 }
 :root[data-theme="light"]{
   --bg:#ecf4fb; --sf:#ffffff; --sf2:#dceef8; --bd:#b4d0e8; --bd2:#cce0f2;
   --gold:#2464a0; --gold2:#2e74b5; --gf:#2a5f88;
   --tx:#192233; --tx2:#3a5870; --tx3:#5878a0;
-  --hd:#16233a; --ok:#2e7d55; --no:#c4463c; --shadow:0 1px 3px rgba(30,60,100,.10);
+  --hd:#16233a; --ok:#16a34a; --no:#dc2626; --shadow:0 1px 3px rgba(30,60,100,.10);
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--tx);
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Malgun Gothic",sans-serif;
+  font-family:'Pretendard Variable',Pretendard,system-ui,-apple-system,
+    "Segoe UI","Malgun Gothic",sans-serif;
   line-height:1.7;-webkit-text-size-adjust:100%}
 #root{min-height:100vh}
 .loading{display:flex;align-items:center;justify-content:center;min-height:100vh;color:var(--gold)}
