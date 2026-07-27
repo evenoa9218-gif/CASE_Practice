@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "case-verify",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-X", "utf8", ".claude/serve.py"],
+      "port": 8731,
+      "autoPort": true
+    }
+  ]
+}

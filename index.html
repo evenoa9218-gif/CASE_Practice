@@ -633,8 +633,9 @@ function ExamCard({e,prog,issueMap,highlight,onPick}){
           <b style={{fontSize:15}}>{e.label}</b>
           {prog[e.id] && <span className="tag ok">완료</span>}
         </div>
-        <div className="muted">
-          {e.groups?.length||0}문 · {e.questions.length}설문{e.totalPoints>0?` · ${e.totalPoints}점`:""}
+        <div className="muted"
+          title={e.groupSource==="estimated"?"문항(제N문) 구분이 확인되지 않아 추정한 값입니다":undefined}>
+          {e.groups?.length||0}문{e.groupSource==="estimated"?"(추정)":""} · {e.questions.length}설문{e.totalPoints>0?` · ${e.totalPoints}점`:""}
         </div>
       </div>
       {e.factSummary &&
@@ -789,6 +790,11 @@ function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSu
               <span key={i} className={"tag"+(focusIssue===i?" gold":"")} title={i}>
                 {issueMap[i]?.label||i}</span>)}</div>
           </div>
+
+          {exam.groupSource==="estimated" &&
+            <div className="muted" style={{fontSize:12,margin:'0 0 7px'}}>
+              ※ 이 회차는 실제 시험지의 문항 구분을 확인하지 못해 아래 문항 라벨이 추정값입니다.
+            </div>}
 
           {/* 문항 페이지 네비게이션 */}
           {groups.length>1 &&
