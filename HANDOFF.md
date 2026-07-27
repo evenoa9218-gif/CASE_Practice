@@ -113,7 +113,7 @@
 1. `_보류항목_사례집대조필요.md`(변시대비 자료 폴더에 위치) — 민사법 2013년 3차(사실관계 연도 2005 vs 2012 상이) / 국제거래법 2014년 1차 채점기준표(한쪽만 실질 내용 있음), 2건 모두 사례집 확보 후 대조 필요
 2. "선택과목 사례형" 통합 파일 15개(국제법·국제거래법分 추출 필요) — 사용자가 "내가 처리할 테니 놔두라"고 했으나, 실제로 처리됐는지 이후 확인된 적 없음
 3. "1~12회 선택형 최종정답" 등 전 과목 통합 정답 파일 — 원본 폴더에 그대로 보관 중, 분리 안 됨
-4. ~~나머지 4과목 태깅 결과가 옛 세션 임시폴더에만 있어 유실 위험~~ — 2026-07-27 해결. `Desktop/2026/변시대비 자료 및 pdf/모의고사 기출문제, 모범답안/_태깅데이터_백업/`에 `형사법_사례_final.json`·`민사법_사례_final.json`·`국제법_사례_final.json`·`국제거래법_사례_final.json` 복사 완료(원본 임시폴더 파일은 그대로 둠, 백업본이 정본은 아니고 안전망)
+4. ~~나머지 4과목 태깅 결과가 옛 세션 임시폴더에만 있어 유실 위험~~ — 2026-07-27 **완전 해결**. 1차로 `_태깅데이터_백업/` 폴더에 복사했고, 이어서 태깅 결과·사례집 블록·레지스트리·파이프라인 스크립트 전부를 저장소 `pipeline/`으로 이전해 커밋했다. 이제 임시폴더가 사라져도 무관하며, 다른 계정·PC에서도 클론만으로 `data/` 재생성이 가능하다(재현성 검증 완료)
 5. ~~공법_경향분석.md 위치~~ — 위 백업 폴더에 함께 복사 완료
 6. `Core_Notes`(암기장) 저장소가 `LawMJ-Mastery`에서 개명됨 — `MCQ`(구 `3000`)에서 겪은 것과 같은 절대경로 버그가 있을 가능성이 있으나 미확인
 7. 허브 저장소(`evenoa9218-gif.github.io`)는 생성만 되고 실제 대시보드/공용 서비스워커/PWA 미구축
@@ -140,7 +140,7 @@
 2. ~~형사법을 공법과 동일한 파이프라인으로 앱에 반영~~ — 2026-07-27 완료 (위 참고)
 3. ~~민사법을 공법·형사법과 동일한 파이프라인으로 앱에 반영~~ — 2026-07-27 완료 (위 참고). **다음은 국제법·국제거래법 차례**
 4. 나머지 2과목(국제법/국제거래법)도 동일 파이프라인으로 완성 — 이 둘은 선택과목이라 15회 변시 데이터가 없고(변시에서 국제법/국제거래법은 선택과목 응시자만 봄, 우리 데이터는 40건 모의고사 위주일 가능성 높음), 공법·형사법·민사법과는 데이터 구성이 다를 수 있으니 시작 전에 `_태깅데이터_백업/국제법_사례_final.json`·`국제거래법_사례_final.json` 구조부터 확인할 것
-5. 미해결 이슈 4·5번의 임시 스크래치패드 데이터(태깅 결과, 경향분석)를 영구 위치로 이전 — 2026-07-27에 백업은 완료(`_태깅데이터_백업/` 폴더), 다만 이건 안전망일 뿐 정본이 아니므로 각 과목 파이프라인을 돌릴 때 정식으로 앱 데이터까지 만들어 반영할 것
+5. ~~미해결 이슈 4·5번의 임시 스크래치패드 데이터(태깅 결과, 경향분석)를 영구 위치로 이전~~ — 2026-07-27 완료. 저장소 `pipeline/`(스크립트·소스·사례집블록·레지스트리) + `docs/경향분석_공법.md`로 이전, 재현성 검증까지 마침
 6. 허브 저장소(`evenoa9218-gif.github.io`) 실제 대시보드·공용 서비스워커 구축
 7. `Core_Notes` 절대경로 버그 점검(있다면 `MCQ` 때와 같은 방식으로 경로만 정밀 수정)
 8. `_보류항목_사례집대조필요.md` 2건 대조 확정 — 민사법 2013년 3차 건은 이번에 확보한 정연석 사례집으로 대조 가능할 수 있음(미해결 이슈 21번)
@@ -186,15 +186,28 @@
 - `HANDOFF.md` — 이 문서
 - 커밋 이력: `0d145eb`(초기 구축) → `51af271`(텍스트 정제) → `60d3795`(라이트 테마·쟁점별 풀이·문항 페이지 분리) → `cb7c584`(사례집 목차 브라우저) → `248322a`(HANDOFF 해시 수정) → `9e417e6`(지문/문제/조문 서식 분리) → `bbe03d8`(형사법 전체 반영 + 다과목 지원) → `7152cde`(HANDOFF 해시 수정) → `eb94f25`(문항 라벨을 실제 시험 표기로 재부여) → `14169ea`(HANDOFF 해시 수정) → `926d284`(문제 풀이 화면 좌우 2단 레이아웃) → `484639e`(HANDOFF 해시 수정) → `a7b0160`(답안 줄 표시·버튼 라벨 통일) → `bd4fc2d`(민사법 전체 반영: 사례집 매칭·쟁점 레지스트리·다과목 지원)
 
-### 로컬 파이프라인 스크립트 (git 미추적, 옛 세션 스크래치패드)
-경로: `C:\Users\82109\AppData\Local\Temp\claude\C--Users-82109\f172b145-1486-46f2-beaf-564463f95d74\scratchpad\`
-- `merge_casebook_형사법.py`, `clean_apply_형사법.py`, `build_issue_registry_형사법.py`, `build_case_app_data_형사법.py` — 공법용 스크립트(`merge_casebook_공법.py`, `clean_text.py`, `build_issue_registry.py`, `build_case_app_data.py`)를 형사법용으로 변형한 것
-- `merge_casebook_민사법.py`, `clean_apply_민사법.py`, `build_issue_registry_민사법.py`, `build_case_app_data_민사법.py` (신규) — 민사법용 변형
-- 위 스크립트들 **모두 임시폴더라 유실 위험 있음** — 재실행 필요해지면 이 문서의 로직 설명을 참고해 다시 작성 가능
-- `...\49071f9b-0ba0-409a-9882-b6d4c5953ba8\scratchpad\casebook\split_casebook_civil.py` (이번 세션 스크래치패드, 신규) — 정연석 민사 사례집 파싱 → `civil_casebook_blocks.json`(566블록)
-- 경로: `...\49071f9b-0ba0-409a-9882-b6d4c5953ba8\scratchpad\casebook\` (이번 세션 스크래치패드)
-  - `split_casebook_criminal.py` — 조균석 「형사법 사례형 해설」에서 변시 6~15회 사례 블록 추출 → `criminal_casebook_blocks.json`(20블록)
-  - `parse_toc.py`, `match_toc.py`, `build_data_file.py` — 공법 사례집 목차 파싱/매칭/데이터생성 스크립트(재사용 가능한 범용 구조, 헌법/행정법 전용 정규식은 book-specific config로 분리돼 있음)
+### 파이프라인 스크립트·소스데이터 — 2026-07-27 저장소로 이전 완료
+**이전에는 임시 스크래치패드에만 있어 유실 위험이 있었으나, 전부 저장소 안 `pipeline/`으로 옮겼다.**
+다른 계정·다른 PC에서도 클론만 하면 `data/` 전체를 재생성할 수 있다.
+
+- `pipeline/scripts/` — 스크립트 57개. 하드코딩된 절대경로는 전부 `paths.py` 상수 참조로 치환
+  - `paths.py`(신규) — 저장소 안 경로는 `__file__` 기준 상대경로, 저장소 밖 개인자료(원본 hwp/pdf, hwp5txt)는 환경변수(`CASE_RAW`/`CASE_PDF_ROOT`/`CASE_WORK`/`HWP5TXT`)로 지정
+  - 과목별 4단 체인: `merge_casebook_{과목}.py` → `clean_apply_{과목}.py`(공법은 `apply_clean.py`) → `build_issue_registry{_과목}.py` → `build_case_app_data{_과목}.py`, 이후 `relabel_groups.py`
+  - `split_casebook{,_criminal,_civil}.py` — 책별 사례집 파싱(마커 형식이 책마다 달라 공용 파서 불가)
+  - `parse_toc.py`·`match_toc.py`·`build_data_file.py` — 공법 사례집 목차 파싱/매칭/생성
+- `pipeline/source/` — 태깅 결과 정본 입력. `{과목}_사례_final.json` 5과목 + `공법_변시_final.json`
+- `pipeline/casebook/` — `casebook_blocks_공법.json`, `criminal_casebook_blocks.json`(20블록), `civil_casebook_blocks.json`(566블록), `toc_raw.json`, `toc_matched.json`
+- `pipeline/registry/` — `issues_*.json`, `exam_issues_*.json` 스냅샷
+- `pipeline/work/` — 중간 산출물, `.gitignore`로 제외(재생성 가능)
+- `pipeline/README.md`(신규) — 단계별 스크립트 역할, 재생성 명령, 책별 마커 형식, 알려진 한계
+- `docs/ARCHITECTURE.md`(신규) — 허브+위성 통합 시스템 설계(오리진 공유 이유, store.js API 계약, 쟁점 ID 체계, 프라이버시 경계, 100점 규칙, AI 채점 계획)
+- `docs/경향분석_공법.md` — 백업 폴더에만 있던 공법 출제경향 분석을 저장소로 이전
+
+**재현성 검증**: 빈 작업폴더에서 `pipeline/source`+`pipeline/casebook`만으로 공법·형사법·민사법 3과목
+체인을 처음부터 다시 돌린 결과가 커밋된 `data/`와 **바이트 단위로 동일**함을 확인했다(`git diff` 무변화).
+이 과정에서 공법 하류 스크립트 3개가 정제 **전** 파일(`공법_사례_full.json`)을 읽던 버그를 발견해
+정제본(`_full_clean.json`)을 읽도록 고쳤다 — 옛 세션에서 `_full.json`을 정제 결과로 덮어써서
+드러나지 않던 문제였다.
 
 ### `3000`(`MCQ`) 저장소 (github.com/evenoa9218-gif/MCQ, 로컬 경로 `projects/3000`)
 - `index.html`, `criminal.html`, `public-law.html`, `manifest.json`, `sw.js` — 저장소 개명(`3000`→`MCQ`)으로 깨진 절대경로 수정
@@ -210,8 +223,15 @@
 ### 참고만 하고 수정하지 않은 파일
 - `C:\Users\82109\.claude\projects\C--Users-82109\memory\hwp-pdf-conversion.md` (조회만 함)
 
-### 백업 완료 (2026-07-27), 그러나 아직 정식 앱 반영은 아님
+### 백업 (2026-07-27) — 이후 저장소로 정식 이전됨
 경로: `Desktop/2026/변시대비 자료 및 pdf/모의고사 기출문제, 모범답안/_태깅데이터_백업/`
-- `민사법_사례_final.json`, `국제법_사례_final.json`, `국제거래법_사례_final.json` — 태깅 완료, 아직 사례집 매칭·정제·앱 반영 전(다음 차례는 민사법)
-- `형사법_사례_final.json`(원본 태깅), `형사법_사례_full_clean.json`(정제 후), `issues_형사법.json`(쟁점 레지스트리), `criminal_casebook_blocks.json`(조균석 책 파싱 블록) — 형사법은 이미 앱에 반영 완료, 이 파일들은 재현/재검증용 중간 산출물
-- `공법_경향분석.md` — 공법 출제경향 분석 결과(333줄), 아직 어디에도 게시되지 않음
+`{과목}_사례_final.json` 4과목, `{형사법,민사법}_사례_full_clean.json`, `issues_{형사법,민사법}.json`,
+`{criminal,civil}_casebook_blocks.json`, `공법_경향분석.md`.
+
+이 폴더는 임시폴더 유실에 대비한 1차 안전망이었고, **지금은 저장소 `pipeline/`·`docs/`가 정본**이다
+(`_사례_final.json` → `pipeline/source/`, 사례집 블록 → `pipeline/casebook/`,
+레지스트리 → `pipeline/registry/`, 경향분석 → `docs/경향분석_공법.md`).
+백업 폴더는 그대로 두되, 앞으로 갱신할 필요는 없다. `_full_clean.json` 같은 중간 산출물은
+`pipeline/scripts`로 언제든 재생성되므로 커밋하지 않았다.
+
+국제법·국제거래법은 `pipeline/source/`에 태깅 결과만 있고 사례집 매칭·정제·앱 반영은 아직 전이다.

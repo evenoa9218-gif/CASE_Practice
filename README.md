@@ -27,6 +27,14 @@
 ```
 index.html              단일 파일 React 앱 (빌드 없음, CDN + Babel)
 core/store.js           4체계 공용 저장 추상화 (IndexedDB)
+docs/
+├─ ARCHITECTURE.md      허브+위성 통합 시스템 설계 (4체계 공용 규약)
+└─ 경향분석_공법.md       공법 출제경향 분석
+pipeline/               data/ 를 만들어내는 데이터 파이프라인 (README.md 참고)
+├─ scripts/             파이프라인 스크립트 57개 + paths.py
+├─ source/              태깅 결과 = 파이프라인 정본 입력 (5과목)
+├─ casebook/            사례집 파싱 블록 + 공법 목차
+└─ registry/            쟁점 레지스트리 스냅샷
 data/
 ├─ issues_공법.json      쟁점 레지스트리 (PUB-0001 ~ PUB-0424)
 ├─ issues_형사법.json    쟁점 레지스트리 (CRI-0001 ~ CRI-0550)
@@ -136,6 +144,19 @@ Store.sync(subject)
 ```bash
 python -m http.server 8000
 ```
+
+### 데이터를 다시 만들려면
+
+`data/` 전체는 `pipeline/source/` + `pipeline/casebook/`(둘 다 커밋되어 있음)에서 재생성할 수 있습니다.
+원본 hwp/pdf는 필요 없습니다. 실행 순서와 스크립트별 역할은 [`pipeline/README.md`](pipeline/README.md) 참고.
+
+2026-07-27 기준 공법·형사법·민사법 3과목 모두 재생성 결과가 커밋된 데이터와 바이트 단위로 동일함을 확인했습니다.
+
+### 다른 앱과 함께 작업하려면
+
+허브(`evenoa9218-gif.github.io`) + 위성 앱 4개(선택형/사례형/암기장/기록형)의 공용 규약 —
+같은 오리진을 쓰는 이유, `store.js` API 계약, 쟁점 ID 체계, 프라이버시 경계 — 는
+[`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)에 정리되어 있습니다.
 
 ## 아직 안 된 것
 
