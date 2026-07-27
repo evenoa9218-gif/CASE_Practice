@@ -39,6 +39,7 @@ body{margin:0;background:var(--bg);color:var(--tx);
 #root{min-height:100vh}
 .loading{display:flex;align-items:center;justify-content:center;min-height:100vh;color:var(--gold)}
 .wrap{max-width:1080px;margin:0 auto;padding:16px}
+.wrap.wide{max-width:1840px;padding:16px 20px}
 
 .hd{background:var(--hd);color:#e8f2fb;padding:13px 18px;
   display:flex;align-items:center;justify-content:space-between;gap:12px;
@@ -79,6 +80,7 @@ textarea:focus{outline:none;border-color:var(--gold)}
 /* 답안 작성칸: 실제 답안지처럼 줄 표시 */
 textarea.answer-sheet{
   line-height:28px;
+  min-height:max(300px, calc(100vh - 330px));
   padding:14px 14px 14px 14px;
   background-image:repeating-linear-gradient(to bottom,
     transparent 0, transparent 27px, var(--bd2) 27px, var(--bd2) 28px);
@@ -104,14 +106,27 @@ input[type=text]:focus{outline:none;border-color:var(--gold)}
 .banner{background:var(--sf2);border:1px solid var(--bd);border-radius:10px;
   padding:11px 14px;margin-bottom:12px;font-size:13px}
 
-/* 문제 풀이 화면: 왼쪽 문제 · 오른쪽 답안 2단 (스크롤 분리) */
-.solve-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
-.solve-col{display:flex;flex-direction:column;gap:11px;
+/* 문제 풀이 화면: 왼쪽 문제 · 오른쪽 답안 2단 (스크롤 분리, 가운데 분할선으로 폭 조절) */
+.solve-grid{display:grid;grid-template-columns:1fr 12px 1fr;gap:5px;align-items:start}
+.solve-col{display:flex;flex-direction:column;gap:11px;min-width:0;
   max-height:calc(100vh - 90px);overflow-y:auto;padding:2px 4px 2px 2px}
 .solve-col .card,.solve-col .pager{margin-bottom:0}
+
+/* 가운데 드래그 분할선 */
+.splitter{align-self:stretch;height:calc(100vh - 90px);cursor:col-resize;
+  display:flex;align-items:center;justify-content:center;
+  touch-action:none;user-select:none;border-radius:6px}
+.splitter::before{content:"";width:3px;height:52px;border-radius:3px;
+  background:var(--bd);transition:background .12s,height .12s}
+.splitter:hover::before,.splitter:focus-visible::before,.splitter.on::before{
+  background:var(--gold);height:100%}
+.splitter:focus-visible{outline:none}
+.solve-grid.dragging{cursor:col-resize;user-select:none}
+
 @media(max-width:860px){
-  .solve-grid{grid-template-columns:1fr}
+  .solve-grid{grid-template-columns:1fr !important}
   .solve-col{max-height:none;overflow:visible;padding:0}
+  .splitter{display:none}
 }
 
 /* 문항 페이지 네비게이션 */
@@ -152,6 +167,7 @@ const SUBJECTS = [
   {id:"민사법", label:"민사법"},
 ];
 const ROUNDS = [1,2,3,4];
+const SPLIT_MIN = 25, SPLIT_MAX = 75;   // 문제/답안 2단 폭 비율 한계(%)
 const URLQ = new URLSearchParams(location.search);
 const INCOMING_ISSUE = URLQ.get("issue");
 
@@ -406,7 +422,7 @@ function App(){
         </div>
       </div>
 
-      <div className="wrap">
+      <div className={"wrap"+(view==="solve"?" wide":"")}>
         <div className="tabs">
           {[["list","문제 풀기"],["history","답안 이력"],["stats","진도·약점"]].map(([k,l])=>
             <div key={k} className={"tab"+(view===k?" on":"")}
@@ -650,6 +666,41 @@ function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSu
   const [showProblem,setShowProblem] = useState(true);
   const startRef = useRef(Date.now());
 
+  // 좌우 폭 비율(%) — 가운데 분할선을 끌어서 조절, localStorage에 유지
+  const [split,setSplit] = useState(()=>{
+    const v = Number(localStorage.getItem('cp_split'));
+    return v>=SPLIT_MIN && v<=SPLIT_MAX ? v : 50;
+  });
+  const [dragging,setDragging] = useState(false);
+  const gridRef = useRef(null);
+
+  useEffect(()=>{ localStorage.setItem('cp_split', String(Math.round(split))); },[split]);
+
+  const startDrag = e=>{
+    e.preventDefault();
+    setDragging(true);
+    const move = ev=>{
+      const r = gridRef.current?.getBoundingClientRect();
+      if(!r || !r.width) return;
+      const pct = ((ev.clientX - r.left) / r.width) * 100;
+      setSplit(Math.min(SPLIT_MAX, Math.max(SPLIT_MIN, pct)));
+    };
+    const up = ()=>{
+      setDragging(false);
+      window.removeEventListener('pointermove',move);
+      window.removeEventListener('pointerup',up);
+    };
+    window.addEventListener('pointermove',move);
+    window.addEventListener('pointerup',up);
+  };
+
+  const nudge = e=>{
+    const d = e.key==="ArrowLeft" ? -2 : e.key==="ArrowRight" ? 2 : 0;
+    if(!d) return;
+    e.preventDefault();
+    setSplit(s=>Math.min(SPLIT_MAX, Math.max(SPLIT_MIN, s+d)));
+  };
+
   useEffect(()=>{
     let alive=true;
     setDetail(null); setErr(null); setPage(0); setReveal(false); setCbIdx(0); setSaved(false);
@@ -724,7 +775,8 @@ function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSu
         </div>
       </div>
 
-      <div className="solve-grid">
+      <div className={"solve-grid"+(dragging?" dragging":"")} ref={gridRef}
+        style={{gridTemplateColumns:`${split}fr 12px ${100-split}fr`}}>
         {/* ── 왼쪽: 문제 ── */}
         <div className="solve-col">
           <div className="card">
@@ -779,6 +831,13 @@ function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSu
             </details>
           </div>
         </div>
+
+        {/* ── 가운데: 폭 조절 분할선 (더블클릭 시 5:5 복귀) ── */}
+        <div className={"splitter"+(dragging?" on":"")} onPointerDown={startDrag}
+          onDoubleClick={()=>setSplit(50)} onKeyDown={nudge} tabIndex={0}
+          role="separator" aria-orientation="vertical"
+          aria-valuenow={Math.round(split)} aria-valuemin={SPLIT_MIN} aria-valuemax={SPLIT_MAX}
+          title="드래그해서 좌우 폭 조절 (더블클릭: 5:5)" />
 
         {/* ── 오른쪽: 답안 작성 ── */}
         <div className="solve-col">
