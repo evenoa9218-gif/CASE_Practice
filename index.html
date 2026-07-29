@@ -425,6 +425,8 @@ function App(){
           <div className="sub">{uid} · {round}회독 · {Object.keys(prog).length}/{meta.examCount} 완료</div>
         </div>
         <div className="row">
+          {/* 허브로 돌아가기. 앱을 잘못 골랐을 때 주소창을 건드리지 않고 나갈 길. */}
+          <a className="btn ghost" href="/" title="다른 앱 고르기">◀ 앱</a>
           <select className="btn" value={subject} onChange={e=>changeSubject(e.target.value)}>
             {SUBJECTS.map(s=><option key={s.id} value={s.id}>{s.label}</option>)}
           </select>
