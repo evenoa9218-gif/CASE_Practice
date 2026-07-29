@@ -181,7 +181,7 @@ const ROUNDS = [1,2,3,4];
 
 // AI 채점 Worker 주소. 배포한 뒤 여기에 넣으면 채점 버튼이 켜진다.
 // 비워 두면 채점 기능만 숨고 나머지는 그대로 돌아간다. (worker/README.md 참고)
-const GRADER_URL = "";
+const GRADER_URL = "https://case-grader.bar-exam.workers.dev";
 const SPLIT_MIN = 25, SPLIT_MAX = 75;   // 문제/답안 2단 폭 비율 한계(%)
 const URLQ = new URLSearchParams(location.search);
 const INCOMING_ISSUE = URLQ.get("issue");
