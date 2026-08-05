@@ -13,7 +13,9 @@ from collections import defaultdict
 from paths import CASEBOOK
 
 SOURCES = [("인사이트 상법", "commercial_cases.json",
-            "인사이트 상법 사례형 해설편 (2026)")]
+            "인사이트 상법 사례형 해설편 (2026)"),
+           ("송영곤 민사소송법", "civil_procedure_cases.json",
+            "송영곤 민소사연 (26.01)")]
 OUT_DIR = CASEBOOK.parent.parent / "data" / "민사법"
 
 
@@ -30,10 +32,17 @@ def main():
         for k, c in enumerate(cases):
             c["uid"] = f"m{chr(ord('a') + i)}{k + 1:03d}"
 
-        by_exam, orphan = defaultdict(list), []
+        # 출처가 아예 없는 것과, 출처는 있지만 앱 데이터 범위 밖인 것을 구분한다.
+        # 둘을 뭉뚱그리면 "범위 밖"이라는 잘못된 설명이 붙는다.
+        by_exam, outside, nosrc = defaultdict(list), [], []
         for c in cases:
             eid = c["source"]["examId"]
-            (by_exam[eid] if eid in known else orphan).append(c)
+            if eid is None:
+                nosrc.append(c)
+            elif eid in known:
+                by_exam[eid].append(c)
+            else:
+                outside.append(c)
 
         def row(c, linked):
             return {"uid": c["uid"], "caseNo": c["caseNo"],
@@ -45,17 +54,23 @@ def main():
         for eid in sorted(by_exam, key=lambda x: (("변시" not in x), x)):
             rows += [row(c, True) for c in sorted(by_exam[eid], key=lambda x: str(x["caseNo"]))]
 
-        parts = [{"title": f"기출 연계 ({len(rows)}사례 · {len(by_exam)}회차)", "cases": rows}]
-        if orphan:
-            parts.append({"title": f"앱 범위 밖 회차 ({len(orphan)}사례)",
-                          "cases": [row(c, False) for c in orphan]})
+        parts = []
+        if rows:
+            parts.append({"title": f"기출 연계 ({len(rows)}사례 · {len(by_exam)}회차)",
+                          "cases": rows})
+        if outside:
+            parts.append({"title": f"앱 범위 밖 회차 ({len(outside)}사례)",
+                          "cases": [row(c, False) for c in outside]})
+        if nosrc:
+            parts.append({"title": f"출처 미표기 ({len(nosrc)}사례)",
+                          "cases": [row(c, False) for c in nosrc]})
 
         toc[name] = {"meta": {"title": title, "year": 2026}, "parts": parts}
         for c in cases:
             texts[c["uid"]] = {"title": c["title"], "source": c["source"],
                                "area": c["area"], "book": c["book"],
                                "author": c["author"], "text": c["text"]}
-        print(f"{name}: 기출 연계 {len(rows)} / 범위 밖 {len(orphan)}")
+        print(f"{name}: 기출 연계 {len(rows)} / 범위 밖 {len(outside)} / 출처 미표기 {len(nosrc)}")
 
     (OUT_DIR / "casebook_toc.json").write_text(
         json.dumps(toc, ensure_ascii=False, indent=1), encoding="utf-8")

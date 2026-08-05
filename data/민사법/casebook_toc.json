@@ -1393,5 +1393,603 @@
     ]
    }
   ]
+ },
+ "송영곤 민사소송법": {
+  "meta": {
+   "title": "송영곤 민소사연 (26.01)",
+   "year": 2026
+  },
+  "parts": [
+   {
+    "title": "출처 미표기 (65사례)",
+    "cases": [
+     {
+      "uid": "mb001",
+      "caseNo": "1",
+      "source": "출처 미표기",
+      "label": "서",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb002",
+      "caseNo": "2",
+      "source": "출처 미표기",
+      "label": "합의관할②- 합의관할의 종류와 승계(2)",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb003",
+      "caseNo": "3",
+      "source": "출처 미표기",
+      "label": "합의관할③ — 약관규제법에 따른 전속적 관할합의 해석",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb004",
+      "caseNo": "4",
+      "source": "출처 미표기",
+      "label": "관할이송의 구속력",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb005",
+      "caseNo": "5",
+      "source": "출처 미표기",
+      "label": "법관제척②- 파가환송되기 전의 원삼판결에 관여한 경우",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb006",
+      "caseNo": "6",
+      "source": "출처 미표기",
+      "label": "당사자능력③- 비법안사단이총유물과 관련하여소제기시정관절차 혹은 사원총회결의홈결시",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb007",
+      "caseNo": "7",
+      "source": "출처 미표기",
+      "label": "당사자적격①- 말소등기청구소송에서 파고적격 . 일반적 이행의 소어서의 표I고적격",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb008",
+      "caseNo": "8",
+      "source": "출처 미표기",
+      "label": "당사자적격② - 제3지소송담당1）",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb009",
+      "caseNo": "9",
+      "source": "출처 미표기",
+      "label": "장래이행의 소",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb010",
+      "caseNo": "10",
+      "source": "출처 미표기",
+      "label": "저!휴다 확인의 소①一 저당권자가 제기한 유치권부존재확인의 소와 확인의 이익",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb011",
+      "caseNo": "11",
+      "source": "출처 미표기",
+      "label": "［론 •일부청구와 과실상계",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb012",
+      "caseNo": "12",
+      "source": "출처 미표기",
+      "label": "중복제소① - 채권자대위소송과 중복제소",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb013",
+      "caseNo": "13",
+      "source": "출처 미표기",
+      "label": "중복제소③ - 일부청구 소송계속 중 제기된 진부청구의 중복제소 해당성",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb014",
+      "caseNo": "14",
+      "source": "출처 미표기",
+      "label": "조건부 소취히합의시 조건을 이행하지 않았을 경우 소이익 유무에 대한 판단",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb015",
+      "caseNo": "15",
+      "source": "출처 미표기",
+      "label": "L완상소②\"판결정본의 공사송달 • 추후보완상소",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb016",
+      "caseNo": "16",
+      "source": "출처 미표기",
+      "label": "소송계속 중 당사자가 사망한 경우 법률문제③— 소송대리권 수여후소송대리인이당사자 사망",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb017",
+      "caseNo": "17",
+      "source": "출처 미표기",
+      "label": "M",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb018",
+      "caseNo": "18",
+      "source": "출처 미표기",
+      "label": "문서 진정성립에 관한 자백 및 처분문서의 사실상 증명력",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb019",
+      "caseNo": "19",
+      "source": "출처 미표기",
+      "label": "공동소송인독립의 원칙 • 당사자일방의 불출석과 의제자백 - 공시송달과 주장 • 증명책임",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb020",
+      "caseNo": "20",
+      "source": "출처 미표기",
+      "label": "증명책임 및 손해발생사실은 인정되나 구체적인 손해액수를 증명하기어려운 경우 법원의조치",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb021",
+      "caseNo": "21",
+      "source": "출처 미표기",
+      "label": "재소금지⑤-권리보호이익의 동일성",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb022",
+      "caseNo": "22",
+      "source": "출처 미표기",
+      "label": "재소금X©- 선행소송의1심에서상계g변을제출하여1심판결로 본안에관한 판댄상겨恩변 배체을 받은 상태에서자동채권",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb023",
+      "caseNo": "23",
+      "source": "출처 미표기",
+      "label": "소송상 화해와 기판력②",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb024",
+      "caseNo": "24",
+      "source": "출처 미표기",
+      "label": "제소전 화해와 기판력",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb025",
+      "caseNo": "25",
+      "source": "출처 미표기",
+      "label": "판결확정시기②- 상소권포기와 판결확정시기 • 보조참가인의 소송행위 • 독립당사자",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb026",
+      "caseNo": "26",
+      "source": "출처 미표기",
+      "label": "판결편취M",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb027",
+      "caseNo": "27",
+      "source": "출처 미표기",
+      "label": "판결편취②■자백간주에 의한 판결편취",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb028",
+      "caseNo": "28",
+      "source": "출처 미표기",
+      "label": "판결편취③- 자백간주에 의한 판결편취 • 소송계속 중당사자 사망과 소송절차 중단 및 수계",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb029",
+      "caseNo": "29",
+      "source": "출처 미표기",
+      "label": "소멸시효 연징을 위한 산소제기와 기판력②",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb030",
+      "caseNo": "30",
+      "source": "출처 미표기",
+      "label": "가판력의 시적 범위①- 토지임차인의 건물매수청구권과 차단효",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb031",
+      "caseNo": "31",
+      "source": "출처 미표기",
+      "label": "기판력의A|적범위®-전 A* 변론종결아전에존* 증거방법을 새로 발견하여후소에서제출한 경우 7®력의차단호적용 여부",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb032",
+      "caseNo": "32",
+      "source": "출처 미표기",
+      "label": "기판력의 시적 범위⑥一 정가금변경의 소",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb033",
+      "caseNo": "33",
+      "source": "출처 미표기",
+      "label": "기판력의 객관적 범위① - 소멸시효중단을 위한 산소제기와 소송촉진법상 가산금리 적용 문제",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb034",
+      "caseNo": "34",
+      "source": "출처 미표기",
+      "label": "기판력의 객관적 범위③- 동시이행항변에 대한 판단과 기판력",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb035",
+      "caseNo": "35",
+      "source": "출처 미표기",
+      "label": "기판력의 객관적 범위④ - 피고가 동시이행항변으로 주장한 채권을 수동채권으로 한 상계",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb036",
+      "caseNo": "36",
+      "source": "출처 미표기",
+      "label": "7|판력의주관적범우®-원고가피고명의이뚜기말소층구소송에서승소확정판결을받은경우 ‘변론종결전피고로부터하타토지의소유권",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb037",
+      "caseNo": "37",
+      "source": "출처 미표기",
+      "label": "기판력의 주관적 범위⑤- 토지소유주가 건물소유주를 상대로 건물철거승소판결 받은 후 건물",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb038",
+      "caseNo": "38",
+      "source": "출처 미표기",
+      "label": "기판력의 주관적 범W- 소유권에 가한 목적물 인도청구 소송어서패소한 자로부터 목적물의소유권을",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb039",
+      "caseNo": "39",
+      "source": "출처 미표기",
+      "label": "단순병합 사건을 선택적 병합청구시 법률관계®",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb040",
+      "caseNo": "40",
+      "source": "출처 미표기",
+      "label": "단순병합 사건을 선택적 병합청구시 법률관겨②",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb041",
+      "caseNo": "41",
+      "source": "출처 미표기",
+      "label": "선택적 병합사건을 예비적 병합으로 청구한 경우 판단누락에 따른 구제책 및 항소심 심판형태①",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb042",
+      "caseNo": "42",
+      "source": "출처 미표기",
+      "label": "선택적 병합사건을 예비적 병합청구한 경우 법원의 심판순서 및 항소심 판결형태 ②",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb043",
+      "caseNo": "43",
+      "source": "출처 미표기",
+      "label": "항소심에서의 추가적 병합과 항소심 심리방식②",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb044",
+      "caseNo": "44",
+      "source": "출처 미표기",
+      "label": "원고 본소청구기각시 피고의 예비적 반소에 대한 판단",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb045",
+      "caseNo": "45",
+      "source": "출처 미표기",
+      "label": "서",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb046",
+      "caseNo": "46",
+      "source": "출처 미표기",
+      "label": "필수적 공동소송①— 민법상 조합의 소송형태",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb047",
+      "caseNo": "47",
+      "source": "출처 미표기",
+      "label": "필수적 공동소송©- 공유물분할청구소송 • 추후보완항소 • 무권리자처분행위 추인",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb048",
+      "caseNo": "48",
+      "source": "출처 미표기",
+      "label": "팔수적 공동소송⑤ — 소의 주관적 • 예비적 병햅2）",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb049",
+      "caseNo": "49",
+      "source": "출처 미표기",
+      "label": "필수적 공동소송⑧— 소의 주관적 • 예비적 병합（5）",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb050",
+      "caseNo": "50",
+      "source": "출처 미표기",
+      "label": "- 소의 주관적 • 선택적 병합",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb051",
+      "caseNo": "51",
+      "source": "출처 미표기",
+      "label": "보조참가의 적법성②",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb052",
+      "caseNo": "52",
+      "source": "출처 미표기",
+      "label": "보조참가인의 법적 지위① - 보조참가인의 항소제기시 항소기간 기산일수）",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb053",
+      "caseNo": "53",
+      "source": "출처 미표기",
+      "label": "보조참가인의 법적 지위②- 피보조참가인의 선행행위를 다툴 수 있는지 여부 • 보조참가인의",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb054",
+      "caseNo": "54",
+      "source": "출처 미표기",
+      "label": "보조참가의 참가적 효력",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb055",
+      "caseNo": "55",
+      "source": "출처 미표기",
+      "label": "소송고지와 참가적 효력",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb056",
+      "caseNo": "56",
+      "source": "출처 미표기",
+      "label": "독립당사자참가의 적법성②",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb057",
+      "caseNo": "57",
+      "source": "출처 미표기",
+      "label": "독립당사자참가의 심리 - 상소불가분의 원칙 • 불이익변경금지 원칙①",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb058",
+      "caseNo": "58",
+      "source": "출처 미표기",
+      "label": "독립당사자참가의 심리 • 상소불가분의 원칙 • 불이익변경금지 원칙②",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb059",
+      "caseNo": "59",
+      "source": "출처 미표기",
+      "label": "소송계속 중 계쟁물을 양수한 자를 당사자로 추가할 수 있는 방법",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb060",
+      "caseNo": "60",
+      "source": "출처 미표기",
+      "label": "소송계속 중 저|3자를 공동원고로 추가하는 경우",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb061",
+      "caseNo": "61",
+      "source": "출처 미표기",
+      "label": "매매계약에가한 이전등기소송절차에 마匠인으로부터목적부동산을 대물변제명목으로 양도받",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb062",
+      "caseNo": "62",
+      "source": "출처 미표기",
+      "label": "채권자- 보증인 보증금청구 소송에 주채무자가 소송참가할 수 있는 방법",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb063",
+      "caseNo": "63",
+      "source": "출처 미표기",
+      "label": "상소이익③ 一 1심에서 전부 승소한 자의 항소이익",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb064",
+      "caseNo": "64",
+      "source": "출처 미표기",
+      "label": "상소이익©-원고가 주장하지않은청구원인AW＞정하여승소판결을선고한 경우원고의상소이익및채권자대위소송에",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "mb065",
+      "caseNo": "65",
+      "source": "출처 미표기",
+      "label": "불이익변경금지원칙（3）",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     }
+    ]
+   }
+  ]
  }
 }
