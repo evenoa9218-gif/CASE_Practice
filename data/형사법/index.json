@@ -6936,14 +6936,14 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "사례1-",
+     "label": "사례1-",
      "count": 8,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "사례2-",
+     "label": "사례2-",
      "count": 7,
      "points": 100
     }
@@ -7068,14 +7068,14 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "사례1-",
+     "label": "사례1-",
      "count": 7,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "사례2-",
+     "label": "사례2-",
      "count": 7,
      "points": 100
     }
@@ -7178,14 +7178,14 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "사례1-",
+     "label": "사례1-",
      "count": 5,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "사례2-",
+     "label": "사례2-",
      "count": 5,
      "points": 100
     }
@@ -7301,14 +7301,14 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "사례1-",
+     "label": "사례1-",
      "count": 7,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "사례2-",
+     "label": "사례2-",
      "count": 6,
      "points": 100
     }
@@ -7424,14 +7424,14 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "사례1-",
+     "label": "사례1-",
      "count": 6,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "사례2-",
+     "label": "사례2-",
      "count": 7,
      "points": 100
     }
@@ -7546,14 +7546,14 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "문제1",
+     "label": "문제1",
      "count": 8,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "문제2",
+     "label": "문제2",
      "count": 6,
      "points": 100
     }
@@ -7652,14 +7652,14 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "문제1",
+     "label": "문제1",
      "count": 5,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "문제2",
+     "label": "문제2",
      "count": 6,
      "points": 100
     }
@@ -7749,14 +7749,14 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "문제1",
+     "label": "문제1",
      "count": 4,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "문제2",
+     "label": "문제2",
      "count": 5,
      "points": 100
     }
@@ -7851,14 +7851,14 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "문제1",
+     "label": "문제1",
      "count": 6,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "문제2",
+     "label": "문제2",
      "count": 4,
      "points": 100
     }
@@ -7952,14 +7952,14 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "문제1",
+     "label": "문제1",
      "count": 5,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "문제2",
+     "label": "문제2",
      "count": 5,
      "points": 100
     }
@@ -8074,21 +8074,21 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "사례1-",
+     "label": "사례1-",
      "count": 4,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "사례2-",
+     "label": "사례2-",
      "count": 8,
      "points": 100
     }
    ],
    "totalPoints": 200,
    "hasRubric": false,
-   "hasCasebook": false,
+   "hasCasebook": true,
    "unmappedKeywords": []
   },
   {
@@ -8195,21 +8195,21 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "사례1-",
+     "label": "사례1-",
      "count": 5,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "사례2-",
+     "label": "사례2-",
      "count": 6,
      "points": 100
     }
    ],
    "totalPoints": 200,
    "hasRubric": false,
-   "hasCasebook": false,
+   "hasCasebook": true,
    "unmappedKeywords": []
   },
   {
@@ -8305,21 +8305,21 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "사례1-",
+     "label": "사례1-",
      "count": 5,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "사례2-",
+     "label": "사례2-",
      "count": 4,
      "points": 100
     }
    ],
    "totalPoints": 200,
    "hasRubric": false,
-   "hasCasebook": false,
+   "hasCasebook": true,
    "unmappedKeywords": []
   },
   {
@@ -8410,21 +8410,21 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "사례1-",
+     "label": "사례1-",
      "count": 5,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "사례2-",
+     "label": "사례2-",
      "count": 4,
      "points": 100
     }
    ],
    "totalPoints": 200,
    "hasRubric": false,
-   "hasCasebook": false,
+   "hasCasebook": true,
    "unmappedKeywords": []
   },
   {
@@ -8511,21 +8511,21 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "사례1-",
+     "label": "사례1-",
      "count": 4,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "사례2-",
+     "label": "사례2-",
      "count": 4,
      "points": 100
     }
    ],
    "totalPoints": 200,
    "hasRubric": false,
-   "hasCasebook": false,
+   "hasCasebook": true,
    "unmappedKeywords": []
   },
   {
@@ -9099,14 +9099,14 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "사례1-",
+     "label": "사례1-",
      "count": 6,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "사례2-",
+     "label": "사례2-",
      "count": 6,
      "points": 100
     }
@@ -9207,14 +9207,14 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "사례1-",
+     "label": "사례1-",
      "count": 4,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "사례2-",
+     "label": "사례2-",
      "count": 6,
      "points": 100
     }
@@ -9325,14 +9325,14 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "사례1-",
+     "label": "사례1-",
      "count": 6,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "사례2-",
+     "label": "사례2-",
      "count": 6,
      "points": 100
     }
@@ -9445,14 +9445,14 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "사례1-",
+     "label": "사례1-",
      "count": 5,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "사례2-",
+     "label": "사례2-",
      "count": 7,
      "points": 100
     }
@@ -9552,14 +9552,14 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "사례1-",
+     "label": "사례1-",
      "count": 5,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "사례2-",
+     "label": "사례2-",
      "count": 5,
      "points": 100
     }
@@ -9651,14 +9651,14 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "사례1-",
+     "label": "사례1-",
      "count": 4,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "사례2-",
+     "label": "사례2-",
      "count": 4,
      "points": 100
     }
@@ -9764,14 +9764,14 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "문제1",
+     "label": "문제1",
      "count": 6,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "문제2",
+     "label": "문제2",
      "count": 5,
      "points": 100
     }
@@ -9876,62 +9876,62 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "문제1",
+     "label": "문제1",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "문제2",
+     "label": "문제2",
      "count": 1,
      "points": 40
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "문제3",
+     "label": "문제3",
      "count": 2,
      "points": 20
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "문제4",
+     "label": "문제4",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "문제5",
+     "label": "문제5",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "문제6",
+     "label": "문제6",
      "count": 1,
      "points": 50
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "문제7",
+     "label": "문제7",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "문제8",
+     "label": "문제8",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "문제9",
+     "label": "문제9",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의5",
-     "label": "제2문의5",
+     "key": "문제10",
+     "label": "문제10",
      "count": 1,
      "points": 15
     }
@@ -10020,14 +10020,14 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "문제1",
+     "label": "문제1",
      "count": 4,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "문제2",
+     "label": "문제2",
      "count": 4,
      "points": 100
     }
@@ -10121,14 +10121,14 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "문제1",
+     "label": "문제1",
      "count": 5,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "문제2",
+     "label": "문제2",
      "count": 4,
      "points": 100
     }
@@ -10228,32 +10228,32 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "문제1",
+     "label": "문제1",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "문제2",
+     "label": "문제2",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "문제3",
+     "label": "문제3",
      "count": 2,
      "points": 20
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "문제4",
+     "label": "문제4",
      "count": 2,
      "points": 20
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "문제5",
+     "label": "문제5",
      "count": 4,
      "points": 100
     }
@@ -10357,14 +10357,14 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "문제1",
+     "label": "문제1",
      "count": 5,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "문제2",
+     "label": "문제2",
      "count": 6,
      "points": 100
     }
@@ -10478,62 +10478,62 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "설문1",
+     "label": "설문1",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "설문2",
+     "label": "설문2",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "설문3",
+     "label": "설문3",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "설문4",
+     "label": "설문4",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "설문5",
+     "label": "설문5",
      "count": 2,
      "points": 12
     },
     {
-     "key": "제1문의6",
-     "label": "제1문의6",
+     "key": "설문6",
+     "label": "설문6",
      "count": 3,
      "points": 18
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "설문7",
+     "label": "설문7",
      "count": 1,
      "points": 60
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "설문8",
+     "label": "설문8",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "설문9",
+     "label": "설문9",
      "count": 2,
      "points": 23
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "설문10",
+     "label": "설문10",
      "count": 1,
      "points": 7
     }
@@ -10626,62 +10626,62 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "설문1",
+     "label": "설문1",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "설문2",
+     "label": "설문2",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "설문3",
+     "label": "설문3",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "설문4",
+     "label": "설문4",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "설문5",
+     "label": "설문5",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "설문6",
+     "label": "설문6",
      "count": 1,
      "points": 60
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "설문7",
+     "label": "설문7",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "설문8",
+     "label": "설문8",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "설문9",
+     "label": "설문9",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의5",
-     "label": "제2문의5",
+     "key": "설문10",
+     "label": "설문10",
      "count": 1,
      "points": 10
     }
@@ -10794,68 +10794,68 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "설문1",
+     "label": "설문1",
      "count": 2,
      "points": 30
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "설문2",
+     "label": "설문2",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "설문3",
+     "label": "설문3",
      "count": 2,
      "points": 15
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "설문4",
+     "label": "설문4",
      "count": 2,
      "points": 10
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "설문5",
+     "label": "설문5",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "설문6",
+     "label": "설문6",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "설문7",
+     "label": "설문7",
      "count": 1,
      "points": 35
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "설문8",
+     "label": "설문8",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "설문9",
+     "label": "설문9",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의5",
-     "label": "제2문의5",
+     "key": "설문10",
+     "label": "설문10",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의6",
-     "label": "제2문의6",
+     "key": "설문11",
+     "label": "설문11",
      "count": 1,
      "points": 15
     }
@@ -10953,56 +10953,56 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "설문1",
+     "label": "설문1",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "설문2",
+     "label": "설문2",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "설문3",
+     "label": "설문3",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "설문4",
+     "label": "설문4",
      "count": 2,
      "points": 15
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "설문5",
+     "label": "설문5",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "설문6",
+     "label": "설문6",
      "count": 1,
      "points": 35
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "설문7",
+     "label": "설문7",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "설문8",
+     "label": "설문8",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "설문9",
+     "label": "설문9",
      "count": 2,
      "points": 15
     }
@@ -11085,50 +11085,50 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "설문1",
+     "label": "설문1",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "설문2",
+     "label": "설문2",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "설문3",
+     "label": "설문3",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "설문4",
+     "label": "설문4",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "설문5",
+     "label": "설문5",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "설문6",
+     "label": "설문6",
      "count": 1,
      "points": 60
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "설문7",
+     "label": "설문7",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "설문8",
+     "label": "설문8",
      "count": 1,
      "points": 10
     }
@@ -11226,62 +11226,62 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "설문1",
+     "label": "설문1",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "설문2",
+     "label": "설문2",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "설문3",
+     "label": "설문3",
      "count": 1,
      "points": 5
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "설문4",
+     "label": "설문4",
      "count": 2,
      "points": 30
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "설문5",
+     "label": "설문5",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "설문6",
+     "label": "설문6",
      "count": 1,
      "points": 45
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "설문7",
+     "label": "설문7",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "설문8",
+     "label": "설문8",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "설문9",
+     "label": "설문9",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의5",
-     "label": "제2문의5",
+     "key": "설문10",
+     "label": "설문10",
      "count": 1,
      "points": 10
     }
@@ -11386,44 +11386,44 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "문1",
+     "label": "문1",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "문2",
+     "label": "문2",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "문3",
+     "label": "문3",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "문4",
+     "label": "문4",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "문5",
+     "label": "문5",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의6",
-     "label": "제1문의6",
+     "key": "문6",
+     "label": "문6",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "문(2)",
+     "label": "문(2)",
      "count": 5,
      "points": 100
     }
@@ -11523,26 +11523,26 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "문1",
+     "label": "문1",
      "count": 1,
      "points": 40
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "문2",
+     "label": "문2",
      "count": 2,
      "points": 30
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "문3",
+     "label": "문3",
      "count": 2,
      "points": 30
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "문(2)",
+     "label": "문(2)",
      "count": 5,
      "points": 100
     }
@@ -11640,38 +11640,38 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "문1",
+     "label": "문1",
      "count": 1,
      "points": 50
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "문2",
+     "label": "문2",
      "count": 5,
      "points": 110
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "문3",
+     "label": "문3",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "문4",
+     "label": "문4",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "문5",
+     "label": "문5",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "문6",
+     "label": "문6",
      "count": 1,
      "points": 10
     }
@@ -11767,32 +11767,32 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "문1",
+     "label": "문1",
      "count": 1,
      "points": 60
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "문2",
+     "label": "문2",
      "count": 5,
      "points": 110
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "문3",
+     "label": "문3",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "문4",
+     "label": "문4",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "문5",
+     "label": "문5",
      "count": 1,
      "points": 10
     }
@@ -11893,38 +11893,38 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "문1",
+     "label": "문1",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "문2",
+     "label": "문2",
      "count": 2,
      "points": 35
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "문3",
+     "label": "문3",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "문4",
+     "label": "문4",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "문5",
+     "label": "문5",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "문(2)",
+     "label": "문(2)",
      "count": 4,
      "points": 100
     }
@@ -12027,14 +12027,14 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "문1",
+     "label": "문1",
      "count": 5,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "문2",
+     "label": "문2",
      "count": 5,
      "points": 100
     }
@@ -12143,68 +12143,68 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "설문1",
+     "label": "설문1",
      "count": 1,
      "points": 40
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "설문2",
+     "label": "설문2",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "설문3",
+     "label": "설문3",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "설문4",
+     "label": "설문4",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "설문5",
+     "label": "설문5",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의6",
-     "label": "제1문의6",
+     "key": "설문6",
+     "label": "설문6",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "설문7",
+     "label": "설문7",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "설문8",
+     "label": "설문8",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "설문9",
+     "label": "설문9",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "설문10",
+     "label": "설문10",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제2문의5",
-     "label": "제2문의5",
+     "key": "설문11",
+     "label": "설문11",
      "count": 1,
      "points": 10
     }
@@ -12318,74 +12318,74 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "설문1",
+     "label": "설문1",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "설문2",
+     "label": "설문2",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "설문3",
+     "label": "설문3",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "설문4",
+     "label": "설문4",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "설문5",
+     "label": "설문5",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의6",
-     "label": "제1문의6",
+     "key": "설문6",
+     "label": "설문6",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "설문7",
+     "label": "설문7",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "설문8",
+     "label": "설문8",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "설문9",
+     "label": "설문9",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "설문10",
+     "label": "설문10",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의5",
-     "label": "제2문의5",
+     "key": "설문11",
+     "label": "설문11",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의6",
-     "label": "제2문의6",
+     "key": "설문12",
+     "label": "설문12",
      "count": 1,
      "points": 20
     }
@@ -12487,62 +12487,62 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "설문1",
+     "label": "설문1",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "설문2",
+     "label": "설문2",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "설문3",
+     "label": "설문3",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "설문4",
+     "label": "설문4",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "설문5",
+     "label": "설문5",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "설문6",
+     "label": "설문6",
      "count": 1,
      "points": 40
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "설문7",
+     "label": "설문7",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "설문8",
+     "label": "설문8",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "설문9",
+     "label": "설문9",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의5",
-     "label": "제2문의5",
+     "key": "설문10",
+     "label": "설문10",
      "count": 1,
      "points": 10
     }
@@ -12651,68 +12651,68 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "설문1",
+     "label": "설문1",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "설문2",
+     "label": "설문2",
      "count": 1,
      "points": 40
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "설문3",
+     "label": "설문3",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "설문4",
+     "label": "설문4",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "설문5",
+     "label": "설문5",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "설문6",
+     "label": "설문6",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "설문7",
+     "label": "설문7",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "설문8",
+     "label": "설문8",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "설문9",
+     "label": "설문9",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의5",
-     "label": "제2문의5",
+     "key": "설문10",
+     "label": "설문10",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의6",
-     "label": "제2문의6",
+     "key": "설문11",
+     "label": "설문11",
      "count": 1,
      "points": 15
     }
@@ -12813,62 +12813,62 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "설문1",
+     "label": "설문1",
      "count": 1,
      "points": 40
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "설문2",
+     "label": "설문2",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "설문3",
+     "label": "설문3",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "설문4",
+     "label": "설문4",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "설문5",
+     "label": "설문5",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "설문6",
+     "label": "설문6",
      "count": 1,
      "points": 45
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "설문7",
+     "label": "설문7",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "설문8",
+     "label": "설문8",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "설문9",
+     "label": "설문9",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의5",
-     "label": "제2문의5",
+     "key": "설문10",
+     "label": "설문10",
      "count": 1,
      "points": 15
     }
@@ -12966,56 +12966,56 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "설문1",
+     "label": "설문1",
      "count": 1,
      "points": 60
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "설문2",
+     "label": "설문2",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "설문3",
+     "label": "설문3",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "설문4",
+     "label": "설문4",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "설문5",
+     "label": "설문5",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "설문6",
+     "label": "설문6",
      "count": 1,
      "points": 35
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "설문7",
+     "label": "설문7",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "설문8",
+     "label": "설문8",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의5",
-     "label": "제2문의5",
+     "key": "설문9",
+     "label": "설문9",
      "count": 1,
      "points": 15
     }
@@ -13108,14 +13108,14 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "사례1-",
+     "label": "사례1-",
      "count": 4,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "사례2-",
+     "label": "사례2-",
      "count": 4,
      "points": 100
     }
@@ -13213,14 +13213,14 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "사례1-",
+     "label": "사례1-",
      "count": 3,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "사례2-",
+     "label": "사례2-",
      "count": 6,
      "points": 100
     }
@@ -13311,14 +13311,14 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "사례1-",
+     "label": "사례1-",
      "count": 4,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "사례2-",
+     "label": "사례2-",
      "count": 4,
      "points": 100
     }
@@ -13403,14 +13403,14 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "사례1-",
+     "label": "사례1-",
      "count": 3,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "사례2-",
+     "label": "사례2-",
      "count": 4,
      "points": 100
     }
@@ -13495,14 +13495,14 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "사례1-",
+     "label": "사례1-",
      "count": 4,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "사례2-",
+     "label": "사례2-",
      "count": 3,
      "points": 100
     }
@@ -13593,14 +13593,14 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "사례1-",
+     "label": "사례1-",
      "count": 4,
      "points": 100
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "사례2-",
+     "label": "사례2-",
      "count": 4,
      "points": 100
     }
