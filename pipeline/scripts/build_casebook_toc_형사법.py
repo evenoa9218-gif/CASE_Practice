@@ -15,6 +15,7 @@
   casebook_cases.json  사례 본문. 목록에서 고를 때만 받는다
 """
 import json
+import re
 from collections import defaultdict
 
 from paths import CASEBOOK
@@ -28,6 +29,15 @@ SOURCES = [
      "작은변사기 형사소송법 (2027, 재OCR)"),
 ]
 OUT_DIR = CASEBOOK.parent.parent / "data" / "형사법"
+
+
+
+def case_key(v):
+    """사례 번호를 숫자로 읽어 정렬한다.
+    문자열로 늘어놓으면 1, 10, 100, 101, 2 순이 되어 사람이 못 찾는다.
+    `20-3` 같은 복합 번호는 조각별 숫자로 비교한다."""
+    nums = re.findall(r"\d+", str(v))
+    return tuple(int(n) for n in nums) if nums else (10 ** 9,)
 
 
 def build(cases, prefix):
@@ -48,7 +58,7 @@ def build(cases, prefix):
 
     exam_rows = []
     for eid in sorted(by_exam, key=lambda x: (("변시" not in x), x)):
-        for c in sorted(by_exam[eid], key=lambda x: str(x["caseNo"])):
+        for c in sorted(by_exam[eid], key=lambda x: case_key(x["caseNo"])):
             exam_rows.append(row(c, c["source"]["label"]))
 
     parts = [{"title": f"기출 연계 ({len(exam_rows)}사례 · {len(by_exam)}회차)",
@@ -56,7 +66,7 @@ def build(cases, prefix):
     if unlabeled:
         parts.append({"title": f"출처 미표기 ({len(unlabeled)}사례)",
                       "cases": [row(c, "출처 미표기")
-                                for c in sorted(unlabeled, key=lambda x: str(x["caseNo"]))]})
+                                for c in sorted(unlabeled, key=lambda x: case_key(x["caseNo"]))]})
     return parts, len(exam_rows), len(unlabeled)
 
 

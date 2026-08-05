@@ -8,6 +8,7 @@
 앱에 없는 회차(2012년 등 데이터 범위 밖)는 회차 연결을 지우고 목록에만 남긴다.
 """
 import json
+import re
 from collections import defaultdict
 
 from paths import CASEBOOK
@@ -19,6 +20,15 @@ SOURCES = [("인사이트 상법", "commercial_cases.json",
            ("박승수 CBT실전답안", "parkss_cases.json",
             "박승수 민민소 사례 CBT실전답안 (26.02, 재OCR)")]
 OUT_DIR = CASEBOOK.parent.parent / "data" / "민사법"
+
+
+
+def case_key(v):
+    """사례 번호를 숫자로 읽어 정렬한다.
+    문자열로 늘어놓으면 1, 10, 100, 101, 2 순이 되어 사람이 못 찾는다.
+    `20-3` 같은 복합 번호는 조각별 숫자로 비교한다."""
+    nums = re.findall(r"\d+", str(v))
+    return tuple(int(n) for n in nums) if nums else (10 ** 9,)
 
 
 def main():
@@ -54,7 +64,7 @@ def main():
 
         rows = []
         for eid in sorted(by_exam, key=lambda x: (("변시" not in x), x)):
-            rows += [row(c, True) for c in sorted(by_exam[eid], key=lambda x: str(x["caseNo"]))]
+            rows += [row(c, True) for c in sorted(by_exam[eid], key=lambda x: case_key(x["caseNo"]))]
 
         parts = []
         if rows:
@@ -62,10 +72,10 @@ def main():
                           "cases": rows})
         if outside:
             parts.append({"title": f"앱 범위 밖 회차 ({len(outside)}사례)",
-                          "cases": [row(c, False) for c in outside]})
+                          "cases": [row(c, False) for c in sorted(outside, key=lambda x: case_key(x["caseNo"]))]})
         if nosrc:
             parts.append({"title": f"출처 미표기 ({len(nosrc)}사례)",
-                          "cases": [row(c, False) for c in nosrc]})
+                          "cases": [row(c, False) for c in sorted(nosrc, key=lambda x: case_key(x["caseNo"]))]})
 
         toc[name] = {"meta": {"title": title, "year": 2026}, "parts": parts}
         for c in cases:

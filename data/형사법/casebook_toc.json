@@ -45,33 +45,6 @@
       "kind": "exam"
      },
      {
-      "uid": "a165",
-      "caseNo": 146,
-      "source": "제11회 변호사시험",
-      "label": "공소시효정지의 효력 범위 351 -",
-      "examId": "형사법_변시_11회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "a204",
-      "caseNo": 177,
-      "source": "제11회 변호사시험",
-      "label": "검사의 증거개시 거부처분과 이에 대한 붐복 및 법원 조치 431 -",
-      "examId": "형사법_변시_11회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "a441",
-      "caseNo": 361,
-      "source": "제11회 변호사시험",
-      "label": "불이익변경금지 원칙과 비상상고 927 -",
-      "examId": "형사법_변시_11회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
       "uid": "a047",
       "caseNo": 40,
       "source": "제11회 변호사시험",
@@ -99,29 +72,38 @@
       "kind": "exam"
      },
      {
+      "uid": "a165",
+      "caseNo": 146,
+      "source": "제11회 변호사시험",
+      "label": "공소시효정지의 효력 범위 351 -",
+      "examId": "형사법_변시_11회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "a204",
+      "caseNo": 177,
+      "source": "제11회 변호사시험",
+      "label": "검사의 증거개시 거부처분과 이에 대한 붐복 및 법원 조치 431 -",
+      "examId": "형사법_변시_11회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "a441",
+      "caseNo": 361,
+      "source": "제11회 변호사시험",
+      "label": "불이익변경금지 원칙과 비상상고 927 -",
+      "examId": "형사법_변시_11회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
       "uid": "a414",
       "caseNo": 338,
       "source": "제12회 변호사시험",
       "label": "상소십에서의 죄수 판단 변경에 따른 심판범위 873 -",
       "examId": "형사법_변시_12회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "a263",
-      "caseNo": 224,
-      "source": "제13회 변호사시험",
-      "label": "녹음파일의 증거능력 557 -",
-      "examId": "형사법_변시_13회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "a381",
-      "caseNo": 308,
-      "source": "제13회 변호사시험",
-      "label": "탄핵대상에 피고인의 진술이 포함되는 여부와 영상녹화물을 탄핵증거로 사용할 수 있는 여부 801 -",
-      "examId": "형사법_변시_13회_사례",
       "groupKey": null,
       "kind": "exam"
      },
@@ -139,6 +121,24 @@
       "caseNo": 83,
       "source": "제13회 변호사시험",
       "label": "휴대폰에서 발견한 녹음파일의 증거능력 197 -",
+      "examId": "형사법_변시_13회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "a263",
+      "caseNo": 224,
+      "source": "제13회 변호사시험",
+      "label": "녹음파일의 증거능력 557 -",
+      "examId": "형사법_변시_13회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "a381",
+      "caseNo": 308,
+      "source": "제13회 변호사시험",
+      "label": "탄핵대상에 피고인의 진술이 포함되는 여부와 영상녹화물을 탄핵증거로 사용할 수 있는 여부 801 -",
       "examId": "형사법_변시_13회_사례",
       "groupKey": null,
       "kind": "exam"
@@ -216,6 +216,24 @@
       "kind": "exam"
      },
      {
+      "uid": "a008",
+      "caseNo": 7,
+      "source": "제3회 변호사시험",
+      "label": "제척 및 기피의 원인과 약식명령의 전심재판 여부 15 -",
+      "examId": "형사법_변시_3회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "a066",
+      "caseNo": 57,
+      "source": "제3회 변호사시험",
+      "label": "긴급체포의 요건이 인정되지 않는 경우 137 -",
+      "examId": "형사법_변시_3회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
       "uid": "a123",
       "caseNo": 107,
       "source": "제3회 변호사시험",
@@ -247,24 +265,6 @@
       "caseNo": 367,
       "source": "제3회 변호사시험",
       "label": "정식재판과 공소장변경, 포괄일죄와 추가기소 939 -",
-      "examId": "형사법_변시_3회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "a066",
-      "caseNo": 57,
-      "source": "제3회 변호사시험",
-      "label": "긴급체포의 요건이 인정되지 않는 경우 137 -",
-      "examId": "형사법_변시_3회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "a008",
-      "caseNo": 7,
-      "source": "제3회 변호사시험",
-      "label": "제척 및 기피의 원인과 약식명령의 전심재판 여부 15 -",
       "examId": "형사법_변시_3회_사례",
       "groupKey": null,
       "kind": "exam"
@@ -306,6 +306,15 @@
       "kind": "exam"
      },
      {
+      "uid": "a049",
+      "caseNo": 42,
+      "source": "제5회 변호사시험",
+      "label": "반의사불벌죄에 고소불가분 원칙이 적용되는 여부 101 -",
+      "examId": "형사법_변시_5회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
       "uid": "a280",
       "caseNo": 235,
       "source": "제5회 변호사시험",
@@ -324,11 +333,11 @@
       "kind": "exam"
      },
      {
-      "uid": "a049",
-      "caseNo": 42,
-      "source": "제5회 변호사시험",
-      "label": "반의사불벌죄에 고소불가분 원칙이 적용되는 여부 101 -",
-      "examId": "형사법_변시_5회_사례",
+      "uid": "a016",
+      "caseNo": 15,
+      "source": "제6회 변호사시험",
+      "label": "성명모용과 피고인의 특정 및 이에 대한 검사와 법원의 조치 31 -",
+      "examId": "형사법_변시_6회_사례",
       "groupKey": null,
       "kind": "exam"
      },
@@ -337,15 +346,6 @@
       "caseNo": 113,
       "source": "제6회 변호사시험",
       "label": "체포와 자동차 검증의 적법성 275 -",
-      "examId": "형사법_변시_6회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "a016",
-      "caseNo": 15,
-      "source": "제6회 변호사시험",
-      "label": "성명모용과 피고인의 특정 및 이에 대한 검사와 법원의 조치 31 -",
       "examId": "형사법_변시_6회_사례",
       "groupKey": null,
       "kind": "exam"
@@ -405,6 +405,15 @@
       "kind": "exam"
      },
      {
+      "uid": "a059",
+      "caseNo": 49,
+      "source": "제8회 변호사시험",
+      "label": "임의동행과 보호실유치의 적법성 121 -",
+      "examId": "형사법_변시_8회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
       "uid": "a127",
       "caseNo": 110,
       "source": "제8회 변호사시험",
@@ -423,11 +432,11 @@
       "kind": "exam"
      },
      {
-      "uid": "a059",
-      "caseNo": 49,
-      "source": "제8회 변호사시험",
-      "label": "임의동행과 보호실유치의 적법성 121 -",
-      "examId": "형사법_변시_8회_사례",
+      "uid": "a063",
+      "caseNo": 54,
+      "source": "제9회 변호사시험",
+      "label": "출석에 불응하는 구속피의자에 대한 강제구인과 피의자신문의 적법성 131 -",
+      "examId": "형사법_변시_9회_사례",
       "groupKey": null,
       "kind": "exam"
      },
@@ -450,11 +459,11 @@
       "kind": "exam"
      },
      {
-      "uid": "a063",
-      "caseNo": 54,
-      "source": "제9회 변호사시험",
-      "label": "출석에 불응하는 구속피의자에 대한 강제구인과 피의자신문의 적법성 131 -",
-      "examId": "형사법_변시_9회_사례",
+      "uid": "a046",
+      "caseNo": 39,
+      "source": "2013년 제1차 모의시험",
+      "label": "고소취소권과 상대적 친고죄에 있어서의 고소불가분 원칙 93 -",
+      "examId": "형사법_모의_2013_1차_사례",
       "groupKey": null,
       "kind": "exam"
      },
@@ -473,24 +482,6 @@
       "source": "2013년 제1차 모의시험",
       "label": "공범인 공동피고인의 증인적격, 피고인의 일시퇴정과 … 실질적 변호 473 -",
       "examId": "형사법_모의_2013_1차_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "a046",
-      "caseNo": 39,
-      "source": "2013년 제1차 모의시험",
-      "label": "고소취소권과 상대적 친고죄에 있어서의 고소불가분 원칙 93 -",
-      "examId": "형사법_모의_2013_1차_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "a321",
-      "caseNo": 266,
-      "source": "2013년 제2차 모의시험",
-      "label": "C 의 진술을 들은 D 가 그 진술내용을 작성한 진술서인 재전문증거의 증거능력 679 -",
-      "examId": "형사법_모의_2013_2차_사례",
       "groupKey": null,
       "kind": "exam"
      },
@@ -522,11 +513,11 @@
       "kind": "exam"
      },
      {
-      "uid": "a256",
-      "caseNo": 218,
-      "source": "2013년 제3차 모의시험",
-      "label": "CD 의 증거능력을 부정할 수 있는 근거 541 -",
-      "examId": "형사법_모의_2013_3차_사례",
+      "uid": "a321",
+      "caseNo": 266,
+      "source": "2013년 제2차 모의시험",
+      "label": "C 의 진술을 들은 D 가 그 진술내용을 작성한 진술서인 재전문증거의 증거능력 679 -",
+      "examId": "형사법_모의_2013_2차_사례",
       "groupKey": null,
       "kind": "exam"
      },
@@ -535,6 +526,15 @@
       "caseNo": 74,
       "source": "2013년 제3차 모의시험",
       "label": "판결선고 후 원심법원에서의 피고인에 대한 구속영장 발부의 적법성 177 -",
+      "examId": "형사법_모의_2013_3차_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "a256",
+      "caseNo": 218,
+      "source": "2013년 제3차 모의시험",
+      "label": "CD 의 증거능력을 부정할 수 있는 근거 541 -",
       "examId": "형사법_모의_2013_3차_사례",
       "groupKey": null,
       "kind": "exam"
@@ -648,6 +648,15 @@
       "kind": "exam"
      },
      {
+      "uid": "a056",
+      "caseNo": 48,
+      "source": "2015년 제1차 모의시험",
+      "label": "불심검문 중 질문과 소지품검사의 적법성, 그 과정에서 압수한 물건의 증거능력 115 -",
+      "examId": "형사법_모의_2015_1차_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
       "uid": "a435",
       "caseNo": 357,
       "source": "2015년 제1차 모의시험",
@@ -657,11 +666,11 @@
       "kind": "exam"
      },
      {
-      "uid": "a056",
-      "caseNo": 48,
-      "source": "2015년 제1차 모의시험",
-      "label": "불심검문 중 질문과 소지품검사의 적법성, 그 과정에서 압수한 물건의 증거능력 115 -",
-      "examId": "형사법_모의_2015_1차_사례",
+      "uid": "a032",
+      "caseNo": 28,
+      "source": "2015년 제2차 모의시험",
+      "label": "변호인선임의 보정적 추완 여부 63 -",
+      "examId": "형사법_모의_2015_2차_사례",
       "groupKey": null,
       "kind": "exam"
      },
@@ -684,20 +693,29 @@
       "kind": "exam"
      },
      {
-      "uid": "a032",
-      "caseNo": 28,
-      "source": "2015년 제2차 모의시험",
-      "label": "변호인선임의 보정적 추완 여부 63 -",
-      "examId": "형사법_모의_2015_2차_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
       "uid": "a416",
       "caseNo": 340,
       "source": "2015년 제2차 모의시험",
       "label": "병합사건에서의 뿔이익변경금지 원칙 877 -",
       "examId": "형사법_모의_2015_2차_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "a031",
+      "caseNo": 27,
+      "source": "2015년 제3차 모의시험",
+      "label": "착오에 의한 소송행위의 유효 여부 61 -",
+      "examId": "형사법_모의_2015_3차_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "a088",
+      "caseNo": 77,
+      "source": "2015년 제3차 모의시험",
+      "label": "구속적부심사절차에서 피의자가 석방된 경우의 검사 항고 가능성 185 -",
+      "examId": "형사법_모의_2015_3차_사례",
       "groupKey": null,
       "kind": "exam"
      },
@@ -729,15 +747,6 @@
       "kind": "exam"
      },
      {
-      "uid": "a031",
-      "caseNo": 27,
-      "source": "2015년 제3차 모의시험",
-      "label": "착오에 의한 소송행위의 유효 여부 61 -",
-      "examId": "형사법_모의_2015_3차_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
       "uid": "a407",
       "caseNo": 332,
       "source": "2015년 제3차 모의시험",
@@ -747,11 +756,11 @@
       "kind": "exam"
      },
      {
-      "uid": "a088",
-      "caseNo": 77,
-      "source": "2015년 제3차 모의시험",
-      "label": "구속적부심사절차에서 피의자가 석방된 경우의 검사 항고 가능성 185 -",
-      "examId": "형사법_모의_2015_3차_사례",
+      "uid": "a006",
+      "caseNo": 6,
+      "source": "2016년 제1차 모의시험",
+      "label": "항소심에서 검사가 합의부 관할사건으로 공소장변경신청을 한 경우의 법원조치 11 -",
+      "examId": "형사법_모의_2016_1차_사례",
       "groupKey": null,
       "kind": "exam"
      },
@@ -774,11 +783,20 @@
       "kind": "exam"
      },
      {
-      "uid": "a006",
-      "caseNo": 6,
-      "source": "2016년 제1차 모의시험",
-      "label": "항소심에서 검사가 합의부 관할사건으로 공소장변경신청을 한 경우의 법원조치 11 -",
-      "examId": "형사법_모의_2016_1차_사례",
+      "uid": "a003",
+      "caseNo": 3,
+      "source": "2016년 제2차 모의시험",
+      "label": "관할의 적법성과 사물관할이 다른 경우에 병합심리를 하기 위한 조치 5 -",
+      "examId": "형사법_모의_2016_2차_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "a073",
+      "caseNo": 61,
+      "source": "2016년 제2차 모의시험",
+      "label": "임의동행과 긴급체포의 적법성 151 -",
+      "examId": "형사법_모의_2016_2차_사례",
       "groupKey": null,
       "kind": "exam"
      },
@@ -792,28 +810,10 @@
       "kind": "exam"
      },
      {
-      "uid": "a003",
-      "caseNo": 3,
-      "source": "2016년 제2차 모의시험",
-      "label": "관할의 적법성과 사물관할이 다른 경우에 병합심리를 하기 위한 조치 5 -",
-      "examId": "형사법_모의_2016_2차_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
       "uid": "a400",
       "caseNo": 326,
       "source": "2016년 제2차 모의시험",
       "label": "확정판결이 상습범이 아닌 가본구성요건의 범죄인 경우와 기판력 845 -",
-      "examId": "형사법_모의_2016_2차_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "a073",
-      "caseNo": 61,
-      "source": "2016년 제2차 모의시험",
-      "label": "임의동행과 긴급체포의 적법성 151 -",
       "examId": "형사법_모의_2016_2차_사례",
       "groupKey": null,
       "kind": "exam"
@@ -864,6 +864,15 @@
       "kind": "exam"
      },
      {
+      "uid": "a048",
+      "caseNo": 40,
+      "source": "2017년 제2차 모의시험",
+      "label": "상대적 친고죄에서의 고소불가분 원칙 2 97 -",
+      "examId": "형사법_모의_2017_2차_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
       "uid": "a128",
       "caseNo": 111,
       "source": "2017년 제2차 모의시험",
@@ -877,15 +886,6 @@
       "caseNo": 325,
       "source": "2017년 제2차 모의시험",
       "label": "기판력의 객관적 범위와 공소사실의 동일성 인정 여부 841 -",
-      "examId": "형사법_모의_2017_2차_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "a048",
-      "caseNo": 40,
-      "source": "2017년 제2차 모의시험",
-      "label": "상대적 친고죄에서의 고소불가분 원칙 2 97 -",
       "examId": "형사법_모의_2017_2차_사례",
       "groupKey": null,
       "kind": "exam"
@@ -927,19 +927,19 @@
       "kind": "exam"
      },
      {
-      "uid": "a241",
-      "caseNo": 208,
+      "uid": "a025",
+      "caseNo": 22,
       "source": "2018년 제1차 모의시험",
-      "label": "독수과실이론의 예외가 인정되기 위한 요건 : 환부 후 다시 제출받은 경우 509 -",
+      "label": "변호인의 접견교통권 침해 여부와 그에 대한 불복 49",
       "examId": "형사법_모의_2018_1차_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "a025",
-      "caseNo": 22,
+      "uid": "a241",
+      "caseNo": 208,
       "source": "2018년 제1차 모의시험",
-      "label": "변호인의 접견교통권 침해 여부와 그에 대한 불복 49",
+      "label": "독수과실이론의 예외가 인정되기 위한 요건 : 환부 후 다시 제출받은 경우 509 -",
       "examId": "형사법_모의_2018_1차_사례",
       "groupKey": null,
       "kind": "exam"
@@ -963,6 +963,15 @@
       "kind": "exam"
      },
      {
+      "uid": "a101",
+      "caseNo": 89,
+      "source": "2018년 제2차 모의시험",
+      "label": "전자정보 압수수색의 적법성 1 213 -",
+      "examId": "형사법_모의_2018_2차_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
       "uid": "a262",
       "caseNo": 223,
       "source": "2018년 제2차 모의시험",
@@ -981,11 +990,20 @@
       "kind": "exam"
      },
      {
-      "uid": "a101",
-      "caseNo": 89,
-      "source": "2018년 제2차 모의시험",
-      "label": "전자정보 압수수색의 적법성 1 213 -",
-      "examId": "형사법_모의_2018_2차_사례",
+      "uid": "a022",
+      "caseNo": 20,
+      "source": "2018년 제3차 모의시험",
+      "label": "진술거부권 행사와 제1 심 법원 형선고의 적법성 43 -",
+      "examId": "형사법_모의_2018_3차_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "a070",
+      "caseNo": 59,
+      "source": "2018년 제3차 모의시험",
+      "label": "친고죄에 대한 고소 전 수사와 긴급체포의 적법성 145 -",
+      "examId": "형사법_모의_2018_3차_사례",
       "groupKey": null,
       "kind": "exam"
      },
@@ -999,28 +1017,10 @@
       "kind": "exam"
      },
      {
-      "uid": "a022",
-      "caseNo": 20,
-      "source": "2018년 제3차 모의시험",
-      "label": "진술거부권 행사와 제1 심 법원 형선고의 적법성 43 -",
-      "examId": "형사법_모의_2018_3차_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
       "uid": "a236",
       "caseNo": 205,
       "source": "2018년 제3차 모의시험",
       "label": "독수과실이론의 예외가 인정된 경우 2",
-      "examId": "형사법_모의_2018_3차_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "a070",
-      "caseNo": 59,
-      "source": "2018년 제3차 모의시험",
-      "label": "친고죄에 대한 고소 전 수사와 긴급체포의 적법성 145 -",
       "examId": "형사법_모의_2018_3차_사례",
       "groupKey": null,
       "kind": "exam"
@@ -1053,19 +1053,19 @@
       "kind": "exam"
      },
      {
-      "uid": "a375",
-      "caseNo": 303,
+      "uid": "a045",
+      "caseNo": 38,
       "source": "2019년 제2차 모의시험",
-      "label": "감정의뢰회보 등을 증거로 한 유죄판결의 가능성 여부 789 -",
+      "label": "항소심에서 반의사불벌죄에 대해 … 반의사불벌죄로 바뀐 경우의 효력 91 -",
       "examId": "형사법_모의_2019_2차_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "a045",
-      "caseNo": 38,
+      "uid": "a375",
+      "caseNo": 303,
       "source": "2019년 제2차 모의시험",
-      "label": "항소심에서 반의사불벌죄에 대해 … 반의사불벌죄로 바뀐 경우의 효력 91 -",
+      "label": "감정의뢰회보 등을 증거로 한 유죄판결의 가능성 여부 789 -",
       "examId": "형사법_모의_2019_2차_사례",
       "groupKey": null,
       "kind": "exam"
@@ -1094,6 +1094,15 @@
       "source": "2019년 제3차 모의시험",
       "label": "공범에 대한 모순된 판결과 재심 919 -",
       "examId": "형사법_모의_2019_3차_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "a093",
+      "caseNo": 83,
+      "source": "2020년 제1차 모의시험",
+      "label": "휴대폰에서 발견한 녹음파일의 증거능력 195 -",
+      "examId": "형사법_모의_2020_1차_사례",
       "groupKey": null,
       "kind": "exam"
      },
@@ -1134,15 +1143,6 @@
       "kind": "exam"
      },
      {
-      "uid": "a093",
-      "caseNo": 83,
-      "source": "2020년 제1차 모의시험",
-      "label": "휴대폰에서 발견한 녹음파일의 증거능력 195 -",
-      "examId": "형사법_모의_2020_1차_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
       "uid": "a134",
       "caseNo": 117,
       "source": "2020년 제2차 모의시험",
@@ -1170,24 +1170,6 @@
       "kind": "exam"
      },
      {
-      "uid": "a298",
-      "caseNo": 248,
-      "source": "2020년 제3차 모의시험",
-      "label": "검증조서에 기재된 자백진술과 범행재연사진의 증거능력 631 -",
-      "examId": "형사법_모의_2020_3차_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "a362",
-      "caseNo": 293,
-      "source": "2020년 제3차 모의시험",
-      "label": "재전문증거의 증거능력 인정 여부와 제2심에서 증거동의를 철회한 경우 763 -",
-      "examId": "형사법_모의_2020_3차_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
       "uid": "a085",
       "caseNo": 75,
       "source": "2020년 제3차 모의시험",
@@ -1201,6 +1183,24 @@
       "caseNo": 99,
       "source": "2020년 제3차 모의시험",
       "label": "체포를 위한 피의자수색과 긴급성 2 235 -",
+      "examId": "형사법_모의_2020_3차_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "a298",
+      "caseNo": 248,
+      "source": "2020년 제3차 모의시험",
+      "label": "검증조서에 기재된 자백진술과 범행재연사진의 증거능력 631 -",
+      "examId": "형사법_모의_2020_3차_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "a362",
+      "caseNo": 293,
+      "source": "2020년 제3차 모의시험",
+      "label": "재전문증거의 증거능력 인정 여부와 제2심에서 증거동의를 철회한 경우 763 -",
       "examId": "형사법_모의_2020_3차_사례",
       "groupKey": null,
       "kind": "exam"
@@ -1242,19 +1242,19 @@
       "kind": "exam"
      },
      {
-      "uid": "a115",
-      "caseNo": 101,
+      "uid": "a028",
+      "caseNo": 24,
       "source": "2021년 제2차 모의시험",
-      "label": "현행범체포의 적법성과 압수물의 증거능력 243 -",
+      "label": "피의자신문참여권의 침해 여부 및 변호인의 주장 내용 55 -",
       "examId": "형사법_모의_2021_2차_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "a028",
-      "caseNo": 24,
+      "uid": "a115",
+      "caseNo": 101,
       "source": "2021년 제2차 모의시험",
-      "label": "피의자신문참여권의 침해 여부 및 변호인의 주장 내용 55 -",
+      "label": "현행범체포의 적법성과 압수물의 증거능력 243 -",
       "examId": "형사법_모의_2021_2차_사례",
       "groupKey": null,
       "kind": "exam"
@@ -1332,6 +1332,15 @@
       "kind": "exam"
      },
      {
+      "uid": "a050",
+      "caseNo": 43,
+      "source": "2022년 제3차 모의시험",
+      "label": "피해자의 고소로 기소된 친고죄에 대한 법정대리인의 고소취소 103 -",
+      "examId": "형사법_모의_2022_3차_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
       "uid": "a223",
       "caseNo": 193,
       "source": "2022년 제3차 모의시험",
@@ -1350,11 +1359,11 @@
       "kind": "exam"
      },
      {
-      "uid": "a050",
-      "caseNo": 43,
-      "source": "2022년 제3차 모의시험",
-      "label": "피해자의 고소로 기소된 친고죄에 대한 법정대리인의 고소취소 103 -",
-      "examId": "형사법_모의_2022_3차_사례",
+      "uid": "a100",
+      "caseNo": 89,
+      "source": "2023년 제1차 모의시험",
+      "label": "전자정보 압수수색의 적법성 1 211 -",
+      "examId": "형사법_모의_2023_1차_사례",
       "groupKey": null,
       "kind": "exam"
      },
@@ -1363,15 +1372,6 @@
       "caseNo": 263,
       "source": "2023년 제1차 모의시험",
       "label": "재전문증거의 증거능력 2 : 형사소송법 제316조 제2항 적용 673 -",
-      "examId": "형사법_모의_2023_1차_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "a100",
-      "caseNo": 89,
-      "source": "2023년 제1차 모의시험",
-      "label": "전자정보 압수수색의 적법성 1 211 -",
       "examId": "형사법_모의_2023_1차_사례",
       "groupKey": null,
       "kind": "exam"
@@ -1494,19 +1494,19 @@
       "kind": "exam"
      },
      {
-      "uid": "a195",
-      "caseNo": 170,
+      "uid": "a021",
+      "caseNo": 19,
       "source": "2025년 제1차 모의시험",
-      "label": "항소심에서 직권으로 폭행치상죄를 폭행죄로만 … 고소취소가 된 경우의 판단 413 -",
+      "label": "진술거부권의 고지대상에 해당하지 않는 경우 41 -",
       "examId": "형사법_모의_2025_1차_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "a021",
-      "caseNo": 19,
+      "uid": "a195",
+      "caseNo": 170,
       "source": "2025년 제1차 모의시험",
-      "label": "진술거부권의 고지대상에 해당하지 않는 경우 41 -",
+      "label": "항소심에서 직권으로 폭행치상죄를 폭행죄로만 … 고소취소가 된 경우의 판단 413 -",
       "examId": "형사법_모의_2025_1차_사례",
       "groupKey": null,
       "kind": "exam"
@@ -1530,24 +1530,6 @@
       "kind": "exam"
      },
      {
-      "uid": "a212",
-      "caseNo": 184,
-      "source": "2025년 제2차 모의시험",
-      "label": "증거조사 미실시의 위법성 447 -",
-      "examId": "형사법_모의_2025_2차_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "a278",
-      "caseNo": 233,
-      "source": "2025년 제2차 모의시험",
-      "label": "피의자의 자백이 기재된 변호인의견서의 증거능력 587 -",
-      "examId": "형사법_모의_2025_2차_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
       "uid": "a087",
       "caseNo": 76,
       "source": "2025년 제2차 모의시험",
@@ -1561,6 +1543,24 @@
       "caseNo": 82,
       "source": "2025년 제2차 모의시험",
       "label": "보석 등의 조건으로서의 전자정치 부착과 구속취소결정에 대한 불복 193 -",
+      "examId": "형사법_모의_2025_2차_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "a212",
+      "caseNo": 184,
+      "source": "2025년 제2차 모의시험",
+      "label": "증거조사 미실시의 위법성 447 -",
+      "examId": "형사법_모의_2025_2차_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "a278",
+      "caseNo": 233,
+      "source": "2025년 제2차 모의시험",
+      "label": "피의자의 자백이 기재된 변호인의견서의 증거능력 587 -",
       "examId": "형사법_모의_2025_2차_사례",
       "groupKey": null,
       "kind": "exam"
@@ -1598,6 +1598,51 @@
       "kind": "unlabeled"
      },
      {
+      "uid": "a002",
+      "caseNo": 2,
+      "source": "출처 미표기",
+      "label": "관련사건의 관할과 군사법원의 신분적 재판권 3 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a004",
+      "caseNo": 4,
+      "source": "출처 미표기",
+      "label": "토지관할 병합심리 신청사건의 관할법원 7 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a005",
+      "caseNo": 5,
+      "source": "출처 미표기",
+      "label": "관할위반과 사건의 직권이송 여부 9 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a007",
+      "caseNo": 6,
+      "source": "출처 미표기",
+      "label": "항소심에서 검사가 합의부 관할사건으로 공소장변경신청을 한 경우의 법원조치 13 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a009",
+      "caseNo": 8,
+      "source": "출처 미표기",
+      "label": "수사단계에서 증거보전을 담당한 판사와",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
       "uid": "a010",
       "caseNo": 10,
       "source": "출처 미표기",
@@ -1611,6 +1656,582 @@
       "caseNo": 10,
       "source": "출처 미표기",
       "label": "기피원인 및 간이기각결정의 요건 해당 여부 21 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a012",
+      "caseNo": 11,
+      "source": "출처 미표기",
+      "label": "기피신청에 대해 소송진행을 정지하지 않고 한 기각결정의 적법성 23 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a013",
+      "caseNo": 12,
+      "source": "출처 미표기",
+      "label": "검사의 단독관청으로서의 지위와 검사동일체 원칙 25 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a014",
+      "caseNo": 13,
+      "source": "출처 미표기",
+      "label": "검사에 대한 제척 및 기피제도 인정 여부 27 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a015",
+      "caseNo": 14,
+      "source": "출처 미표기",
+      "label": "수사개시 및 공소제기 가능 범위와 이를 벗어난 경우의 판단 29 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a018",
+      "caseNo": 17,
+      "source": "출처 미표기",
+      "label": "위장출석과 피고인의 특정 및 공판절차에 따른 법원의 조치 35 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a019",
+      "caseNo": 18,
+      "source": "출처 미표기",
+      "label": "진술거부권의 고지대상인 여부와 진술거부권을 고지하지 않고 작성된 조서의 증거능력 37 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a020",
+      "caseNo": 18,
+      "source": "출처 미표기",
+      "label": "진술거부권의 고지대상인 여부와 진술거부권을 고지하지 않고 작성된 조서의 증거능력 39 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a023",
+      "caseNo": 21,
+      "source": "출처 미표기",
+      "label": "국선변호인 선정청구와 결정의 위법성 45 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a024",
+      "caseNo": 21,
+      "source": "출처 미표기",
+      "label": "국선변호인 선정청구와 결정의 위법성 47 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a026",
+      "caseNo": 23,
+      "source": "출처 미표기",
+      "label": "검사의 접견교통금지처분의 적법성과 그 구제책, 피의자신문조서의 증거능력",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a029",
+      "caseNo": 25,
+      "source": "출처 미표기",
+      "label": "변호인의 피의자신문참여권 침해와 피의자신문조서의 증거능력 57 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a030",
+      "caseNo": 26,
+      "source": "출처 미표기",
+      "label": "소송행위의 성립과 하자의 치유 여부 59 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a033",
+      "caseNo": 29,
+      "source": "출처 미표기",
+      "label": "고소추완의 인정과 공소장변경을 통한 공소제기의 하자 치유 여부 65 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a034",
+      "caseNo": 29,
+      "source": "출처 미표기",
+      "label": "고소추완의 인정과 공소장변경을 통한 공소제기의 하자 치유 여부 67 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a035",
+      "caseNo": 30,
+      "source": "출처 미표기",
+      "label": "소송조건 결여의 경합 : 친고죄의 고소기간 제한 위반과 확정판결이 있은 때 69 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a036",
+      "caseNo": 31,
+      "source": "출처 미표기",
+      "label": "긴급체포의 적법성 심사룰 위한 검사의 피의자 대면조사권과 경찰 거부시의 검사 조치 71 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a037",
+      "caseNo": 32,
+      "source": "출처 미표기",
+      "label": "함정수사의 적법성 인정 여부와 위법한 함정수사에 대한 법원의 판단 75 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a038",
+      "caseNo": 32,
+      "source": "출처 미표기",
+      "label": "함정수사의 적법성 인정 여부와 위법한 함정수사에 대한 법원의 판단 77 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a039",
+      "caseNo": 33,
+      "source": "출처 미표기",
+      "label": "직권조사사항과 성년후견인의 소송행위 대리 79 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a040",
+      "caseNo": 34,
+      "source": "출처 미표기",
+      "label": "법정대리인의 고소권의 성질과 고소대리의 방식 81 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a041",
+      "caseNo": 34,
+      "source": "출처 미표기",
+      "label": "법정대리인의 고소권의 성질과 고소대리의 방식 83 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a042",
+      "caseNo": 35,
+      "source": "출처 미표기",
+      "label": "고소의 방식과 고소취소 고소71-cf ~ 入",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a043",
+      "caseNo": 36,
+      "source": "출처 미표기",
+      "label": "상대적 친고죄에 있어서의 고소기간과 고소의 적법성 87 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a044",
+      "caseNo": 37,
+      "source": "출처 미표기",
+      "label": "특경법위반죄에 대해 친족상도례의 적용 여부와 고소취소시의 조치 89 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a051",
+      "caseNo": 44,
+      "source": "출처 미표기",
+      "label": "상대적 친고죄에서의 고소불가분 원칙과 고소권 포기의 허용 여부 105 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a052",
+      "caseNo": 45,
+      "source": "출처 미표기",
+      "label": "고발에서의 주관적 불가분 원칙의 적용 여부, 불기소결정과 고발 효력 107 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a053",
+      "caseNo": 45,
+      "source": "출처 미표기",
+      "label": "고발에서의 주관적 불가분 원칙의 적용 여부, 불기소결정과 고발 효력 109 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a054",
+      "caseNo": 46,
+      "source": "출처 미표기",
+      "label": "불심검문의 적법성 여부 111 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a055",
+      "caseNo": 47,
+      "source": "출처 미표기",
+      "label": "불심검문의 방법과 절차 113 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a057",
+      "caseNo": 48,
+      "source": "출처 미표기",
+      "label": "불심검문 중 질문과 소지품검사의 적법성, 그 과정에서 압수한 물건의 증거능력 117 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a058",
+      "caseNo": 49,
+      "source": "출처 미표기",
+      "label": "임의동행과 보호실유치의 적법성 119 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a060",
+      "caseNo": 50,
+      "source": "출처 미표기",
+      "label": "임의동행의 적법성과 경찰 수사과정에서 피의자가 작성한 진술서의 증거능력 123 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a061",
+      "caseNo": 52,
+      "source": "출처 미표기",
+      "label": "승낙검증의 적법성 127 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a062",
+      "caseNo": 53,
+      "source": "출처 미표기",
+      "label": "사진촬영의 적법성 129 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a064",
+      "caseNo": 55,
+      "source": "출처 미표기",
+      "label": "체포영장을 제시하지 않은 체포절차 착수와 다른 혐의에 따른 체포집행 133 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a065",
+      "caseNo": 56,
+      "source": "출처 미표기",
+      "label": "긴급체포의 요건이 인정되는 경우 135 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a068",
+      "caseNo": 58,
+      "source": "출처 미표기",
+      "label": "경찰서에 자진출석한 자에 대한 긴급체포의 적법성 141 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a069",
+      "caseNo": 59,
+      "source": "출처 미표기",
+      "label": "친고죄에 대한 고소 전 수사와 긴급체포의 적법성 143 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a071",
+      "caseNo": 60,
+      "source": "출처 미표기",
+      "label": "긴급체포의 적법성과 구속영장 신청 전에 변호인의 소송법적 대응수단 147 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a072",
+      "caseNo": 61,
+      "source": "출처 미표기",
+      "label": "임의동행과 긴급체포의 적법성 149 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a074",
+      "caseNo": 63,
+      "source": "출처 미표기",
+      "label": "현행범인의 의미와 긴급체포의 요건 153 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a076",
+      "caseNo": 64,
+      "source": "출처 미표기",
+      "label": "불심검문의 적법성과 체포의 방법 157 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a077",
+      "caseNo": 65,
+      "source": "출처 미표기",
+      "label": "현행범인체포의 요건으로서의 범죄의 명백성 159 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a078",
+      "caseNo": 66,
+      "source": "출처 미표기",
+      "label": "친고죄의 고소 전 수사가능성과 현행범인체포의 요건으로서의 체포의 필요성 161 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a079",
+      "caseNo": 67,
+      "source": "출처 미표기",
+      "label": "현행범인체포의 요건과 절차 163 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a080",
+      "caseNo": 68,
+      "source": "출처 미표기",
+      "label": "구속영장 신청에 대한 검사의 조치와 구속영장 기각에 대한 사법경찰관의 조치 165 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a082",
+      "caseNo": 72,
+      "source": "출처 미표기",
+      "label": "법원이 사전청문절차없이 구속영장율 발부한 경우의 위법성 여부 173 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a083",
+      "caseNo": 73,
+      "source": "출처 미표기",
+      "label": "피의자에 대한 구속기간과 구속전피의자심문기일 속행의 적법성 175 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a089",
+      "caseNo": 78,
+      "source": "출처 미표기",
+      "label": "수사단계에서 보증금납입조건부 석방절차 187 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a090",
+      "caseNo": 79,
+      "source": "출처 미표기",
+      "label": "보석허가결정에 대한 불복과 보석취소결정 후의 보증금믈취결정 189 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a091",
+      "caseNo": 80,
+      "source": "출처 미표기",
+      "label": "2심에서 보석취소결정에 대한 불복과 집행정지효력 191 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a095",
+      "caseNo": 84,
+      "source": "출처 미표기",
+      "label": "음주운전의 현행범인체포와 관련이 없는 지갑 등의 압수의 적법성 199 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a096",
+      "caseNo": 85,
+      "source": "출처 미표기",
+      "label": "압수 · 수색영장에",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a097",
+      "caseNo": 86,
+      "source": "출처 미표기",
+      "label": "압수·수색절차에서의 적법성 1 203 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a098",
+      "caseNo": 86,
+      "source": "출처 미표기",
+      "label": "압수· 수색절차에서의 적법성 1 205 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a099",
+      "caseNo": 87,
+      "source": "출처 미표기",
+      "label": "압수·수색절차에서의 적법성 2 207 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a102",
+      "caseNo": 90,
+      "source": "출처 미표기",
+      "label": "정보저장매체의 수사기관 반출 후 탐색단계에서의 참여권 보장 215 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a103",
+      "caseNo": 91,
+      "source": "출처 미표기",
+      "label": "전자정보 압수수색의 적법성 2 217 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a105",
+      "caseNo": 93,
+      "source": "출처 미표기",
+      "label": "피압수자가 압수물에 대한 소유권이나 환부청구권을 포기한 경우와 환부의무 221 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a106",
+      "caseNo": 94,
+      "source": "출처 미표기",
+      "label": "현행범체포 의사무능력자에 대한 채혀 도의의 처버人",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a107",
+      "caseNo": 94,
+      "source": "출처 미표기",
+      "label": "현행범체포, 의사무능력자에 대한 채혈 동의의 적법성 225 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a109",
+      "caseNo": 96,
+      "source": "출처 미표기",
+      "label": "강제채혈의 적법성 여부 229 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a110",
+      "caseNo": 97,
+      "source": "출처 미표기",
+      "label": "강제채뇨의 적법성 여부 231 -",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "a111",
+      "caseNo": 98,
+      "source": "출처 미표기",
+      "label": "체포를 위한 피의자수색과 긴급성 1 233 -",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
@@ -1697,15 +2318,6 @@
       "kind": "unlabeled"
      },
      {
-      "uid": "a012",
-      "caseNo": 11,
-      "source": "출처 미표기",
-      "label": "기피신청에 대해 소송진행을 정지하지 않고 한 기각결정의 적법성 23 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
       "uid": "a131",
       "caseNo": 114,
       "source": "출처 미표기",
@@ -1728,15 +2340,6 @@
       "caseNo": 119,
       "source": "출처 미표기",
       "label": "임의제출물에 대한 압수의 적법성과 증거동의 287 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a013",
-      "caseNo": 12,
-      "source": "출처 미표기",
-      "label": "검사의 단독관청으로서의 지위와 검사동일체 원칙 25 -",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
@@ -1818,15 +2421,6 @@
       "caseNo": 129,
       "source": "출처 미표기",
       "label": "기소유예 처분에 대한 피의자의 불복 309 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a014",
-      "caseNo": 13,
-      "source": "출처 미표기",
-      "label": "검사에 대한 제척 및 기피제도 인정 여부 27 -",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
@@ -1917,15 +2511,6 @@
       "caseNo": 139,
       "source": "출처 미표기",
       "label": "공소사실의 예비적 기재의 적법성과 주위적 기재 부분의 무죄 판단 335 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a015",
-      "caseNo": 14,
-      "source": "출처 미표기",
-      "label": "수사개시 및 공소제기 가능 범위와 이를 벗어난 경우의 판단 29 -",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
@@ -2138,15 +2723,6 @@
       "kind": "unlabeled"
      },
      {
-      "uid": "a018",
-      "caseNo": 17,
-      "source": "출처 미표기",
-      "label": "위장출석과 피고인의 특정 및 공판절차에 따른 법원의 조치 35 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
       "uid": "a197",
       "caseNo": 171,
       "source": "출처 미표기",
@@ -2196,24 +2772,6 @@
       "caseNo": 179,
       "source": "출처 미표기",
       "label": "위법한 공시송달에 따른 상소권회복청구와 재심청구 435 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a019",
-      "caseNo": 18,
-      "source": "출처 미표기",
-      "label": "진술거부권의 고지대상인 여부와 진술거부권을 고지하지 않고 작성된 조서의 증거능력 37 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a020",
-      "caseNo": 18,
-      "source": "출처 미표기",
-      "label": "진술거부권의 고지대상인 여부와 진술거부권을 고지하지 않고 작성된 조서의 증거능력 39 -",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
@@ -2336,15 +2894,6 @@
       "kind": "unlabeled"
      },
      {
-      "uid": "a002",
-      "caseNo": 2,
-      "source": "출처 미표기",
-      "label": "관련사건의 관할과 군사법원의 신분적 재판권 3 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
       "uid": "a231",
       "caseNo": 200,
       "source": "출처 미표기",
@@ -2421,24 +2970,6 @@
       "caseNo": 209,
       "source": "출처 미표기",
       "label": "불법체포상태에서의 자백에 의해 ... 피고인이 증거동의를 하는 경우의 증거능력 511 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a023",
-      "caseNo": 21,
-      "source": "출처 미표기",
-      "label": "국선변호인 선정청구와 결정의 위법성 45 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a024",
-      "caseNo": 21,
-      "source": "출처 미표기",
-      "label": "국선변호인 선정청구와 결정의 위법성 47 -",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
@@ -2606,15 +3137,6 @@
       "kind": "unlabeled"
      },
      {
-      "uid": "a026",
-      "caseNo": 23,
-      "source": "출처 미표기",
-      "label": "검사의 접견교통금지처분의 적법성과 그 구제책, 피의자신문조서의 증거능력",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
       "uid": "a274",
       "caseNo": 231,
       "source": "출처 미표기",
@@ -2750,15 +3272,6 @@
       "kind": "unlabeled"
      },
      {
-      "uid": "a029",
-      "caseNo": 25,
-      "source": "출처 미표기",
-      "label": "변호인의 피의자신문참여권 침해와 피의자신문조서의 증거능력 57 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
       "uid": "a303",
       "caseNo": 253,
       "source": "출처 미표기",
@@ -2808,15 +3321,6 @@
       "caseNo": 258,
       "source": "출처 미표기",
       "label": "혈액채취의 적법성 및 진술서와 검사 증언의 증거능력 661 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a030",
-      "caseNo": 26,
-      "source": "출처 미표기",
-      "label": "소송행위의 성립과 하자의 치유 여부 59 -",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
@@ -3083,24 +3587,6 @@
       "kind": "unlabeled"
      },
      {
-      "uid": "a033",
-      "caseNo": 29,
-      "source": "출처 미표기",
-      "label": "고소추완의 인정과 공소장변경을 통한 공소제기의 하자 치유 여부 65 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a034",
-      "caseNo": 29,
-      "source": "출처 미표기",
-      "label": "고소추완의 인정과 공소장변경을 통한 공소제기의 하자 치유 여부 67 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
       "uid": "a358",
       "caseNo": 290,
       "source": "출처 미표기",
@@ -3173,15 +3659,6 @@
       "kind": "unlabeled"
      },
      {
-      "uid": "a035",
-      "caseNo": 30,
-      "source": "출처 미표기",
-      "label": "소송조건 결여의 경합 : 친고죄의 고소기간 제한 위반과 확정판결이 있은 때 69 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
       "uid": "a373",
       "caseNo": 302,
       "source": "출처 미표기",
@@ -3245,15 +3722,6 @@
       "kind": "unlabeled"
      },
      {
-      "uid": "a036",
-      "caseNo": 31,
-      "source": "출처 미표기",
-      "label": "긴급체포의 적법성 심사룰 위한 검사의 피의자 대면조사권과 경찰 거부시의 검사 조치 71 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
       "uid": "a384",
       "caseNo": 311,
       "source": "출처 미표기",
@@ -3312,24 +3780,6 @@
       "caseNo": 317,
       "source": "출처 미표기",
       "label": "형의 임의적 감면사유인 자수의 주장이 ... 포합되는 여부 823 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a037",
-      "caseNo": 32,
-      "source": "출처 미표기",
-      "label": "함정수사의 적법성 인정 여부와 위법한 함정수사에 대한 법원의 판단 75 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a038",
-      "caseNo": 32,
-      "source": "출처 미표기",
-      "label": "함정수사의 적법성 인정 여부와 위법한 함정수사에 대한 법원의 판단 77 -",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
@@ -3407,15 +3857,6 @@
       "kind": "unlabeled"
      },
      {
-      "uid": "a039",
-      "caseNo": 33,
-      "source": "출처 미표기",
-      "label": "직권조사사항과 성년후견인의 소송행위 대리 79 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
       "uid": "a405",
       "caseNo": 330,
       "source": "출처 미표기",
@@ -3447,24 +3888,6 @@
       "caseNo": 339,
       "source": "출처 미표기",
       "label": "집행유예 선고와 불이익변경금지 원칙 875 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a040",
-      "caseNo": 34,
-      "source": "출처 미표기",
-      "label": "법정대리인의 고소권의 성질과 고소대리의 방식 81 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a041",
-      "caseNo": 34,
-      "source": "출처 미표기",
-      "label": "법정대리인의 고소권의 성질과 고소대리의 방식 83 -",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
@@ -3515,15 +3938,6 @@
       "kind": "unlabeled"
      },
      {
-      "uid": "a042",
-      "caseNo": 35,
-      "source": "출처 미표기",
-      "label": "고소의 방식과 고소취소 고소71-cf ~ 入",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
       "uid": "a429",
       "caseNo": 352,
       "source": "출처 미표기",
@@ -3564,15 +3978,6 @@
       "caseNo": 358,
       "source": "출처 미표기",
       "label": "판결이 확정된 위장자수자에 대한 구제방법과 진범 기소가능성 917 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a043",
-      "caseNo": 36,
-      "source": "출처 미표기",
-      "label": "상대적 친고죄에 있어서의 고소기간과 고소의 적법성 87 -",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
@@ -3645,411 +4050,6 @@
       "caseNo": 368,
       "source": "출처 미표기",
       "label": "정식재판에서의 공소장변경과 형종상향 금지 943 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a044",
-      "caseNo": 37,
-      "source": "출처 미표기",
-      "label": "특경법위반죄에 대해 친족상도례의 적용 여부와 고소취소시의 조치 89 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a004",
-      "caseNo": 4,
-      "source": "출처 미표기",
-      "label": "토지관할 병합심리 신청사건의 관할법원 7 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a051",
-      "caseNo": 44,
-      "source": "출처 미표기",
-      "label": "상대적 친고죄에서의 고소불가분 원칙과 고소권 포기의 허용 여부 105 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a052",
-      "caseNo": 45,
-      "source": "출처 미표기",
-      "label": "고발에서의 주관적 불가분 원칙의 적용 여부, 불기소결정과 고발 효력 107 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a053",
-      "caseNo": 45,
-      "source": "출처 미표기",
-      "label": "고발에서의 주관적 불가분 원칙의 적용 여부, 불기소결정과 고발 효력 109 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a054",
-      "caseNo": 46,
-      "source": "출처 미표기",
-      "label": "불심검문의 적법성 여부 111 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a055",
-      "caseNo": 47,
-      "source": "출처 미표기",
-      "label": "불심검문의 방법과 절차 113 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a057",
-      "caseNo": 48,
-      "source": "출처 미표기",
-      "label": "불심검문 중 질문과 소지품검사의 적법성, 그 과정에서 압수한 물건의 증거능력 117 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a058",
-      "caseNo": 49,
-      "source": "출처 미표기",
-      "label": "임의동행과 보호실유치의 적법성 119 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a005",
-      "caseNo": 5,
-      "source": "출처 미표기",
-      "label": "관할위반과 사건의 직권이송 여부 9 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a060",
-      "caseNo": 50,
-      "source": "출처 미표기",
-      "label": "임의동행의 적법성과 경찰 수사과정에서 피의자가 작성한 진술서의 증거능력 123 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a061",
-      "caseNo": 52,
-      "source": "출처 미표기",
-      "label": "승낙검증의 적법성 127 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a062",
-      "caseNo": 53,
-      "source": "출처 미표기",
-      "label": "사진촬영의 적법성 129 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a064",
-      "caseNo": 55,
-      "source": "출처 미표기",
-      "label": "체포영장을 제시하지 않은 체포절차 착수와 다른 혐의에 따른 체포집행 133 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a065",
-      "caseNo": 56,
-      "source": "출처 미표기",
-      "label": "긴급체포의 요건이 인정되는 경우 135 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a068",
-      "caseNo": 58,
-      "source": "출처 미표기",
-      "label": "경찰서에 자진출석한 자에 대한 긴급체포의 적법성 141 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a069",
-      "caseNo": 59,
-      "source": "출처 미표기",
-      "label": "친고죄에 대한 고소 전 수사와 긴급체포의 적법성 143 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a007",
-      "caseNo": 6,
-      "source": "출처 미표기",
-      "label": "항소심에서 검사가 합의부 관할사건으로 공소장변경신청을 한 경우의 법원조치 13 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a071",
-      "caseNo": 60,
-      "source": "출처 미표기",
-      "label": "긴급체포의 적법성과 구속영장 신청 전에 변호인의 소송법적 대응수단 147 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a072",
-      "caseNo": 61,
-      "source": "출처 미표기",
-      "label": "임의동행과 긴급체포의 적법성 149 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a074",
-      "caseNo": 63,
-      "source": "출처 미표기",
-      "label": "현행범인의 의미와 긴급체포의 요건 153 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a076",
-      "caseNo": 64,
-      "source": "출처 미표기",
-      "label": "불심검문의 적법성과 체포의 방법 157 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a077",
-      "caseNo": 65,
-      "source": "출처 미표기",
-      "label": "현행범인체포의 요건으로서의 범죄의 명백성 159 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a078",
-      "caseNo": 66,
-      "source": "출처 미표기",
-      "label": "친고죄의 고소 전 수사가능성과 현행범인체포의 요건으로서의 체포의 필요성 161 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a079",
-      "caseNo": 67,
-      "source": "출처 미표기",
-      "label": "현행범인체포의 요건과 절차 163 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a080",
-      "caseNo": 68,
-      "source": "출처 미표기",
-      "label": "구속영장 신청에 대한 검사의 조치와 구속영장 기각에 대한 사법경찰관의 조치 165 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a082",
-      "caseNo": 72,
-      "source": "출처 미표기",
-      "label": "법원이 사전청문절차없이 구속영장율 발부한 경우의 위법성 여부 173 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a083",
-      "caseNo": 73,
-      "source": "출처 미표기",
-      "label": "피의자에 대한 구속기간과 구속전피의자심문기일 속행의 적법성 175 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a089",
-      "caseNo": 78,
-      "source": "출처 미표기",
-      "label": "수사단계에서 보증금납입조건부 석방절차 187 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a090",
-      "caseNo": 79,
-      "source": "출처 미표기",
-      "label": "보석허가결정에 대한 불복과 보석취소결정 후의 보증금믈취결정 189 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a009",
-      "caseNo": 8,
-      "source": "출처 미표기",
-      "label": "수사단계에서 증거보전을 담당한 판사와",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a091",
-      "caseNo": 80,
-      "source": "출처 미표기",
-      "label": "2심에서 보석취소결정에 대한 불복과 집행정지효력 191 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a095",
-      "caseNo": 84,
-      "source": "출처 미표기",
-      "label": "음주운전의 현행범인체포와 관련이 없는 지갑 등의 압수의 적법성 199 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a096",
-      "caseNo": 85,
-      "source": "출처 미표기",
-      "label": "압수 · 수색영장에",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a097",
-      "caseNo": 86,
-      "source": "출처 미표기",
-      "label": "압수·수색절차에서의 적법성 1 203 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a098",
-      "caseNo": 86,
-      "source": "출처 미표기",
-      "label": "압수· 수색절차에서의 적법성 1 205 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a099",
-      "caseNo": 87,
-      "source": "출처 미표기",
-      "label": "압수·수색절차에서의 적법성 2 207 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a102",
-      "caseNo": 90,
-      "source": "출처 미표기",
-      "label": "정보저장매체의 수사기관 반출 후 탐색단계에서의 참여권 보장 215 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a103",
-      "caseNo": 91,
-      "source": "출처 미표기",
-      "label": "전자정보 압수수색의 적법성 2 217 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a105",
-      "caseNo": 93,
-      "source": "출처 미표기",
-      "label": "피압수자가 압수물에 대한 소유권이나 환부청구권을 포기한 경우와 환부의무 221 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a106",
-      "caseNo": 94,
-      "source": "출처 미표기",
-      "label": "현행범체포 의사무능력자에 대한 채혀 도의의 처버人",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a107",
-      "caseNo": 94,
-      "source": "출처 미표기",
-      "label": "현행범체포, 의사무능력자에 대한 채혈 동의의 적법성 225 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a109",
-      "caseNo": 96,
-      "source": "출처 미표기",
-      "label": "강제채혈의 적법성 여부 229 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a110",
-      "caseNo": 97,
-      "source": "출처 미표기",
-      "label": "강제채뇨의 적법성 여부 231 -",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "a111",
-      "caseNo": 98,
-      "source": "출처 미표기",
-      "label": "체포를 위한 피의자수색과 긴급성 1 233 -",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
@@ -4257,6 +4257,15 @@
       "kind": "exam"
      },
      {
+      "uid": "b007",
+      "caseNo": "4-1",
+      "source": "제6회 변호사시험",
+      "label": "구성요건적 고의 및 구성요건적 착오 39 사정과 일반인이라면 인식할 수",
+      "examId": "형사법_변시_6회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
       "uid": "b045",
       "caseNo": "20-6",
       "source": "제6회 변호사시험",
@@ -4270,15 +4279,6 @@
       "caseNo": "32-4",
       "source": "제6회 변호사시험",
       "label": "기타 재산범죄 549 사래 32-3 법전협 2024(기모의(제2문) 丁은",
-      "examId": "형사법_변시_6회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b007",
-      "caseNo": "4-1",
-      "source": "제6회 변호사시험",
-      "label": "구성요건적 고의 및 구성요건적 착오 39 사정과 일반인이라면 인식할 수",
       "examId": "형사법_변시_6회_사례",
       "groupKey": null,
       "kind": "exam"
@@ -4302,19 +4302,19 @@
       "kind": "exam"
      },
      {
-      "uid": "b056",
-      "caseNo": "26-8",
+      "uid": "b009",
+      "caseNo": "4-3",
       "source": "제8회 변호사시험",
-      "label": "절도의 최 329 된다면, 그 재물에 대한 처분행위가 있었다고 볼 수 없",
+      "label": "위법성조각사유 53 서 비롯된 심약적 충동요소로 인하여 적법행위에 대한",
       "examId": "형사법_변시_8회_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "b009",
-      "caseNo": "4-3",
+      "uid": "b056",
+      "caseNo": "26-8",
       "source": "제8회 변호사시험",
-      "label": "위법성조각사유 53 서 비롯된 심약적 충동요소로 인하여 적법행위에 대한",
+      "label": "절도의 최 329 된다면, 그 재물에 대한 처분행위가 있었다고 볼 수 없",
       "examId": "형사법_변시_8회_사례",
       "groupKey": null,
       "kind": "exam"
@@ -4351,6 +4351,96 @@
    {
     "title": "출처 미표기 (90사례)",
     "cases": [
+     {
+      "uid": "b002",
+      "caseNo": "2-3",
+      "source": "출처 미표기",
+      "label": "구성요건적 고의 및 구성요건적 착오 15 '방법의 착오'라는 견해가 대립",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b003",
+      "caseNo": "2-4",
+      "source": "출처 미표기",
+      "label": "구성요건적 고의 및 구성요건적 착오 17 사례에 대해 乙에 대한 살인의",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b005",
+      "caseNo": "2-7",
+      "source": "출처 미표기",
+      "label": "구성요건적 고의 및 구성요건적 착오 33 1||. 乙의 죄책 사안에서 乙",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b006",
+      "caseNo": "2-8",
+      "source": "출처 미표기",
+      "label": "구성요건적 고의 및 구성요건적 착오 33 1||. 乙의 죄책 사안에서 乙",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b008",
+      "caseNo": "4-2",
+      "source": "출처 미표기",
+      "label": "구성요건적 고의 및 구성요건적 착오 39 사정과 일반인이라면 인식할 수",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b010",
+      "caseNo": "4-8",
+      "source": "출처 미표기",
+      "label": "위법성조각사유 65 사래 4-7 2016년 제5회 변호사시험(제2문) 신",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b012",
+      "caseNo": "7-2",
+      "source": "출처 미표기",
+      "label": "금지착오 및 위법성조각사유의 전제사실의 착오 89 건조물침입죄가 성립한다",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b013",
+      "caseNo": "7-3",
+      "source": "출처 미표기",
+      "label": "중지미수 99 (2) 교사자인 乙의 죄책 착오의 구조에 비추어 정범의 객",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b014",
+      "caseNo": "7-5",
+      "source": "출처 미표기",
+      "label": "중지미수 99 (2) 교사자인 乙의 죄책 착오의 구조에 비추어 정범의 객",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b015",
+      "caseNo": "8-1",
+      "source": "출처 미표기",
+      "label": "중지미수 99 (2) 교사자인 乙의 죄책 착오의 구조에 비추어 정범의 객",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
      {
       "uid": "b016",
       "caseNo": "10-1",
@@ -4541,42 +4631,6 @@
       "kind": "unlabeled"
      },
      {
-      "uid": "b002",
-      "caseNo": "2-3",
-      "source": "출처 미표기",
-      "label": "구성요건적 고의 및 구성요건적 착오 15 '방법의 착오'라는 견해가 대립",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b003",
-      "caseNo": "2-4",
-      "source": "출처 미표기",
-      "label": "구성요건적 고의 및 구성요건적 착오 17 사례에 대해 乙에 대한 살인의",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b005",
-      "caseNo": "2-7",
-      "source": "출처 미표기",
-      "label": "구성요건적 고의 및 구성요건적 착오 33 1||. 乙의 죄책 사안에서 乙",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b006",
-      "caseNo": "2-8",
-      "source": "출처 미표기",
-      "label": "구성요건적 고의 및 구성요건적 착오 33 1||. 乙의 죄책 사안에서 乙",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
       "uid": "b041",
       "caseNo": "20-1",
       "source": "출처 미표기",
@@ -4721,33 +4775,6 @@
       "kind": "unlabeled"
      },
      {
-      "uid": "b066",
-      "caseNo": "28-11",
-      "source": "출처 미표기",
-      "label": "사기의 최 419 분실물이나 유류물은 원래 점유자가 그 소재를 알고 되찾",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b067",
-      "caseNo": "28-15",
-      "source": "출처 미표기",
-      "label": "사기의 죄 423 하는 것은 우추해석이라는 부정설 등이 대립하지만, 판례",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b069",
-      "caseNo": "28-19",
-      "source": "출처 미표기",
-      "label": "사기의 최 445 3. 사안의 결론 최협의의 폭행일 경우 甲과 乙은 직불",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
       "uid": "b063",
       "caseNo": "28-2",
       "source": "출처 미표기",
@@ -4775,6 +4802,33 @@
       "kind": "unlabeled"
      },
      {
+      "uid": "b066",
+      "caseNo": "28-11",
+      "source": "출처 미표기",
+      "label": "사기의 최 419 분실물이나 유류물은 원래 점유자가 그 소재를 알고 되찾",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b067",
+      "caseNo": "28-15",
+      "source": "출처 미표기",
+      "label": "사기의 죄 423 하는 것은 우추해석이라는 부정설 등이 대립하지만, 판례",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b069",
+      "caseNo": "28-19",
+      "source": "출처 미표기",
+      "label": "사기의 최 445 3. 사안의 결론 최협의의 폭행일 경우 甲과 乙은 직불",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
       "uid": "b071",
       "caseNo": "29-2",
       "source": "출처 미표기",
@@ -4797,15 +4851,6 @@
       "caseNo": "29-5",
       "source": "출처 미표기",
       "label": "공갈의 최 461 (2) 직무유기죄(제122조)의 성부 (6/16점) 직",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b080",
-      "caseNo": "30-12",
-      "source": "출처 미표기",
-      "label": "횡령의 최 495 권설정계약에 따라 채권자에게 그 소유의 부동산에 관하여",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
@@ -4847,10 +4892,10 @@
       "kind": "unlabeled"
      },
      {
-      "uid": "b085",
-      "caseNo": "31-10",
+      "uid": "b080",
+      "caseNo": "30-12",
       "source": "출처 미표기",
-      "label": "배임의 최 519 배임행위에 해당한다는 점을 알고 거래에 임하였다는 사정",
+      "label": "횡령의 최 495 권설정계약에 따라 채권자에게 그 소유의 부동산에 관하여",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
@@ -4876,6 +4921,15 @@
      {
       "uid": "b084",
       "caseNo": "31-7",
+      "source": "출처 미표기",
+      "label": "배임의 최 519 배임행위에 해당한다는 점을 알고 거래에 임하였다는 사정",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b085",
+      "caseNo": "31-10",
       "source": "출처 미표기",
       "label": "배임의 최 519 배임행위에 해당한다는 점을 알고 거래에 임하였다는 사정",
       "examId": null,
@@ -4919,33 +4973,6 @@
       "kind": "unlabeled"
      },
      {
-      "uid": "b098",
-      "caseNo": "33-10",
-      "source": "출처 미표기",
-      "label": "문서에 관한 최 587 유제 [법전협 2023(1)모의(제2문)] X은행",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b099",
-      "caseNo": "33-11",
-      "source": "출처 미표기",
-      "label": "문서에 관한 최 593 적인 지배영역 내라면 그 물건에 대해서는 그 영역",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b100",
-      "caseNo": "33-12",
-      "source": "출처 미표기",
-      "label": "문서에 관한 최 597 사례 33-12 법전협 2016(기모의(제1문)",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
       "uid": "b095",
       "caseNo": "33-4",
       "source": "출처 미표기",
@@ -4977,6 +5004,33 @@
       "caseNo": "33-8",
       "source": "출처 미표기",
       "label": "문서에 관한 최 사례 33-8 법전협 2025(1)모의(제1문) 583",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b098",
+      "caseNo": "33-10",
+      "source": "출처 미표기",
+      "label": "문서에 관한 최 587 유제 [법전협 2023(1)모의(제2문)] X은행",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b099",
+      "caseNo": "33-11",
+      "source": "출처 미표기",
+      "label": "문서에 관한 최 593 적인 지배영역 내라면 그 물건에 대해서는 그 영역",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b100",
+      "caseNo": "33-12",
+      "source": "출처 미표기",
+      "label": "문서에 관한 최 597 사례 33-12 법전협 2016(기모의(제1문)",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
@@ -5072,24 +5126,6 @@
       "kind": "unlabeled"
      },
      {
-      "uid": "b008",
-      "caseNo": "4-2",
-      "source": "출처 미표기",
-      "label": "구성요건적 고의 및 구성요건적 착오 39 사정과 일반인이라면 인식할 수",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b010",
-      "caseNo": "4-8",
-      "source": "출처 미표기",
-      "label": "위법성조각사유 65 사래 4-7 2016년 제5회 변호사시험(제2문) 신",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
       "uid": "b117",
       "caseNo": "40-1",
       "source": "출처 미표기",
@@ -5124,42 +5160,6 @@
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
-     },
-     {
-      "uid": "b012",
-      "caseNo": "7-2",
-      "source": "출처 미표기",
-      "label": "금지착오 및 위법성조각사유의 전제사실의 착오 89 건조물침입죄가 성립한다",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b013",
-      "caseNo": "7-3",
-      "source": "출처 미표기",
-      "label": "중지미수 99 (2) 교사자인 乙의 죄책 착오의 구조에 비추어 정범의 객",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b014",
-      "caseNo": "7-5",
-      "source": "출처 미표기",
-      "label": "중지미수 99 (2) 교사자인 乙의 죄책 착오의 구조에 비추어 정범의 객",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b015",
-      "caseNo": "8-1",
-      "source": "출처 미표기",
-      "label": "중지미수 99 (2) 교사자인 乙의 죄책 착오의 구조에 비추어 정범의 객",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
      }
     ]
    }
@@ -5183,6 +5183,510 @@
       "caseNo": "1",
       "source": "출처 미표기",
       "label": "항소심에서의 사물관할의 변경과 관할법원의 문제 제1편 총론 3",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c007",
+      "caseNo": "4",
+      "source": "출처 미표기",
+      "label": "위장출석",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c008",
+      "caseNo": "5",
+      "source": "출처 미표기",
+      "label": "변호인-의뢰인 비밀 유지권1) D 자산운용 대표 甲은 2021 년 5월경부터 투자자를 기망하여 부실 펀드를",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c009",
+      "caseNo": "6",
+      "source": "출처 미표기",
+      "label": "제33조제1항제1호의 필요적 국선변호인 선정사유인 '피고인이구속된 메의 의미",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c005",
+      "caseNo": "8",
+      "source": "출처 미표기",
+      "label": "동일한 국선변호인의 선정 •• 15",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c010",
+      "caseNo": "11",
+      "source": "출처 미표기",
+      "label": "필요적 변호사건에서 소송기록접수통지 후에 새로 선임된 사선변호인에 대한 소송기록접수통지",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c011",
+      "caseNo": "13",
+      "source": "출처 미표기",
+      "label": "구속피의자의 피의자신문을 위한 구인 허부",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c012",
+      "caseNo": "14",
+      "source": "출처 미표기",
+      "label": "변호인의 접견교통권 침해 여부 및 그에 대한 불복방법 제1편 총론 23",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c013",
+      "caseNo": "15",
+      "source": "출처 미표기",
+      "label": "변호인의 피의자신문 참여권의 침해와 불복방법, 진술거부권을 고지하였지만 제244조의3 제2 항에 위반하여 작",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c014",
+      "caseNo": "16",
+      "source": "출처 미표기",
+      "label": "변호인의 피의자신문 참여권과 그 침해시 불복방법 등",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c015",
+      "caseNo": "21",
+      "source": "출처 미표기",
+      "label": "착오에 의한 소송행위의 무효원인 여부 제1편 총론 33",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c016",
+      "caseNo": "24",
+      "source": "출처 미표기",
+      "label": "공소장에 기명날인 • 서명이 누락된 공소제기와 추완 허부 검사가 공소를 제기하면서 공소장을 작성한 후 기명날",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c017",
+      "caseNo": "25",
+      "source": "출처 미표기",
+      "label": "공소장변경에 의한 공소제기 하자의 치유 허부 제1편 총론 37",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c018",
+      "caseNo": "26",
+      "source": "출처 미표기",
+      "label": "소송조건 홈결의 경합과 법원의 조치",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c019",
+      "caseNo": "28",
+      "source": "출처 미표기",
+      "label": "고소 전 수사의 적법성 여부",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c020",
+      "caseNo": "29",
+      "source": "출처 미표기",
+      "label": "함정수사 제2편 수사 43",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c021",
+      "caseNo": "31",
+      "source": "출처 미표기",
+      "label": "전 수사, 구本°l 추완, 7本의 포기 제2편 수사 47",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c022",
+      "caseNo": "33",
+      "source": "출처 미표기",
+      "label": "성년후견인이 의사무능력인 피해자를 대리하여 반의사불벌죄의 처벌불원의사를 결정하거나 처벌 희망의사를 철회할 수",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c023",
+      "caseNo": "34",
+      "source": "출처 미표기",
+      "label": "합의서 제출 후 번복과 고소취소의 허부",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c024",
+      "caseNo": "35",
+      "source": "출처 미표기",
+      "label": "전속고발사건과 고소의 주관적 불가분원칙의 유추적용 여부 제2편 수사 53",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c025",
+      "caseNo": "38",
+      "source": "출처 미표기",
+      "label": "수사기관의 범행현장의 대화녹음 체포현장에서의 영장 없는 사진촬영, 진술거부권 고지 및 그 대상이 되는 피의자",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c026",
+      "caseNo": "39",
+      "source": "출처 미표기",
+      "label": "긴급체포의 적법성",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c027",
+      "caseNo": "41",
+      "source": "출처 미표기",
+      "label": "현행범체포시 체포의 필요성 요부",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c028",
+      "caseNo": "43",
+      "source": "출처 미표기",
+      "label": "보증금납입조건부 피의자석방결정에 대한 검사의 항고 허부 제2편 수사 63",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c029",
+      "caseNo": "44",
+      "source": "출처 미표기",
+      "label": "압수의 목적물-사건과의 관련성, 녹음파일의 증거능력",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c030",
+      "caseNo": "45",
+      "source": "출처 미표기",
+      "label": "'정보처리장치 및 정보저장매체에 저장되어 있는 전자정보'의 압수에 휴대전화도 포함되는지 여부",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c031",
+      "caseNo": "48",
+      "source": "출처 미표기",
+      "label": "정보저장매체등을 수사기관 조사실로 반출하여 압수시 참여권 보장 제2편 수사 69",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c032",
+      "caseNo": "49",
+      "source": "출처 미표기",
+      "label": "참여권을 보장하여아 할 실질적인 압수 수색 당사자 피고인(국회의원, 변호사)은 허위의 인턴십 확인서를 작성한",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c033",
+      "caseNo": "51",
+      "source": "출처 미표기",
+      "label": "복제된 전자정보 압수 • 수색절차에서의 참여권에 관한 법리",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c034",
+      "caseNo": "53",
+      "source": "출처 미표기",
+      "label": "압수수색영장 유효기간의 성질 등 제2편 수사 77",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c035",
+      "caseNo": "54",
+      "source": "출처 미표기",
+      "label": "휴대전화의 동영상 파일을 복사한 CD의 증거능력",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c036",
+      "caseNo": "56",
+      "source": "출처 미표기",
+      "label": "체포목적의 피의자 수색",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c037",
+      "caseNo": "58",
+      "source": "출처 미표기",
+      "label": "체포현장에서의 영장 없는 압수, 별건압수 등(1) 제2편 수사 83",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c038",
+      "caseNo": "59",
+      "source": "출처 미표기",
+      "label": "체포현장에서의 영장 없는 압수, 별건압수 등(기 제2편 수사 85",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c039",
+      "caseNo": "61",
+      "source": "출처 미표기",
+      "label": "체포현장, 범죄장소에서의 영장 없는 압수(1) 제2편 수사 89",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c040",
+      "caseNo": "63",
+      "source": "출처 미표기",
+      "label": "긴급체포시 영장 없는 압수(기와 요급처분의 문제",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c041",
+      "caseNo": "64",
+      "source": "출처 미표기",
+      "label": "유류물의 압수 甲의 불법촬영 혐의에 관하여 이루어진 주거지 등에 관한 압수수색 직전에, 甲은 주거지 밖으로",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c042",
+      "caseNo": "65",
+      "source": "출처 미표기",
+      "label": "임의제출물의 압수(1), 비망록의 증거능력 제2편 수사 95",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c043",
+      "caseNo": "66",
+      "source": "출처 미표기",
+      "label": "임의제출물의 압쉬기",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c044",
+      "caseNo": "68",
+      "source": "출처 미표기",
+      "label": "피해자 등 제3자가 피의자가 소유 • 관리하는 전자정보를 임의제출한 경우, 압수의 제문제",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c001",
+      "caseNo": "69",
+      "source": "출처 미표기",
+      "label": ", 예비적 공소사실만 유죄로 인정되고 그 부분에 대하여 피고 인만 상고한 경우, 주위적 공소사실까지 전부 상",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c045",
+      "caseNo": "69",
+      "source": "출처 미표기",
+      "label": "압수목록의 작성 • 교부시기",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c046",
+      "caseNo": "71",
+      "source": "출처 미표기",
+      "label": "강제채뇨 제2편 수사 103",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c047",
+      "caseNo": "73",
+      "source": "출처 미표기",
+      "label": "증거보전, 증인신문의 청구 제2편 수사 105",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c048",
+      "caseNo": "75",
+      "source": "출처 미표기",
+      "label": "증인신문 전 작성된 번복 '진술조세의 증거능력과 법정 증언의 증명력",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c049",
+      "caseNo": "78",
+      "source": "출처 미표기",
+      "label": "공소사실의 불특정과 법원의 조치 제3편 공소제기 117",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c050",
+      "caseNo": "81",
+      "source": "출처 미표기",
+      "label": "공소장일본주의와 전과기재, 엄격증명 • 자유증명",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c051",
+      "caseNo": "83",
+      "source": "출처 미표기",
+      "label": "공소시효와 공소장변경",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c052",
+      "caseNo": "84",
+      "source": "출처 미표기",
+      "label": "공소시효와 공범(대힝뻠 관겨뻬 있는 재의 시효의 정지여부 제3편 공소제기 127",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c053",
+      "caseNo": "85",
+      "source": "출처 미표기",
+      "label": "공범과 시효의 정지 제3편 공소제기 129",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c054",
+      "caseNo": "86",
+      "source": "출처 미표기",
+      "label": "포괄일최에 대한 추가기소시 검사와 법원의 조치",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c055",
+      "caseNo": "88",
+      "source": "출처 미표기",
+      "label": "공소사실의 동일성(공소징변경의 한계와 기판력의 객관적 범위)",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c056",
+      "caseNo": "91",
+      "source": "출처 미표기",
+      "label": "단독범을 공동정범으로 인정하는 경우 공소장변경의 필요성",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c057",
+      "caseNo": "93",
+      "source": "출처 미표기",
+      "label": "법원의 공소장변경요구",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c058",
+      "caseNo": "94",
+      "source": "출처 미표기",
+      "label": "공소장변경 신청의 방식(구술에 의한 공소장변경신청과 전지문서의 제출) 제4편 공판 147",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c059",
+      "caseNo": "96",
+      "source": "출처 미표기",
+      "label": "약식명령에 대한정식재판절차에서의 피고인2회 불출석과증거동의의 의제",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "c060",
+      "caseNo": "98",
+      "source": "출처 미표기",
+      "label": "제1 회 공판기일 전 수소법원이 공판준비를 이유로 증인신문 등 증거조사의 허부 피고인 甲은 피해자 A 등과",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
@@ -5228,15 +5732,6 @@
       "caseNo": "108",
       "source": "출처 미표기",
       "label": "변호인의 피고인신문권의 법적 성격, 법원의 증거조사완료 전 피고인신문의 허부등",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c010",
-      "caseNo": "11",
-      "source": "출처 미표기",
-      "label": "필요적 변호사건에서 소송기록접수통지 후에 새로 선임된 사선변호인에 대한 소송기록접수통지",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
@@ -5314,15 +5809,6 @@
       "kind": "unlabeled"
      },
      {
-      "uid": "c011",
-      "caseNo": "13",
-      "source": "출처 미표기",
-      "label": "구속피의자의 피의자신문을 위한 구인 허부",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
       "uid": "c074",
       "caseNo": "131",
       "source": "출처 미표기",
@@ -5368,15 +5854,6 @@
       "kind": "unlabeled"
      },
      {
-      "uid": "c012",
-      "caseNo": "14",
-      "source": "출처 미표기",
-      "label": "변호인의 접견교통권 침해 여부 및 그에 대한 불복방법 제1편 총론 23",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
       "uid": "c078",
       "caseNo": "141",
       "source": "출처 미표기",
@@ -5399,15 +5876,6 @@
       "caseNo": "148",
       "source": "출처 미표기",
       "label": "피해자가 피고인과의 대화내용을 비일녹음한 녹음테이프(진술녹음)의 증거능력",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c013",
-      "caseNo": "15",
-      "source": "출처 미표기",
-      "label": "변호인의 피의자신문 참여권의 침해와 불복방법, 진술거부권을 고지하였지만 제244조의3 제2 항에 위반하여 작",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
@@ -5444,15 +5912,6 @@
       "caseNo": "158",
       "source": "출처 미표기",
       "label": "현행범인체포 경찰관이 작성한 압수조서상 '압수경위'란의 보강증거의 자객)",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c014",
-      "caseNo": "16",
-      "source": "출처 미표기",
-      "label": "변호인의 피의자신문 참여권과 그 침해시 불복방법 등",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
@@ -5642,465 +6101,6 @@
       "caseNo": "198",
       "source": "출처 미표기",
       "label": "등을 들 수 있습니다. 3. 기본서 또는 변사기(團 관련법률, 回 관련판례)의 활용 무리겠지만, 가능하면 기",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c015",
-      "caseNo": "21",
-      "source": "출처 미표기",
-      "label": "착오에 의한 소송행위의 무효원인 여부 제1편 총론 33",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c016",
-      "caseNo": "24",
-      "source": "출처 미표기",
-      "label": "공소장에 기명날인 • 서명이 누락된 공소제기와 추완 허부 검사가 공소를 제기하면서 공소장을 작성한 후 기명날",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c017",
-      "caseNo": "25",
-      "source": "출처 미표기",
-      "label": "공소장변경에 의한 공소제기 하자의 치유 허부 제1편 총론 37",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c018",
-      "caseNo": "26",
-      "source": "출처 미표기",
-      "label": "소송조건 홈결의 경합과 법원의 조치",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c019",
-      "caseNo": "28",
-      "source": "출처 미표기",
-      "label": "고소 전 수사의 적법성 여부",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c020",
-      "caseNo": "29",
-      "source": "출처 미표기",
-      "label": "함정수사 제2편 수사 43",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c021",
-      "caseNo": "31",
-      "source": "출처 미표기",
-      "label": "전 수사, 구本°l 추완, 7本의 포기 제2편 수사 47",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c022",
-      "caseNo": "33",
-      "source": "출처 미표기",
-      "label": "성년후견인이 의사무능력인 피해자를 대리하여 반의사불벌죄의 처벌불원의사를 결정하거나 처벌 희망의사를 철회할 수",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c023",
-      "caseNo": "34",
-      "source": "출처 미표기",
-      "label": "합의서 제출 후 번복과 고소취소의 허부",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c024",
-      "caseNo": "35",
-      "source": "출처 미표기",
-      "label": "전속고발사건과 고소의 주관적 불가분원칙의 유추적용 여부 제2편 수사 53",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c025",
-      "caseNo": "38",
-      "source": "출처 미표기",
-      "label": "수사기관의 범행현장의 대화녹음 체포현장에서의 영장 없는 사진촬영, 진술거부권 고지 및 그 대상이 되는 피의자",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c026",
-      "caseNo": "39",
-      "source": "출처 미표기",
-      "label": "긴급체포의 적법성",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c007",
-      "caseNo": "4",
-      "source": "출처 미표기",
-      "label": "위장출석",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c027",
-      "caseNo": "41",
-      "source": "출처 미표기",
-      "label": "현행범체포시 체포의 필요성 요부",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c028",
-      "caseNo": "43",
-      "source": "출처 미표기",
-      "label": "보증금납입조건부 피의자석방결정에 대한 검사의 항고 허부 제2편 수사 63",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c029",
-      "caseNo": "44",
-      "source": "출처 미표기",
-      "label": "압수의 목적물-사건과의 관련성, 녹음파일의 증거능력",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c030",
-      "caseNo": "45",
-      "source": "출처 미표기",
-      "label": "'정보처리장치 및 정보저장매체에 저장되어 있는 전자정보'의 압수에 휴대전화도 포함되는지 여부",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c031",
-      "caseNo": "48",
-      "source": "출처 미표기",
-      "label": "정보저장매체등을 수사기관 조사실로 반출하여 압수시 참여권 보장 제2편 수사 69",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c032",
-      "caseNo": "49",
-      "source": "출처 미표기",
-      "label": "참여권을 보장하여아 할 실질적인 압수 수색 당사자 피고인(국회의원, 변호사)은 허위의 인턴십 확인서를 작성한",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c008",
-      "caseNo": "5",
-      "source": "출처 미표기",
-      "label": "변호인-의뢰인 비밀 유지권1) D 자산운용 대표 甲은 2021 년 5월경부터 투자자를 기망하여 부실 펀드를",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c033",
-      "caseNo": "51",
-      "source": "출처 미표기",
-      "label": "복제된 전자정보 압수 • 수색절차에서의 참여권에 관한 법리",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c034",
-      "caseNo": "53",
-      "source": "출처 미표기",
-      "label": "압수수색영장 유효기간의 성질 등 제2편 수사 77",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c035",
-      "caseNo": "54",
-      "source": "출처 미표기",
-      "label": "휴대전화의 동영상 파일을 복사한 CD의 증거능력",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c036",
-      "caseNo": "56",
-      "source": "출처 미표기",
-      "label": "체포목적의 피의자 수색",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c037",
-      "caseNo": "58",
-      "source": "출처 미표기",
-      "label": "체포현장에서의 영장 없는 압수, 별건압수 등(1) 제2편 수사 83",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c038",
-      "caseNo": "59",
-      "source": "출처 미표기",
-      "label": "체포현장에서의 영장 없는 압수, 별건압수 등(기 제2편 수사 85",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c009",
-      "caseNo": "6",
-      "source": "출처 미표기",
-      "label": "제33조제1항제1호의 필요적 국선변호인 선정사유인 '피고인이구속된 메의 의미",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c039",
-      "caseNo": "61",
-      "source": "출처 미표기",
-      "label": "체포현장, 범죄장소에서의 영장 없는 압수(1) 제2편 수사 89",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c040",
-      "caseNo": "63",
-      "source": "출처 미표기",
-      "label": "긴급체포시 영장 없는 압수(기와 요급처분의 문제",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c041",
-      "caseNo": "64",
-      "source": "출처 미표기",
-      "label": "유류물의 압수 甲의 불법촬영 혐의에 관하여 이루어진 주거지 등에 관한 압수수색 직전에, 甲은 주거지 밖으로",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c042",
-      "caseNo": "65",
-      "source": "출처 미표기",
-      "label": "임의제출물의 압수(1), 비망록의 증거능력 제2편 수사 95",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c043",
-      "caseNo": "66",
-      "source": "출처 미표기",
-      "label": "임의제출물의 압쉬기",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c044",
-      "caseNo": "68",
-      "source": "출처 미표기",
-      "label": "피해자 등 제3자가 피의자가 소유 • 관리하는 전자정보를 임의제출한 경우, 압수의 제문제",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c001",
-      "caseNo": "69",
-      "source": "출처 미표기",
-      "label": ", 예비적 공소사실만 유죄로 인정되고 그 부분에 대하여 피고 인만 상고한 경우, 주위적 공소사실까지 전부 상",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c045",
-      "caseNo": "69",
-      "source": "출처 미표기",
-      "label": "압수목록의 작성 • 교부시기",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c046",
-      "caseNo": "71",
-      "source": "출처 미표기",
-      "label": "강제채뇨 제2편 수사 103",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c047",
-      "caseNo": "73",
-      "source": "출처 미표기",
-      "label": "증거보전, 증인신문의 청구 제2편 수사 105",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c048",
-      "caseNo": "75",
-      "source": "출처 미표기",
-      "label": "증인신문 전 작성된 번복 '진술조세의 증거능력과 법정 증언의 증명력",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c049",
-      "caseNo": "78",
-      "source": "출처 미표기",
-      "label": "공소사실의 불특정과 법원의 조치 제3편 공소제기 117",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c005",
-      "caseNo": "8",
-      "source": "출처 미표기",
-      "label": "동일한 국선변호인의 선정 •• 15",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c050",
-      "caseNo": "81",
-      "source": "출처 미표기",
-      "label": "공소장일본주의와 전과기재, 엄격증명 • 자유증명",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c051",
-      "caseNo": "83",
-      "source": "출처 미표기",
-      "label": "공소시효와 공소장변경",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c052",
-      "caseNo": "84",
-      "source": "출처 미표기",
-      "label": "공소시효와 공범(대힝뻠 관겨뻬 있는 재의 시효의 정지여부 제3편 공소제기 127",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c053",
-      "caseNo": "85",
-      "source": "출처 미표기",
-      "label": "공범과 시효의 정지 제3편 공소제기 129",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c054",
-      "caseNo": "86",
-      "source": "출처 미표기",
-      "label": "포괄일최에 대한 추가기소시 검사와 법원의 조치",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c055",
-      "caseNo": "88",
-      "source": "출처 미표기",
-      "label": "공소사실의 동일성(공소징변경의 한계와 기판력의 객관적 범위)",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c056",
-      "caseNo": "91",
-      "source": "출처 미표기",
-      "label": "단독범을 공동정범으로 인정하는 경우 공소장변경의 필요성",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c057",
-      "caseNo": "93",
-      "source": "출처 미표기",
-      "label": "법원의 공소장변경요구",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c058",
-      "caseNo": "94",
-      "source": "출처 미표기",
-      "label": "공소장변경 신청의 방식(구술에 의한 공소장변경신청과 전지문서의 제출) 제4편 공판 147",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c059",
-      "caseNo": "96",
-      "source": "출처 미표기",
-      "label": "약식명령에 대한정식재판절차에서의 피고인2회 불출석과증거동의의 의제",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "c060",
-      "caseNo": "98",
-      "source": "출처 미표기",
-      "label": "제1 회 공판기일 전 수소법원이 공판준비를 이유로 증인신문 등 증거조사의 허부 피고인 甲은 피해자 A 등과",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
