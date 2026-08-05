@@ -5,3 +5,6 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+
+# Cloudflare Worker 의존성 — 재설치 가능
+worker/node_modules/

@@ -6273,83 +6273,136 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
-     "count": 2,
-     "points": 35
-    },
-    {
-     "key": "제1문의2",
-     "label": "제1문의2",
-     "count": 1,
-     "points": 15
-    },
-    {
-     "key": "제1문의3",
-     "label": "제1문의3",
-     "count": 1,
-     "points": 25
-    },
-    {
-     "key": "제1문의4",
-     "label": "제1문의4",
-     "count": 1,
-     "points": 25
-    },
-    {
-     "key": "제1문의5",
-     "label": "제1문의5",
-     "count": 1,
-     "points": 30
-    },
-    {
-     "key": "제1문의6",
-     "label": "제1문의6",
+     "key": "문1",
+     "label": "문1",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
-     "count": 2,
-     "points": 20
-    },
-    {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "문2",
+     "label": "문2",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "문3",
+     "label": "문3",
+     "count": 1,
+     "points": 15
+    },
+    {
+     "key": "문4",
+     "label": "문4",
+     "count": 1,
+     "points": 25
+    },
+    {
+     "key": "문5",
+     "label": "문5",
+     "count": 1,
+     "points": 25
+    },
+    {
+     "key": "문6",
+     "label": "문6",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
-     "count": 3,
-     "points": 35
+     "key": "문7",
+     "label": "문7",
+     "count": 1,
+     "points": 20
     },
     {
-     "key": "제3문의1",
-     "label": "제3문의1",
-     "count": 4,
-     "points": 50
+     "key": "문8",
+     "label": "문8",
+     "count": 1,
+     "points": 10
     },
     {
-     "key": "제3문의2",
-     "label": "제3문의2",
-     "count": 3,
-     "points": 50
+     "key": "문9",
+     "label": "문9",
+     "count": 1,
+     "points": 10
+    },
+    {
+     "key": "문10",
+     "label": "문10",
+     "count": 1,
+     "points": 15
+    },
+    {
+     "key": "문11",
+     "label": "문11",
+     "count": 1,
+     "points": 10
+    },
+    {
+     "key": "문12",
+     "label": "문12",
+     "count": 1,
+     "points": 10
+    },
+    {
+     "key": "문13",
+     "label": "문13",
+     "count": 1,
+     "points": 15
+    },
+    {
+     "key": "문14",
+     "label": "문14",
+     "count": 1,
+     "points": 30
+    },
+    {
+     "key": "문15",
+     "label": "문15",
+     "count": 1,
+     "points": 15
+    },
+    {
+     "key": "문16",
+     "label": "문16",
+     "count": 1,
+     "points": 10
+    },
+    {
+     "key": "문17",
+     "label": "문17",
+     "count": 1,
+     "points": 10
+    },
+    {
+     "key": "문18",
+     "label": "문18",
+     "count": 1,
+     "points": 15
+    },
+    {
+     "key": "문19",
+     "label": "문19",
+     "count": 1,
+     "points": 20
+    },
+    {
+     "key": "문20",
+     "label": "문20",
+     "count": 1,
+     "points": 10
+    },
+    {
+     "key": "문21",
+     "label": "문21",
+     "count": 1,
+     "points": 20
     }
    ],
    "totalPoints": 350,
    "hasRubric": false,
    "hasCasebook": true,
-   "unmappedKeywords": [],
-   "groupSource": "pdf"
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_변시_14회_사례",
@@ -6507,137 +6560,136 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "문1",
+     "label": "문1",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "문2",
+     "label": "문2",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "문3",
+     "label": "문3",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "문4",
+     "label": "문4",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "문5",
+     "label": "문5",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "문6",
+     "label": "문6",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "문7",
+     "label": "문7",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "문8",
+     "label": "문8",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "문9",
+     "label": "문9",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의5",
-     "label": "제2문의5",
+     "key": "문10",
+     "label": "문10",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의6",
-     "label": "제2문의6",
+     "key": "문11",
+     "label": "문11",
      "count": 1,
      "points": 40
     },
     {
-     "key": "제3문의1",
-     "label": "제3문의1",
+     "key": "문12",
+     "label": "문12",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의2",
-     "label": "제3문의2",
+     "key": "문13",
+     "label": "문13",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제3문의3",
-     "label": "제3문의3",
+     "key": "문14",
+     "label": "문14",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제3문의4",
-     "label": "제3문의4",
+     "key": "문15",
+     "label": "문15",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제3문의5",
-     "label": "제3문의5",
+     "key": "문16",
+     "label": "문16",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의6",
-     "label": "제3문의6",
+     "key": "문17",
+     "label": "문17",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의7",
-     "label": "제3문의7",
+     "key": "문18",
+     "label": "문18",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제3문의8",
-     "label": "제3문의8",
+     "key": "문19",
+     "label": "문19",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제4문의1",
-     "label": "제4문의1",
+     "key": "문20",
+     "label": "문20",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제4문의2",
-     "label": "제4문의2",
+     "key": "문21",
+     "label": "문21",
      "count": 1,
      "points": 10
     }
    ],
    "totalPoints": 350,
    "hasRubric": false,
-   "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "hasCasebook": true,
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_변시_13회_사례",
@@ -6799,122 +6851,122 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "문1",
+     "label": "문1",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "문2",
+     "label": "문2",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "문3",
+     "label": "문3",
      "count": 2,
      "points": 25
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "문4",
+     "label": "문4",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "문5",
+     "label": "문5",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "문6",
+     "label": "문6",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "문7",
+     "label": "문7",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "문8",
+     "label": "문8",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "문9",
+     "label": "문9",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의5",
-     "label": "제2문의5",
+     "key": "문10",
+     "label": "문10",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의6",
-     "label": "제2문의6",
+     "key": "문11",
+     "label": "문11",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의7",
-     "label": "제2문의7",
+     "key": "문12",
+     "label": "문12",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의8",
-     "label": "제2문의8",
+     "key": "문13",
+     "label": "문13",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의9",
-     "label": "제2문의9",
+     "key": "문14",
+     "label": "문14",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의1",
-     "label": "제3문의1",
+     "key": "문15",
+     "label": "문15",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제3문의2",
-     "label": "제3문의2",
+     "key": "문16",
+     "label": "문16",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의3",
-     "label": "제3문의3",
+     "key": "문17",
+     "label": "문17",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제3문의4",
-     "label": "제3문의4",
+     "key": "문18",
+     "label": "문18",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제3문의5",
-     "label": "제3문의5",
+     "key": "문19",
+     "label": "문19",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제4문",
-     "label": "제4문",
+     "key": "문20",
+     "label": "문20",
      "count": 1,
      "points": 30
     }
@@ -6922,8 +6974,7 @@
    "totalPoints": 350,
    "hasRubric": false,
    "hasCasebook": true,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_변시_12회_사례",
@@ -7085,137 +7136,136 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "문1",
+     "label": "문1",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "문2",
+     "label": "문2",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "문3",
+     "label": "문3",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "문4",
+     "label": "문4",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "문5",
+     "label": "문5",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의6",
-     "label": "제1문의6",
+     "key": "문6",
+     "label": "문6",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "문7",
+     "label": "문7",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "문8",
+     "label": "문8",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "문9",
+     "label": "문9",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "문10",
+     "label": "문10",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의5",
-     "label": "제2문의5",
+     "key": "문11",
+     "label": "문11",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제2문의6",
-     "label": "제2문의6",
+     "key": "문12",
+     "label": "문12",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제3문의1",
-     "label": "제3문의1",
+     "key": "문13",
+     "label": "문13",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제3문의2",
-     "label": "제3문의2",
+     "key": "문14",
+     "label": "문14",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제3문의3",
-     "label": "제3문의3",
+     "key": "문15",
+     "label": "문15",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의4",
-     "label": "제3문의4",
+     "key": "문16",
+     "label": "문16",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의5",
-     "label": "제3문의5",
+     "key": "문17",
+     "label": "문17",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제3문의6",
-     "label": "제3문의6",
+     "key": "문18",
+     "label": "문18",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제3문의7",
-     "label": "제3문의7",
+     "key": "문19",
+     "label": "문19",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제4문의1",
-     "label": "제4문의1",
+     "key": "문20",
+     "label": "문20",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제4문의2",
-     "label": "제4문의2",
+     "key": "문21",
+     "label": "문21",
      "count": 1,
      "points": 15
     }
    ],
    "totalPoints": 350,
    "hasRubric": false,
-   "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "hasCasebook": true,
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_변시_11회_사례",
@@ -7354,110 +7404,110 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "문1",
+     "label": "문1",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "문2",
+     "label": "문2",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "문3",
+     "label": "문3",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "문4",
+     "label": "문4",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "문5",
+     "label": "문5",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의6",
-     "label": "제1문의6",
+     "key": "문6",
+     "label": "문6",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의7",
-     "label": "제1문의7",
+     "key": "문7",
+     "label": "문7",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "문8",
+     "label": "문8",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "문9",
+     "label": "문9",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "문10",
+     "label": "문10",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "문11",
+     "label": "문11",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의5",
-     "label": "제2문의5",
+     "key": "문12",
+     "label": "문12",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제3문의1",
-     "label": "제3문의1",
+     "key": "문13",
+     "label": "문13",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의2",
-     "label": "제3문의2",
+     "key": "문14",
+     "label": "문14",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의3",
-     "label": "제3문의3",
+     "key": "문15",
+     "label": "문15",
      "count": 1,
      "points": 35
     },
     {
-     "key": "제3문의4",
-     "label": "제3문의4",
+     "key": "문16",
+     "label": "문16",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의5",
-     "label": "제3문의5",
+     "key": "문17",
+     "label": "문17",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제4문",
-     "label": "제4문",
+     "key": "문18",
+     "label": "문18",
      "count": 1,
      "points": 20
     }
@@ -7465,8 +7515,7 @@
    "totalPoints": 350,
    "hasRubric": false,
    "hasCasebook": true,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_변시_10회_사례",
@@ -7623,128 +7672,128 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "문1",
+     "label": "문1",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "문2",
+     "label": "문2",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "문3",
+     "label": "문3",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "문4",
+     "label": "문4",
      "count": 1,
      "points": 5
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "문5",
+     "label": "문5",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의6",
-     "label": "제1문의6",
+     "key": "문6",
+     "label": "문6",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의7",
-     "label": "제1문의7",
+     "key": "문7",
+     "label": "문7",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의8",
-     "label": "제1문의8",
+     "key": "문8",
+     "label": "문8",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "문9",
+     "label": "문9",
      "count": 1,
      "points": 45
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "문10",
+     "label": "문10",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "문11",
+     "label": "문11",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "문12",
+     "label": "문12",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의5",
-     "label": "제2문의5",
+     "key": "문13",
+     "label": "문13",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의1",
-     "label": "제3문의1",
+     "key": "문14",
+     "label": "문14",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의2",
-     "label": "제3문의2",
+     "key": "문15",
+     "label": "문15",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의3",
-     "label": "제3문의3",
+     "key": "문16",
+     "label": "문16",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제3문의4",
-     "label": "제3문의4",
+     "key": "문17",
+     "label": "문17",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의5",
-     "label": "제3문의5",
+     "key": "문18",
+     "label": "문18",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제3문의6",
-     "label": "제3문의6",
+     "key": "문19",
+     "label": "문19",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제4문의1",
-     "label": "제4문의1",
+     "key": "문20",
+     "label": "문20",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제4문의2",
-     "label": "제4문의2",
+     "key": "문21",
+     "label": "문21",
      "count": 1,
      "points": 15
     }
@@ -7752,8 +7801,7 @@
    "totalPoints": 350,
    "hasRubric": false,
    "hasCasebook": true,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_변시_9회_사례",
@@ -7918,149 +7966,148 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "문1",
+     "label": "문1",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "문2",
+     "label": "문2",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "문3",
+     "label": "문3",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "문4",
+     "label": "문4",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "문5",
+     "label": "문5",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의6",
-     "label": "제1문의6",
+     "key": "문6",
+     "label": "문6",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의7",
-     "label": "제1문의7",
+     "key": "문7",
+     "label": "문7",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "문8",
+     "label": "문8",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "문9",
+     "label": "문9",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "문10",
+     "label": "문10",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "문11",
+     "label": "문11",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의5",
-     "label": "제2문의5",
+     "key": "문12",
+     "label": "문12",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의6",
-     "label": "제2문의6",
+     "key": "문13",
+     "label": "문13",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의1",
-     "label": "제3문의1",
+     "key": "문14",
+     "label": "문14",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제3문의2",
-     "label": "제3문의2",
+     "key": "문15",
+     "label": "문15",
      "count": 1,
      "points": 5
     },
     {
-     "key": "제3문의3",
-     "label": "제3문의3",
+     "key": "문16",
+     "label": "문16",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의4",
-     "label": "제3문의4",
+     "key": "문17",
+     "label": "문17",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의5",
-     "label": "제3문의5",
+     "key": "문18",
+     "label": "문18",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의6",
-     "label": "제3문의6",
+     "key": "문19",
+     "label": "문19",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의7",
-     "label": "제3문의7",
+     "key": "문20",
+     "label": "문20",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제3문의8",
-     "label": "제3문의8",
+     "key": "문21",
+     "label": "문21",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제4문의1",
-     "label": "제4문의1",
+     "key": "문22",
+     "label": "문22",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제4문의2",
-     "label": "제4문의2",
+     "key": "문23",
+     "label": "문23",
      "count": 1,
      "points": 10
     }
    ],
    "totalPoints": 350,
    "hasRubric": false,
-   "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "hasCasebook": true,
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_변시_8회_사례",
@@ -8199,110 +8246,110 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "문1",
+     "label": "문1",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "문2",
+     "label": "문2",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "문3",
+     "label": "문3",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "문4",
+     "label": "문4",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "문5",
+     "label": "문5",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "문6",
+     "label": "문6",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "문7",
+     "label": "문7",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "문8",
+     "label": "문8",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "문9",
+     "label": "문9",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의5",
-     "label": "제2문의5",
+     "key": "문10",
+     "label": "문10",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의6",
-     "label": "제2문의6",
+     "key": "문11",
+     "label": "문11",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의1",
-     "label": "제3문의1",
+     "key": "문12",
+     "label": "문12",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의2",
-     "label": "제3문의2",
+     "key": "문13",
+     "label": "문13",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의3",
-     "label": "제3문의3",
+     "key": "문14",
+     "label": "문14",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의4",
-     "label": "제3문의4",
+     "key": "문15",
+     "label": "문15",
      "count": 1,
      "points": 35
     },
     {
-     "key": "제3문의5",
-     "label": "제3문의5",
+     "key": "문16",
+     "label": "문16",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제4문의1",
-     "label": "제4문의1",
+     "key": "문17",
+     "label": "문17",
      "count": 1,
      "points": 35
     },
     {
-     "key": "제4문의2",
-     "label": "제4문의2",
+     "key": "문18",
+     "label": "문18",
      "count": 1,
      "points": 15
     }
@@ -8310,8 +8357,7 @@
    "totalPoints": 350,
    "hasRubric": false,
    "hasCasebook": true,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_변시_7회_사례",
@@ -8445,104 +8491,104 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "문1",
+     "label": "문1",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "문2",
+     "label": "문2",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "문3",
+     "label": "문3",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "문4",
+     "label": "문4",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "문5",
+     "label": "문5",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "문6",
+     "label": "문6",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "문7",
+     "label": "문7",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "문8",
+     "label": "문8",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "문9",
+     "label": "문9",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제2문의5",
-     "label": "제2문의5",
+     "key": "문10",
+     "label": "문10",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의6",
-     "label": "제2문의6",
+     "key": "문11",
+     "label": "문11",
      "count": 1,
      "points": 35
     },
     {
-     "key": "제3문의1",
-     "label": "제3문의1",
+     "key": "문12",
+     "label": "문12",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의2",
-     "label": "제3문의2",
+     "key": "문13",
+     "label": "문13",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제3문의3",
-     "label": "제3문의3",
+     "key": "문14",
+     "label": "문14",
      "count": 1,
      "points": 35
     },
     {
-     "key": "제3문의4",
-     "label": "제3문의4",
+     "key": "문15",
+     "label": "문15",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제3문의5",
-     "label": "제3문의5",
+     "key": "문16",
+     "label": "문16",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제4문",
-     "label": "제4문",
+     "key": "문17",
+     "label": "문17",
      "count": 1,
      "points": 20
     }
@@ -8550,8 +8596,7 @@
    "totalPoints": 350,
    "hasRubric": false,
    "hasCasebook": true,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_변시_6회_사례",
@@ -8701,122 +8746,122 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "문1",
+     "label": "문1",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "문2",
+     "label": "문2",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "문3",
+     "label": "문3",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "문4",
+     "label": "문4",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "문5",
+     "label": "문5",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "문6",
+     "label": "문6",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "문7",
+     "label": "문7",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "문8",
+     "label": "문8",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "문9",
+     "label": "문9",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의5",
-     "label": "제2문의5",
+     "key": "문10",
+     "label": "문10",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의6",
-     "label": "제2문의6",
+     "key": "문11",
+     "label": "문11",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의7",
-     "label": "제2문의7",
+     "key": "문12",
+     "label": "문12",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의1",
-     "label": "제3문의1",
+     "key": "문13",
+     "label": "문13",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의2",
-     "label": "제3문의2",
+     "key": "문14",
+     "label": "문14",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의3",
-     "label": "제3문의3",
+     "key": "문15",
+     "label": "문15",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의4",
-     "label": "제3문의4",
+     "key": "문16",
+     "label": "문16",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의5",
-     "label": "제3문의5",
+     "key": "문17",
+     "label": "문17",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의6",
-     "label": "제3문의6",
+     "key": "문18",
+     "label": "문18",
      "count": 1,
      "points": 40
     },
     {
-     "key": "제4문의1",
-     "label": "제4문의1",
+     "key": "문19",
+     "label": "문19",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제4문의2",
-     "label": "제4문의2",
+     "key": "문20",
+     "label": "문20",
      "count": 1,
      "points": 15
     }
@@ -8824,8 +8869,7 @@
    "totalPoints": 350,
    "hasRubric": false,
    "hasCasebook": true,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_변시_5회_사례",
@@ -9010,53 +9054,52 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "문1",
+     "label": "문1",
      "count": 4,
      "points": 40
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "문2",
+     "label": "문2",
      "count": 2,
      "points": 40
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "문3",
+     "label": "문3",
      "count": 5,
      "points": 45
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "문4",
+     "label": "문4",
      "count": 2,
      "points": 25
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "문5",
+     "label": "문5",
      "count": 3,
      "points": 60
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "문6",
+     "label": "문6",
      "count": 3,
      "points": 40
     },
     {
-     "key": "제3문",
-     "label": "제3문",
+     "key": "문7",
+     "label": "문7",
      "count": 6,
      "points": 100
     }
    ],
    "totalPoints": 350,
    "hasRubric": false,
-   "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "hasCasebook": true,
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_변시_4회_사례",
@@ -9217,50 +9260,50 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "문1",
+     "label": "문1",
      "count": 4,
      "points": 60
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "문2",
+     "label": "문2",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "문3",
+     "label": "문3",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "문4",
+     "label": "문4",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "문5",
+     "label": "문5",
      "count": 3,
      "points": 40
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "문6",
+     "label": "문6",
      "count": 4,
      "points": 65
     },
     {
-     "key": "제3문의1",
-     "label": "제3문의1",
+     "key": "문7",
+     "label": "문7",
      "count": 2,
      "points": 35
     },
     {
-     "key": "제3문의2",
-     "label": "제3문의2",
+     "key": "문8",
+     "label": "문8",
      "count": 4,
      "points": 100
     }
@@ -9268,8 +9311,7 @@
    "totalPoints": 350,
    "hasRubric": false,
    "hasCasebook": true,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_변시_3회_사례",
@@ -9425,89 +9467,88 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "문1",
+     "label": "문1",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "문2",
+     "label": "문2",
      "count": 2,
      "points": 30
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "문3",
+     "label": "문3",
      "count": 1,
      "points": 18
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "문4",
+     "label": "문4",
      "count": 1,
      "points": 12
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "문5",
+     "label": "문5",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의6",
-     "label": "제1문의6",
+     "key": "문6",
+     "label": "문6",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "문7",
+     "label": "문7",
      "count": 2,
      "points": 25
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "문8",
+     "label": "문8",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "문9",
+     "label": "문9",
      "count": 2,
      "points": 40
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "문10",
+     "label": "문10",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의1",
-     "label": "제3문의1",
+     "key": "문11",
+     "label": "문11",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의2",
-     "label": "제3문의2",
+     "key": "문12",
+     "label": "문12",
      "count": 2,
      "points": 20
     },
     {
-     "key": "제3문의3",
-     "label": "제3문의3",
+     "key": "문13",
+     "label": "문13",
      "count": 3,
      "points": 100
     }
    ],
    "totalPoints": 350,
    "hasRubric": false,
-   "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "hasCasebook": true,
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_변시_2회_사례",
@@ -9645,47 +9686,46 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "문1",
+     "label": "문1",
      "count": 6,
      "points": 90
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "문2",
+     "label": "문2",
      "count": 3,
      "points": 60
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "문3",
+     "label": "문3",
      "count": 1,
      "points": 40
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "문4",
+     "label": "문4",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "문5",
+     "label": "문5",
      "count": 2,
      "points": 30
     },
     {
-     "key": "제3문",
-     "label": "제3문",
+     "key": "문6",
+     "label": "문6",
      "count": 4,
      "points": 100
     }
    ],
    "totalPoints": 350,
    "hasRubric": false,
-   "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "hasCasebook": true,
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_변시_1회_사례",
@@ -9807,41 +9847,40 @@
    ],
    "groups": [
     {
-     "key": "제1문",
-     "label": "제1문",
+     "key": "문1",
+     "label": "문1",
      "count": 7,
      "points": 150
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "문2",
+     "label": "문2",
      "count": 1,
      "points": 50
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "문3",
+     "label": "문3",
      "count": 2,
      "points": 30
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "문4",
+     "label": "문4",
      "count": 2,
      "points": 20
     },
     {
-     "key": "제3문",
-     "label": "제3문",
+     "key": "문5",
+     "label": "문5",
      "count": 3,
      "points": 100
     }
    ],
    "totalPoints": 350,
    "hasRubric": false,
-   "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "hasCasebook": true,
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2026_1차_사례",
@@ -9995,122 +10034,122 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "설문1",
+     "label": "설문1",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "설문2",
+     "label": "설문2",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "설문3",
+     "label": "설문3",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "설문4",
+     "label": "설문4",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "설문5",
+     "label": "설문5",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의6",
-     "label": "제1문의6",
+     "key": "설문6",
+     "label": "설문6",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의7",
-     "label": "제1문의7",
+     "key": "설문7",
+     "label": "설문7",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "설문8",
+     "label": "설문8",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "설문9",
+     "label": "설문9",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "설문10",
+     "label": "설문10",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "설문11",
+     "label": "설문11",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의5",
-     "label": "제2문의5",
+     "key": "설문12",
+     "label": "설문12",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의1",
-     "label": "제3문의1",
+     "key": "설문13",
+     "label": "설문13",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의2",
-     "label": "제3문의2",
+     "key": "설문14",
+     "label": "설문14",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제3문의3",
-     "label": "제3문의3",
+     "key": "설문15",
+     "label": "설문15",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의4",
-     "label": "제3문의4",
+     "key": "설문16",
+     "label": "설문16",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제3문의5",
-     "label": "제3문의5",
+     "key": "설문17",
+     "label": "설문17",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제4문의1",
-     "label": "제4문의1",
+     "key": "설문18",
+     "label": "설문18",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제4문의2",
-     "label": "제4문의2",
+     "key": "설문19",
+     "label": "설문19",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제4문의3",
-     "label": "제4문의3",
+     "key": "설문20",
+     "label": "설문20",
      "count": 1,
      "points": 15
     }
@@ -10118,8 +10157,7 @@
    "totalPoints": 350,
    "hasRubric": true,
    "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2025_3차_사례",
@@ -10273,128 +10311,128 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "설문1",
+     "label": "설문1",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "설문2",
+     "label": "설문2",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "설문3",
+     "label": "설문3",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "설문4",
+     "label": "설문4",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "설문5",
+     "label": "설문5",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의6",
-     "label": "제1문의6",
+     "key": "설문6",
+     "label": "설문6",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의7",
-     "label": "제1문의7",
+     "key": "설문7",
+     "label": "설문7",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "설문8",
+     "label": "설문8",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "설문9",
+     "label": "설문9",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "설문10",
+     "label": "설문10",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "설문11",
+     "label": "설문11",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의5",
-     "label": "제2문의5",
+     "key": "설문12",
+     "label": "설문12",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의1",
-     "label": "제3문의1",
+     "key": "설문13",
+     "label": "설문13",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제3문의2",
-     "label": "제3문의2",
+     "key": "설문14",
+     "label": "설문14",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의3",
-     "label": "제3문의3",
+     "key": "설문15",
+     "label": "설문15",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제3문의4",
-     "label": "제3문의4",
+     "key": "설문16",
+     "label": "설문16",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의5",
-     "label": "제3문의5",
+     "key": "설문17",
+     "label": "설문17",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제3문의6",
-     "label": "제3문의6",
+     "key": "설문18",
+     "label": "설문18",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의7",
-     "label": "제3문의7",
+     "key": "설문19",
+     "label": "설문19",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제4문의1",
-     "label": "제4문의1",
+     "key": "설문20",
+     "label": "설문20",
      "count": 1,
      "points": 40
     },
     {
-     "key": "제4문의2",
-     "label": "제4문의2",
+     "key": "설문21",
+     "label": "설문21",
      "count": 1,
      "points": 10
     }
@@ -10402,8 +10440,7 @@
    "totalPoints": 350,
    "hasRubric": true,
    "hasCasebook": true,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2025_2차_사례",
@@ -10542,110 +10579,110 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "설문1",
+     "label": "설문1",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "설문2",
+     "label": "설문2",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "설문3",
+     "label": "설문3",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "설문4",
+     "label": "설문4",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "설문5",
+     "label": "설문5",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "설문6",
+     "label": "설문6",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "설문7",
+     "label": "설문7",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "설문8",
+     "label": "설문8",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "설문9",
+     "label": "설문9",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의5",
-     "label": "제2문의5",
+     "key": "설문10",
+     "label": "설문10",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의6",
-     "label": "제2문의6",
+     "key": "설문11",
+     "label": "설문11",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의1",
-     "label": "제3문의1",
+     "key": "설문12",
+     "label": "설문12",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의2",
-     "label": "제3문의2",
+     "key": "설문13",
+     "label": "설문13",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제3문의3",
-     "label": "제3문의3",
+     "key": "설문14",
+     "label": "설문14",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의4",
-     "label": "제3문의4",
+     "key": "설문15",
+     "label": "설문15",
      "count": 1,
      "points": 35
     },
     {
-     "key": "제3문의5",
-     "label": "제3문의5",
+     "key": "설문16",
+     "label": "설문16",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제4문의1",
-     "label": "제4문의1",
+     "key": "설문17",
+     "label": "설문17",
      "count": 1,
      "points": 35
     },
     {
-     "key": "제4문의2",
-     "label": "제4문의2",
+     "key": "설문18",
+     "label": "설문18",
      "count": 1,
      "points": 15
     }
@@ -10653,8 +10690,7 @@
    "totalPoints": 350,
    "hasRubric": true,
    "hasCasebook": true,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2025_1차_사례",
@@ -10798,116 +10834,116 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "설문1",
+     "label": "설문1",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "설문2",
+     "label": "설문2",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "설문3",
+     "label": "설문3",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "설문4",
+     "label": "설문4",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "설문5",
+     "label": "설문5",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의6",
-     "label": "제1문의6",
+     "key": "설문6",
+     "label": "설문6",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "설문7",
+     "label": "설문7",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "설문8",
+     "label": "설문8",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "설문9",
+     "label": "설문9",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "설문10",
+     "label": "설문10",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의5",
-     "label": "제2문의5",
+     "key": "설문11",
+     "label": "설문11",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의6",
-     "label": "제2문의6",
+     "key": "설문12",
+     "label": "설문12",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의1",
-     "label": "제3문의1",
+     "key": "설문13",
+     "label": "설문13",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의2",
-     "label": "제3문의2",
+     "key": "설문14",
+     "label": "설문14",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제3문의3",
-     "label": "제3문의3",
+     "key": "설문15",
+     "label": "설문15",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의4",
-     "label": "제3문의4",
+     "key": "설문16",
+     "label": "설문16",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제3문의5",
-     "label": "제3문의5",
+     "key": "설문17",
+     "label": "설문17",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제4문의1",
-     "label": "제4문의1",
+     "key": "설문18",
+     "label": "설문18",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제4문의2",
-     "label": "제4문의2",
+     "key": "설문19",
+     "label": "설문19",
      "count": 1,
      "points": 15
     }
@@ -10915,8 +10951,7 @@
    "totalPoints": 350,
    "hasRubric": true,
    "hasCasebook": true,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2024_3차_사례",
@@ -11077,116 +11112,116 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "사자명의",
+     "label": "사자명의",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "송달-문",
+     "label": "송달-문",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "변론주의",
+     "label": "변론주의",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "자유심증",
+     "label": "자유심증",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "자백취소",
+     "label": "자백취소",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의6",
-     "label": "제1문의6",
+     "key": "재심-문",
+     "label": "재심-문",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의7",
-     "label": "제1문의7",
+     "key": "예비적공",
+     "label": "예비적공",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "공유물철",
+     "label": "공유물철",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "사해행위",
+     "label": "사해행위",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "무단신축",
+     "label": "무단신축",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "법정지상",
+     "label": "법정지상",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의5",
-     "label": "제2문의5",
+     "key": "일괄경매",
+     "label": "일괄경매",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의6",
-     "label": "제2문의6",
+     "key": "상속회복",
+     "label": "상속회복",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의1",
-     "label": "제3문의1",
+     "key": "양도담보",
+     "label": "양도담보",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의2",
-     "label": "제3문의2",
+     "key": "지상물매",
+     "label": "지상물매",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제3문의3",
-     "label": "제3문의3",
+     "key": "회사분할",
+     "label": "회사분할",
      "count": 2,
      "points": 45
     },
     {
-     "key": "제3문의4",
-     "label": "제3문의4",
+     "key": "표현대표",
+     "label": "표현대표",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제4문의1",
-     "label": "제4문의1",
+     "key": "위탁매매",
+     "label": "위탁매매",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제4문의2",
-     "label": "제4문의2",
+     "key": "보험면책",
+     "label": "보험면책",
      "count": 1,
      "points": 20
     }
@@ -11194,8 +11229,7 @@
    "totalPoints": 350,
    "hasRubric": true,
    "hasCasebook": true,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2024_2차_사례",
@@ -11357,119 +11391,118 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "관할이송",
+     "label": "관할이송",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "중복소송",
+     "label": "중복소송",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "추후보완",
+     "label": "추후보완",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "소취하-",
+     "label": "소취하-",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "청구변경",
+     "label": "청구변경",
      "count": 2,
      "points": 25
     },
     {
-     "key": "제1문의6",
-     "label": "제1문의6",
+     "key": "보조참가",
+     "label": "보조참가",
      "count": 2,
      "points": 20
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "채권양도",
+     "label": "채권양도",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "상계충당",
+     "label": "상계충당",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "취득시효",
+     "label": "취득시효",
      "count": 2,
      "points": 30
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "가처분-",
+     "label": "가처분-",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의5",
-     "label": "제2문의5",
+     "key": "부당이득",
+     "label": "부당이득",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의1",
-     "label": "제3문의1",
+     "key": "사해행위",
+     "label": "사해행위",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의2",
-     "label": "제3문의2",
+     "key": "채권자대",
+     "label": "채권자대",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의3",
-     "label": "제3문의3",
+     "key": "주식양도",
+     "label": "주식양도",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의4",
-     "label": "제3문의4",
+     "key": "주식매수",
+     "label": "주식매수",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의5",
-     "label": "제3문의5",
+     "key": "주주제안",
+     "label": "주주제안",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의6",
-     "label": "제3문의6",
+     "key": "소집허가",
+     "label": "소집허가",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제4문",
-     "label": "제4문",
+     "key": "화물상환",
+     "label": "화물상환",
      "count": 1,
      "points": 30
     }
    ],
    "totalPoints": 350,
    "hasRubric": true,
-   "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "hasCasebook": true,
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2024_1차_사례",
@@ -11620,95 +11653,94 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "공시송달",
+     "label": "공시송달",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "종중소송",
+     "label": "종중소송",
      "count": 2,
      "points": 25
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "예비적병",
+     "label": "예비적병",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "보조참가",
+     "label": "보조참가",
      "count": 2,
      "points": 25
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "근저당배",
+     "label": "근저당배",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "유치권-",
+     "label": "유치권-",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "법정지상",
+     "label": "법정지상",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "명의신탁",
+     "label": "명의신탁",
      "count": 2,
      "points": 40
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "착오송금",
+     "label": "착오송금",
      "count": 2,
      "points": 30
     },
     {
-     "key": "제3문의1",
-     "label": "제3문의1",
+     "key": "상속포기",
+     "label": "상속포기",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제3문의2",
-     "label": "제3문의2",
+     "key": "이사책임",
+     "label": "이사책임",
      "count": 2,
      "points": 50
     },
     {
-     "key": "제3문의3",
-     "label": "제3문의3",
+     "key": "결의취소",
+     "label": "결의취소",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제4문의1",
-     "label": "제4문의1",
+     "key": "어음보증",
+     "label": "어음보증",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제4문의2",
-     "label": "제4문의2",
+     "key": "보험-문",
+     "label": "보험-문",
      "count": 1,
      "points": 15
     }
    ],
    "totalPoints": 335,
    "hasRubric": true,
-   "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "hasCasebook": true,
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2023_3차_사례",
@@ -11852,95 +11884,94 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "채권자대",
+     "label": "채권자대",
      "count": 3,
      "points": 45
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "선택적병",
+     "label": "선택적병",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "독립당사",
+     "label": "독립당사",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "동시이행",
+     "label": "동시이행",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "재단법인",
+     "label": "재단법인",
      "count": 2,
      "points": 50
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "근저당권",
+     "label": "근저당권",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "유치권-",
+     "label": "유치권-",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제3문의1",
-     "label": "제3문의1",
+     "key": "유치권행",
+     "label": "유치권행",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제3문의2",
-     "label": "제3문의2",
+     "key": "법정지상",
+     "label": "법정지상",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의3",
-     "label": "제3문의3",
+     "key": "상속포기",
+     "label": "상속포기",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제3문의4",
-     "label": "제3문의4",
+     "key": "중간배당",
+     "label": "중간배당",
      "count": 2,
      "points": 50
     },
     {
-     "key": "제4문의1",
-     "label": "제4문의1",
+     "key": "영업양도",
+     "label": "영업양도",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제4문의2",
-     "label": "제4문의2",
+     "key": "구상금-",
+     "label": "구상금-",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제4문의3",
-     "label": "제4문의3",
+     "key": "백지어음",
+     "label": "백지어음",
      "count": 1,
      "points": 20
     }
    ],
    "totalPoints": 380,
    "hasRubric": true,
-   "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "hasCasebook": true,
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2023_2차_사례",
@@ -12115,17 +12146,16 @@
      "points": 100
     },
     {
-     "key": "제3문",
-     "label": "제3문",
+     "key": "상법문제",
+     "label": "상법문제",
      "count": 5,
      "points": 100
     }
    ],
    "totalPoints": 350,
    "hasRubric": true,
-   "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "hasCasebook": true,
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2023_1차_사례",
@@ -12268,47 +12298,34 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
-     "count": 1,
-     "points": 20
+     "key": "제1문",
+     "label": "제1문",
+     "count": 8,
+     "points": 150
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "문2",
+     "label": "문2",
+     "count": 5,
+     "points": 75
+    },
+    {
+     "key": "제2문",
+     "label": "제2문",
      "count": 2,
-     "points": 30
+     "points": 25
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
-     "count": 2,
-     "points": 40
-    },
-    {
-     "key": "제1문의4",
-     "label": "제1문의4",
-     "count": 1,
-     "points": 10
-    },
-    {
-     "key": "제1문의5",
-     "label": "제1문의5",
-     "count": 4,
-     "points": 80
-    },
-    {
-     "key": "제2문의2",
-     "label": "제2문의2",
-     "count": 10,
-     "points": 170
+     "key": "상법문제",
+     "label": "상법문제",
+     "count": 5,
+     "points": 100
     }
    ],
    "totalPoints": 350,
    "hasRubric": true,
    "hasCasebook": true,
-   "unmappedKeywords": [],
-   "groupSource": "exam-heading"
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2022_3차_사례",
@@ -12465,65 +12482,28 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
-     "count": 2,
-     "points": 25
+     "key": "제1문",
+     "label": "제1문",
+     "count": 9,
+     "points": 150
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
-     "count": 2,
-     "points": 30
+     "key": "제2문",
+     "label": "제2문",
+     "count": 7,
+     "points": 100
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
-     "count": 2,
-     "points": 30
-    },
-    {
-     "key": "제1문의4",
-     "label": "제1문의4",
-     "count": 1,
-     "points": 15
-    },
-    {
-     "key": "제1문의5",
-     "label": "제1문의5",
-     "count": 2,
-     "points": 50
-    },
-    {
-     "key": "제2문의1",
-     "label": "제2문의1",
-     "count": 2,
-     "points": 15
-    },
-    {
-     "key": "제2문의2",
-     "label": "제2문의2",
-     "count": 2,
-     "points": 30
-    },
-    {
-     "key": "제2문의3",
-     "label": "제2문의3",
-     "count": 1,
-     "points": 30
-    },
-    {
-     "key": "제2문의4",
-     "label": "제2문의4",
-     "count": 8,
-     "points": 125
+     "key": "상법-문",
+     "label": "상법-문",
+     "count": 6,
+     "points": 100
     }
    ],
    "totalPoints": 350,
    "hasRubric": true,
-   "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "exam-heading"
+   "hasCasebook": true,
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2022_2차_사례",
@@ -12680,71 +12660,28 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
-     "count": 1,
-     "points": 15
+     "key": "제1문",
+     "label": "제1문",
+     "count": 8,
+     "points": 150
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
-     "count": 2,
-     "points": 35
+     "key": "제2문",
+     "label": "제2문",
+     "count": 8,
+     "points": 100
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
-     "count": 1,
-     "points": 15
-    },
-    {
-     "key": "제1문의4",
-     "label": "제1문의4",
-     "count": 1,
-     "points": 15
-    },
-    {
-     "key": "제1문의5",
-     "label": "제1문의5",
-     "count": 1,
-     "points": 20
-    },
-    {
-     "key": "제1문의6",
-     "label": "제1문의6",
-     "count": 2,
-     "points": 50
-    },
-    {
-     "key": "제2문의1",
-     "label": "제2문의1",
-     "count": 3,
-     "points": 30
-    },
-    {
-     "key": "제2문의2",
-     "label": "제2문의2",
-     "count": 2,
-     "points": 25
-    },
-    {
-     "key": "제2문의3",
-     "label": "제2문의3",
-     "count": 2,
-     "points": 25
-    },
-    {
-     "key": "제2문의4",
-     "label": "제2문의4",
-     "count": 7,
-     "points": 120
+     "key": "상법-문",
+     "label": "상법-문",
+     "count": 6,
+     "points": 100
     }
    ],
    "totalPoints": 350,
    "hasRubric": true,
-   "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "exam-heading"
+   "hasCasebook": true,
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2022_1차_사례",
@@ -12901,65 +12838,28 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
-     "count": 2,
-     "points": 25
+     "key": "제1문",
+     "label": "제1문",
+     "count": 9,
+     "points": 150
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
-     "count": 2,
-     "points": 25
+     "key": "제2문",
+     "label": "제2문",
+     "count": 8,
+     "points": 100
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
-     "count": 2,
-     "points": 35
-    },
-    {
-     "key": "제1문의4",
-     "label": "제1문의4",
-     "count": 1,
-     "points": 15
-    },
-    {
-     "key": "제1문의5",
-     "label": "제1문의5",
-     "count": 2,
-     "points": 50
-    },
-    {
-     "key": "제2문의1",
-     "label": "제2문의1",
-     "count": 1,
-     "points": 15
-    },
-    {
-     "key": "제2문의2",
-     "label": "제2문의2",
-     "count": 2,
-     "points": 30
-    },
-    {
-     "key": "제2문의3",
-     "label": "제2문의3",
-     "count": 3,
-     "points": 40
-    },
-    {
-     "key": "제2문의4",
-     "label": "제2문의4",
-     "count": 7,
-     "points": 115
+     "key": "상법-문",
+     "label": "상법-문",
+     "count": 5,
+     "points": 100
     }
    ],
    "totalPoints": 350,
    "hasRubric": true,
    "hasCasebook": true,
-   "unmappedKeywords": [],
-   "groupSource": "exam-heading"
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2021_3차_사례",
@@ -13127,23 +13027,22 @@
      "points": 150
     },
     {
-     "key": "제2문",
-     "label": "제2문",
+     "key": "문2",
+     "label": "문2",
      "count": 6,
      "points": 100
     },
     {
-     "key": "제3문",
-     "label": "제3문",
+     "key": "상법-문",
+     "label": "상법-문",
      "count": 7,
      "points": 100
     }
    ],
    "totalPoints": 350,
    "hasRubric": true,
-   "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "hasCasebook": true,
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2021_2차_사례",
@@ -13287,29 +13186,28 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
-     "count": 3,
-     "points": 50
+     "key": "제1문",
+     "label": "제1문",
+     "count": 9,
+     "points": 150
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
-     "count": 4,
-     "points": 50
+     "key": "문2",
+     "label": "문2",
+     "count": 6,
+     "points": 100
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
-     "count": 13,
-     "points": 250
+     "key": "상법-문",
+     "label": "상법-문",
+     "count": 5,
+     "points": 100
     }
    ],
    "totalPoints": 350,
    "hasRubric": true,
    "hasCasebook": true,
-   "unmappedKeywords": [],
-   "groupSource": "exam-heading"
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2021_1차_사례",
@@ -13472,41 +13370,28 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
-     "count": 3,
-     "points": 35
+     "key": "제1문",
+     "label": "제1문",
+     "count": 12,
+     "points": 150
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
-     "count": 2,
-     "points": 25
+     "key": "문2",
+     "label": "문2",
+     "count": 6,
+     "points": 100
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
-     "count": 2,
-     "points": 25
-    },
-    {
-     "key": "제1문의4",
-     "label": "제1문의4",
-     "count": 1,
-     "points": 15
-    },
-    {
-     "key": "제1문의5",
-     "label": "제1문의5",
-     "count": 15,
-     "points": 250
+     "key": "상법-문",
+     "label": "상법-문",
+     "count": 5,
+     "points": 100
     }
    ],
    "totalPoints": 350,
    "hasRubric": true,
-   "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "exam-heading"
+   "hasCasebook": true,
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2020_3차_사례",
@@ -13639,47 +13524,28 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
-     "count": 1,
-     "points": 40
+     "key": "제1문",
+     "label": "제1문",
+     "count": 6,
+     "points": 150
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
-     "count": 3,
-     "points": 60
+     "key": "제2문",
+     "label": "제2문",
+     "count": 6,
+     "points": 100
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
-     "count": 2,
-     "points": 50
-    },
-    {
-     "key": "제2문의1",
-     "label": "제2문의1",
-     "count": 3,
-     "points": 50
-    },
-    {
-     "key": "제2문의2",
-     "label": "제2문의2",
-     "count": 2,
-     "points": 30
-    },
-    {
-     "key": "제2문의3",
-     "label": "제2문의3",
-     "count": 5,
-     "points": 120
+     "key": "상법문제",
+     "label": "상법문제",
+     "count": 4,
+     "points": 100
     }
    ],
    "totalPoints": 350,
    "hasRubric": true,
    "hasCasebook": true,
-   "unmappedKeywords": [],
-   "groupSource": "exam-heading"
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2020_2차_사례",
@@ -13817,59 +13683,28 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
-     "count": 3,
-     "points": 50
+     "key": "제1문",
+     "label": "제1문",
+     "count": 9,
+     "points": 150
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
-     "count": 2,
-     "points": 30
+     "key": "제2문",
+     "label": "제2문",
+     "count": 4,
+     "points": 100
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
-     "count": 1,
-     "points": 20
-    },
-    {
-     "key": "제1문의4",
-     "label": "제1문의4",
-     "count": 2,
-     "points": 30
-    },
-    {
-     "key": "제1문의5",
-     "label": "제1문의5",
-     "count": 1,
-     "points": 20
-    },
-    {
-     "key": "제2문의1",
-     "label": "제2문의1",
-     "count": 2,
-     "points": 50
-    },
-    {
-     "key": "제2문의2",
-     "label": "제2문의2",
-     "count": 1,
-     "points": 30
-    },
-    {
-     "key": "제2문의3",
-     "label": "제2문의3",
-     "count": 5,
-     "points": 120
+     "key": "상법문제",
+     "label": "상법문제",
+     "count": 4,
+     "points": 100
     }
    ],
    "totalPoints": 350,
    "hasRubric": true,
    "hasCasebook": true,
-   "unmappedKeywords": [],
-   "groupSource": "exam-heading"
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2020_1차_사례",
@@ -14024,8 +13859,8 @@
      "points": 100
     },
     {
-     "key": "제3문",
-     "label": "제3문",
+     "key": "상법문제",
+     "label": "상법문제",
      "count": 3,
      "points": 100
     }
@@ -14033,8 +13868,7 @@
    "totalPoints": 350,
    "hasRubric": true,
    "hasCasebook": true,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2019_3차_사례",
@@ -14182,53 +14016,28 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
-     "count": 2,
-     "points": 30
+     "key": "제1문",
+     "label": "제1문",
+     "count": 10,
+     "points": 150
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
-     "count": 2,
-     "points": 30
-    },
-    {
-     "key": "제1문의3",
-     "label": "제1문의3",
-     "count": 2,
-     "points": 40
-    },
-    {
-     "key": "제1문의4",
-     "label": "제1문의4",
-     "count": 4,
-     "points": 50
-    },
-    {
-     "key": "제2문의1",
-     "label": "제2문의1",
-     "count": 3,
-     "points": 70
-    },
-    {
-     "key": "제2문의2",
-     "label": "제2문의2",
-     "count": 1,
-     "points": 15
-    },
-    {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "제2문",
+     "label": "제2문",
      "count": 5,
-     "points": 115
+     "points": 100
+    },
+    {
+     "key": "상법문제",
+     "label": "상법문제",
+     "count": 4,
+     "points": 100
     }
    ],
    "totalPoints": 350,
    "hasRubric": true,
-   "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "exam-heading"
+   "hasCasebook": true,
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2019_2차_사례",
@@ -14380,47 +14189,28 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
-     "count": 1,
-     "points": 15
+     "key": "제1문",
+     "label": "제1문",
+     "count": 9,
+     "points": 150
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
-     "count": 1,
-     "points": 20
+     "key": "문2",
+     "label": "문2",
+     "count": 7,
+     "points": 100
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
-     "count": 1,
-     "points": 20
-    },
-    {
-     "key": "제1문의4",
-     "label": "제1문의4",
-     "count": 2,
-     "points": 35
-    },
-    {
-     "key": "제1문의5",
-     "label": "제1문의5",
-     "count": 1,
-     "points": 10
-    },
-    {
-     "key": "제1문의6",
-     "label": "제1문의6",
-     "count": 14,
-     "points": 250
+     "key": "상법문제",
+     "label": "상법문제",
+     "count": 4,
+     "points": 100
     }
    ],
    "totalPoints": 350,
    "hasRubric": true,
-   "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "exam-heading"
+   "hasCasebook": true,
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2019_1차_사례",
@@ -14563,41 +14353,28 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
-     "count": 1,
-     "points": 30
+     "key": "제1문",
+     "label": "제1문",
+     "count": 9,
+     "points": 150
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
-     "count": 2,
-     "points": 30
+     "key": "문2",
+     "label": "문2",
+     "count": 6,
+     "points": 100
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
-     "count": 1,
-     "points": 15
-    },
-    {
-     "key": "제1문의4",
-     "label": "제1문의4",
-     "count": 2,
-     "points": 25
-    },
-    {
-     "key": "제1문의5",
-     "label": "제1문의5",
-     "count": 13,
-     "points": 250
+     "key": "상법문제",
+     "label": "상법문제",
+     "count": 4,
+     "points": 100
     }
    ],
    "totalPoints": 350,
    "hasRubric": true,
    "hasCasebook": true,
-   "unmappedKeywords": [],
-   "groupSource": "exam-heading"
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2018_3차_사례",
@@ -14767,17 +14544,16 @@
      "points": 100
     },
     {
-     "key": "제3문",
-     "label": "제3문",
+     "key": "상법-문",
+     "label": "상법-문",
      "count": 5,
      "points": 100
     }
    ],
    "totalPoints": 350,
    "hasRubric": true,
-   "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "hasCasebook": true,
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2018_2차_사례",
@@ -14928,8 +14704,8 @@
      "points": 100
     },
     {
-     "key": "제3문",
-     "label": "제3문",
+     "key": "상법-문",
+     "label": "상법-문",
      "count": 4,
      "points": 100
     }
@@ -14937,8 +14713,7 @@
    "totalPoints": 350,
    "hasRubric": true,
    "hasCasebook": true,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2018_1차_사례",
@@ -15068,53 +14843,28 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
-     "count": 2,
-     "points": 35
+     "key": "제1문",
+     "label": "제1문",
+     "count": 8,
+     "points": 150
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "제2문",
+     "label": "제2문",
+     "count": 6,
+     "points": 100
+    },
+    {
+     "key": "제3문",
+     "label": "제3문",
      "count": 3,
-     "points": 60
-    },
-    {
-     "key": "제1문의3",
-     "label": "제1문의3",
-     "count": 3,
-     "points": 55
-    },
-    {
-     "key": "제2문의1",
-     "label": "제2문의1",
-     "count": 2,
-     "points": 45
-    },
-    {
-     "key": "제2문의2",
-     "label": "제2문의2",
-     "count": 4,
-     "points": 55
-    },
-    {
-     "key": "제3문의1",
-     "label": "제3문의1",
-     "count": 2,
-     "points": 70
-    },
-    {
-     "key": "제3문의2",
-     "label": "제3문의2",
-     "count": 1,
-     "points": 30
+     "points": 100
     }
    ],
    "totalPoints": 350,
    "hasRubric": true,
-   "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "exam-heading"
+   "hasCasebook": true,
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2017_3차_사례",
@@ -15247,47 +14997,28 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
-     "count": 3,
-     "points": 50
+     "key": "제1문",
+     "label": "제1문",
+     "count": 8,
+     "points": 150
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
-     "count": 2,
-     "points": 30
+     "key": "근저당-",
+     "label": "근저당-",
+     "count": 6,
+     "points": 100
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
-     "count": 2,
-     "points": 50
-    },
-    {
-     "key": "제1문의4",
-     "label": "제1문의4",
-     "count": 7,
-     "points": 120
-    },
-    {
-     "key": "제3문의1",
-     "label": "제3문의1",
-     "count": 2,
-     "points": 70
-    },
-    {
-     "key": "제3문의2",
-     "label": "제3문의2",
-     "count": 2,
-     "points": 30
+     "key": "제3문",
+     "label": "제3문",
+     "count": 4,
+     "points": 100
     }
    ],
    "totalPoints": 350,
    "hasRubric": true,
    "hasCasebook": true,
-   "unmappedKeywords": [],
-   "groupSource": "exam-heading"
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2017_2차_사례",
@@ -15436,17 +15167,16 @@
      "points": 100
     },
     {
-     "key": "제3문",
-     "label": "제3문",
+     "key": "상법-문",
+     "label": "상법-문",
      "count": 4,
      "points": 100
     }
    ],
    "totalPoints": 350,
    "hasRubric": true,
-   "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "hasCasebook": true,
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2017_1차_사례",
@@ -15576,35 +15306,28 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "제1문",
+     "label": "제1문",
+     "count": 9,
+     "points": 150
+    },
+    {
+     "key": "제2문",
+     "label": "제2문",
      "count": 5,
-     "points": 95
+     "points": 100
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "상법-문",
+     "label": "상법-문",
      "count": 3,
-     "points": 45
-    },
-    {
-     "key": "제1문의3",
-     "label": "제1문의3",
-     "count": 1,
-     "points": 10
-    },
-    {
-     "key": "제2문의1",
-     "label": "제2문의1",
-     "count": 8,
-     "points": 200
+     "points": 100
     }
    ],
    "totalPoints": 350,
    "hasRubric": true,
-   "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "exam-heading"
+   "hasCasebook": true,
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2016_3차_사례",
@@ -15726,35 +15449,40 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
-     "count": 4,
-     "points": 75
-    },
-    {
-     "key": "제1문의2",
-     "label": "제1문의2",
-     "count": 3,
-     "points": 75
-    },
-    {
-     "key": "제2문의1",
-     "label": "제2문의1",
-     "count": 2,
-     "points": 50
-    },
-    {
-     "key": "제2문의2",
-     "label": "제2문의2",
-     "count": 6,
+     "key": "제1문",
+     "label": "제1문",
+     "count": 7,
      "points": 150
+    },
+    {
+     "key": "제2문",
+     "label": "제2문",
+     "count": 4,
+     "points": 100
+    },
+    {
+     "key": "상법-1",
+     "label": "상법-1",
+     "count": 1,
+     "points": 30
+    },
+    {
+     "key": "상법-2",
+     "label": "상법-2",
+     "count": 1,
+     "points": 30
+    },
+    {
+     "key": "상법-3",
+     "label": "상법-3",
+     "count": 2,
+     "points": 40
     }
    ],
    "totalPoints": 350,
    "hasRubric": true,
    "hasCasebook": true,
-   "unmappedKeywords": [],
-   "groupSource": "exam-heading"
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2016_2차_사례",
@@ -15911,9 +15639,8 @@
    ],
    "totalPoints": 350,
    "hasRubric": true,
-   "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "hasCasebook": true,
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2016_1차_사례",
@@ -16040,14 +15767,14 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "문제1",
+     "label": "문제1",
      "count": 3,
      "points": 50
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "문제2",
+     "label": "문제2",
      "count": 5,
      "points": 100
     },
@@ -16066,9 +15793,8 @@
    ],
    "totalPoints": 350,
    "hasRubric": true,
-   "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "hasCasebook": true,
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2015_3차_사례",
@@ -16196,20 +15922,20 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "문제1",
+     "label": "문제1",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "문제2",
+     "label": "문제2",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "문제3",
+     "label": "문제3",
      "count": 5,
      "points": 100
     },
@@ -16220,32 +15946,32 @@
      "points": 100
     },
     {
-     "key": "제3문의1",
-     "label": "제3문의1",
+     "key": "상법-1",
+     "label": "상법-1",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의2",
-     "label": "제3문의2",
+     "key": "상법-2",
+     "label": "상법-2",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제3문의3",
-     "label": "제3문의3",
+     "key": "상법-3",
+     "label": "상법-3",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의4",
-     "label": "제3문의4",
+     "key": "상법-4",
+     "label": "상법-4",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제3문의5",
-     "label": "제3문의5",
+     "key": "상법-5",
+     "label": "상법-5",
      "count": 1,
      "points": 20
     }
@@ -16253,8 +15979,7 @@
    "totalPoints": 350,
    "hasRubric": true,
    "hasCasebook": true,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2015_2차_사례",
@@ -16410,35 +16135,46 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
-     "count": 5,
+     "key": "제1문",
+     "label": "제1문",
+     "count": 9,
+     "points": 150
+    },
+    {
+     "key": "제2문",
+     "label": "제2문",
+     "count": 8,
      "points": 100
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
-     "count": 4,
-     "points": 50
+     "key": "상법-1",
+     "label": "상법-1",
+     "count": 1,
+     "points": 30
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
-     "count": 3,
-     "points": 40
+     "key": "상법-2",
+     "label": "상법-2",
+     "count": 1,
+     "points": 20
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
-     "count": 9,
-     "points": 160
+     "key": "상법-3",
+     "label": "상법-3",
+     "count": 1,
+     "points": 25
+    },
+    {
+     "key": "상법-4",
+     "label": "상법-4",
+     "count": 1,
+     "points": 25
     }
    ],
    "totalPoints": 350,
    "hasRubric": true,
    "hasCasebook": true,
-   "unmappedKeywords": [],
-   "groupSource": "exam-heading"
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2015_1차_사례",
@@ -16577,35 +16313,46 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
-     "count": 4,
-     "points": 110
+     "key": "제1문",
+     "label": "제1문",
+     "count": 7,
+     "points": 150
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
-     "count": 3,
+     "key": "제2문",
+     "label": "제2문",
+     "count": 7,
+     "points": 100
+    },
+    {
+     "key": "상법-1",
+     "label": "상법-1",
+     "count": 1,
+     "points": 15
+    },
+    {
+     "key": "상법-2",
+     "label": "상법-2",
+     "count": 1,
+     "points": 30
+    },
+    {
+     "key": "상법-3",
+     "label": "상법-3",
+     "count": 1,
      "points": 40
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
-     "count": 3,
-     "points": 45
-    },
-    {
-     "key": "제2문의2",
-     "label": "제2문의2",
-     "count": 8,
-     "points": 155
+     "key": "상법-4",
+     "label": "상법-4",
+     "count": 1,
+     "points": 15
     }
    ],
    "totalPoints": 350,
    "hasRubric": true,
-   "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "exam-heading"
+   "hasCasebook": true,
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2014_3차_사례",
@@ -16751,47 +16498,28 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "문1",
+     "label": "문1",
+     "count": 9,
+     "points": 150
+    },
+    {
+     "key": "문2",
+     "label": "문2",
+     "count": 7,
+     "points": 100
+    },
+    {
+     "key": "문3",
+     "label": "문3",
      "count": 4,
-     "points": 60
-    },
-    {
-     "key": "제1문의2",
-     "label": "제1문의2",
-     "count": 2,
-     "points": 40
-    },
-    {
-     "key": "제1문의3",
-     "label": "제1문의3",
-     "count": 3,
-     "points": 50
-    },
-    {
-     "key": "제2문의1",
-     "label": "제2문의1",
-     "count": 5,
-     "points": 65
-    },
-    {
-     "key": "제2문의2",
-     "label": "제2문의2",
-     "count": 1,
-     "points": 20
-    },
-    {
-     "key": "제2문의3",
-     "label": "제2문의3",
-     "count": 5,
-     "points": 115
+     "points": 100
     }
    ],
    "totalPoints": 350,
    "hasRubric": true,
-   "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "exam-heading"
+   "hasCasebook": true,
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2014_2차_사례",
@@ -16931,116 +16659,116 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "A-1",
+     "label": "A-1",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "A-2",
+     "label": "A-2",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "B-1",
+     "label": "B-1",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "B-2",
+     "label": "B-2",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "C-1",
+     "label": "C-1",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의6",
-     "label": "제1문의6",
+     "key": "C-2",
+     "label": "C-2",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "D-1",
+     "label": "D-1",
      "count": 1,
      "points": 35
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "D-2",
+     "label": "D-2",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "E-1",
+     "label": "E-1",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "E-2",
+     "label": "E-2",
      "count": 1,
      "points": 5
     },
     {
-     "key": "제2문의5",
-     "label": "제2문의5",
+     "key": "E-3",
+     "label": "E-3",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의6",
-     "label": "제2문의6",
+     "key": "E-4",
+     "label": "E-4",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제2문의7",
-     "label": "제2문의7",
+     "key": "E-5",
+     "label": "E-5",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제3문의1",
-     "label": "제3문의1",
+     "key": "E-6",
+     "label": "E-6",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제3문의2",
-     "label": "제3문의2",
+     "key": "E-7",
+     "label": "E-7",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의3",
-     "label": "제3문의3",
+     "key": "F-1",
+     "label": "F-1",
      "count": 1,
      "points": 40
     },
     {
-     "key": "제3문의4",
-     "label": "제3문의4",
+     "key": "F-2",
+     "label": "F-2",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제4문의1",
-     "label": "제4문의1",
+     "key": "F-3",
+     "label": "F-3",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제4문의2",
-     "label": "제4문의2",
+     "key": "F-4",
+     "label": "F-4",
      "count": 1,
      "points": 25
     }
@@ -17048,8 +16776,7 @@
    "totalPoints": 350,
    "hasRubric": true,
    "hasCasebook": true,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2014_1차_사례",
@@ -17166,95 +16893,94 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "A-1",
+     "label": "A-1",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "A-2",
+     "label": "A-2",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "A-3",
+     "label": "A-3",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "A-4",
+     "label": "A-4",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "A-5",
+     "label": "A-5",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의6",
-     "label": "제1문의6",
+     "key": "A-6",
+     "label": "A-6",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "A-7",
+     "label": "A-7",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "A-8",
+     "label": "A-8",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "A-9",
+     "label": "A-9",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "B-1",
+     "label": "B-1",
      "count": 1,
      "points": 60
     },
     {
-     "key": "제3문의1",
-     "label": "제3문의1",
+     "key": "B-2",
+     "label": "B-2",
      "count": 1,
      "points": 40
     },
     {
-     "key": "제3문의2",
-     "label": "제3문의2",
+     "key": "C-1",
+     "label": "C-1",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제3문의3",
-     "label": "제3문의3",
+     "key": "C-2",
+     "label": "C-2",
      "count": 1,
      "points": 35
     },
     {
-     "key": "제4문",
-     "label": "제4문",
+     "key": "C-3",
+     "label": "C-3",
      "count": 1,
      "points": 40
     }
    ],
    "totalPoints": 350,
    "hasRubric": true,
-   "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "hasCasebook": true,
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2013_3차_사례",
@@ -17369,101 +17095,100 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "A-1",
+     "label": "A-1",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "A-2a",
+     "label": "A-2a",
      "count": 1,
      "points": 12
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "A-2b",
+     "label": "A-2b",
      "count": 1,
      "points": 8
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "A-3",
+     "label": "A-3",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "A-4",
+     "label": "A-4",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의6",
-     "label": "제1문의6",
+     "key": "A-5",
+     "label": "A-5",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의7",
-     "label": "제1문의7",
+     "key": "A-6",
+     "label": "A-6",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "A-7",
+     "label": "A-7",
      "count": 1,
      "points": 50
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "B-1",
+     "label": "B-1",
      "count": 1,
      "points": 35
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "B-2",
+     "label": "B-2",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의1",
-     "label": "제3문의1",
+     "key": "B-3",
+     "label": "B-3",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제3문의2",
-     "label": "제3문의2",
+     "key": "B-4",
+     "label": "B-4",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의3",
-     "label": "제3문의3",
+     "key": "C-1",
+     "label": "C-1",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제3문의4",
-     "label": "제3문의4",
+     "key": "C-2",
+     "label": "C-2",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제3문의5",
-     "label": "제3문의5",
+     "key": "C-3",
+     "label": "C-3",
      "count": 1,
      "points": 50
     }
    ],
    "totalPoints": 350,
    "hasRubric": true,
-   "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "hasCasebook": true,
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2013_2차_사례",
@@ -17582,107 +17307,106 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "A-1",
+     "label": "A-1",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "A-2",
+     "label": "A-2",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "A-3",
+     "label": "A-3",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "A-4",
+     "label": "A-4",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "A-5",
+     "label": "A-5",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의6",
-     "label": "제1문의6",
+     "key": "A-6",
+     "label": "A-6",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "B-1",
+     "label": "B-1",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "B-2",
+     "label": "B-2",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "C-1",
+     "label": "C-1",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제2문의4",
-     "label": "제2문의4",
+     "key": "C-2",
+     "label": "C-2",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의5",
-     "label": "제2문의5",
+     "key": "D-1",
+     "label": "D-1",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제3문의1",
-     "label": "제3문의1",
+     "key": "D-2",
+     "label": "D-2",
      "count": 1,
      "points": 35
     },
     {
-     "key": "제3문의2",
-     "label": "제3문의2",
+     "key": "E-1",
+     "label": "E-1",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의3",
-     "label": "제3문의3",
+     "key": "E-2",
+     "label": "E-2",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제3문의4",
-     "label": "제3문의4",
+     "key": "E-3",
+     "label": "E-3",
      "count": 1,
      "points": 40
     },
     {
-     "key": "제4문",
-     "label": "제4문",
+     "key": "E-4",
+     "label": "E-4",
      "count": 1,
      "points": 30
     }
    ],
    "totalPoints": 350,
    "hasRubric": true,
-   "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "hasCasebook": true,
+   "unmappedKeywords": []
   },
   {
    "id": "민사법_모의_2013_1차_사례",
@@ -17796,74 +17520,74 @@
    ],
    "groups": [
     {
-     "key": "제1문의1",
-     "label": "제1문의1",
+     "key": "I-1",
+     "label": "I-1",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의2",
-     "label": "제1문의2",
+     "key": "I-2",
+     "label": "I-2",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제1문의3",
-     "label": "제1문의3",
+     "key": "I-3",
+     "label": "I-3",
      "count": 1,
      "points": 25
     },
     {
-     "key": "제1문의4",
-     "label": "제1문의4",
+     "key": "II-1",
+     "label": "II-1",
      "count": 1,
      "points": 30
     },
     {
-     "key": "제1문의5",
-     "label": "제1문의5",
+     "key": "II-2",
+     "label": "II-2",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의1",
-     "label": "제2문의1",
+     "key": "II-3",
+     "label": "II-3",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제2문의2",
-     "label": "제2문의2",
+     "key": "II-4",
+     "label": "II-4",
      "count": 1,
      "points": 15
     },
     {
-     "key": "제2문의3",
-     "label": "제2문의3",
+     "key": "III-",
+     "label": "III-",
      "count": 4,
      "points": 100
     },
     {
-     "key": "제3문의1",
-     "label": "제3문의1",
+     "key": "IV-1",
+     "label": "IV-1",
      "count": 1,
      "points": 20
     },
     {
-     "key": "제3문의2",
-     "label": "제3문의2",
+     "key": "IV-2",
+     "label": "IV-2",
      "count": 1,
      "points": 40
     },
     {
-     "key": "제3문의3",
-     "label": "제3문의3",
+     "key": "IV-3",
+     "label": "IV-3",
      "count": 1,
      "points": 10
     },
     {
-     "key": "제3문의4",
-     "label": "제3문의4",
+     "key": "IV-4",
+     "label": "IV-4",
      "count": 1,
      "points": 30
     }
@@ -17871,8 +17595,7 @@
    "totalPoints": 350,
    "hasRubric": true,
    "hasCasebook": false,
-   "unmappedKeywords": [],
-   "groupSource": "estimated"
+   "unmappedKeywords": []
   }
  ]
 }
