@@ -15,11 +15,15 @@
 import json
 import re
 
+from pathlib import Path
+
 import fitz
 
 from paths import CASEBOOK, RAW
 
-PDF = RAW / "사례집" / "형사소송법" / "(26.02)[이창현] 사례형사소송법.pdf"
+# 같은 책이지만 판본에 따라 텍스트 층 품질이 다르다. Desktop본은 당사자 표기가
+# 38% 깨져 있고(甲乙丙 → 己江心), D 드라이브본은 1%다. 깨끗한 쪽을 쓴다.
+PDF = Path(r"D:/pdf/사례/형사법/(26.02)[이창현] 사례형사소송법.pdf")
 OUT = CASEBOOK / "criminal_procedure_cases.json"
 
 BOOK = "사례형사소송법"

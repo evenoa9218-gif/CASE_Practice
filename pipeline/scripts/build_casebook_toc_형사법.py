@@ -24,6 +24,8 @@ SOURCES = [
      "이창현 사례형사소송법 (26.02)"),
     ("이인규 형법", "criminal_inkyu_cases.json",
      "이인규 형법 변사기 (2026)"),
+    ("작은변사기 형소", "jaksik_cases.json",
+     "작은변사기 형사소송법 (2027, 재OCR)"),
 ]
 OUT_DIR = CASEBOOK.parent.parent / "data" / "형사법"
 
