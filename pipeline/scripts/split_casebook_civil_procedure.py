@@ -23,38 +23,49 @@ FOOT = re.compile(r"^[^\n]{0,40}[I|]\s*\d{1,4}\s*$", re.M)   # '소송의 개시
 
 
 def main():
-    # 원본 텍스트 층은 당사자 표기가 35% 깨져 있다. 재OCR 본문이 있으면 쓴다.
-    # 재OCR본은 쪽 전체가 한 줄로 합쳐져 나와, 쪽머리가 `사례`인지 보는 이 방식이
-    # 통하지 않는다(사례 0개). 분할 방식을 바꾸기 전까지는 원본 텍스트를 쓴다.
-    # 그래서 이 책만 당사자 표기 35%가 남아 있다.
+    # 경계는 원본 PDF에서, 본문은 재OCR에서 가져온다.
+    # 원본은 쪽머리가 `사례` + 제목이라 사례 시작 쪽을 정확히 알려주지만 당사자
+    # 표기가 35% 깨져 있다. 재OCR본은 표기가 깨끗한 대신 쪽 전체가 한 줄로
+    # 합쳐져 나와 쪽머리 판정이 안 된다. 각자 잘하는 것을 쓴다.
+    doc = fitz.open(PDF)
+    orig = [doc[i].get_text() for i in range(SKIP_HEAD, doc.page_count - SKIP_TAIL)]
+
     reocr = PDF.parent / "송영곤_민소사연_재OCR.txt"
-    if False and reocr.exists():
+    body_of = orig
+    if reocr.exists():
         parts = re.split(r"^<<<PAGE p(\d+)>>>$", reocr.read_text(encoding="utf-8"), flags=re.M)
         page = {int(parts[i]): parts[i + 1] for i in range(1, len(parts) - 1, 2)}
-        last = max(page) + 1 if page else 0
-        pages = [page.get(i, "") for i in range(SKIP_HEAD, last - SKIP_TAIL)]
+        body_of = [page.get(i, "") for i in range(SKIP_HEAD, SKIP_HEAD + len(orig))]
         print(f"재OCR 본문 사용 {len(page)}쪽")
-    else:
-        doc = fitz.open(PDF)
-        pages = [doc[i].get_text() for i in range(SKIP_HEAD, doc.page_count - SKIP_TAIL)]
 
     starts = []
-    for i, t in enumerate(pages):
+    for i, t in enumerate(orig):
         ls = [l.strip() for l in t.split("\n") if l.strip()]
         if ls and ls[0] == "사례" and len(ls) > 1:
             starts.append((i, re.sub(r"\s+", " ", ls[1])[:70]))
     print(f"사례 시작 쪽 {len(starts)}개")
 
+    # 재OCR본에는 원본 OCR이 놓쳤던 출처 표기가 살아 있다.
+    # OCR이 "변시"를 "변사"로도 읽고, 회차 숫자를 놓쳐 "제: 회"가 되기도 한다.
+    SRC = re.compile(r"[(（]\s*\d{4}\s*년\s*제?\s*(\d{1,2})\s*회\s*변\s*[시사]")
+
     cases = []
     for k, (pi, title) in enumerate(starts):
-        end = starts[k + 1][0] if k + 1 < len(starts) else len(pages)
-        seg = FOOT.sub("", "\n".join(pages[pi:end])).strip()
+        end = starts[k + 1][0] if k + 1 < len(starts) else len(orig)
+        seg = FOOT.sub("", "\n".join(body_of[pi:end])).strip()
         if len(seg) < MIN_CHARS:
             continue
+        m = SRC.search(seg[:600])
+        if m:
+            hoi = int(m.group(1))
+            src = {"kind": "exam", "examId": f"민사법_변시_{hoi}회_사례",
+                   "label": f"제{hoi}회 변호사시험"}
+        else:
+            src = {"kind": "unlabeled", "examId": None, "label": "출처 미표기"}
         cases.append({
             "caseNo": str(k + 1), "title": title,
             "book": BOOK, "author": AUTHOR, "area": "민사소송법",
-            "source": {"kind": "unlabeled", "examId": None, "label": "출처 미표기"},
+            "source": src,
             "text": re.sub(r"\n{3,}", "\n\n", seg), "chars": len(seg),
         })
 
