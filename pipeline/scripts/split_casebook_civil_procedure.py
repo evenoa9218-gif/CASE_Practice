@@ -23,8 +23,20 @@ FOOT = re.compile(r"^[^\n]{0,40}[I|]\s*\d{1,4}\s*$", re.M)   # '소송의 개시
 
 
 def main():
-    doc = fitz.open(PDF)
-    pages = [doc[i].get_text() for i in range(SKIP_HEAD, doc.page_count - SKIP_TAIL)]
+    # 원본 텍스트 층은 당사자 표기가 35% 깨져 있다. 재OCR 본문이 있으면 쓴다.
+    # 재OCR본은 쪽 전체가 한 줄로 합쳐져 나와, 쪽머리가 `사례`인지 보는 이 방식이
+    # 통하지 않는다(사례 0개). 분할 방식을 바꾸기 전까지는 원본 텍스트를 쓴다.
+    # 그래서 이 책만 당사자 표기 35%가 남아 있다.
+    reocr = PDF.parent / "송영곤_민소사연_재OCR.txt"
+    if False and reocr.exists():
+        parts = re.split(r"^<<<PAGE p(\d+)>>>$", reocr.read_text(encoding="utf-8"), flags=re.M)
+        page = {int(parts[i]): parts[i + 1] for i in range(1, len(parts) - 1, 2)}
+        last = max(page) + 1 if page else 0
+        pages = [page.get(i, "") for i in range(SKIP_HEAD, last - SKIP_TAIL)]
+        print(f"재OCR 본문 사용 {len(page)}쪽")
+    else:
+        doc = fitz.open(PDF)
+        pages = [doc[i].get_text() for i in range(SKIP_HEAD, doc.page_count - SKIP_TAIL)]
 
     starts = []
     for i, t in enumerate(pages):

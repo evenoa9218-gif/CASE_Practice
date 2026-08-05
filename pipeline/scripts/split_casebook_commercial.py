@@ -21,18 +21,36 @@ SKIP_HEAD, SKIP_TAIL = 20, 20
 MIN_CHARS = 400
 
 # `변시6 (2017)` / `모고 (2022 • 3)` — OCR이 가운뎃점을 ■·•·- 로 흔든다
+# 재OCR 본문은 줄바꿈이 원본과 달라 헤더가 줄머리에 오지 않는다.
+# 줄 고정을 빼고, 쪽머리로 되풀이되는 같은 표시는 아래에서 걸러낸다.
 HEAD = re.compile(
-    r"^\s*(?:변시\s*(\d{1,2})\s*\(\s*\d{4}\s*\)"
-    r"|모고\s*\(\s*(\d{4})\s*[^\d\n]{0,4}\s*([1-3])\s*\))\s*$", re.M)
+    r"(?:변시\s*(\d{1,2})\s*[(（]\s*\d{4}\s*[)）]"
+    r"|모고\s*[(（]\s*(\d{4})\s*[^\d\n]{0,4}\s*([1-3])\s*[)）])")
 NOISE = re.compile(r"^\s*\d{1,4}\s*[|I]\s*인사이트상법[^\n]*$", re.M)
 
 
 def main():
-    doc = fitz.open(PDF)
-    body = "\n".join(doc[i].get_text() for i in range(SKIP_HEAD, doc.page_count - SKIP_TAIL))
+    # 원본 텍스트 층은 당사자 표기가 38% 깨져 있다(甲乙丙 → 己江心因內).
+    # Windows 내장 OCR로 다시 읽은 본문이 있으면 그걸 쓴다.
+    reocr = PDF.parent / "인사이트_상법_재OCR.txt"
+    if reocr.exists():
+        parts = re.split(r"^<<<PAGE p(\d+)>>>$", reocr.read_text(encoding="utf-8"), flags=re.M)
+        page = {int(parts[i]): parts[i + 1] for i in range(1, len(parts) - 1, 2)}
+        last = max(page) + 1 if page else 0
+        body = "\n".join(page.get(i, "") for i in range(SKIP_HEAD, last - SKIP_TAIL))
+        print(f"재OCR 본문 사용 {len(page)}쪽")
+    else:
+        doc = fitz.open(PDF)
+        body = "\n".join(doc[i].get_text() for i in range(SKIP_HEAD, doc.page_count - SKIP_TAIL))
     body = NOISE.sub("", body)          # 쪽머리 잡음 제거
 
-    heads = list(HEAD.finditer(body))
+    raw_heads = list(HEAD.finditer(body))
+    heads, prev = [], None
+    for m in raw_heads:                      # 쪽머리로 되풀이되는 같은 표시는 건너뛴다
+        key = (m.group(1), m.group(2), m.group(3))
+        if key != prev:
+            heads.append(m)
+            prev = key
     print(f"사례 머리 {len(heads)}개")
 
     cases = []
