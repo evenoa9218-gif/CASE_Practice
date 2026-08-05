@@ -453,7 +453,7 @@ function App(){
             onSubmitted={()=>reload()} />}
 
         {view==="list" &&
-          <ExamList exams={exams} issues={issues} issueMap={issueMap} prog={prog} byIssue={byIssue}
+          <ExamList subject={subject} exams={exams} issues={issues} issueMap={issueMap} prog={prog} byIssue={byIssue}
             casebookToc={casebookToc}
             mode={mode} setMode={setMode}
             fType={fType} setFType={setFType} fIssue={fIssue} setFIssue={setFIssue}
@@ -475,11 +475,25 @@ function App(){
 }
 
 // ══════════════════════════════════════════════
-function ExamList({exams,issues,issueMap,prog,byIssue,casebookToc,mode,setMode,
+function ExamList({subject,exams,issues,issueMap,prog,byIssue,casebookToc,mode,setMode,
                    fType,setFType,fIssue,setFIssue,fDone,setFDone,incoming,onPick}){
   const [showAll,setShowAll] = useState(false);
   const [q,setQ] = useState("");
   const [issueSub,setIssueSub] = useState(fIssue ? "tag" : "toc");
+  // 사례집 본문은 2MB가 넘어서 목록에서 하나를 고를 때만 받는다.
+  const [caseTexts,setCaseTexts] = useState(null);
+  const [viewUid,setViewUid] = useState(null);
+  const openCase = async uid => {
+    let m = caseTexts;
+    if(!m){
+      try{
+        const r = await fetch(`data/${subject}/casebook_cases.json`);
+        m = r.ok ? await r.json() : {};
+      }catch{ m = {}; }
+      setCaseTexts(m);
+    }
+    setViewUid(m[uid] ? uid : null);
+  };
 
   // ── 쟁점별 모드 ──
   if(mode==="issue"){
@@ -503,8 +517,36 @@ function ExamList({exams,issues,issueMap,prog,byIssue,casebookToc,mode,setMode,
 
         {issueSub==="toc" &&
           (casebookToc
-            ? <CasebookBrowser casebookToc={casebookToc} onPick={onPick} />
+            ? <CasebookBrowser casebookToc={casebookToc} onPick={onPick} onView={openCase} />
             : <div className="empty">사례집 목차 데이터가 없습니다.</div>)}
+
+        {viewUid && caseTexts?.[viewUid] && (()=>{
+          const c = caseTexts[viewUid];
+          return (
+            <div style={{position:'fixed',inset:0,background:'rgba(8,16,30,.55)',zIndex:60,
+              display:'flex',alignItems:'center',justifyContent:'center',padding:16}}
+              onClick={()=>setViewUid(null)}>
+              <div className="card" style={{maxWidth:900,width:'100%',maxHeight:'88vh',
+                overflowY:'auto',margin:0}} onClick={e=>e.stopPropagation()}>
+                <div className="row" style={{justifyContent:'space-between',marginBottom:10}}>
+                  <div style={{minWidth:0}}>
+                    <b style={{fontSize:15}}>{c.title}</b>
+                    <div className="muted" style={{marginTop:3}}>
+                      {c.source.label} · {c.author} {c.book}
+                    </div>
+                  </div>
+                  <button className="btn" onClick={()=>setViewUid(null)}>닫기</button>
+                </div>
+                {c.source.kind==="original" &&
+                  <div className="banner">저자가 만든 창작 사례입니다 — 실제 기출이 아닙니다.</div>}
+                {c.source.kind==="exam" &&
+                  <div className="banner">{c.source.label} 연계 사례입니다.
+                    <span className="muted"> 저자가 변형·발췌한 것이라 시험 원문과 다를 수 있습니다.</span></div>}
+                <div className="pre">{c.text}</div>
+              </div>
+            </div>
+          );
+        })()}
 
         {issueSub==="tag" && <div>
           <div className="card">
@@ -570,7 +612,7 @@ function ExamList({exams,issues,issueMap,prog,byIssue,casebookToc,mode,setMode,
   );
 }
 
-function CasebookBrowser({casebookToc,onPick}){
+function CasebookBrowser({casebookToc,onPick,onView}){
   const books = Object.keys(casebookToc);
   const [book,setBook] = useState(books[0]);
   const [openParts,setOpenParts] = useState(()=>new Set([0]));
@@ -604,21 +646,25 @@ function CasebookBrowser({casebookToc,onPick}){
             </div>
             {isOpen && <div style={{borderTop:'1px solid var(--bd2)'}}>
               {p.cases.map(c=>{
-                const clickable = !!(c.examId && c.groupKey);
+                // 회차로 건너뛸 수 있는 사례와, 사례 본문만 볼 수 있는 사례를 나눈다.
+                // 창작 사례는 붙일 회차가 없지만 쟁점 훈련에는 그대로 쓸모가 있다.
+                const jump = !!(c.examId && c.groupKey);
+                const view = !!c.uid;
                 return (
-                  <div key={c.caseNo} className={"row"+(clickable?" click":"")}
+                  <div key={c.uid||c.caseNo} className={"row"+((jump||view)?" click":"")}
                     style={{justifyContent:'space-between',padding:'9px 14px',
                       borderBottom:'1px solid var(--bd2)',flexWrap:'nowrap',
-                      opacity:clickable?1:.45,cursor:clickable?'pointer':'default'}}
-                    onClick={()=>clickable && onPick(c.examId,c.groupKey)}
-                    title={clickable?"":"연결된 문제를 찾지 못했습니다 (데이터 범위 밖이거나 인식 오류)"}>
+                      opacity:(jump||view)?1:.45,cursor:(jump||view)?'pointer':'default'}}
+                    onClick={()=>jump ? onPick(c.examId,c.groupKey) : view && onView(c.uid)}
+                    title={(jump||view)?"":"연결된 문제를 찾지 못했습니다 (데이터 범위 밖이거나 인식 오류)"}>
                     <div style={{minWidth:0,flex:1}}>
                       <div style={{fontSize:13.5}}>
                         <span className="muted">사례{c.caseNo}.</span> {c.source}
                       </div>
                       <div className="muted" style={{fontSize:12.5,marginTop:2}}>{c.label}</div>
                     </div>
-                    {!clickable && <span className="tag">미연결</span>}
+                    {c.kind==="original" && <span className="tag">창작</span>}
+                    {!jump && !view && <span className="tag">미연결</span>}
                   </div>
                 );
               })}
