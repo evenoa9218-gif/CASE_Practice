@@ -2057,5 +2057,126 @@
     ]
    }
   ]
+ },
+ "정선균 행정법": {
+  "meta": {
+   "title": "정선균 행정법 기출해설 바이블 (26.03, 재OCR)",
+   "year": 2026
+  },
+  "parts": [
+   {
+    "title": "기출 해설 (12사례)",
+    "cases": [
+     {
+      "uid": "pa001",
+      "caseNo": "15-1-3",
+      "source": "제15회 변호사시험 제1문의 3",
+      "label": "제15회 변호사시험 제1문의 3",
+      "examId": "공법_변시_15회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "pa002",
+      "caseNo": "14-1",
+      "source": "제14회 변호사시험 제1문",
+      "label": "제14회 변호사시험 제1문",
+      "examId": "공법_변시_14회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "pa003",
+      "caseNo": "13-1",
+      "source": "제13회 변호사시험 제1문",
+      "label": "제13회 변호사시험 제1문",
+      "examId": "공법_변시_13회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "pa004",
+      "caseNo": "12-1",
+      "source": "제12회 변호사시험 제1문",
+      "label": "제12회 변호사시험 제1문",
+      "examId": "공법_변시_12회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "pa005",
+      "caseNo": "11-1",
+      "source": "제11회 변호사시험 제1문",
+      "label": "제11회 변호사시험 제1문",
+      "examId": "공법_변시_11회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "pa006",
+      "caseNo": "10-1-2",
+      "source": "제10회 변호사시험 제1문의 2",
+      "label": "제10회 변호사시험 제1문의 2",
+      "examId": "공법_변시_10회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "pa007",
+      "caseNo": "9-1-2",
+      "source": "제9회 변호사시험 제1문의 2",
+      "label": "제9회 변호사시험 제1문의 2",
+      "examId": "공법_변시_9회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "pa008",
+      "caseNo": "8-1-2",
+      "source": "제8회 변호사시험 제1문의 2",
+      "label": "제8회 변호사시험 제1문의 2",
+      "examId": "공법_변시_8회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "pa009",
+      "caseNo": "7-1",
+      "source": "제7회 변호사시험 제1문",
+      "label": "제7회 변호사시험 제1문",
+      "examId": "공법_변시_7회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "pa010",
+      "caseNo": "6-1",
+      "source": "제6회 변호사시험 제1문",
+      "label": "제6회 변호사시험 제1문",
+      "examId": "공법_변시_6회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "pa011",
+      "caseNo": "5-1",
+      "source": "제5회 변호사시험 제1문",
+      "label": "제5회 변호사시험 제1문",
+      "examId": "공법_변시_5회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "pa012",
+      "caseNo": "4-2-1",
+      "source": "제4회 변호사시험 제2문의 1",
+      "label": "제4회 변호사시험 제2문의 1",
+      "examId": "공법_변시_4회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     }
+    ]
+   }
+  ]
  }
 }
