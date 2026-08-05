@@ -1991,5 +1991,288 @@
     ]
    }
   ]
+ },
+ "박승수 CBT실전답안": {
+  "meta": {
+   "title": "박승수 민민소 사례 CBT실전답안 (26.02, 재OCR)",
+   "year": 2026
+  },
+  "parts": [
+   {
+    "title": "기출 연계 (30사례 · 15회차)",
+    "cases": [
+     {
+      "uid": "mc011",
+      "caseNo": "10-1",
+      "source": "제10회 변호사시험 제1문",
+      "label": "제10회 제1문",
+      "examId": "민사법_변시_10회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc012",
+      "caseNo": "10-2",
+      "source": "제10회 변호사시험 제2문",
+      "label": "제10회 제2문",
+      "examId": "민사법_변시_10회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc009",
+      "caseNo": "11-1",
+      "source": "제11회 변호사시험 제1문",
+      "label": "제11회 제1문",
+      "examId": "민사법_변시_11회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc010",
+      "caseNo": "11-2",
+      "source": "제11회 변호사시험 제2문",
+      "label": "제11회 제2문",
+      "examId": "민사법_변시_11회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc007",
+      "caseNo": "12-1",
+      "source": "제12회 변호사시험 제1문",
+      "label": "제12회 제1문",
+      "examId": "민사법_변시_12회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc008",
+      "caseNo": "12-2",
+      "source": "제12회 변호사시험 제2문",
+      "label": "제12회 제2문",
+      "examId": "민사법_변시_12회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc005",
+      "caseNo": "13-1",
+      "source": "제13회 변호사시험 제1문",
+      "label": "제13회 제1문",
+      "examId": "민사법_변시_13회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc006",
+      "caseNo": "13-2",
+      "source": "제13회 변호사시험 제2문",
+      "label": "제13회 제2문",
+      "examId": "민사법_변시_13회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc003",
+      "caseNo": "14-1",
+      "source": "제14회 변호사시험 제1문",
+      "label": "제14회 제1문",
+      "examId": "민사법_변시_14회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc004",
+      "caseNo": "14-2",
+      "source": "제14회 변호사시험 제2문",
+      "label": "제14회 제2문",
+      "examId": "민사법_변시_14회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc001",
+      "caseNo": "15-1",
+      "source": "제15회 변호사시험 제1문",
+      "label": "제15회 제1문",
+      "examId": "민사법_변시_15회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc002",
+      "caseNo": "15-2",
+      "source": "제15회 변호사시험 제2문",
+      "label": "제15회 제2문",
+      "examId": "민사법_변시_15회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc029",
+      "caseNo": "1-1",
+      "source": "제1회 변호사시험 제1문",
+      "label": "제1회 제1문",
+      "examId": "민사법_변시_1회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc030",
+      "caseNo": "1-2",
+      "source": "제1회 변호사시험 제2문",
+      "label": "제1회 제2문",
+      "examId": "민사법_변시_1회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc027",
+      "caseNo": "2-1",
+      "source": "제2회 변호사시험 제1문",
+      "label": "제2회 제1문",
+      "examId": "민사법_변시_2회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc028",
+      "caseNo": "2-2",
+      "source": "제2회 변호사시험 제2문",
+      "label": "제2회 제2문",
+      "examId": "민사법_변시_2회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc025",
+      "caseNo": "3-1",
+      "source": "제3회 변호사시험 제1문",
+      "label": "제3회 제1문",
+      "examId": "민사법_변시_3회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc026",
+      "caseNo": "3-2",
+      "source": "제3회 변호사시험 제2문",
+      "label": "제3회 제2문",
+      "examId": "민사법_변시_3회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc023",
+      "caseNo": "4-1",
+      "source": "제4회 변호사시험 제1문",
+      "label": "제4회 제1문",
+      "examId": "민사법_변시_4회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc024",
+      "caseNo": "4-2",
+      "source": "제4회 변호사시험 제2문",
+      "label": "제4회 제2문",
+      "examId": "민사법_변시_4회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc021",
+      "caseNo": "5-1",
+      "source": "제5회 변호사시험 제1문",
+      "label": "제5회 제1문",
+      "examId": "민사법_변시_5회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc022",
+      "caseNo": "5-2",
+      "source": "제5회 변호사시험 제2문",
+      "label": "제5회 제2문",
+      "examId": "민사법_변시_5회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc019",
+      "caseNo": "6-1",
+      "source": "제6회 변호사시험 제1문",
+      "label": "제6회 제1문",
+      "examId": "민사법_변시_6회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc020",
+      "caseNo": "6-2",
+      "source": "제6회 변호사시험 제2문",
+      "label": "제6회 제2문",
+      "examId": "민사법_변시_6회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc017",
+      "caseNo": "7-1",
+      "source": "제7회 변호사시험 제1문",
+      "label": "제7회 제1문",
+      "examId": "민사법_변시_7회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc018",
+      "caseNo": "7-2",
+      "source": "제7회 변호사시험 제2문",
+      "label": "제7회 제2문",
+      "examId": "민사법_변시_7회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc015",
+      "caseNo": "8-1",
+      "source": "제8회 변호사시험 제1문",
+      "label": "제8회 제1문",
+      "examId": "민사법_변시_8회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc016",
+      "caseNo": "8-2",
+      "source": "제8회 변호사시험 제2문",
+      "label": "제8회 제2문",
+      "examId": "민사법_변시_8회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc013",
+      "caseNo": "9-1",
+      "source": "제9회 변호사시험 제1문",
+      "label": "제9회 제1문",
+      "examId": "민사법_변시_9회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "mc014",
+      "caseNo": "9-2",
+      "source": "제9회 변호사시험 제2문",
+      "label": "제9회 제2문",
+      "examId": "민사법_변시_9회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     }
+    ]
+   }
+  ]
  }
 }

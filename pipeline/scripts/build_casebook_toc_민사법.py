@@ -15,7 +15,9 @@ from paths import CASEBOOK
 SOURCES = [("인사이트 상법", "commercial_cases.json",
             "인사이트 상법 사례형 해설편 (2026)"),
            ("송영곤 민사소송법", "civil_procedure_cases.json",
-            "송영곤 민소사연 (26.01)")]
+            "송영곤 민소사연 (26.01)"),
+           ("박승수 CBT실전답안", "parkss_cases.json",
+            "박승수 민민소 사례 CBT실전답안 (26.02, 재OCR)")]
 OUT_DIR = CASEBOOK.parent.parent / "data" / "민사법"
 
 
