@@ -28,8 +28,18 @@ MO = re.compile(r"(\d{4})\s*년\s*제?\s*([1-3])\s*차\s*모의")
 
 
 def main():
-    doc = fitz.open(PDF)
-    body = "\n".join(doc[i].get_text() for i in range(SKIP_HEAD, doc.page_count - SKIP_TAIL))
+    # 원본 텍스트 층은 당사자 표기가 39% 깨져 있다(甲乙丙 → 己江心因內).
+    # Windows 내장 OCR로 다시 읽은 본문(의심률 1%)이 있으면 그걸 쓴다.
+    reocr = PDF.parent / "이인규_변사기_재OCR.txt"
+    if reocr.exists():
+        parts = re.split(r"^<<<PAGE p(\d+)>>>$", reocr.read_text(encoding="utf-8"), flags=re.M)
+        page = {int(parts[i]): parts[i + 1] for i in range(1, len(parts) - 1, 2)}
+        last = max(page) + 1 if page else 0
+        body = "\n".join(page.get(i, "") for i in range(SKIP_HEAD, last - SKIP_TAIL))
+        print(f"재OCR 본문 사용 {len(page)}쪽")
+    else:
+        doc = fitz.open(PDF)
+        body = "\n".join(doc[i].get_text() for i in range(SKIP_HEAD, doc.page_count - SKIP_TAIL))
 
     # 장 제목을 위치별로 기억해 두었다가, 각 하위 사례에 가장 가까운 앞 장을 붙인다
     chaps = [(m.start(), re.sub(r"\s+", " ", m.group(2)).strip()) for m in CHAP.finditer(body)]

@@ -4065,508 +4065,283 @@
   },
   "parts": [
    {
-    "title": "기출 연계 (56사례 · 14회차)",
+    "title": "기출 연계 (31사례 · 13회차)",
     "cases": [
      {
-      "uid": "b081",
+      "uid": "b042",
       "caseNo": "20-3",
       "source": "제10회 변호사시험",
-      "label": "생명과 신체에 대한 죄 259",
+      "label": "생명과 신체에 대한 최 257 생명과 신체에 대한 최 생명과 신체에 대한",
       "examId": "형사법_변시_10회_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "b010",
-      "caseNo": "3-1",
-      "source": "제10회 변호사시험",
-      "label": "구성요건적 고의 및 구성요건적 착오 39",
-      "examId": "형사법_변시_10회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b149",
+      "uid": "b078",
       "caseNo": "30-8",
       "source": "제10회 변호사시험",
-      "label": "횡령의 죄 487",
+      "label": "횡령의 최 475 사래 30-4 2014년 제3회 변호사시험(제2문) 甲",
       "examId": "형사법_변시_10회_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "b191",
+      "uid": "b105",
       "caseNo": "35-4",
       "source": "제10회 변호사시험",
-      "label": "공무원의 직무에 관한 죄 623",
+      "label": "공무원의 직무에 관한 최 623 사례 35-4 2021년 제10회 변호사",
       "examId": "형사법_변시_10회_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "b205",
-      "caseNo": "37-1",
-      "source": "제10회 변호사시험",
-      "label": "공무방해에 관한 죄 669",
-      "examId": "형사법_변시_10회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b229",
+      "uid": "b121",
       "caseNo": "41-1",
       "source": "제10회 변호사시험",
-      "label": "도로교통법 및 특가법 757",
+      "label": "도로교통법 및 특가법 751 사래 40-7 법전협 2018(3)모의(제1",
       "examId": "형사법_변시_10회_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "b111",
-      "caseNo": "27-5",
-      "source": "제11회 변호사시험",
-      "label": "강도의 죄 363",
-      "examId": "형사법_변시_11회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b175",
+      "uid": "b093",
       "caseNo": "33-4",
       "source": "제11회 변호사시험",
-      "label": "문서에 관한 죄 569",
+      "label": "문서에 관한 최 사례 33-4 2022년 제11회 변호사시험(제2문) 5",
       "examId": "형사법_변시_11회_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "b189",
+      "uid": "b104",
       "caseNo": "35-2",
       "source": "제11회 변호사시험",
-      "label": "공무원의 직무에 관한 죄 615",
+      "label": "공무원의 직무에 관한 최 615 Ⅲ. 乙의 죄책 1. 문제점 乙은 丙이",
       "examId": "형사법_변시_11회_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "b005",
-      "caseNo": "2-5",
-      "source": "제12회 변호사시험",
-      "label": "구성요건적 고의 및 구성요건적 착오 23",
-      "examId": "형사법_변시_12회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b090",
-      "caseNo": "23-1",
-      "source": "제12회 변호사시험",
-      "label": "강간과 추행의 죄 283",
-      "examId": "형사법_변시_12회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b162",
-      "caseNo": "31-11",
-      "source": "제12회 변호사시험",
-      "label": "배임의 죄 535",
-      "examId": "형사법_변시_12회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b176",
-      "caseNo": "33-5",
-      "source": "제12회 변호사시험",
-      "label": "문서에 관한 죄 571",
-      "examId": "형사법_변시_12회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b023",
+      "uid": "b011",
       "caseNo": "6-3",
       "source": "제12회 변호사시험",
-      "label": "금지착오 및 위법성조각사유의 전제사실의 착오 81",
+      "label": "금지착오 및 위법성조각사유의 전제사실의 착오 81 사례 6-3 2023년",
       "examId": "형사법_변시_12회_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "b133",
-      "caseNo": "28-16",
+      "uid": "b057",
+      "caseNo": "26-10",
       "source": "제13회 변호사시험",
-      "label": "사기의 죄 433",
+      "label": "절도의 최 341 2. 폭처법 위반의 공동주거침입조l(폭처법 제2조 제2",
       "examId": "형사법_변시_13회_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "b031",
-      "caseNo": "7-4",
-      "source": "제13회 변호사시험",
-      "label": "중지미수 101",
-      "examId": "형사법_변시_13회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b045",
+      "uid": "b019",
       "caseNo": "11-3",
       "source": "제14회 변호사시험",
-      "label": "간접정범 151",
+      "label": "간접정범 사례 11-3 2025년 제14회 변호사시험(제1문) 151 X",
       "examId": "형사법_변시_14회_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "b065",
+      "uid": "b033",
       "caseNo": "16-4",
       "source": "제14회 변호사시험",
-      "label": "결과적가중범 213",
+      "label": "결과적 가중범 213 실행의 범의를 포기한 직후로서 사회통님상 범죄행위가",
       "examId": "형사법_변시_14회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b114",
-      "caseNo": "27-8",
-      "source": "제14회 변호사시험",
-      "label": "강도의 죄 377",
-      "examId": "형사법_변시_14회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b198",
-      "caseNo": "35-9",
-      "source": "제14회 변호사시험",
-      "label": "공무원의 직무에 관한 죄 647",
-      "examId": "형사법_변시_14회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b201",
-      "caseNo": "36-3",
-      "source": "제14회 변호사시험",
-      "label": "공무방해에 관한 죄 659",
-      "examId": "형사법_변시_14회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b047",
-      "caseNo": "12-1",
-      "source": "제1회 변호사시험",
-      "label": "공동정범 159",
-      "examId": "형사법_변시_1회_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
       "uid": "b061",
+      "caseNo": "27-8",
+      "source": "제14회 변호사시험",
+      "label": "강도의 최 377 사례 27-8 2025년 제14회 변호사시험(제2문)",
+      "examId": "형사법_변시_14회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "b109",
+      "caseNo": "36-3",
+      "source": "제14회 변호사시험",
+      "label": "공무방해에 관한 최 659 사례 36-3 2025년 제14회 변호사시험(",
+      "examId": "형사법_변시_14회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "b021",
+      "caseNo": "12-1",
+      "source": "제1회 변호사시험",
+      "label": "간접정범 155 제+i조 제1항의 문언에 정면으로 배치되므로 비록 이용자",
+      "examId": "형사법_변시_1회_사례",
+      "groupKey": null,
+      "kind": "exam"
+     },
+     {
+      "uid": "b030",
       "caseNo": "16-1",
       "source": "제1회 변호사시험",
-      "label": "결과적가중범 199",
-      "examId": "형사법_변시_1회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b195",
-      "caseNo": "35-6",
-      "source": "제1회 변호사시험",
-      "label": "공무원의 직무에 관한 죄 635",
-      "examId": "형사법_변시_1회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b217",
-      "caseNo": "39-1",
-      "source": "제1회 변호사시험",
-      "label": "위증과 증거인멸의 죄 721",
+      "label": "정범 • 공범과 신분 191 설을 따른다 판례에 의하면 제33조 본문에",
       "examId": "형사법_변시_1회_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
       "uid": "b106",
-      "caseNo": "26-9",
-      "source": "제2회 변호사시험",
-      "label": "절도의 죄 339",
-      "examId": "형사법_변시_2회_사례",
+      "caseNo": "35-6",
+      "source": "제1회 변호사시험",
+      "label": "공무원의 직무에 관한 최 635 III. 甲의 죄책 1. 甲의 가담형대",
+      "examId": "형사법_변시_1회_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "b208",
+      "uid": "b112",
       "caseNo": "38-1",
       "source": "제2회 변호사시험",
-      "label": "도주와 범인은닉의 죄 689",
+      "label": "도주와 범인은닉의 최 689 한 것은 스스로 도피하는 행위의 범주를 넘어",
       "examId": "형사법_변시_2회_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "b145",
-      "caseNo": "30-4",
-      "source": "제3회 변호사시험",
-      "label": "횡령의 죄 475",
-      "examId": "형사법_변시_3회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b188",
+      "uid": "b102",
       "caseNo": "34-4",
       "source": "제3회 변호사시험",
-      "label": "방화 및 도박에 관한 죄 609",
+      "label": "방화 및 도박에 관한 최 601 으므로 이미 발생한 화력을 방치함으로써",
       "examId": "형사법_변시_3회_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "b206",
-      "caseNo": "37-2",
-      "source": "제3회 변호사시험",
-      "label": "도주와 범인은닉의 죄 675",
-      "examId": "형사법_변시_3회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b117",
+      "uid": "b062",
       "caseNo": "28-1",
       "source": "제4회 변호사시험",
-      "label": "사기의 죄 387",
+      "label": "강도의 최 379 좌의 공동정범의 죄책 부담 : 대판 81되飇), (의",
       "examId": "형사법_변시_4회_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "b135",
+      "uid": "b068",
       "caseNo": "28-18",
       "source": "제4회 변호사시험",
-      "label": "사기의 죄 443",
+      "label": "사기의 죄 423 하는 것은 우추해석이라는 부정설 등이 대립하지만, 판례",
       "examId": "형사법_변시_4회_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "b154",
+      "uid": "b081",
       "caseNo": "31-2",
       "source": "제4회 변호사시험",
-      "label": "배임의 죄 505",
-      "examId": "형사법_변시_4회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b173",
-      "caseNo": "33-2",
-      "source": "제4회 변호사시험",
-      "label": "문서에 관한 죄 565",
+      "label": "배임의 최 사례 31-2 2015년 제4회 변호사시험(제1문) 505 甲",
       "examId": "형사법_변시_4회_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
       "uid": "b091",
-      "caseNo": "23-2",
-      "source": "제5회 변호사시험",
-      "label": "명예에 관한 죄 285",
-      "examId": "형사법_변시_5회_사례",
+      "caseNo": "33-2",
+      "source": "제4회 변호사시험",
+      "label": "문서에 관한 최 563 있다. 예컨대 분실물의 경우 원래 점유자가 그 소",
+      "examId": "형사법_변시_4회_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "b018",
-      "caseNo": "4-7",
-      "source": "제5회 변호사시험",
-      "label": "위법성조각사유 65",
-      "examId": "형사법_변시_5회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b223",
-      "caseNo": "40-4",
-      "source": "제5회 변호사시험",
-      "label": "도로교통법 및 특가법 741",
-      "examId": "형사법_변시_5회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b084",
+      "uid": "b045",
       "caseNo": "20-6",
       "source": "제6회 변호사시험",
-      "label": "생명과 신체에 대한 죄 265",
+      "label": "생명과 신체에 대한 최 265 2. 상습폭행조l(제264조)의 성부 甲의",
       "examId": "형사법_변시_6회_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "b112",
-      "caseNo": "27-6",
-      "source": "제6회 변호사시험",
-      "label": "강도의 죄 367",
-      "examId": "형사법_변시_6회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b166",
-      "caseNo": "32-2",
-      "source": "제6회 변호사시험",
-      "label": "기타 재산범죄 547",
-      "examId": "형사법_변시_6회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b168",
+      "uid": "b087",
       "caseNo": "32-4",
       "source": "제6회 변호사시험",
-      "label": "기타 재산범죄 551",
+      "label": "기타 재산범죄 549 사래 32-3 법전협 2024(기모의(제2문) 丁은",
       "examId": "형사법_변시_6회_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "b012",
+      "uid": "b007",
       "caseNo": "4-1",
       "source": "제6회 변호사시험",
-      "label": "우연방위 등 45",
+      "label": "구성요건적 고의 및 구성요건적 착오 39 사정과 일반인이라면 인식할 수",
       "examId": "형사법_변시_6회_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "b094",
-      "caseNo": "24-1",
-      "source": "제7회 변호사시험",
-      "label": "신용 • 업무 • 경매에 관한 죄 303",
-      "examId": "형사법_변시_7회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b150",
-      "caseNo": "30-10",
-      "source": "제7회 변호사시험",
-      "label": "횡령의 죄 495",
-      "examId": "형사법_변시_7회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b153",
-      "caseNo": "31-1",
-      "source": "제7회 변호사시험",
-      "label": "배임의 죄 503",
-      "examId": "형사법_변시_7회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b174",
+      "uid": "b092",
       "caseNo": "33-3",
       "source": "제7회 변호사시험",
-      "label": "문서에 관한 죄 567",
+      "label": "문서에 관한 최 567 사례 33-3 2018년 제7회 변호사시험(제1문",
       "examId": "형사법_변시_7회_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "b024",
-      "caseNo": "6-4",
-      "source": "제7회 변호사시험",
-      "label": "금지착오 및 위법성조각사유의 전제사실의 착오 83",
-      "examId": "형사법_변시_7회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b002",
+      "uid": "b001",
       "caseNo": "2-2",
       "source": "제8회 변호사시험",
-      "label": "구성요건적 고의 및 구성요건적 착오 13",
+      "label": "구성요건적 고의 및 구성요건적 착오 9 구성요건적 고의 및 구성요건적 착",
       "examId": "형사법_변시_8회_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "b105",
+      "uid": "b056",
       "caseNo": "26-8",
       "source": "제8회 변호사시험",
-      "label": "절도의 죄 335",
+      "label": "절도의 최 329 된다면, 그 재물에 대한 처분행위가 있었다고 볼 수 없",
       "examId": "형사법_변시_8회_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "b119",
-      "caseNo": "28-4",
-      "source": "제8회 변호사시험",
-      "label": "사기의 죄 399",
-      "examId": "형사법_변시_8회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b014",
+      "uid": "b009",
       "caseNo": "4-3",
       "source": "제8회 변호사시험",
-      "label": "위법성조각사유 53",
+      "label": "위법성조각사유 53 서 비롯된 심약적 충동요소로 인하여 적법행위에 대한",
       "examId": "형사법_변시_8회_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "b006",
+      "uid": "b004",
       "caseNo": "2-6",
       "source": "제9회 변호사시험",
-      "label": "구성요건적 고의 및 구성요건적 착오 27",
+      "label": "구성요건적 고의 및 구성요건적 착오 25 1) 문제점 위 (1)의 법리는",
       "examId": "형사법_변시_9회_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "b137",
+      "uid": "b070",
       "caseNo": "29-1",
       "source": "제9회 변호사시험",
-      "label": "사기의 죄 447",
+      "label": "사기의 최 445 3. 사안의 결론 최협의의 폭행일 경우 甲과 乙은 직불",
       "examId": "형사법_변시_9회_사례",
       "groupKey": null,
       "kind": "exam"
      },
      {
-      "uid": "b144",
+      "uid": "b075",
       "caseNo": "30-3",
       "source": "제9회 변호사시험",
-      "label": "횡령의 죄 471",
-      "examId": "형사법_변시_9회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b160",
-      "caseNo": "31-8",
-      "source": "제9회 변호사시험",
-      "label": "배임의 죄 529",
-      "examId": "형사법_변시_9회_사례",
-      "groupKey": null,
-      "kind": "exam"
-     },
-     {
-      "uid": "b016",
-      "caseNo": "4-5",
-      "source": "제9회 변호사시험",
-      "label": "위법성조각사유 61",
+      "label": "공갈의 최 465 대가관계'만 있으면 직무집행의 의사 유무외는 무관하게",
       "examId": "형사법_변시_9회_사례",
       "groupKey": null,
       "kind": "exam"
@@ -4574,1561 +4349,814 @@
     ]
    },
    {
-    "title": "출처 미표기 (173사례)",
+    "title": "출처 미표기 (90사례)",
     "cases": [
      {
-      "uid": "b037",
+      "uid": "b016",
       "caseNo": "10-1",
       "source": "출처 미표기",
-      "label": "예비 131",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b039",
-      "caseNo": "10-1",
-      "source": "출처 미표기",
-      "label": "다수참가형태일반론 137",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b038",
-      "caseNo": "10-2",
-      "source": "출처 미표기",
-      "label": "다수참가형태일반론 135",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b040",
-      "caseNo": "10-3",
-      "source": "출처 미표기",
-      "label": "다수참가형태일반론 139",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b041",
-      "caseNo": "10-4",
-      "source": "출처 미표기",
-      "label": "다수참가형태일반론 141",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b042",
-      "caseNo": "10-5",
-      "source": "출처 미표기",
-      "label": "다수참가형태일반론 143",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b043",
-      "caseNo": "11-1",
-      "source": "출처 미표기",
-      "label": "간접정범 145",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b044",
-      "caseNo": "11-2",
-      "source": "출처 미표기",
-      "label": "간접정범 149",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b046",
-      "caseNo": "11-4",
-      "source": "출처 미표기",
-      "label": "간접정범 153",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b062",
-      "caseNo": "12-1",
-      "source": "출처 미표기",
-      "label": "결과적가중범 201",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b048",
-      "caseNo": "12-2",
-      "source": "출처 미표기",
-      "label": "공동정범 161",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b049",
-      "caseNo": "12-3",
-      "source": "출처 미표기",
-      "label": "공동정범 163",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b050",
-      "caseNo": "12-4",
-      "source": "출처 미표기",
-      "label": "공동정범 167",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b051",
-      "caseNo": "12-5",
-      "source": "출처 미표기",
-      "label": "공동정범 171",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b052",
-      "caseNo": "13-1",
-      "source": "출처 미표기",
-      "label": "교사범 및 방조범 173",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b053",
-      "caseNo": "13-2",
-      "source": "출처 미표기",
-      "label": "교사범 및 방조범 177",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b054",
-      "caseNo": "13-3",
-      "source": "출처 미표기",
-      "label": "교사범 및 방조범 179",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b055",
-      "caseNo": "14-1",
-      "source": "출처 미표기",
-      "label": "교사범 및 방조범 183",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b056",
-      "caseNo": "14-2",
-      "source": "출처 미표기",
-      "label": "정범 ■ 공범과 신분 187",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b057",
-      "caseNo": "14-3",
-      "source": "출처 미표기",
-      "label": "정범 • 공범과 신분 189",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b143",
-      "caseNo": "14-3",
-      "source": "출처 미표기",
-      "label": "횡령의 죄 469",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b164",
-      "caseNo": "14-3",
-      "source": "출처 미표기",
-      "label": "배임의 죄 541",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b058",
-      "caseNo": "14-4",
-      "source": "출처 미표기",
-      "label": "정범 ■ 공범과 신분 191",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b059",
-      "caseNo": "14-5",
-      "source": "출처 미표기",
-      "label": "정범 • 공범과 신분 193",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b060",
-      "caseNo": "15-1",
-      "source": "출처 미표기",
-      "label": "과실범 197",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b063",
-      "caseNo": "16-2",
-      "source": "출처 미표기",
-      "label": "결과적가중범 205",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b064",
-      "caseNo": "16-3",
-      "source": "출처 미표기",
-      "label": "결과적가중범 209",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b066",
-      "caseNo": "16-5",
-      "source": "출처 미표기",
-      "label": "결과적가중범 219",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b067",
-      "caseNo": "16-6",
-      "source": "출처 미표기",
-      "label": "결과적가중범 221",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b068",
-      "caseNo": "16-7",
-      "source": "출처 미표기",
-      "label": "결과적가중범 223",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b071",
-      "caseNo": "17-1",
-      "source": "출처 미표기",
-      "label": "부작위범 237",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b069",
-      "caseNo": "17-3",
-      "source": "출처 미표기",
-      "label": "부작위범 233",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b070",
-      "caseNo": "17-5",
-      "source": "출처 미표기",
-      "label": "부작위범 237",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b072",
-      "caseNo": "17-6",
-      "source": "출처 미표기",
-      "label": "부작위범 239",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b073",
-      "caseNo": "18-1",
-      "source": "출처 미표기",
-      "label": "죄수론 243",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b074",
-      "caseNo": "18-2",
-      "source": "출처 미표기",
-      "label": "죄수론 245",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b075",
-      "caseNo": "18-3",
-      "source": "출처 미표기",
-      "label": "죄수론 247",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b076",
-      "caseNo": "19-1",
-      "source": "출처 미표기",
-      "label": "형벌론 251",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b077",
-      "caseNo": "19-2",
-      "source": "출처 미표기",
-      "label": "형벌론 251",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b078",
-      "caseNo": "19-3",
-      "source": "출처 미표기",
-      "label": "형벌론 255",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b001",
-      "caseNo": "2-1",
-      "source": "출처 미표기",
-      "label": "구성요건적 고의 및 구성요건적 착오 9",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b003",
-      "caseNo": "2-3",
-      "source": "출처 미표기",
-      "label": "구성요건적 고의 및 구성요건적 착오 15",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b004",
-      "caseNo": "2-4",
-      "source": "출처 미표기",
-      "label": "구성요건적 고의 및 구성요건적 착오 17",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b008",
-      "caseNo": "2-7",
-      "source": "출처 미표기",
-      "label": "구성요건적 고의 및 구성요건적 착오 33",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b007",
-      "caseNo": "2-8",
-      "source": "출처 미표기",
-      "label": "구성요건적 고의 및 구성요건적 착오 29",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b009",
-      "caseNo": "2-8",
-      "source": "출처 미표기",
-      "label": "구성요건적 고의 및 구성요건적 착오 37",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b079",
-      "caseNo": "20-1",
-      "source": "출처 미표기",
-      "label": "생명과 신체에 대한 죄 257",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b080",
-      "caseNo": "20-2",
-      "source": "출처 미표기",
-      "label": "생명과 신체에 대한 죄 257",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b082",
-      "caseNo": "20-4",
-      "source": "출처 미표기",
-      "label": "생명과 신체에 대한 죄 261",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b083",
-      "caseNo": "20-5",
-      "source": "출처 미표기",
-      "label": "생명과 신체에 대한 죄 263",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b085",
-      "caseNo": "21-1",
-      "source": "출처 미표기",
-      "label": "생명과 신체에 대한 죄 267",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b086",
-      "caseNo": "21-2",
-      "source": "출처 미표기",
-      "label": "협박, 강요, 체포 • 감금, 약취 • 유인의 죄 丄71",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b087",
-      "caseNo": "22-1",
-      "source": "출처 미표기",
-      "label": "협박, 강요, 체포 • 감금, 약취 • 유인의 죄 273",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b088",
-      "caseNo": "22-2",
-      "source": "출처 미표기",
-      "label": "강간과 추행의 죄 279",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b089",
-      "caseNo": "22-3",
-      "source": "출처 미표기",
-      "label": "강간과 추행의 죄 281",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b092",
-      "caseNo": "23-3",
-      "source": "출처 미표기",
-      "label": "명예에 관한 죄 289",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b093",
-      "caseNo": "23-4",
-      "source": "출처 미표기",
-      "label": "명예에 관한 죄 299",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b095",
-      "caseNo": "24-2",
-      "source": "출처 미표기",
-      "label": "신용 • 업무 - 경매에 관한 죄 305",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b096",
-      "caseNo": "25-1",
-      "source": "출처 미표기",
-      "label": "신용 • 업무 • 경매에 관한 죄 307",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b097",
-      "caseNo": "26-1",
-      "source": "출처 미표기",
-      "label": "절도의 죄 311",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b098",
-      "caseNo": "26-2",
-      "source": "출처 미표기",
-      "label": "절도의 죄 313",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b099",
-      "caseNo": "26-3",
-      "source": "출처 미표기",
-      "label": "절도의 죄 315",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b101",
-      "caseNo": "26-3",
-      "source": "출처 미표기",
-      "label": "절도의 죄 321",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b100",
-      "caseNo": "26-4",
-      "source": "출처 미표기",
-      "label": "절도의 죄 321",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b102",
-      "caseNo": "26-5",
-      "source": "출처 미표기",
-      "label": "절도의 죄 323",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b103",
-      "caseNo": "26-6",
-      "source": "출처 미표기",
-      "label": "절도의 죄 327",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b104",
-      "caseNo": "26-7",
-      "source": "출처 미표기",
-      "label": "절도의 죄 333",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b107",
-      "caseNo": "27-1",
-      "source": "출처 미표기",
-      "label": "강도의 죄 349",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b116",
-      "caseNo": "27-1",
-      "source": "출처 미표기",
-      "label": "강도의 죄 385",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b108",
-      "caseNo": "27-2",
-      "source": "출처 미표기",
-      "label": "강도의 죄 351",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b109",
-      "caseNo": "27-3",
-      "source": "출처 미표기",
-      "label": "강도의 죄 357",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b110",
-      "caseNo": "27-5",
-      "source": "출처 미표기",
-      "label": "강도의 죄 363",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b113",
-      "caseNo": "27-7",
-      "source": "출처 미표기",
-      "label": "강도의 죄 371",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b115",
-      "caseNo": "27-9",
-      "source": "출처 미표기",
-      "label": "강도의 죄 381",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b136",
-      "caseNo": "28-1",
-      "source": "출처 미표기",
-      "label": "사기의 죄 445",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b127",
-      "caseNo": "28-10",
-      "source": "출처 미표기",
-      "label": "사기의 죄 417",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b128",
-      "caseNo": "28-11",
-      "source": "출처 미표기",
-      "label": "사기의 죄 421",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b129",
-      "caseNo": "28-12",
-      "source": "출처 미표기",
-      "label": "사기의 죄 423",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b130",
-      "caseNo": "28-13",
-      "source": "출처 미표기",
-      "label": "사기의 죄 425",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b131",
-      "caseNo": "28-14",
-      "source": "출처 미표기",
-      "label": "사기의 죄 427",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b132",
-      "caseNo": "28-15",
-      "source": "출처 미표기",
-      "label": "사기의 죄 429",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b134",
-      "caseNo": "28-17",
-      "source": "출처 미표기",
-      "label": "사기의 죄 439",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b118",
-      "caseNo": "28-3",
-      "source": "출처 미표기",
-      "label": "사기의 죄 395",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b120",
-      "caseNo": "28-5",
-      "source": "출처 미표기",
-      "label": "사기의 죄 401",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b121",
-      "caseNo": "28-6",
-      "source": "출처 미표기",
-      "label": "사기의 죄 403",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b124",
-      "caseNo": "28-7",
-      "source": "출처 미표기",
-      "label": "사기의 죄 413",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b126",
-      "caseNo": "28-7",
-      "source": "출처 미표기",
-      "label": "사기의 죄 415",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b122",
-      "caseNo": "28-8",
-      "source": "출처 미표기",
-      "label": "사기의 죄 409",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b123",
-      "caseNo": "28-8",
-      "source": "출처 미표기",
-      "label": "사기의 죄 411",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b125",
-      "caseNo": "28-9",
-      "source": "출처 미표기",
-      "label": "사기의 죄 415",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b138",
-      "caseNo": "29-2",
-      "source": "출처 미표기",
-      "label": "공갈의 죄 449",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b139",
-      "caseNo": "29-3",
-      "source": "출처 미표기",
-      "label": "공갈의 죄 455",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b140",
-      "caseNo": "29-4",
-      "source": "출처 미표기",
-      "label": "공갈의 죄 457",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b141",
-      "caseNo": "29-5",
-      "source": "출처 미표기",
-      "label": "공갈의 죄 463",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b011",
-      "caseNo": "3-2",
-      "source": "출처 미표기",
-      "label": "우연방위 등 43",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b151",
-      "caseNo": "30-11",
-      "source": "출처 미표기",
-      "label": "횡령의 죄 499",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b152",
-      "caseNo": "30-12",
-      "source": "출처 미표기",
-      "label": "횡령의 죄 501",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b142",
-      "caseNo": "30-2",
-      "source": "출처 미표기",
-      "label": "횡령의 죄 467",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b146",
-      "caseNo": "30-5",
-      "source": "출처 미표기",
-      "label": "횡령의 죄 479",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b147",
-      "caseNo": "30-6",
-      "source": "출처 미표기",
-      "label": "횡령의 죄 483",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b148",
-      "caseNo": "30-7",
-      "source": "출처 미표기",
-      "label": "횡령의 죄 483",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b163",
-      "caseNo": "31-12",
-      "source": "출처 미표기",
-      "label": "배임의 죄 539",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b155",
-      "caseNo": "31-3",
-      "source": "출처 미표기",
-      "label": "배임의 죄 509",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b156",
-      "caseNo": "31-4",
-      "source": "출처 미표기",
-      "label": "배임의 죄 513",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b157",
-      "caseNo": "31-5",
-      "source": "출처 미표기",
-      "label": "배임의 죄 515",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b158",
-      "caseNo": "31-6",
-      "source": "출처 미표기",
-      "label": "배임의 죄 519",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b159",
-      "caseNo": "31-7",
-      "source": "출처 미표기",
-      "label": "배임의 죄 525",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b161",
-      "caseNo": "31-9",
-      "source": "출처 미표기",
-      "label": "배임의 죄 531",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b165",
-      "caseNo": "32-1",
-      "source": "출처 미표기",
-      "label": "기타 재산범죄 545",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b167",
-      "caseNo": "32-3",
-      "source": "출처 미표기",
-      "label": "기타 재산범죄 549",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b169",
-      "caseNo": "32-5",
-      "source": "출처 미표기",
-      "label": "기타 재산범죄 553",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b170",
-      "caseNo": "32-6",
-      "source": "출처 미표기",
-      "label": "기타 재산범죄 557",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b171",
-      "caseNo": "32-7",
-      "source": "출처 미표기",
-      "label": "기타 재산범죄 559",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b172",
-      "caseNo": "33-1",
-      "source": "출처 미표기",
-      "label": "기타 재산범죄 561",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b182",
-      "caseNo": "33-10",
-      "source": "출처 미표기",
-      "label": "문서에 관한 죄 591",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b183",
-      "caseNo": "33-11",
-      "source": "출처 미표기",
-      "label": "문서에 관한 죄 595",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b184",
-      "caseNo": "33-12",
-      "source": "출처 미표기",
-      "label": "문서에 관한 죄 597",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b178",
-      "caseNo": "33-5",
-      "source": "출처 미표기",
-      "label": "문서에 관한 죄 579",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b177",
-      "caseNo": "33-6",
-      "source": "출처 미표기",
-      "label": "문서에 관한 죄 575",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b179",
-      "caseNo": "33-7",
-      "source": "출처 미표기",
-      "label": "문서에 관한 죄 581",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b180",
-      "caseNo": "33-8",
-      "source": "출처 미표기",
-      "label": "문서에 관한 죄 583",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b181",
-      "caseNo": "33-9",
-      "source": "출처 미표기",
-      "label": "문서에 관한 죄 589",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b185",
-      "caseNo": "34-1",
-      "source": "출처 미표기",
-      "label": "방화 및 도박에 관한 죄 599",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b186",
-      "caseNo": "34-2",
-      "source": "출처 미표기",
-      "label": "방화 및 도박에 관한 죄 605",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b187",
-      "caseNo": "34-3",
-      "source": "출처 미표기",
-      "label": "방화 및 도박에 관한 죄 607",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b190",
-      "caseNo": "35-3",
-      "source": "출처 미표기",
-      "label": "공무원의 직무에 관한 죄 619",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b192",
-      "caseNo": "35-5",
-      "source": "출처 미표기",
-      "label": "공무원의 직무에 관한 죄 627",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b193",
-      "caseNo": "35-5",
-      "source": "출처 미표기",
-      "label": "공무원의 직무에 관한 죄 633",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b194",
-      "caseNo": "35-5",
-      "source": "출처 미표기",
-      "label": "공무원의 직무에 관한 죄 633",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b196",
-      "caseNo": "35-7",
-      "source": "출처 미표기",
-      "label": "공무원의 직무에 관한 죄 637",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b197",
-      "caseNo": "35-8",
-      "source": "출처 미표기",
-      "label": "공무원의 직무에 관한 죄 641",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b199",
-      "caseNo": "36-1",
-      "source": "출처 미표기",
-      "label": "공무방해에 관한 죄 651",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b200",
-      "caseNo": "36-2",
-      "source": "출처 미표기",
-      "label": "공무방해에 관한 죄 655",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b202",
-      "caseNo": "36-4",
-      "source": "출처 미표기",
-      "label": "공무방해에 관한 죄 661",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b203",
-      "caseNo": "36-5",
-      "source": "출처 미표기",
-      "label": "공무방해에 관한 죄 665",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b204",
-      "caseNo": "36-6",
-      "source": "출처 미표기",
-      "label": "공무방해에 관한 죄 667",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b207",
-      "caseNo": "37-3",
-      "source": "출처 미표기",
-      "label": "도주와 범인은닉의 죄 677",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b209",
-      "caseNo": "38-2",
-      "source": "출처 미표기",
-      "label": "위증과 증거인멸의 죄 695",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b210",
-      "caseNo": "38-3",
-      "source": "출처 미표기",
-      "label": "위증과 증거인멸의 죄 697",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b211",
-      "caseNo": "38-4",
-      "source": "출처 미표기",
-      "label": "위증과 증거인멸의 죄 701",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b212",
-      "caseNo": "38-5",
-      "source": "출처 미표기",
-      "label": "위증과 증거인멸의 죄 705",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b215",
-      "caseNo": "38-5",
-      "source": "출처 미표기",
-      "label": "위증과 증거인멸의 죄 715",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b213",
-      "caseNo": "38-6",
-      "source": "출처 미표기",
-      "label": "위증과 증거인멸의 죄 709",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b214",
-      "caseNo": "38-7",
-      "source": "출처 미표기",
-      "label": "위증과 증거인멸의 죄 713",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b216",
-      "caseNo": "38-8",
-      "source": "출처 미표기",
-      "label": "위증과 증거인멸의 죄 717",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b218",
-      "caseNo": "39-2",
-      "source": "출처 미표기",
-      "label": "무고의 죄 725",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b219",
-      "caseNo": "39-3",
-      "source": "출처 미표기",
-      "label": "무고의 죄 727",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b013",
-      "caseNo": "4-2",
-      "source": "출처 미표기",
-      "label": "위법성조각사유 47",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b015",
-      "caseNo": "4-4",
-      "source": "출처 미표기",
-      "label": "위법성조각사유 57",
+      "label": "중지미수 99 (2) 교사자인 乙의 죄책 착오의 구조에 비추어 정범의 객",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
      },
      {
       "uid": "b017",
-      "caseNo": "4-6",
+      "caseNo": "10-3",
       "source": "출처 미표기",
-      "label": "위법성조각사유 63",
+      "label": "다수참가형태 일반론 135 III. 甲의 공무상비밀누설교사쇄제127조,",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
      },
      {
-      "uid": "b019",
-      "caseNo": "4-8",
+      "uid": "b018",
+      "caseNo": "10-4",
       "source": "출처 미표기",
-      "label": "위법성조각사유 65",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b220",
-      "caseNo": "40-1",
-      "source": "출처 미표기",
-      "label": "도로교통법 및 특가법 731",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b221",
-      "caseNo": "40-2",
-      "source": "출처 미표기",
-      "label": "도로교통법 및 특가법 733",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b222",
-      "caseNo": "40-3",
-      "source": "출처 미표기",
-      "label": "도로교통법 및 특가법 737",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b224",
-      "caseNo": "40-5",
-      "source": "출처 미표기",
-      "label": "도로교통법 및 특가법 745",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b225",
-      "caseNo": "40-6",
-      "source": "출처 미표기",
-      "label": "도로교통법 및 특가법 749",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b226",
-      "caseNo": "40-7",
-      "source": "출처 미표기",
-      "label": "도로교통법 및 특가법 751",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b227",
-      "caseNo": "40-8",
-      "source": "출처 미표기",
-      "label": "도로교통법 및 특가법 753",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b228",
-      "caseNo": "40-8",
-      "source": "출처 미표기",
-      "label": "도로교통법 및 특가법 757",
+      "label": "다수참가형태 일반론 135 III. 甲의 공무상비밀누설교사쇄제127조,",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
      },
      {
       "uid": "b020",
-      "caseNo": "5-1",
+      "caseNo": "11-4",
       "source": "출처 미표기",
-      "label": "원인에 있어서 자유로운 행위 69",
+      "label": "간접정범 사례 11-4 법전협 2024(기모의(제2문) 153 건물주 A",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
      },
      {
-      "uid": "b021",
-      "caseNo": "5-2",
+      "uid": "b031",
+      "caseNo": "12-1",
       "source": "출처 미표기",
-      "label": "원인에 있어서 자유로운 행위 73",
+      "label": "결과적 가중범 201 III. 특수공무집행방해치상조l(제144조 제2항)",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
      },
      {
       "uid": "b022",
-      "caseNo": "6-2",
+      "caseNo": "12-2",
       "source": "출처 미표기",
-      "label": "금지착오 및 위법성조각사유의 전제사실의 착오 79",
+      "label": "공동정범 사례 12-2 법전협 2016(3)모의(제1문) 161 甲은 丙",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b023",
+      "caseNo": "13-2",
+      "source": "출처 미표기",
+      "label": "교사범 및 방조범 175 주거침입죄에 있어서 '주게라 함은 단순히 가옥",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b024",
+      "caseNo": "13-3",
+      "source": "출처 미표기",
+      "label": "교사범 및 방조범 175 주거침입죄에 있어서 '주게라 함은 단순히 가옥",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
      },
      {
       "uid": "b025",
-      "caseNo": "6-2",
+      "caseNo": "14-1",
       "source": "출처 미표기",
-      "label": "금지착오 및 위법성조각사유의 전제사실의 착오 85",
+      "label": "교사범 및 방조범 183 책임설이나 소극적 구성요건표지이론도 과실치상죄의",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
      },
      {
       "uid": "b026",
-      "caseNo": "6-2",
+      "caseNo": "14-2",
       "source": "출처 미표기",
-      "label": "금지착오 및 위법성조각사유의 전제사실의 착오 87",
+      "label": "정범 • 공범과 신분 187 사례 14-2 법전협 2011(1)모의(제1",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
      },
      {
       "uid": "b027",
-      "caseNo": "6-5",
+      "caseNo": "14-3",
       "source": "출처 미표기",
-      "label": "금지착오 및 위법성조각사유의 전제사실의 착오 87",
+      "label": "정범 • 공범과 신분 사례 14-3 법전협 2020(3)모의(제1문) 1",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
      },
      {
       "uid": "b028",
-      "caseNo": "7-1",
+      "caseNo": "14-4",
       "source": "출처 미표기",
-      "label": "중지미수 91",
+      "label": "정범 • 공범과 신분 191 설을 따른다 판례에 의하면 제33조 본문에",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
      },
      {
       "uid": "b029",
-      "caseNo": "7-2",
+      "caseNo": "14-5",
       "source": "출처 미표기",
-      "label": "중지미수 95",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b030",
-      "caseNo": "7-3",
-      "source": "출처 미표기",
-      "label": "중지미수 99",
+      "label": "정범 • 공범과 신분 191 설을 따른다 판례에 의하면 제33조 본문에",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
      },
      {
       "uid": "b032",
-      "caseNo": "7-5",
+      "caseNo": "16-3",
       "source": "출처 미표기",
-      "label": "중지미수 105",
-      "examId": null,
-      "groupKey": null,
-      "kind": "unlabeled"
-     },
-     {
-      "uid": "b033",
-      "caseNo": "9-1",
-      "source": "출처 미표기",
-      "label": "불능미수 115",
+      "label": "결과적 가중범 209 사례 16-3 법전협 2023(2)모의(제2문);",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
      },
      {
       "uid": "b034",
-      "caseNo": "9-2",
+      "caseNo": "16-5",
       "source": "출처 미표기",
-      "label": "예 비 119",
+      "label": "결과적 가중범 사례 16-5 법전협 2025(2)모의(제1문) 219 乙",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
      },
      {
       "uid": "b035",
-      "caseNo": "9-3",
+      "caseNo": "16-6",
       "source": "출처 미표기",
-      "label": "예 비 123",
+      "label": "결과적 가중범 221 사례 16-6 법전협 2018(3)모의(제1문) 甲",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"
      },
      {
       "uid": "b036",
-      "caseNo": "9-4",
+      "caseNo": "17-1",
       "source": "출처 미표기",
-      "label": "예 비 125",
+      "label": "부작위범 225 제5장 부작위범 曰 부작위범(기수범)의 가벌성 심사구조",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b037",
+      "caseNo": "17-1",
+      "source": "출처 미표기",
+      "label": "부작위범 235 사래 17-4 법전협 2022(1)모의(제2문) 甲은 길",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b038",
+      "caseNo": "17-6",
+      "source": "출처 미표기",
+      "label": "부작위범 235 사래 17-4 법전협 2022(1)모의(제2문) 甲은 길",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b039",
+      "caseNo": "19-1",
+      "source": "출처 미표기",
+      "label": "최수론 247 3. 소결 절도의 습벽이 있는 甲이 승용차의 운전석 자문을",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b040",
+      "caseNo": "19-3",
+      "source": "출처 미표기",
+      "label": "형벌론 255 사례 19-3 2017년 제59회 사법시험(제2문의 2)",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b002",
+      "caseNo": "2-3",
+      "source": "출처 미표기",
+      "label": "구성요건적 고의 및 구성요건적 착오 15 '방법의 착오'라는 견해가 대립",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b003",
+      "caseNo": "2-4",
+      "source": "출처 미표기",
+      "label": "구성요건적 고의 및 구성요건적 착오 17 사례에 대해 乙에 대한 살인의",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b005",
+      "caseNo": "2-7",
+      "source": "출처 미표기",
+      "label": "구성요건적 고의 및 구성요건적 착오 33 1||. 乙의 죄책 사안에서 乙",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b006",
+      "caseNo": "2-8",
+      "source": "출처 미표기",
+      "label": "구성요건적 고의 및 구성요건적 착오 33 1||. 乙의 죄책 사안에서 乙",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b041",
+      "caseNo": "20-1",
+      "source": "출처 미표기",
+      "label": "형벌론 255 사례 19-3 2017년 제59회 사법시험(제2문의 2)",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b043",
+      "caseNo": "20-4",
+      "source": "출처 미표기",
+      "label": "생명과 신체에 대한 최 261 하다 甲은 체포가 두려우4, 乙은 평소에",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b044",
+      "caseNo": "20-5",
+      "source": "출처 미표기",
+      "label": "생명과 신체에 대한 최 261 하다 甲은 체포가 두려우4, 乙은 평소에",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b046",
+      "caseNo": "21-1",
+      "source": "출처 미표기",
+      "label": "생명과 신체에 대한 최 265 2. 상습폭행조l(제264조)의 성부 甲의",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b047",
+      "caseNo": "21-2",
+      "source": "출처 미표기",
+      "label": "생명과 신체에 대한 최 265 2. 상습폭행조l(제264조)의 성부 甲의",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b048",
+      "caseNo": "22-1",
+      "source": "출처 미표기",
+      "label": "생명과 신체에 대한 최 265 2. 상습폭행조l(제264조)의 성부 甲의",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b049",
+      "caseNo": "22-3",
+      "source": "출처 미표기",
+      "label": "강간과 추행의 최 281 4. 소결 丙은 B에 대한 준강간불능미수죄의 죄",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b050",
+      "caseNo": "23-3",
+      "source": "출처 미표기",
+      "label": "명예에 관한 최 289 2. 제310조의 적용요건 및 '진실성' 착오의",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b051",
+      "caseNo": "26-1",
+      "source": "출처 미표기",
+      "label": "명예에 관한 최 2. 丙이 기사화하여 배포한 부분에 대한 정보통신망법 제",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b052",
+      "caseNo": "26-2",
+      "source": "출처 미표기",
+      "label": "절도의 최 313 사례 26-2 법전협 2018(3)모의(제2문) 폭력배",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b053",
+      "caseNo": "26-3",
+      "source": "출처 미표기",
+      "label": "절도의 최 313 사례 26-2 법전협 2018(3)모의(제2문) 폭력배",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b054",
+      "caseNo": "26-5",
+      "source": "출처 미표기",
+      "label": "절도의 최 313 사례 26-2 법전협 2018(3)모의(제2문) 폭력배",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b055",
+      "caseNo": "26-6",
+      "source": "출처 미표기",
+      "label": "절도의 최 325 “이러한 법리는 권리이전에 등기 • 등록을 요하는 동신",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b058",
+      "caseNo": "27-1",
+      "source": "출처 미표기",
+      "label": "절도의 최 347 있어야 공소를 제기할 수 있는바, 사안에서 A가 “甲,",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b059",
+      "caseNo": "27-2",
+      "source": "출처 미표기",
+      "label": "강도의 최 351 2. 甲과 丙의 강도치상죄의 공동정범(제337조. 제3",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b060",
+      "caseNo": "27-7",
+      "source": "출처 미표기",
+      "label": "강도의 최 371 원을 상해에 이르게 함으로써 성립하는 결과적 가중범인바",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b066",
+      "caseNo": "28-11",
+      "source": "출처 미표기",
+      "label": "사기의 최 419 분실물이나 유류물은 원래 점유자가 그 소재를 알고 되찾",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b067",
+      "caseNo": "28-15",
+      "source": "출처 미표기",
+      "label": "사기의 죄 423 하는 것은 우추해석이라는 부정설 등이 대립하지만, 판례",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b069",
+      "caseNo": "28-19",
+      "source": "출처 미표기",
+      "label": "사기의 최 445 3. 사안의 결론 최협의의 폭행일 경우 甲과 乙은 직불",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b063",
+      "caseNo": "28-2",
+      "source": "출처 미표기",
+      "label": "강도의 최 379 좌의 공동정범의 죄책 부담 : 대판 81되飇), (의",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b064",
+      "caseNo": "28-3",
+      "source": "출처 미표기",
+      "label": "사기의 최 395 2. 예비의 중지 인부 사안에서 甲은 '양심의 가책을",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b065",
+      "caseNo": "28-7",
+      "source": "출처 미표기",
+      "label": "사기의 최 405 례는 “사기죄의 피기망지는 재산에 대한 처분행위를 할",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b071",
+      "caseNo": "29-2",
+      "source": "출처 미표기",
+      "label": "공갈의 최 449 평가된다면 甲은 乙이 공갈로 취득한 재물, 즉 장물을",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b072",
+      "caseNo": "29-4",
+      "source": "출처 미표기",
+      "label": "공갈의 최 457 해악의 실행주체는 반드시 행위자일 것을 요하지 않고,",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b073",
+      "caseNo": "29-5",
+      "source": "출처 미표기",
+      "label": "공갈의 최 461 (2) 직무유기죄(제122조)의 성부 (6/16점) 직",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b080",
+      "caseNo": "30-12",
+      "source": "출처 미표기",
+      "label": "횡령의 최 495 권설정계약에 따라 채권자에게 그 소유의 부동산에 관하여",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b074",
+      "caseNo": "30-2",
+      "source": "출처 미표기",
+      "label": "공갈의 최 465 대가관계'만 있으면 직무집행의 의사 유무외는 무관하게",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b076",
+      "caseNo": "30-5",
+      "source": "출처 미표기",
+      "label": "횡령의 최 475 사래 30-4 2014년 제3회 변호사시험(제2문) 甲",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b077",
+      "caseNo": "30-6",
+      "source": "출처 미표기",
+      "label": "횡령의 최 475 사래 30-4 2014년 제3회 변호사시험(제2문) 甲",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b079",
+      "caseNo": "30-9",
+      "source": "출처 미표기",
+      "label": "횡령의 최 475 사래 30-4 2014년 제3회 변호사시험(제2문) 甲",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b085",
+      "caseNo": "31-10",
+      "source": "출처 미표기",
+      "label": "배임의 최 519 배임행위에 해당한다는 점을 알고 거래에 임하였다는 사정",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b082",
+      "caseNo": "31-3",
+      "source": "출처 미표기",
+      "label": "배임의 최 509 적어도 중도금을 받는 등 매도인이 더 이상 임의로 계약",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b083",
+      "caseNo": "31-5",
+      "source": "출처 미표기",
+      "label": "배임의 최 509 적어도 중도금을 받는 등 매도인이 더 이상 임의로 계약",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b084",
+      "caseNo": "31-7",
+      "source": "출처 미표기",
+      "label": "배임의 최 519 배임행위에 해당한다는 점을 알고 거래에 임하였다는 사정",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b086",
+      "caseNo": "32-1",
+      "source": "출처 미표기",
+      "label": "배임의 최 541 (3) 소 결 甲과 丙은 ㉦ '합동하여 야간에 회사에",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b088",
+      "caseNo": "32-5",
+      "source": "출처 미표기",
+      "label": "기타 재산범최 553 사례 32-5 법전협 2024(3)모의(제2문) 甲",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b089",
+      "caseNo": "32-6",
+      "source": "출처 미표기",
+      "label": "기타 재산범죄 555 죄는 성립할 수 없다. 판례는 절도죄의 불법영득의시",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b090",
+      "caseNo": "32-7",
+      "source": "출처 미표기",
+      "label": "기타 재산범최 559 시킨 것은 교사로 보아야 한다. 甲에게 乙의 범행에",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b098",
+      "caseNo": "33-10",
+      "source": "출처 미표기",
+      "label": "문서에 관한 최 587 유제 [법전협 2023(1)모의(제2문)] X은행",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b099",
+      "caseNo": "33-11",
+      "source": "출처 미표기",
+      "label": "문서에 관한 최 593 적인 지배영역 내라면 그 물건에 대해서는 그 영역",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b100",
+      "caseNo": "33-12",
+      "source": "출처 미표기",
+      "label": "문서에 관한 최 597 사례 33-12 법전협 2016(기모의(제1문)",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b095",
+      "caseNo": "33-4",
+      "source": "출처 미표기",
+      "label": "문서에 관한 최 사례 33-6 법전협 20기(1)모의(제2문) 575 丁",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b094",
+      "caseNo": "33-6",
+      "source": "출처 미표기",
+      "label": "문서에 관한 최 사례 33-6 법전협 20기(1)모의(제2문) 575 丁",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b096",
+      "caseNo": "33-7",
+      "source": "출처 미표기",
+      "label": "문서에 관한 최 사례 33-6 법전협 20기(1)모의(제2문) 575 丁",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b097",
+      "caseNo": "33-8",
+      "source": "출처 미표기",
+      "label": "문서에 관한 최 사례 33-8 법전협 2025(1)모의(제1문) 583",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b101",
+      "caseNo": "34-3",
+      "source": "출처 미표기",
+      "label": "방화 및 도박에 관한 최 601 으므로 이미 발생한 화력을 방치함으로써",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b103",
+      "caseNo": "35-1",
+      "source": "출처 미표기",
+      "label": "방화 및 도박에 관한 최 601 으므로 이미 발생한 화력을 방치함으로써",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b107",
+      "caseNo": "36-1",
+      "source": "출처 미표기",
+      "label": "공무원의 직무에 관한 최 649 2.2천만 원 임의소비행위에 대한 죄책",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b108",
+      "caseNo": "36-2",
+      "source": "출처 미표기",
+      "label": "공무방해에 관한 최 655 사례 36-2 법전협 2016(3)모의(제2문",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b110",
+      "caseNo": "36-5",
+      "source": "출처 미표기",
+      "label": "공무방해에 관한 최 665 사례 36-5 2026 제15회 변호사시험(제",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b111",
+      "caseNo": "37-3",
+      "source": "출처 미표기",
+      "label": "도주와 범인은닉의 최 671 2. 제334조 제1 항 특수강도죄의 실행의",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b113",
+      "caseNo": "38-2",
+      "source": "출처 미표기",
+      "label": "위증과 증거인열의 최 유제 2 [2023년 제1?회 변호사시험(제1문)1",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b114",
+      "caseNo": "38-4",
+      "source": "출처 미표기",
+      "label": "위증과 증거인일의 최 701 사례 38-4 법전협 2019(기모의(제1문",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b115",
+      "caseNo": "38-5",
+      "source": "출처 미표기",
+      "label": "위증과 증거인일의 최 701 사례 38-4 법전협 2019(기모의(제1문",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b116",
+      "caseNo": "39-2",
+      "source": "출처 미표기",
+      "label": "위증과 증거인일의 최 사레 38-8 2017년 제59회 사법시험(제1문)",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b008",
+      "caseNo": "4-2",
+      "source": "출처 미표기",
+      "label": "구성요건적 고의 및 구성요건적 착오 39 사정과 일반인이라면 인식할 수",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b010",
+      "caseNo": "4-8",
+      "source": "출처 미표기",
+      "label": "위법성조각사유 65 사래 4-7 2016년 제5회 변호사시험(제2문) 신",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b117",
+      "caseNo": "40-1",
+      "source": "출처 미표기",
+      "label": "무고의 최 727 ||. 문기의 해설아 1. 문제점 甲에게 A로 하여금",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b118",
+      "caseNo": "40-5",
+      "source": "출처 미표기",
+      "label": "도로교통법 및 특가법 사례 40-5 법전협 2021(3)모의(제2문) 7",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b119",
+      "caseNo": "40-6",
+      "source": "출처 미표기",
+      "label": "도로교통법 및 특가법 사례 40-6 법전협 2017(3)모의(제2문) 7",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b120",
+      "caseNo": "40-8",
+      "source": "출처 미표기",
+      "label": "도로교통법 및 특가법 751 사래 40-7 법전협 2018(3)모의(제1",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b012",
+      "caseNo": "7-2",
+      "source": "출처 미표기",
+      "label": "금지착오 및 위법성조각사유의 전제사실의 착오 89 건조물침입죄가 성립한다",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b013",
+      "caseNo": "7-3",
+      "source": "출처 미표기",
+      "label": "중지미수 99 (2) 교사자인 乙의 죄책 착오의 구조에 비추어 정범의 객",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b014",
+      "caseNo": "7-5",
+      "source": "출처 미표기",
+      "label": "중지미수 99 (2) 교사자인 乙의 죄책 착오의 구조에 비추어 정범의 객",
+      "examId": null,
+      "groupKey": null,
+      "kind": "unlabeled"
+     },
+     {
+      "uid": "b015",
+      "caseNo": "8-1",
+      "source": "출처 미표기",
+      "label": "중지미수 99 (2) 교사자인 乙의 죄책 착오의 구조에 비추어 정범의 객",
       "examId": null,
       "groupKey": null,
       "kind": "unlabeled"

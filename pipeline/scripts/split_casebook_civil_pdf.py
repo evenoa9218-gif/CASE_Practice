@@ -29,7 +29,7 @@ AUTHOR = "정연석"
 # OCR이 '모'를 E/S/몬/므로, '0'을 '이'로 자주 바꾼다. 느슨하게 받는다.
 MOCK = re.compile(r"(20[0-9]{2}|2이[0-9]|20[0-9])\s*년\s*([01]?\d)\s*[모ES몬므]")
 BAR = re.compile(r"제?\s*(\d{1,2})\s*[회히]\s*변시")
-CASE_LABEL = re.compile(r"^제\s*(\d+)\s*문(?:\s*의\s*(\d+))?")
+CASE_ANY = re.compile(r"제\s*(\d+)\s*문(?:\s*의\s*(\d+))?")
 MONTH_TO_ROUND = {6: 1, 8: 2, 10: 3}
 
 
@@ -72,7 +72,19 @@ def exam_id(kind, a, b):
 
 def main():
     doc = fitz.open(PDF)
-    texts = [doc[i].get_text() for i in range(doc.page_count)]
+    # 이 책의 원래 텍스트 층은 당사자 표기가 47% 깨져 있다(甲乙丙 → 己江心因內).
+    # 누가 누구인지 뒤섞이면 사례로 못 쓰므로, Windows 내장 OCR로 다시 읽은
+    # 본문(의심률 0%)을 쪽 단위로 갈아 끼운다. 회차 판정에 쓰는 꼬리말은 그대로다.
+    reocr = PDF.parent / "정연석_해설편_재OCR.txt"
+    if reocr.exists():
+        parts = re.split(r"^<<<PAGE p(\d+)>>>$", reocr.read_text(encoding="utf-8"), flags=re.M)
+        page_text = {}
+        for i in range(1, len(parts) - 1, 2):
+            page_text[int(parts[i])] = parts[i + 1]
+        texts = [page_text.get(i, doc[i].get_text()) for i in range(doc.page_count)]
+        print(f"재OCR 본문 사용 {len(page_text)}쪽")
+    else:
+        texts = [doc[i].get_text() for i in range(doc.page_count)]
     raw = [page_round(t) for t in texts]
     rounds = smooth(raw)
 
@@ -89,28 +101,27 @@ def main():
     for (kind, a, b), s, e in spans:
         eid = exam_id(kind, a, b)
         body = "\n".join(texts[s:e + 1])
-        lines = [l.strip() for l in body.split("\n") if l.strip()]
-        cur_label, buf = None, []
-
-        def flush():
-            if cur_label and buf:
-                txt = " ".join(buf).strip()
-                if len(txt) >= 300:                     # 목차·요약 조각은 버린다
-                    blocks.append({
-                        "examId": eid, "label": cur_label[0],
-                        "qno": cur_label[1], "subno": cur_label[2],
-                        "book": BOOK, "author": AUTHOR, "area": "민사법",
-                        "answerText": txt, "chars": len(txt),
-                    })
-
-        for l in lines:
-            m = CASE_LABEL.match(l)
-            if m:
-                flush()
-                buf = []
-                cur_label = (l[:m.end()], m.group(1), m.group(2) or "1")
-            buf.append(l)
-        flush()
+        # 재OCR 본문은 줄바꿈이 원본과 달라 라벨이 줄머리에 오지 않는다.
+        # 그래서 줄 단위가 아니라 본문 전체에서 라벨 위치를 찾아 자른다.
+        flat = " ".join(l.strip() for l in body.split("\n") if l.strip())
+        marks = [(m.start(), m.group(0), m.group(1), m.group(2) or "1")
+                 for m in CASE_ANY.finditer(flat)]
+        # 같은 라벨이 쪽머리로 되풀이되므로 바뀌는 첫 지점만 남긴다
+        keep = []
+        for mk in marks:
+            if not keep or (keep[-1][2], keep[-1][3]) != (mk[2], mk[3]):
+                keep.append(mk)
+        for i, (pos, lab, qno, subno) in enumerate(keep):
+            end = keep[i + 1][0] if i + 1 < len(keep) else len(flat)
+            txt = flat[pos:end].strip()
+            if len(txt) < 300:                      # 목차·요약 조각은 버린다
+                continue
+            blocks.append({
+                "examId": eid, "label": lab.strip(),
+                "qno": qno, "subno": subno,
+                "book": BOOK, "author": AUTHOR, "area": "민사법",
+                "answerText": txt, "chars": len(txt),
+            })
 
     OUT.write_text(json.dumps(blocks, ensure_ascii=False, indent=1), encoding="utf-8")
     c = Counter(b["examId"] for b in blocks)
