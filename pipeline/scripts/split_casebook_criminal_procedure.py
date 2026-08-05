@@ -61,7 +61,7 @@ def main():
             src = {"kind": "exam", "examId": f"형사법_모의_{s.group(3)}_{s.group(4)}차_사례",
                    "label": f"{s.group(3)}년 제{s.group(4)}차 모의시험"}
         else:
-            src = {"kind": "original", "examId": None, "label": "저자 창작 사례"}
+            src = {"kind": "unlabeled", "examId": None, "label": "출처 미표기"}
 
         cases.append({
             "caseNo": int(m.group(1)),

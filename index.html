@@ -537,8 +537,9 @@ function ExamList({subject,exams,issues,issueMap,prog,byIssue,casebookToc,mode,s
                   </div>
                   <button className="btn" onClick={()=>setViewUid(null)}>닫기</button>
                 </div>
-                {c.source.kind==="original" &&
-                  <div className="banner">저자가 만든 창작 사례입니다 — 실제 기출이 아닙니다.</div>}
+                {c.source.kind==="unlabeled" &&
+                  <div className="banner">출처가 적혀 있지 않은 사례입니다 — 저자 창작이거나
+                    표기가 빠진 것으로, 실제 기출인지 확인되지 않았습니다.</div>}
                 {c.source.kind==="exam" &&
                   <div className="banner">{c.source.label} 연계 사례입니다.
                     <span className="muted"> 저자가 변형·발췌한 것이라 시험 원문과 다를 수 있습니다.</span></div>}
@@ -663,7 +664,7 @@ function CasebookBrowser({casebookToc,onPick,onView}){
                       </div>
                       <div className="muted" style={{fontSize:12.5,marginTop:2}}>{c.label}</div>
                     </div>
-                    {c.kind==="original" && <span className="tag">창작</span>}
+                    {c.kind==="unlabeled" && <span className="tag">출처 미표기</span>}
                     {!jump && !view && <span className="tag">미연결</span>}
                   </div>
                 );
