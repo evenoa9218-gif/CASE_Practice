@@ -597,7 +597,7 @@ function ExamList({subject,exams,issues,issueMap,prog,byIssue,casebookToc,mode,s
       <div className="card">
         <div className="row" style={{marginBottom:9}}>
           <span className="muted" style={{minWidth:44}}>구분</span>
-          {[["all","전체"],["실제기출","변호사시험"],["모의고사","모의고사"]].map(([k,l])=>
+          {[["all","전체"],["실제기출","변호사시험"],["모의고사","모의고사"],["창작문제","창작문제"]].map(([k,l])=>
             <span key={k} className={"tag click"+(fType===k?" on":"")} onClick={()=>setFType(k)}>{l}</span>)}
         </div>
         <div className="row">
@@ -687,13 +687,19 @@ function ModeSwitch({mode,setMode}){
   );
 }
 
+// 시험 구분 배지. 기출(변시/모의)과 창작문제(사례집 신작)를 한눈에 가른다.
+const TYPE_LABEL={"실제기출":"변호사시험","모의고사":"모의고사","창작문제":"창작문제"};
+function TypeTag({t}){
+  return <span className={"tag"+(t==="실제기출"?" gold":t==="창작문제"?" ok":"")}>
+    {TYPE_LABEL[t]||t}</span>;
+}
+
 function ExamCard({e,prog,issueMap,highlight,onPick}){
   return (
     <div className="card" style={{cursor:'pointer'}} onClick={()=>onPick(e.id)}>
       <div className="row" style={{justifyContent:'space-between',marginBottom:5}}>
         <div className="row">
-          <span className={"tag"+(e.examType==="실제기출"?" gold":"")}>
-            {e.examType==="실제기출"?"변호사시험":"모의고사"}</span>
+          <TypeTag t={e.examType}/>
           <b style={{fontSize:15}}>{e.label}</b>
           {prog[e.id] && <span className="tag ok">완료</span>}
         </div>
@@ -724,7 +730,10 @@ function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSu
   const [page,setPage] = useState(0);            // 문항 그룹 인덱스
   const [answers,setAnswers] = useState({});     // {groupKey: text}
   const [reveal,setReveal] = useState(false);
+  // 채점기준표가 없는 시험(창작문제·변시)은 사례집 모범답안 탭으로 연다 —
+  // 그러지 않으면 "공개되지 않았습니다"만 보이고 탭을 한 번 더 눌러야 한다.
   const [pane,setPane] = useState("rubric");
+  useEffect(()=>{ if(detail) setPane(detail.rubricText ? "rubric" : "casebook"); },[detail]);
   const [cbIdx,setCbIdx] = useState(0);
   const [grade,setGrade] = useState(null);   // {running, text, score, error}
   const [elapsed,setElapsed] = useState(0);
@@ -896,8 +905,7 @@ function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSu
         <div className="solve-col">
           <div className="card">
             <div className="row" style={{marginBottom:7}}>
-              <span className={"tag"+(exam.examType==="실제기출"?" gold":"")}>
-                {exam.examType==="실제기출"?"변호사시험":"모의고사"}</span>
+              <TypeTag t={exam.examType}/>
               <b style={{fontSize:16}}>{exam.label}</b>
             </div>
             <div className="row">{exam.issueIds.map(i=>
@@ -1087,10 +1095,11 @@ function History({records,issueMap,onOpen,onDelete}){
 // ══════════════════════════════════════════════
 function Stats({exams,issues,prog,records,byIssue,onPickIssue}){
   const done=new Set(Object.keys(prog));
-  const real=exams.filter(e=>e.examType==="실제기출");
-  const mock=exams.filter(e=>e.examType==="모의고사");
   const pct=(a,b)=>b?Math.round(a/b*100):0;
-  const rd=real.filter(e=>done.has(e.id)).length, md=mock.filter(e=>done.has(e.id)).length;
+  const bars=Object.entries(TYPE_LABEL).map(([t,l])=>{
+    const all=exams.filter(e=>e.examType===t);
+    return [l, all.filter(e=>done.has(e.id)).length, all.length];
+  }).filter(([,,total])=>total>0);
 
   const stat=issues.map(it=>{
     const all=byIssue[it.id]||[];
@@ -1105,7 +1114,7 @@ function Stats({exams,issues,prog,records,byIssue,onPickIssue}){
       <div className="grid c2">
         <div className="card">
           <div className="title">진도</div>
-          {[["변호사시험",rd,real.length],["모의고사",md,mock.length]].map(([l,d,t])=>
+          {bars.map(([l,d,t])=>
             <div key={l} style={{marginBottom:11}}>
               <div className="row" style={{justifyContent:'space-between',marginBottom:5}}>
                 <span>{l}</span><span className="muted">{d}/{t} ({pct(d,t)}%)</span></div>
