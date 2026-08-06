@@ -1,0 +1,12 @@
+# GitHub Pages(Jekyll) 빌드 설정.
+#
+# 저장소 전체가 사이트로 게시되는데, 실제로 필요한 건 index.html · core/ · data/ 뿐이다.
+# pipeline/(35MB, 스크립트·원본 블록)과 worker/까지 빌드에 넣었더니 2026-08-07 로사정
+# 163사례를 추가한 커밋부터 빌드가 cancelled 로 끝나 새 파일이 계속 404였다.
+# 게시 대상을 줄여 빌드가 통과하게 한다. 제외해도 저장소에는 그대로 남는다.
+exclude:
+  - pipeline
+  - worker
+  - docs
+  - HANDOFF.md
+  - README.md

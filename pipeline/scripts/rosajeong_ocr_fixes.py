@@ -121,6 +121,13 @@ MIXED = [
     ("없다면B의", "없다면 B의"), ("업무는B가", "업무는 B가"), ("모두B의", "모두 B의"),
 ]
 
+# ── 책 자체의 오기 ────────────────────────────────────────────
+# OCR이 아니라 지면에 그렇게 인쇄된 것들. 원문 보존이 원칙이지만, 같은 책이 바른 표기를
+# 훨씬 자주 쓰고 있어 의도가 분명한 것만 바로잡는다.
+ERRATA = [
+    ("자연석 해석", "자연적 해석"),      # 같은 책에 ‘자연적 해석’ 3회, ‘자연석’ 1회
+]
+
 MISC = [
     ("十", "+"),                        # 12건 전부 덧셈
     ("연습福필요가", "연습해둘 필요가"),
@@ -181,7 +188,7 @@ def apply(text):
     # `으`가 C가 아닌 두 자리 — 먼저 처리해 아래 일괄 규칙에 걸리지 않게 한다
     text = text.replace("乙에게 배으가 인", "乙에게 배액인")
     text = text.replace("총 연체\n으가 이 2기분", "총 연체액이 2기분")
-    for a, b in NUMBERS + MIXED + MISC:
+    for a, b in NUMBERS + MIXED + ERRATA + MISC:
         text = text.replace(a, b)
     for rx, b in CITE_RE + BRACKET_RE + MISC_RE + PARTY_RE:
         text = rx.sub(b, text)
