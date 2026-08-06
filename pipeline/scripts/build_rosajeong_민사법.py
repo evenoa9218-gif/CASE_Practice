@@ -16,6 +16,7 @@ from collections import Counter
 
 from paths import APP, CASEBOOK, REGISTRY
 from parse_rosajeong import parse_case
+from reflow_rosajeong import build_vocab
 
 DATA = APP / "data" / "민사법"
 EXAMS = DATA / "exams"
@@ -33,9 +34,12 @@ MAX_ISSUES = 12
 
 def load_cases():
     cases = json.load(open(CASEBOOK / "rosajeong_cases.json", encoding="utf-8"))
+    # 문단 재조립용 사전 — 책 전체의 '줄 중간에 온전히 들어 있는 토큰'으로 만든다
+    vocab = build_vocab([pg[1].split("\n")
+                         for c in cases.values() for pg in c["pages"]])
     out, last = [], None
     for c in sorted(cases.values(), key=lambda x: x["pdfPages"][0]):
-        p = parse_case(c, last)
+        p = parse_case(c, last, vocab)
         last = p["lastFootnote"]
         p.update(part=c["part"], topic=c["topic"],
                  bookPage=c["bookPage"], pdfPages=c["pdfPages"])
@@ -54,6 +58,14 @@ def issue_matcher():
     by_label = {it["label"]: it["id"] for it in reg["issues"]}
     pats.sort(key=lambda x: -len(x[0]))
     return pats, by_label, reg
+
+
+def fact_summary(problem):
+    """목록 카드에 보일 요약. 표지(〈기초적 사실관계〉)와 지시문(※)은 정보가 없어 뺀다."""
+    t = re.sub(r"^[〈<][^〉>\n]*[〉>]\s*", "", problem.strip())
+    t = re.sub(r"^\s*※[^\n]*\n?", "", t, flags=re.M)
+    t = re.sub(r"\s+", " ", t).strip()
+    return t[:220]
 
 
 def answer_text(p):
@@ -106,7 +118,7 @@ def build():
             "year": 2026, "round": None, "hoi": None,
             "majorField": "민법", "subFields": [p["part"], topic],
             "issueIds": iids,
-            "factSummary": re.sub(r"\s+", " ", p["problemText"])[:220],
+            "factSummary": fact_summary(p["problemText"]),
             "questions": p["questions"],
             "groups": [{"key": g["key"], "label": g["label"],
                         "count": 1, "points": g["points"]} for g in groups],
@@ -125,7 +137,7 @@ def build():
         }
         toc_parts.setdefault(p["part"], []).append({
             "uid": uid, "caseNo": no, "source": p["tag"] or "신작문제",
-            "label": f"{topic} — " + re.sub(r"\s+", " ", p["problemText"])[:60],
+            "label": f"{topic} — " + fact_summary(p["problemText"])[:60],
             "examId": eid, "groupKey": None, "kind": "창작",
         })
 
@@ -184,4 +196,4 @@ if __name__ == "__main__":
           f"(사례당 평균 {sum(len(e['issueIds']) for e in ex)/len(ex):.1f})")
     noiss = [e["id"] for e in ex if not e["issueIds"]]
     if noiss:
-        print(f"  ⚠ 쟁점 0건: {len(noiss)}건 {noiss[:5]}")
+        print(f"  [주의] 쟁점 0건: {len(noiss)}건 {noiss[:5]}")

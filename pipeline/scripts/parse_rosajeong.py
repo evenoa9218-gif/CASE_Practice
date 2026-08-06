@@ -27,6 +27,8 @@ r"""로사정(정연석 「로스쿨 사례의 정석」 26.02) 사례 텍스트
 """
 import re
 
+from reflow_rosajeong import reflow
+
 # 〈문제 3〉 · 〈문제3〉 · 〈문제 1, 2〉 — 책이 두 표기를 섞어 쓴다
 Q_RE = re.compile(r"^[〈<]\s*문제\s*([0-9]+(?:\s*,\s*[0-9]+)*)?\s*[〉>]", re.M)
 # 〈기초적 사실관계〉 · 〈공통적 사실관계〉 · 〈추가적 사실관계 2〉
@@ -68,15 +70,21 @@ def split_footnotes(pages, first_no=None):
     숫자 시작 줄과 진짜 각주를 가른다.
     """
     body, foot, last = [], [], first_no
-    for _, page in pages:
+    body_wrap = []
+    for entry in pages:
+        page = entry[1]
+        wr = entry[2] if len(entry) > 2 else ""
         lines = page.split("\n")
+        wr = (wr + "0" * len(lines))[:len(lines)]
         hits = [(i, int(m.group(1)))
                 for i, ln in enumerate(lines) if (m := FOOT_RE.match(ln))]
         start = _block_start(hits, last, len(lines))
         if start is None:
-            body.append(page)
+            body += lines
+            body_wrap += list(wr)
             continue
-        body.append("\n".join(lines[:start]))
+        body += lines[:start]
+        body_wrap += list(wr[:start])
         cur = None
         for ln in lines[start:]:
             m = FOOT_RE.match(ln)
@@ -86,7 +94,7 @@ def split_footnotes(pages, first_no=None):
                 last = int(m.group(1))
             elif cur is not None and ln.strip():
                 cur[1] += " " + ln.strip()
-    return "\n".join(body), foot, last
+    return body, body_wrap, foot, last
 
 
 def _block_start(hits, last, nlines):
@@ -116,28 +124,31 @@ def _block_start(hits, last, nlines):
     return start_i
 
 
-def parse_case(case, first_no=None):
+def parse_case(case, first_no=None, vocab=None):
     """`rosajeong_cases.json`의 사례 하나 → {problemText, answerText, footnotes, questions}
 
     `first_no`는 직전 사례까지 읽은 마지막 각주 번호다. 각주 연번이 책 전체를 관통하므로
     이걸 이어서 넘겨줘야 본문의 숫자 시작 줄을 각주로 오인하지 않는다.
     반환값의 `lastFootnote`를 다음 사례에 그대로 넘기면 된다.
+
+    `vocab`을 주면 조판 줄바꿈을 문단으로 되돌린다(`reflow_rosajeong`).
     """
     no = case["no"]
-    body, foot, last = split_footnotes(case["pages"], first_no)
+    lines, wraps, foot, last = split_footnotes(case["pages"], first_no)
 
-    m = ANS_RE.search(body)
-    if not m:
+    cut = next((i for i, ln in enumerate(lines) if ANS_RE.match(ln)), None)
+    if cut is None:
         raise ValueError(f"{no}: 최고답안 표지를 찾지 못했다")
-    prob, ans = body[:m.start()], body[m.end():]
+    pl, pw = lines[:cut], wraps[:cut]
+    al, aw = lines[cut + 1:], wraps[cut + 1:]
 
     # 문제부 머리 정리 — 러닝헤더·핵심사례 표지·출처 꼬리표를 걷어낸다
-    hm = HEAD_RE.search(prob)
-    if hm:
-        prob = prob[hm.end():]
-    head_lines, rest = [], []
+    hi = next((i for i, ln in enumerate(pl) if HEAD_RE.match(ln)), None)
+    if hi is not None:
+        pl, pw = pl[hi + 1:], pw[hi + 1:]
+    head_lines, keep = [], []
     started = False
-    for ln in prob.split("\n"):
+    for i, ln in enumerate(pl):
         if not started:
             if FACT_RE.match(ln) or Q_RE.match(ln):
                 started = True
@@ -146,10 +157,15 @@ def parse_case(case, first_no=None):
                 continue
             elif not ln.strip():
                 continue
-        rest.append(ln)
-    prob = "\n".join(rest).strip()
+        keep.append(i)
+    pl, pw = [pl[i] for i in keep], [pw[i] for i in keep]
     tag = " · ".join(head_lines)
-    ans = ans.strip()
+
+    if vocab is None:
+        prob, ans = "\n".join(pl).strip(), "\n".join(al).strip()
+    else:
+        prob = reflow(pl, [w == "1" for w in pw], vocab).strip()
+        ans = reflow(al, [w == "1" for w in aw], vocab).strip()
 
     # 설문 번호와 배점 — 답안부의 〈문제 N〉 (N점) 이 가장 정확하다.
     # 배점이 표지 '뒤'가 아니라 '앞'에 오는 사례가 있다. 지면에서 배점은 표지와 같은 줄

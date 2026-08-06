@@ -108,11 +108,37 @@ def normalize(s):
     return rosajeong_ocr_fixes.apply(s)                     # 지면 대조로 확정한 개별 교정
 
 
+def wrap_flags(page, nlines):
+    """줄별로 '오른쪽 끝까지 찬 줄'인지 표시한다 — 조판 줄바꿈과 문단 끝을 가르는 근거.
+
+    오른쪽 여백은 **블록마다 따로** 잰다. 문제 지문은 음영 박스 안에 있어 본문보다
+    여백이 10pt쯤 좁은데, 쪽 전체의 최댓값 하나로 재면 박스 안의 줄이 전부
+    '문단 끝'으로 잘못 분류되어 지문만 재조립이 안 된다.
+    """
+    flags = []
+    for b in page.get_text("dict")["blocks"]:
+        if b.get("type") != 0:
+            continue
+        xs = [max(s["bbox"][2] for s in l["spans"]) for l in b["lines"]]
+        right = max(xs)
+        flags += [x >= right - 6 for x in xs]
+    if not flags:
+        return [False] * nlines
+    return (flags + [False] * nlines)[:nlines]
+
+
 def main():
     doc = fitz.open(PDF)
-    pages = {n + 1: normalize(strip_footer(doc[n].get_text()))
-             for n in range(doc.page_count)}
     raw = {n + 1: doc[n].get_text() for n in range(doc.page_count)}
+    pages, wraps = {}, {}
+    for n in range(doc.page_count):
+        stripped = strip_footer(raw[n + 1])
+        lines = stripped.split("\n")
+        wraps[n + 1] = wrap_flags(doc[n], len(lines))
+        pages[n + 1] = normalize(stripped)
+        # 교정으로 줄 수가 바뀌면 플래그가 어긋나므로 맞춰 준다
+        d = len(pages[n + 1].split("\n")) - len(wraps[n + 1])
+        wraps[n + 1] = (wraps[n + 1] + [False] * d)[:len(pages[n + 1].split("\n"))]
 
     # ── 목차(pdf 10~17): PART · 논점 · 책쪽 ──
     toc, part, topic = {}, None, None
@@ -169,7 +195,9 @@ def main():
             "pdfPages": [start, end],
             # 쪽 경계를 남긴다 — 각주는 언제나 그 쪽의 맨 아래에 붙으므로,
             # 경계를 잃으면 각주와 다음 쪽 본문을 구분할 수 없다.
-            "pages": [[n, pages[n]] for n in range(start, end + 1)],
+            # 세 번째 값은 줄별 '오른쪽 끝까지 찬 줄' 표시(문단 재조립 근거).
+            "pages": [[n, pages[n], "".join("1" if w else "0" for w in wraps[n])]
+                      for n in range(start, end + 1)],
         }
         cases[no]["text"] = "\n".join(p[1] for p in cases[no]["pages"]).strip()
 
