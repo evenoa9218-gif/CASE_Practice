@@ -1,0 +1,2290 @@
+[
+ {
+  "no": 1,
+  "title": "관습법(★★★) — 종중의 구^원",
+  "stars": 3,
+  "bookPage": 25,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 2,
+  "title": "신**) — 권리남용의 금지",
+  "stars": 2,
+  "bookPage": 27,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 3,
+  "title": "신의칙(★★) — 금반언과 적용한계",
+  "stars": 2,
+  "bookPage": 29,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 4,
+  "title": "태아의 권라능력(★)",
+  "stars": 1,
+  "bookPage": 32,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 5,
+  "title": "의M무능력자의 행위(★★)",
+  "stars": 2,
+  "bookPage": 34,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 6,
+  "title": "미성년자의 법률행위의 효력(★★★)",
+  "stars": 3,
+  "bookPage": 37,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 7,
+  "title": "이하｝상^위(★★★)",
+  "stars": 3,
+  "bookPage": 40,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 8,
+  "title": "이#상반행위와 친권의 남용(★★★)",
+  "stars": 3,
+  "bookPage": 45,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 9,
+  "title": "재단법인 출연；자산의 WI기(★★)",
+  "stars": 2,
+  "bookPage": 47,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 10,
+  "title": "법률에 의한 대표권 저한과 대표권 남용(★★)",
+  "stars": 2,
+  "bookPage": 49,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 11,
+  "title": "정관에 의한 대표권 제한과 대표권 남용(★★)",
+  "stars": 2,
+  "bookPage": 52,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 12,
+  "title": "비법인사단의 대표자의 보증계약의 효력과 비법인사단의 책임(★★★)",
+  "stars": 3,
+  "bookPage": 54,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 13,
+  "title": "비법인시단(★★) - :고회계약당■사자의 확정",
+  "stars": 2,
+  "bookPage": 59,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 14,
+  "title": "법률행위의 해석(★★★) — 계약당사자의 확정",
+  "stars": 3,
+  "bookPage": 61,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 15,
+  "title": "법률행위의 해석(★★★) - 목적의 확정",
+  "stars": 3,
+  "bookPage": 63,
+  "part": "제1편 민법총칙",
+  "pageGuessed": true
+ },
+ {
+  "no": 16,
+  "title": "법률행위의 해석방법(★★★) - 의사표사^ 당사자의 확정",
+  "stars": 3,
+  "bookPage": 65,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 17,
+  "title": "목적의 사회적타당성(★★★) - 동기의 불법과 불법원안급여",
+  "stars": 3,
+  "bookPage": 67,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 18,
+  "title": "부동산 아중매매(★★★) — 배임행위 적극가담로 무효",
+  "stars": 3,
+  "bookPage": 70,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 19,
+  "title": "아중매매(★★★) - 상속재산협의분할",
+  "stars": 3,
+  "bookPage": 75,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 20,
+  "title": "아중매매(★★★) - 유효한 경우",
+  "stars": 3,
+  "bookPage": 80,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 21,
+  "title": "가등기에 기한 본등가를 기초로 이해관계를 맺은 제3자(★★)",
+  "stars": 2,
+  "bookPage": 83,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 22,
+  "title": "근저당권등기와 매0H로 인한 소유권이전등기에 대한 가압류채권자(★★★)",
+  "stars": 3,
+  "bookPage": 84,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 23,
+  "title": "무효인 전세권설정계약에 와하여 형성된 법률관계로 생긴 전세권부저당권자(★★★)",
+  "stars": 3,
+  "bookPage": 87,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 24,
+  "title": "일방동기의 착오오누 손해배상책임(★★★)",
+  "stars": 3,
+  "bookPage": 90,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 25,
+  "title": "사기에 의한 의시표사와 칙오에 빠진 의사표시의 경합(★★★) - 의사와 5시가 불일치한 경우",
+  "stars": 3,
+  "bookPage": 92,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 26,
+  "title": "사기에 의한 의사표시와 착오에 빠진 의사표시의 경합(★★) - 의시와 표시가 일치하는 경우",
+  "stars": 2,
+  "bookPage": 94,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 27,
+  "title": "강박에 의한 의사표시(★★)",
+  "stars": 2,
+  "bookPage": 96,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 28,
+  "title": "대리권 남용 1(***) — 유권 一 무권 一 표대 一 남용 시안",
+  "stars": 3,
+  "bookPage": 98,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 29,
+  "title": "무권대리와 표현대리 및 추인과 대리권 남용(★★★)",
+  "stars": 3,
+  "bookPage": 100,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 30,
+  "title": "일상가사대리권과 표현대리(★★★)",
+  "stars": 3,
+  "bookPage": 106,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 31,
+  "title": "무권대리행위의 효력(★★★)",
+  "stars": 3,
+  "bookPage": 109,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 32,
+  "title": "토지거래허가와 허가지정해제(★★★)",
+  "stars": 3,
+  "bookPage": 112,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 33,
+  "title": "토지거래허가 없는 매매계약의 효력과 유동적 무효★★★)",
+  "stars": 3,
+  "bookPage": 114,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 34,
+  "title": "무권리자 처분행위의 효력(★★)",
+  "stars": 2,
+  "bookPage": 117,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 35,
+  "title": "매매에 기한 소유권이전등기청구와 소멸사효 ★★★)",
+  "stars": 3,
+  "bookPage": 120,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 36,
+  "title": "명의신탁과 소멸시효(★★★)",
+  "stars": 3,
+  "bookPage": 122,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 37,
+  "title": "주채무자에 대한 판결의 확정이 연대보증인에게 미차는 영힝(★★大) — 연장부정",
+  "stars": 3,
+  "bookPage": 124,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 38,
+  "title": "채무자에 대한 판결의 확정에 의한 시효연장이 저|3취득자에게 미차는 영헁 ★★) - 연장긍정",
+  "stars": 2,
+  "bookPage": 126,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 39,
+  "title": "근저당권설정등기 청구와 시효중단(★★★)",
+  "stars": 3,
+  "bookPage": 128,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 40,
+  "title": "소멸사효의 완성과 포기 및 보증채무의 부종성(★★★)",
+  "stars": 3,
+  "bookPage": 131,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 41,
+  "title": "시효이익의 포기의 효력이 미차는 자(★★★)",
+  "stars": 3,
+  "bookPage": 135,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 42,
+  "title": "大W도와 소멸시효의 완성과 중단 및 포기(★★)",
+  "stars": 1,
+  "bookPage": 139,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 43,
+  "title": "소송안수와 민법 제170조 제2항의 가산점(★★★)",
+  "stars": 1,
+  "bookPage": 141,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 44,
+  "title": "가압류와 추심명령의 사효중단 효력(★★★)",
+  "stars": 3,
+  "bookPage": 143,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 45,
+  "title": "차!무자의 사효중단효력이 추삼차®다에 미차는지 여부(★★大)",
+  "stars": 3,
+  "bookPage": 145,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 46,
+  "title": "채권자대위소송을 양수금청구로 교환적 변경(★★★)",
+  "stars": 1,
+  "bookPage": 147,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 47,
+  "title": "법인대표자의 불법행위의 소멸시효 가산점 ★★★)",
+  "stars": 3,
+  "bookPage": 149,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 48,
+  "title": "소멸사효와 최고로 인한 사효중단(★★★)",
+  "stars": 3,
+  "bookPage": 151,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 49,
+  "title": "소멸사효오｝ 사^이익의 m!(★★★)",
+  "stars": 3,
+  "bookPage": 153,
+  "part": "제1편 민법총칙",
+  "pageGuessed": false
+ },
+ {
+  "no": 50,
+  "title": "특정물채권과 이행지체로 인한 손해배상청구(★★)",
+  "stars": 2,
+  "bookPage": 156,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 51,
+  "title": "종류채권의 특정고F 물건인도의무(★★)",
+  "stars": 2,
+  "bookPage": 160,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 52,
+  "title": "0|A［채권과 선Op다 공제(★★)",
+  "stars": 2,
+  "bookPage": 163,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 53,
+  "title": "직접 이행보조자(★★)",
+  "stars": 2,
+  "bookPage": 164,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 54,
+  "title": "간접 이행보조자(★★)",
+  "stars": 2,
+  "bookPage": 166,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 55,
+  "title": "물권적 청구권의 이행불능에 기한 손해배상청구 가부(★★★)",
+  "stars": 3,
+  "bookPage": 169,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 56,
+  "title": "이행불능에 기한 대상청구 가부(★★★)",
+  "stars": 3,
+  "bookPage": 173,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 57,
+  "title": "불완전이행책임4 혹tH손해(★★★)",
+  "stars": 3,
+  "bookPage": 176,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 58,
+  "title": "손배예정과 위약금 약정(★★★)",
+  "stars": 3,
+  "bookPage": 178,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 59,
+  "title": "채권자대위권에 있어 채무자의 무자력 요부(★★★)",
+  "stars": 3,
+  "bookPage": 180,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 60,
+  "title": "채권자대위와 합와해제 및 해제(★★★)",
+  "stars": 3,
+  "bookPage": 183,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 61,
+  "title": "채권자대위권과 물권적 청구권 ★★★)",
+  "stars": 3,
+  "bookPage": 186,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 62,
+  "title": "채권자대위와 공유물분할청구(★★★)",
+  "stars": 3,
+  "bookPage": 188,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 63,
+  "title": "채권자대위와 수령권능(★★★)",
+  "stars": 1,
+  "bookPage": 190,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 64,
+  "title": "채권자대위와 제405조 제2항과 전부명령(★★★)",
+  "stars": 3,
+  "bookPage": 192,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 65,
+  "title": "채권자대위와 무효등기 유용(★ ★ ★)",
+  "stars": 1,
+  "bookPage": 195,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 66,
+  "title": "채권자취소권★★★) - 저당권이 설정된 부동산이 사해행위로 양도된 후 저당권이 소멸한 경우",
+  "stars": 3,
+  "bookPage": 200,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 67,
+  "title": "차®자추!소권과 물적담뵈 ★★★)",
+  "stars": 3,
+  "bookPage": 203,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 68,
+  "title": "채권자취소권과 피보전채권의 소멸시효 주징(★★★)",
+  "stars": 3,
+  "bookPage": 207,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 69,
+  "title": "채권자취소권과 원상화복으로 채권자대위(★★★) - 상대적 무효",
+  "stars": 3,
+  "bookPage": 209,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 70,
+  "title": "채권자취소권에서 전득자에 대한 제소기간과 대상적격(★★★)",
+  "stars": 3,
+  "bookPage": 211,
+  "part": "제2편 채권총론",
+  "pageGuessed": true
+ },
+ {
+  "no": 71,
+  "title": "채권자취소권과 취소의 대상적격(★★수)",
+  "stars": 3,
+  "bookPage": 213,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 72,
+  "title": "채권자취소소송에서 아중매 매와 사해행위취소 가부(★★★)",
+  "stars": 3,
+  "bookPage": 216,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 73,
+  "title": "차©자추！소소^과 차^되 ★★★)",
+  "stars": 3,
+  "bookPage": 220,
+  "part": "제2편 채권총론",
+  "pageGuessed": true
+ },
+ {
+  "no": 74,
+  "title": "채권자취소소송과 기액배상청구 및 대상청구(★★★)",
+  "stars": 3,
+  "bookPage": 223,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 75,
+  "title": "채권자취소소송과 수익자의 상계 가부와 전부명령 가부(★★★)",
+  "stars": 1,
+  "bookPage": 225,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 76,
+  "title": "채권자취소소송에서 저당권설정행위가 사해행위로 취소되고 저당권이 설정되어 있는 부동산이 사해행위로 양도된 경",
+  "stars": 0,
+  "bookPage": 227,
+  "part": "제2편 채권총론",
+  "pageGuessed": true
+ },
+ {
+  "no": 77,
+  "title": "차®자추I소소송에서 가등기와 가액배상(★★★)",
+  "stars": 3,
+  "bookPage": 230,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 78,
+  "title": "사해행위인 저당권설정계약 취소와 임의경매에서 배당한 경우 원상회복방법(★★★)",
+  "stars": 3,
+  "bookPage": 232,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 79,
+  "title": "채권자취소소송에서 원상화복과 채무자에 대한 효과(★★★)",
+  "stars": 3,
+  "bookPage": 235,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 80,
+  "title": "XH권자추！소소송에서 '샹속포기(★★★)",
+  "stars": 3,
+  "bookPage": 237,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 81,
+  "title": "채권자 취소소 송에서 상속재산 협의분 힐 (★★★)",
+  "stars": 3,
+  "bookPage": 239,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 82,
+  "title": "채권자 취소권으로서 원상 화복 청구권의 소멸시효와 중단 (★★★)",
+  "stars": 3,
+  "bookPage": 241,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 83,
+  "title": "차®자취소와 반환범위(★★)",
+  "stars": 2,
+  "bookPage": 243,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 84,
+  "title": "채권자취소권과 가등기담보와 공동임 대인(★★★)",
+  "stars": 3,
+  "bookPage": 245,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 85,
+  "title": "채권양도와 통지시까지 생긴 사유(★★)",
+  "stars": 2,
+  "bookPage": 247,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 86,
+  "title": "채권?i도오F %금자특익(★★★)",
+  "stars": 3,
+  "bookPage": 249,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 87,
+  "title": "전부명령과 채권양도와 양도금지특약의 우열(★★★)",
+  "stars": 3,
+  "bookPage": 252,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 88,
+  "title": "채권양도와 통재★★)",
+  "stars": 2,
+  "bookPage": 254,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 89,
+  "title": "채권양도와 통지시까지 생긴 사유로 대항 가부(★★★)",
+  "stars": 3,
+  "bookPage": 255,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 90,
+  "title": "이와를 유보하지 않은 승낙 一 제451조 제1항",
+  "stars": 0,
+  "bookPage": 256,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 91,
+  "title": "채권양도에서 이의를 유보하지 않은 승낙(★★★)",
+  "stars": 3,
+  "bookPage": 258,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 92,
+  "title": "채권양도에서 이와를 유보하지 않은 승닉(★★★)",
+  "stars": 3,
+  "bookPage": 260,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 93,
+  "title": "채권양도의 취소 또는 해제 ★★)",
+  "stars": 2,
+  "bookPage": 261,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 94,
+  "title": "채권양도에서 저|3자에 대한 대항요건(★★★) — 이시도달",
+  "stars": 3,
+  "bookPage": 262,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 95,
+  "title": "大W도와 전부명령의 이시도달(★★★)",
+  "stars": 1,
+  "bookPage": 264,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 96,
+  "title": "채권양도에서 제3자에 대한 대항요건(★★) - 동시도달",
+  "stars": 2,
+  "bookPage": 266,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 97,
+  "title": "채권양도와 전부명령의 동시도달(★★★)",
+  "stars": 3,
+  "bookPage": 268,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 98,
+  "title": "채권양도에서 무권대리와 추인 및 소급효(★★★)",
+  "stars": 3,
+  "bookPage": 270,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 99,
+  "title": "담보목적의 차^도(★★★)",
+  "stars": 3,
+  "bookPage": 272,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 100,
+  "title": "채무안수와 이행안수(★★★)",
+  "stars": 1,
+  "bookPage": 274,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 101,
+  "title": "이행안수와 해제(★★大)",
+  "stars": 1,
+  "bookPage": 276,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 102,
+  "title": "병존적 차｛무안수와 상계(★★)",
+  "stars": 1,
+  "bookPage": 278,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 103,
+  "title": "변제자 대위 ★★★) - 전부대위",
+  "stars": 3,
+  "bookPage": 280,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 104,
+  "title": "변제자 일부대위와 우선화수특익(★★★)",
+  "stars": 1,
+  "bookPage": 282,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 105,
+  "title": "보증인과 저3취득자 사이의 변제자 대위 (★★★)",
+  "stars": 3,
+  "bookPage": 286,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 106,
+  "title": "물상보증인과 제3취득자 사이의 변제자 대위 (★★★)",
+  "stars": 3,
+  "bookPage": 288,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 107,
+  "title": "변제충당(★★)",
+  "stars": 2,
+  "bookPage": 291,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 108,
+  "title": "자동채권에 최고•검색의 항변권이 있는 경우 상계가부(★★★)",
+  "stars": 3,
+  "bookPage": 293,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 109,
+  "title": "고의 불법행위로 인한 손해배상청구권을 수동채권으로 하는 상계(★★★) - 저|496조",
+  "stars": 1,
+  "bookPage": 295,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 110,
+  "title": "상계와 자급금지명령(★★★) — 제498조",
+  "stars": 3,
+  "bookPage": 297,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 111,
+  "title": "사전구상권과 상계 및 제498조(★★★)",
+  "stars": 3,
+  "bookPage": 299,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 112,
+  "title": "상계오서 상계충당(★★★)",
+  "stars": 3,
+  "bookPage": 302,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 113,
+  "title": "상계오｝ 저1498조에 의흔t 저［한(★★★)",
+  "stars": 3,
+  "bookPage": 304,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 114,
+  "title": "상계와 자급금지명령(★★★)",
+  "stars": 3,
+  "bookPage": 307,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 115,
+  "title": "차®?^도오1 상계의 항변(★★★) - 저W51 조 제2항",
+  "stars": 3,
+  "bookPage": 309,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 116,
+  "title": "상계와 일부 전부명령(★★★)",
+  "stars": 3,
+  "bookPage": 311,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 117,
+  "title": "상계와 일부전부명령(★★★) 법전협 ’24 2차",
+  "stars": 3,
+  "bookPage": 314,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 118,
+  "title": "유익바상환청구와 상계(★★★) — 제195조",
+  "stars": 3,
+  "bookPage": 317,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 119,
+  "title": "상계와 연체차임의 상계와 공제(★★★)",
+  "stars": 3,
+  "bookPage": 320,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 120,
+  "title": "임차보증금과의 상계가부(★★★)",
+  "stars": 3,
+  "bookPage": 322,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 121,
+  "title": "계약금반환채무의 법적성잘과 구상금 청구 가부(★★★) - 불가분채무",
+  "stars": 3,
+  "bookPage": 324,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 122,
+  "title": "진정연대채무와 보증채무 및 소멸사효 관련사례",
+  "stars": 0,
+  "bookPage": 326,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 123,
+  "title": "부진정연대채무 - 고의의 불법행위 - 와측설로 판례변경(★★★)",
+  "stars": 3,
+  "bookPage": 330,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 124,
+  "title": "부잔정연대채무와 알부변제(★★★) — 와측설",
+  "stars": 3,
+  "bookPage": 334,
+  "part": "제2편 채권총론",
+  "pageGuessed": false
+ },
+ {
+  "no": 125,
+  "title": "특정물 멸실의 법률관계(★★★)",
+  "stars": 3,
+  "bookPage": 336,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 126,
+  "title": "종류물 멸실의 법리(★★)",
+  "stars": 2,
+  "bookPage": 338,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 127,
+  "title": "대가위험부담(★★★) — 저538조 제1항 제1문",
+  "stars": 3,
+  "bookPage": 343,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 128,
+  "title": "영구적불수령과 위험부담(★★★) — 저638조 제1항 제2문",
+  "stars": 1,
+  "bookPage": 346,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 129,
+  "title": "해약금 해제와 이행기 전 이행착수(★★★)",
+  "stars": 1,
+  "bookPage": 348,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 130,
+  "title": "해약금 해제와 계약금 계약(★★)",
+  "stars": 2,
+  "bookPage": 350,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 131,
+  "title": "해약금 해제와 토지거래허가(★★)",
+  "stars": 2,
+  "bookPage": 352,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 132,
+  "title": "매도인의 이행入체와 해제권(★★★)",
+  "stars": 3,
+  "bookPage": 354,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 133,
+  "title": "이행지처로 인한 해제와 대항력있는 암^권(★★★)",
+  "stars": 3,
+  "bookPage": 358,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 134,
+  "title": "이행불능과 해제권(★★★)",
+  "stars": 3,
+  "bookPage": 362,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 135,
+  "title": "해제와 저I3자(★★★)",
+  "stars": 3,
+  "bookPage": 365,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 136,
+  "title": "해제와 天4분금지가처분(★★★)",
+  "stars": 3,
+  "bookPage": 368,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 137,
+  "title": "해제와 가등기(★★★)",
+  "stars": 3,
+  "bookPage": 370,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 138,
+  "title": "합으同！제(★★★)",
+  "stars": 3,
+  "bookPage": 372,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 139,
+  "title": "사안증여계약의 해제와 철회 가부(★★★)",
+  "stars": 3,
+  "bookPage": 374,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 140,
+  "title": "타인 권리의 매매(★★★)",
+  "stars": 3,
+  "bookPage": 375,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 141,
+  "title": "착오오［ 하자담보책임(★★★)",
+  "stars": 3,
+  "bookPage": 377,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 142,
+  "title": "저680조의 하자담보책암과 제109조에 의한 착오취소 ★★★)",
+  "stars": 3,
+  "bookPage": 380,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 143,
+  "title": "하자^보책임고F 확다！손해(★★★)",
+  "stars": 3,
+  "bookPage": 383,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 144,
+  "title": "하자담보책임에 기한 손해배상청구권의 소멸사효 ★★★)",
+  "stars": 3,
+  "bookPage": 387,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 145,
+  "title": "확대손해에 대한 하자담보책임과 불법행위로 인한 손해배상책임(★★★)",
+  "stars": 3,
+  "bookPage": 389,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 146,
+  "title": "임대차보증금^환=★★★)",
+  "stars": 3,
+  "bookPage": 392,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 147,
+  "title": "임대치보증금반환청구와 공제 항변(★★★)",
+  "stars": 3,
+  "bookPage": 395,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 148,
+  "title": "임대차와 임대인지위승계와 보증금에서 공제(★★★)",
+  "stars": 3,
+  "bookPage": 397,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 149,
+  "title": "임대인의 임차 목적물 반환청구와 임차인의 바 용 상환청구와 부속물매 수청구 (★★★)",
+  "stars": 1,
+  "bookPage": 399,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 150,
+  "title": "임차와 보증금에서 공제와 대항력 ★★★)",
+  "stars": 3,
+  "bookPage": 403,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 151,
+  "title": "임차인의 入사물매수청구궨★★★★)",
+  "stars": 1,
+  "bookPage": 408,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 152,
+  "title": "건물매수청구권의 행사와 법원의 판결(★★★)",
+  "stars": 1,
+  "bookPage": 412,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 153,
+  "title": "임대차와 건물마!수청구(★★★)",
+  "stars": 1,
+  "bookPage": 415,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 154,
+  "title": "임차목적물과 임차 외 목적물의 이행불능으로 안한 손배(★★★)",
+  "stars": 3,
+  "bookPage": 418,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 155,
+  "title": "임차권의 양도와 바신행위이론(★★大)",
+  "stars": 3,
+  "bookPage": 421,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 156,
+  "title": "무단임대와 바신행위아론 및 건물매수청구(★★★)",
+  "stars": 1,
+  "bookPage": 425,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 157,
+  "title": "주택임대치^법상 대항력과 암大이 보호 ★★★)",
+  "stars": 1,
+  "bookPage": 427,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 158,
+  "title": "주택임대차의 대항력과 저당권과의 우열(★★★)",
+  "stars": 3,
+  "bookPage": 430,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 159,
+  "title": "대항력 있는 임차권과 저당권의 우열(★★★)",
+  "stars": 3,
+  "bookPage": 434,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 160,
+  "title": "상속인과 경락인이 임대인의 지위를 승계(★★★)",
+  "stars": 3,
+  "bookPage": 436,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 161,
+  "title": "공동임차인고［ 대항력 및 명와신탁과 임대인지위 승계(★★★)",
+  "stars": 3,
+  "bookPage": 438,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 162,
+  "title": "임대차의 소액임차인과 대지만 경매(★★★)",
+  "stars": 3,
+  "bookPage": 440,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 163,
+  "title": "도급에 관한 사례(★★★)",
+  "stars": 3,
+  "bookPage": 443,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 164,
+  "title": "건물도급과 해제(★★★)",
+  "stars": 3,
+  "bookPage": 448,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 165,
+  "title": "도급에 관한 사례(★★★) — 신축건물의 소유권 귀속",
+  "stars": 3,
+  "bookPage": 450,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 166,
+  "title": "도급과 하자보수(★★★)",
+  "stars": 1,
+  "bookPage": 455,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 167,
+  "title": "착오송금과 상계(★★★) — 소비임치",
+  "stars": 3,
+  "bookPage": 457,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 168,
+  "title": "조합채무와 조합원 개인 채무(★★)",
+  "stars": 2,
+  "bookPage": 461,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 169,
+  "title": "전용물소권(★★★)",
+  "stars": 3,
+  "bookPage": 463,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 170,
+  "title": "횡령한 돈으로의 변제와 단축급부(★★★)",
+  "stars": 3,
+  "bookPage": 466,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 171,
+  "title": "횡령한 돈으로의 변제와 단축급부(★★★)",
+  "stars": 3,
+  "bookPage": 468,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 172,
+  "title": "집합건물의 공용 부분을 무단점유한 구분소 유자의 부당아 득 반환청구 가부 (★★★)",
+  "stars": 3,
+  "bookPage": 472,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 173,
+  "title": "저756조 各HHH상책임(★★)",
+  "stars": 2,
+  "bookPage": 474,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 174,
+  "title": "불법손배와 사망과 상속(★★★)",
+  "stars": 3,
+  "bookPage": 476,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 175,
+  "title": "공동불법행위와 자배법(★★★)",
+  "stars": 3,
+  "bookPage": 480,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 176,
+  "title": "호와동승과 책임감경(★★★) 변경판례문제",
+  "stars": 3,
+  "bookPage": 484,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 177,
+  "title": "물권적 청구권의 이행불능을 이유로 한 불법행위로 인한 손해배상(★★★)",
+  "stars": 3,
+  "bookPage": 489,
+  "part": "제3편 채권각론",
+  "pageGuessed": false
+ },
+ {
+  "no": 178,
+  "title": "g복등가(★★)",
+  "stars": 2,
+  "bookPage": 492,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 179,
+  "title": "등기의 불법말소와 부당아득(★★★)",
+  "stars": 3,
+  "bookPage": 495,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 180,
+  "title": "소유권의 배타적 人용수익권 포기 가부와 제 문제 ★★★)",
+  "stars": 1,
+  "bookPage": 498,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 181,
+  "title": "*스^등기(★★★)",
+  "stars": 1,
+  "bookPage": 501,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 182,
+  "title": "이미 경료된 중간생략등기의 효력(★★★)",
+  "stars": 3,
+  "bookPage": 503,
+  "part": "제4편 물권법",
+  "pageGuessed": true
+ },
+ {
+  "no": 183,
+  "title": "미 경료된 중간%등기 청구권(★★★)",
+  "stars": 3,
+  "bookPage": 506,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 184,
+  "title": "선의취득과 점유보조 횡령(★★★)",
+  "stars": 3,
+  "bookPage": 508,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 185,
+  "title": "선의^득(★★★)",
+  "stars": 3,
+  "bookPage": 510,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 186,
+  "title": "부합과 선으!취득(★★★)",
+  "stars": 3,
+  "bookPage": 512,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 187,
+  "title": "부합과 선의취득과 무권대리(★★★)",
+  "stars": 3,
+  "bookPage": 515,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 188,
+  "title": "동산양도담보와 선의취득(★★) - 양도담보와 경매",
+  "stars": 2,
+  "bookPage": 518,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 189,
+  "title": "점유의 소와 본권의 쇠★★★)",
+  "stars": 3,
+  "bookPage": 521,
+  "part": "제4편 물권법",
+  "pageGuessed": true
+ },
+ {
+  "no": 190,
+  "title": "^우^자통^권(★★)",
+  "stars": 2,
+  "bookPage": 524,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 191,
+  "title": "점유취득시효 완성 후 소유권이 이전된 경우의 법률관계(★★★)",
+  "stars": 3,
+  "bookPage": 526,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 192,
+  "title": "악의의 무단점유 ★★★)",
+  "stars": 3,
+  "bookPage": 532,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 193,
+  "title": "점유시효취득과 계약명와신탁 및 악의의 무단점유(★★★)",
+  "stars": 3,
+  "bookPage": 535,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 194,
+  "title": "점유취득시효의 다상과 점유의 승계(★★★) — 자기 소유 부동산",
+  "stars": 3,
+  "bookPage": 538,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 195,
+  "title": "취득사효 완성 후 명와신탁이 해지된 경우 대항가부(★★★)",
+  "stars": 3,
+  "bookPage": 543,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 196,
+  "title": "점유시효취득완성 후 명와신탁 해지(★★★)",
+  "stars": 3,
+  "bookPage": 545,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 197,
+  "title": "수증자가 취득시효 완성 후의 이해관계인인지 여부(★★★)",
+  "stars": 1,
+  "bookPage": 547,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 198,
+  "title": "점유취득시효 완성자의 처분금지가처분권자에게 대항 가부(★★★)",
+  "stars": 3,
+  "bookPage": 549,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 199,
+  "title": "점유취득시효와 가압류가 취득시효의 중단사유가 돠는지 여부(★★★)",
+  "stars": 3,
+  "bookPage": 552,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 200,
+  "title": "가압류가 취득시효의 중단사유가 돠는지 여부(★★★)",
+  "stars": 3,
+  "bookPage": 555,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 201,
+  "title": "점유취득시효 완성 후 저당관소유권 이전(★★★)",
+  "stars": 3,
+  "bookPage": 557,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 202,
+  "title": "2차 점유취득人효과 법률관계(★★★)",
+  "stars": 3,
+  "bookPage": 560,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 203,
+  "title": "무효등기의 유용과 등기부사효취득(★★★)",
+  "stars": 3,
+  "bookPage": 566,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 204,
+  "title": "소유권에 기한 말소등기와 승낙의 의사표시(★★★)",
+  "stars": 3,
+  "bookPage": 569,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 205,
+  "title": "공유와 관리방법(★★★)",
+  "stars": 3,
+  "bookPage": 572,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 206,
+  "title": "공유물의 소수자분권자의 소수지분권자에 대한 인도청구 가부(★★★)",
+  "stars": 1,
+  "bookPage": 575,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 207,
+  "title": "공유물의 소수지분권자의 소수지분권자에 대한 인도청구 가부(★★★)",
+  "stars": 1,
+  "bookPage": 579,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 208,
+  "title": "공유물 분할과 지분상의 담보물권(★★★)",
+  "stars": 3,
+  "bookPage": 581,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 209,
+  "title": "종중의 명의신탁(★★★)",
+  "stars": 3,
+  "bookPage": 582,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 210,
+  "title": "종중의 명와신탁과 명와신탁해지로 인한 소아등 양도(★★★)",
+  "stars": 3,
+  "bookPage": 587,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 211,
+  "title": "채권자추소권과 2자간 명와신탁(★★★)",
+  "stars": 3,
+  "bookPage": 589,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 212,
+  "title": "*스^§ 명*탁(★★大)",
+  "stars": 1,
+  "bookPage": 592,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 213,
+  "title": "중간^형 명와신탁과 차邑자대위권 ★★★)",
+  "stars": 3,
+  "bookPage": 594,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 214,
+  "title": "3자간 등기명와신탁과 부당아득반환청구(★★★)",
+  "stars": 3,
+  "bookPage": 597,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 215,
+  "title": "3자간 등기명와신탁과 차！권자취소소송(★★★)",
+  "stars": 3,
+  "bookPage": 601,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 216,
+  "title": "3자간 명와신탁과 저당권 설정 및 부당아득(★★★)",
+  "stars": 3,
+  "bookPage": 604,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 217,
+  "title": "물권변동 요건과 3자간 명와신탁 및 제3자(★★★)",
+  "stars": 3,
+  "bookPage": 606,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 218,
+  "title": "계약명의신탁(★★★)",
+  "stars": 3,
+  "bookPage": 608,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 219,
+  "title": "경매와 계약명와신탁(★★★)",
+  "stars": 3,
+  "bookPage": 612,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 220,
+  "title": "계약명의신탁에서 사해행위취쇠 ★★★)",
+  "stars": 3,
+  "bookPage": 616,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 221,
+  "title": "계약명와신탁어서 악의 매도인과 불법손배(★★★)",
+  "stars": 3,
+  "bookPage": 618,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 222,
+  "title": "법제상권(★★★)",
+  "stars": 3,
+  "bookPage": 620,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 223,
+  "title": "건물공유와 법정자상권 성립(★★수)",
+  "stars": 3,
+  "bookPage": 624,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 224,
+  "title": "관습법상 법정자상권과 소유자 동일성 판단사점(★★★)",
+  "stars": 3,
+  "bookPage": 626,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 225,
+  "title": "관습법상 법정자상권과 강제경매와 상속포기(★★★)",
+  "stars": 3,
+  "bookPage": 629,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 226,
+  "title": "법정A|상권(★★)",
+  "stars": 2,
+  "bookPage": 631,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 227,
+  "title": "법정A［상권(★★★) - 공동저당",
+  "stars": 3,
+  "bookPage": 633,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 228,
+  "title": "관습법상 법정자상권과 차®자추！소권 ★★★)",
+  "stars": 3,
+  "bookPage": 636,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 229,
+  "title": "법정자상권과 '샹속포기(★★★)",
+  "stars": 3,
+  "bookPage": 641,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 230,
+  "title": "관습법상 법정자상권과 건물퇴거청구(★★★)",
+  "stars": 3,
+  "bookPage": 644,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 231,
+  "title": "건물철거와 퇴거 및 법정자상권 성립과 일괄경매(★★★)",
+  "stars": 3,
+  "bookPage": 647,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 232,
+  "title": "담%☆★★)",
+  "stars": 3,
+  "bookPage": 651,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 233,
+  "title": "분묘기지권 ★★)",
+  "stars": 2,
+  "bookPage": 653,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 234,
+  "title": "전세권과 관련문제(★★★)",
+  "stars": 3,
+  "bookPage": 655,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 235,
+  "title": "전세권에 대한 저당권의 효력(★★★)",
+  "stars": 3,
+  "bookPage": 659,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 236,
+  "title": "전세권저당권과 물상대위 및 승낙의사표시(★★★)",
+  "stars": 3,
+  "bookPage": 662,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 237,
+  "title": "전세권저당권과 상계(★★★)",
+  "stars": 3,
+  "bookPage": 669,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 238,
+  "title": "임대차와 유치권 및 경매(★★★)",
+  "stars": 3,
+  "bookPage": 673,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 239,
+  "title": "소유권에 기한 물건반환청구와 유치권 및 사용이익 반환청구(★★★)",
+  "stars": 3,
+  "bookPage": 677,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 240,
+  "title": "경매에서 유치권 시례(★★★)",
+  "stars": 3,
+  "bookPage": 680,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 241,
+  "title": "싱속포가시 상속권자오서 유치권 항변 가부(★★★)",
+  "stars": 3,
+  "bookPage": 683,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 242,
+  "title": "질권과 임차권(★★★)",
+  "stars": 3,
+  "bookPage": 686,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 243,
+  "title": "#권질권과 저당권(★★★)",
+  "stars": 3,
+  "bookPage": 691,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 244,
+  "title": "차겨잘권과 전부명령(★★★)",
+  "stars": 3,
+  "bookPage": 694,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 245,
+  "title": "저당권의 효력이 미차는 범위와 종물과 부합물 및 선의취득(★★★)",
+  "stars": 3,
+  "bookPage": 696,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 246,
+  "title": "저당권의 효력이 미차는 범위 ★★★)",
+  "stars": 3,
+  "bookPage": 698,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 247,
+  "title": "%저당(★★大) 一 종합시례",
+  "stars": 3,
+  "bookPage": 700,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 248,
+  "title": "공동저당 - 채무자 소유 부동산 먼저 경매",
+  "stars": 0,
+  "bookPage": 707,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 249,
+  "title": "공동저당에서 실질적 채무자와 실질적 물상보증(★★)",
+  "stars": 2,
+  "bookPage": 709,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 250,
+  "title": "채무자소유의 부동산의 공동저당과 사해행위(★★★)",
+  "stars": 3,
+  "bookPage": 711,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 251,
+  "title": "채무자와 물상보증인 소유의 부동산에 공동저당과 사해행위(★★★)",
+  "stars": 3,
+  "bookPage": 714,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 252,
+  "title": "공유지분의 공동저당과 사해행위취소★★★)",
+  "stars": 3,
+  "bookPage": 718,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 253,
+  "title": "공유지분의 공동저당과 사해행위취소(★★★)",
+  "stars": 3,
+  "bookPage": 722,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 254,
+  "title": "누적적 근저당권 ★★★)",
+  "stars": 3,
+  "bookPage": 724,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 255,
+  "title": "근저당권 ★★★)",
+  "stars": 3,
+  "bookPage": 726,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 256,
+  "title": "근저당권과 피담보차!무 확정과 배당(★★★)",
+  "stars": 3,
+  "bookPage": 728,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 257,
+  "title": "공동저당과 제3취득자(★★★)(★★★) - 피담보채무 확정",
+  "stars": 3,
+  "bookPage": 730,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 258,
+  "title": "가등기담보법의 적용범위(★★★)",
+  "stars": 3,
+  "bookPage": 733,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 259,
+  "title": "가등기담보에 관한 사례(★★★)",
+  "stars": 3,
+  "bookPage": 737,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 260,
+  "title": "가등기담보법이 적용돠는 양도담보(★★★)",
+  "stars": 3,
+  "bookPage": 741,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 261,
+  "title": "가담법이 적용되지 않는 부동산의 양도담보(★★★)",
+  "stars": 3,
+  "bookPage": 743,
+  "part": "제4편 물권법",
+  "pageGuessed": false
+ },
+ {
+  "no": 262,
+  "title": "내용이 변동하는 잡합동산의 양도담뵈 ★★★)",
+  "stars": 3,
+  "bookPage": 746,
+  "part": "제4편 물권법",
+  "pageGuessed": true
+ },
+ {
+  "no": 263,
+  "title": "특정물양도담보와 천연과실(★★)",
+  "stars": 2,
+  "bookPage": 749,
+  "part": "제4편 물권법",
+  "pageGuessed": true
+ },
+ {
+  "no": 264,
+  "title": "특정 동산의 양도담보★★★)",
+  "stars": 3,
+  "bookPage": 752,
+  "part": "제4편 물권법",
+  "pageGuessed": true
+ },
+ {
+  "no": 265,
+  "title": "부부별산저우**)",
+  "stars": 2,
+  "bookPage": 755,
+  "part": "제5편 친족상속법",
+  "pageGuessed": false
+ },
+ {
+  "no": 266,
+  "title": "이혼(★★수) - 유책배우자 이혼청구와 재산분할",
+  "stars": 3,
+  "bookPage": 756,
+  "part": "제5편 친족상속법",
+  "pageGuessed": false
+ },
+ {
+  "no": 267,
+  "title": "찬새^ 추= 제핸 ★★)",
+  "stars": 2,
+  "bookPage": 761,
+  "part": "제5편 친족상속법",
+  "pageGuessed": false
+ },
+ {
+  "no": 268,
+  "title": "인지의 소급효와 채권의 준점유자에 대한 변제(★★★)",
+  "stars": 3,
+  "bookPage": 763,
+  "part": "제5편 친족상속법",
+  "pageGuessed": false
+ },
+ {
+  "no": 269,
+  "title": "허위의 찬생자 출생신고에 의한 입양■무효인 입양의 추인(★★)",
+  "stars": 2,
+  "bookPage": 765,
+  "part": "제5편 친족상속법",
+  "pageGuessed": false
+ },
+ {
+  "no": 270,
+  "title": "싱속화복청구궨 ★★★)",
+  "stars": 3,
+  "bookPage": 767,
+  "part": "제5편 친족상속법",
+  "pageGuessed": false
+ },
+ {
+  "no": 271,
+  "title": "상속회복청구의 쇠★★★)",
+  "stars": 3,
+  "bookPage": 770,
+  "part": "제5편 친족상속법",
+  "pageGuessed": false
+ },
+ {
+  "no": 272,
+  "title": "싱속히복^구와 포골=★★★)",
+  "stars": 3,
+  "bookPage": 772,
+  "part": "제5편 친족상속법",
+  "pageGuessed": false
+ },
+ {
+  "no": 273,
+  "title": "다^속과 동사사밍$★★★)",
+  "stars": 3,
+  "bookPage": 774,
+  "part": "제5편 친족상속법",
+  "pageGuessed": false
+ },
+ {
+  "no": 274,
+  "title": "낙태행위^ ‘샹속결격(★★)",
+  "stars": 2,
+  "bookPage": 776,
+  "part": "제5편 친족상속법",
+  "pageGuessed": false
+ },
+ {
+  "no": 275,
+  "title": "싱‘속재산분할협의의 법률관계(★★★) — 아해상반행위",
+  "stars": 3,
+  "bookPage": 778,
+  "part": "제5편 친족상속법",
+  "pageGuessed": false
+ },
+ {
+  "no": 276,
+  "title": "상속；재산의 협의분할과 합와해제(★★★)",
+  "stars": 3,
+  "bookPage": 779,
+  "part": "제5편 친족상속법",
+  "pageGuessed": false
+ },
+ {
+  "no": 277,
+  "title": "상속；다산협의분할과 제하다 =(★★★)",
+  "stars": 3,
+  "bookPage": 782,
+  "part": "제5편 친족상속법",
+  "pageGuessed": false
+ },
+ {
+  "no": 278,
+  "title": "상속과 저［1014죄 ★★★)",
+  "stars": 3,
+  "bookPage": 784,
+  "part": "제5편 친족상속법",
+  "pageGuessed": false
+ },
+ {
+  "no": 279,
+  "title": "%과 저［1014죄 ★★★)",
+  "stars": 3,
+  "bookPage": 786,
+  "part": "제5편 친족상속법",
+  "pageGuessed": false
+ },
+ {
+  "no": 280,
+  "title": "금전차！무의 상속(★★★)",
+  "stars": 3,
+  "bookPage": 789,
+  "part": "제5편 친족상속법",
+  "pageGuessed": false
+ },
+ {
+  "no": 281,
+  "title": "상^포기(★★★)",
+  "stars": 3,
+  "bookPage": 792,
+  "part": "제5편 친족상속법",
+  "pageGuessed": false
+ },
+ {
+  "no": 282,
+  "title": "상속포기와 상속재산협와분할 및 한정승인의 효력(★★★)",
+  "stars": 3,
+  "bookPage": 795,
+  "part": "제5편 친족상속법",
+  "pageGuessed": false
+ },
+ {
+  "no": 283,
+  "title": "상속채권자와 한정승인자의 우열(★★★)",
+  "stars": 3,
+  "bookPage": 798,
+  "part": "제5편 친족상속법",
+  "pageGuessed": false
+ },
+ {
+  "no": 284,
+  "title": "상속에 관한 법률관계(★★★) — 특별수익",
+  "stars": 3,
+  "bookPage": 800,
+  "part": "제5편 친족상속법",
+  "pageGuessed": false
+ },
+ {
+  "no": 285,
+  "title": "유^번!환W***)",
+  "stars": 3,
+  "bookPage": 803,
+  "part": "제5편 친족상속법",
+  "pageGuessed": false
+ },
+ {
+  "no": 286,
+  "title": "^^S.^***)",
+  "stars": 3,
+  "bookPage": 806,
+  "part": "제5편 친족상속법",
+  "pageGuessed": false
+ }
+]
