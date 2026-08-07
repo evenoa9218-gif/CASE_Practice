@@ -185,6 +185,11 @@ const GRADER_URL = "https://case-grader.bar-exam.workers.dev";
 const SPLIT_MIN = 25, SPLIT_MAX = 75;   // 문제/답안 2단 폭 비율 한계(%)
 const URLQ = new URLSearchParams(location.search);
 const INCOMING_ISSUE = URLQ.get("issue");
+// ?exam=민사법_로사정_003_사례 로 특정 문제를 바로 연다.
+// 암기장(Core_Notes)의 CASE 링크가 이 주소로 들어온다. 과목은 id 앞머리에서 읽는다.
+const INCOMING_EXAM = URLQ.get("exam");
+const INCOMING_SUBJECT = INCOMING_EXAM ? INCOMING_EXAM.split("_")[0] : null;
+let incomingExamUsed = false;
 
 const fmtDate = ts => { const d=new Date(ts), p=n=>String(n).padStart(2,'0');
   return `${d.getFullYear()}.${p(d.getMonth()+1)}.${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())}`; };
@@ -327,6 +332,7 @@ function useTheme(){
 // ══════════════════════════════════════════════
 function App(){
   const [subject,setSubject] = useState(()=>{
+    if(SUBJECTS.some(x=>x.id===INCOMING_SUBJECT)) return INCOMING_SUBJECT;
     const s = localStorage.getItem('cp_subject');
     return SUBJECTS.some(x=>x.id===s) ? s : SUBJECTS[0].id;
   });
@@ -369,6 +375,12 @@ function App(){
       if(!r.ok) throw new Error(`data/${subject}/index.json 로드 실패 (${r.status})`);
       const j = await r.json();
       setMeta(j.meta); setExams(j.exams); setIssues(j.issues); setByIssue(j.byIssue);
+      // ?exam= 으로 들어왔으면 목록을 건너뛰고 그 문제를 바로 연다.
+      // 한 번만 쓴다 — 안 그러면 과목을 바꿀 때마다 그 문제로 되돌아간다.
+      if(!incomingExamUsed && INCOMING_EXAM && j.exams.some(e=>e.id===INCOMING_EXAM)){
+        incomingExamUsed = true;
+        setCurId(INCOMING_EXAM); setView("solve");
+      }
       fetch(`data/${subject}/casebook_toc.json`).then(r2=>r2.ok?r2.json():null)
         .then(tj=>tj && setCasebookToc(tj)).catch(()=>{});
       setReady(true);
