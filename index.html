@@ -189,6 +189,9 @@ const INCOMING_ISSUE = URLQ.get("issue");
 // 암기장(Core_Notes)의 CASE 링크가 이 주소로 들어온다. 과목은 id 앞머리에서 읽는다.
 const INCOMING_EXAM = URLQ.get("exam");
 const INCOMING_SUBJECT = INCOMING_EXAM ? INCOMING_EXAM.split("_")[0] : null;
+// &group=제2문 을 덧붙이면 그 문항으로 바로 넘어간다. 기출은 한 시험에 논점이
+// 여럿 섞여 있어 ?exam= 만으로는 시험 전체가 열려 단원 링크로 쓸 수 없다.
+const INCOMING_GROUP = URLQ.get("group");
 let incomingExamUsed = false;
 
 const fmtDate = ts => { const d=new Date(ts), p=n=>String(n).padStart(2,'0');
@@ -380,6 +383,11 @@ function App(){
       if(!incomingExamUsed && INCOMING_EXAM && j.exams.some(e=>e.id===INCOMING_EXAM)){
         incomingExamUsed = true;
         setCurId(INCOMING_EXAM); setView("solve");
+        // &group= 은 그 시험에 실제로 있는 문항일 때만 쓴다. 없는 값이면
+        // 무시하고 첫 문항을 연다 — 엉뚱한 문항을 여느니 처음부터 보는 게 낫다.
+        const ex = j.exams.find(e=>e.id===INCOMING_EXAM);
+        if(INCOMING_GROUP && (ex.groups||[]).some(g=>g.key===INCOMING_GROUP))
+          setFocusGroupKey(INCOMING_GROUP);
       }
       fetch(`data/${subject}/casebook_toc.json`).then(r2=>r2.ok?r2.json():null)
         .then(tj=>tj && setCasebookToc(tj)).catch(()=>{});
