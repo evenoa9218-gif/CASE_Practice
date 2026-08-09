@@ -16,6 +16,7 @@ import json
 import re
 from collections import Counter
 
+from parkss_titles import FIXED_TITLE
 from paths import APP, CASEBOOK, REGISTRY
 
 DATA = APP / "data" / "민사법"
@@ -120,7 +121,7 @@ def build():
     exams_idx, new_cases, toc_parts = [], {}, {}
     for i, no in enumerate(sorted(cases, key=int), 1):
         c = cases[no]
-        title = best_title(c["title"], c["rawHeader"])
+        title = FIXED_TITLE.get(int(no)) or best_title(c["title"], c["rawHeader"])
         part = c["part"] or "제1편 민법총칙"
         eid = f"{PREFIX}{int(no):03d}_사례"
         flat = re.sub(r"[\s·]", "", c["problemText"] + c["answerText"])
