@@ -24,6 +24,7 @@ import fitz
 
 from parse_parkss_toc import OFFSET, PDF, fill_pages, parse
 from paths import CASEBOOK
+import parkss_body_fixes
 import parkss_ocr_fixes
 
 MARGIN_X = 393        # 이보다 오른쪽에서 시작하는 줄 = 여백 메모
@@ -53,9 +54,30 @@ def page_lines(page):
 
 
 def strip_footer(lines):
-    """쪽 하단의 쪽번호 한 줄을 뗀다."""
+    """쪽 하단의 쪽번호 한 줄을 뗀다.
+
+    제목 띠 줄은 여기서 버리면 안 된다 — 그 줄이 곧 **사례가 시작하는 표시**라
+    `looks_like_start()`가 그것을 보고 판단한다. 본문을 조립할 때 걸러낸다.
+    """
     return [l for l in lines
             if not (l["y"] > 680 and re.fullmatch(r"\d{1,3}", l["text"].strip()))]
+
+
+def clean(lines):
+    """본문으로 쓸 줄만 남긴다 — 제목 띠와 그 무늬가 읽힌 줄을 뺀다."""
+    return [l for l in lines if not parkss_body_fixes.is_banner_noise(l["text"])]
+
+
+def trim_head(lines):
+    """지문 앞머리에 남은 제목 띠 부스러기(`*—`, `"r ―1`)를 걷어낸다.
+
+    지문은 반드시 글월이나 `〈사실관계〉` 표지로 시작하므로, 한글이 다섯 자도
+    안 되는 줄이 앞에 붙어 있으면 본문이 아니다. 뒤쪽은 건드리지 않는다.
+    """
+    i = 0
+    while i < len(lines) and len(re.findall(r"[가-힣]", lines[i]["text"])) < 5:
+        i += 1
+    return lines[i:] if i < len(lines) else lines
 
 
 def split_columns(lines):
@@ -127,7 +149,8 @@ def snap_start(doc, p0, span=3):
 
 
 def norm(s, no):
-    return parkss_ocr_fixes.apply(s, no)
+    """당사자 기호 등 전역 교정 → 지면 대조로 확정한 자리별 교정 순."""
+    return parkss_body_fixes.apply(parkss_ocr_fixes.apply(s, no))
 
 
 def extract():
@@ -161,12 +184,13 @@ def extract():
             "pdfPages": [p0 + 1, max(p1, p0 + 1)],
             "pageGuessed": r["pageGuessed"],
             "rawHeader": head,
-            "problemText": norm("\n".join(l["text"] for l in pages[0]["lines"][1:opening]), r["no"]),
-            "outlineText": norm("\n".join(l["text"] for l in pages[0]["lines"][opening:ans0]), r["no"]),
+            "problemText": norm("\n".join(
+                l["text"] for l in trim_head(clean(pages[0]["lines"][1:opening]))), r["no"]),
+            "outlineText": norm("\n".join(l["text"] for l in clean(pages[0]["lines"][opening:ans0])), r["no"]),
             "answerText": norm("\n".join(
-                [l["text"] for l in pages[0]["lines"][ans0:]] +
-                [l["text"] for pg in pages[1:] for l in pg["lines"]]), r["no"]),
-            "notes": notes,
+                [l["text"] for l in clean(pages[0]["lines"][ans0:])] +
+                [l["text"] for pg in pages[1:] for l in clean(pg["lines"])]), r["no"]),
+            "notes": [n for n in notes if not parkss_body_fixes.is_banner_noise(n)],
         }
     doc.close()
     return out
