@@ -205,7 +205,11 @@ export default {
           }
           send({ done: true, usage: final.usage });
         } catch (e) {
-          send({ error: `채점 중 오류: ${e.message}` });
+          // API 쪽에서 막힌 것인지 이쪽 잘못인지 나중에 가리려면 요청 ID가 있어야
+          // 한다. Anthropic 지원에 문의할 때 이것부터 묻는다.
+          const id = e?.request_id || e?.headers?.['request-id'];
+          console.error('grade failed', { status: e?.status, request_id: id, msg: e?.message });
+          send({ error: `채점 중 오류: ${e.message}` + (id ? ` (요청 ID ${id})` : '') });
         } finally {
           controller.close();
         }
