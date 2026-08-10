@@ -93,10 +93,13 @@ const SYSTEM = `당신은 대한민국 변호사시험 사례형 채점위원이
 function buildPrompt(exam, group, answer) {
   const parts = [];
   parts.push(`# 시험\n${exam.label}`);
-  // 배점이 없는 문항이 있다. 창작문제 사례집 중에는 책이 배점을 매기지 않은 것이
-  // 많은데, 없는 배점을 `0점`이라고 알려주면 채점이 엉뚱해진다 — 아예 빼고 보낸다.
-  parts.push(`# 채점할 문항\n${group.label}` +
-    (group.points > 0 ? ` (배점 ${group.points}점)` : ''));
+  // 배점이 없는 문항이 있다. 창작문제 사례집 중에는 책이 배점을 아예 매기지 않은
+  // 것이 많은데(박승수 민법 기본사례 286개 중 115개), 없는 배점을 `0점`이라고
+  // 알려주면 채점이 엉뚱해진다. 그렇다고 빼기만 하면 채점자가 제멋대로 만점을
+  // 잡아 점수가 사례마다 다른 잣대로 나온다 — **100점 만점으로 못박는다.**
+  // 앱도 배점이 없으면 100을 만점으로 삼아 표시·기록한다(index.html의 maxPts).
+  parts.push(`# 채점할 문항\n${group.label} ` +
+    (group.points > 0 ? `(배점 ${group.points}점)` : '(배점 미표시 — 100점 만점으로 채점한다)'));
 
   if (group.questions?.length) {
     const qs = group.questions

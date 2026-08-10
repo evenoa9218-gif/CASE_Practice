@@ -828,6 +828,10 @@ function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSu
   const groups = detail?.groups?.length ? detail.groups
     : (detail ? [{key:"전체",label:"전체",questions:detail.questions||[],points:0}] : []);
   const g = groups[page];
+  // 책이 배점을 매기지 않은 사례가 있다(창작문제 일부). 그럴 땐 100점 만점으로
+  // 삼는다 — 채점 Worker에도 같은 기준을 알려준다. 0으로 두면 화면에 `45 / 0점`이
+  // 뜨고 진도 집계의 득점률도 무너진다.
+  const maxPts = g?.points > 0 ? g.points : 100;
 
   const setAnswer = (key,val)=>{
     setAnswers(a=>({...a,[key]:val})); setSaved(false);
@@ -898,7 +902,7 @@ function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSu
       if(score !== null){
         await Store.record({
           subject, mode:"case", examId:exam.id, label:`${exam.label} ${g.label}`,
-          round, issueIds:exam.issueIds, score, maxScore:g.points,
+          round, issueIds:exam.issueIds, score, maxScore:maxPts,
           text, feedback:body, seconds:elapsed,
         });
       }
@@ -1024,7 +1028,7 @@ function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSu
                 <div className="row">
                   <strong>AI 채점</strong>
                   {grade.score!==null && grade.score!==undefined &&
-                    <span className="tag gold">{grade.score} / {g.points}점</span>}
+                    <span className="tag gold">{grade.score} / {maxPts}점</span>}
                   {grade.running && <span className="muted">답안을 읽는 중…</span>}
                 </div>
                 <button className="btn" onClick={()=>setGrade(null)}>닫기</button>
