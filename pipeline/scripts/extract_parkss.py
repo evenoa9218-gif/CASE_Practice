@@ -17,6 +17,7 @@ r"""박승수 「민법 기본사례」(2025) PDF → pipeline/casebook/parkss_b
               **버리지 않는다** — 같은 x대(200~393)가 이어지는 쪽 137곳에도 나와서,
               좌표만으로 걷어내면 본문이 날아간다. 따로 표시만 해 둔다.
 """
+import collections
 import json
 import re
 
@@ -24,6 +25,7 @@ import fitz
 
 from parse_parkss_toc import OFFSET, PDF, fill_pages, parse
 from paths import CASEBOOK
+from reflow_rosajeong import build_vocab, reflow   # 책과 무관한 일반 재조립기다
 import parkss_body_fixes
 import parkss_ocr_fixes
 
@@ -32,24 +34,55 @@ BODY_WIDE = 430       # 본답안 첫 줄은 쪽 폭을 다 쓴다(개요도 줄
 LAST_PAGE = None      # 판례색인 앞까지. None이면 자동 탐지
 
 
+WRAP_SLACK = 6      # 오른쪽 끝에서 이만큼 안쪽까지는 '끝까지 찬 줄'로 본다
+
+
 def page_lines(page):
-    """줄 단위로 (x0, x1, y, size, text). 블록 순서가 아니라 y 순으로 되돌린다."""
-    out = []
+    """줄 단위로 (x0, x1, y, size, text, wrap). 블록 순서가 아니라 y 순으로 되돌린다.
+
+    `wrap`은 그 줄이 **오른쪽 끝까지 찼는가** — 조판 줄바꿈인지 문단 끝인지를 가른다.
+    여백은 **블록마다** 재야 한다. 지문은 음영 박스라 폭이 다르고, 답안은 오른쪽에
+    여백 메모가 있어 본문이 더 좁다. 쪽 전체 최댓값으로 재면 답안이 재조립되지 않는다.
+    """
+    blocks = []
     for b in page.get_text("dict")["blocks"]:
         if b.get("type") != 0:
             continue
+        rows = []
         for l in b["lines"]:
             sp = l["spans"]
             t = "".join(s["text"] for s in sp).rstrip()
             if not t.strip():
                 continue
-            out.append({
+            rows.append({
                 "x0": min(s["bbox"][0] for s in sp),
                 "x1": max(s["bbox"][2] for s in sp),
                 "y": l["bbox"][1],
                 "size": max(s["size"] for s in sp),
                 "text": t,
             })
+        if rows:
+            blocks.append(rows)
+
+    # 여백은 블록마다 재면 안 된다 — 한 줄짜리 블록은 제 자신이 곧 최댓값이라
+    # 무조건 '끝까지 찬 줄'이 돼서 제목이 본문에 붙어버린다. 그렇다고 쪽 하나로 재면
+    # 폭이 다른 단(지문 박스는 넓고, 여백 메모 옆 답안은 좁다)이 재조립되지 않는다.
+    # 그래서 **줄 끝 x좌표가 여럿 모이는 자리**를 단의 오른쪽 끝으로 본다.
+    # 제목은 길이가 제각각이라 그런 무리를 이루지 않아 자연히 걸러진다.
+    body_x1 = [r["x1"] for rows in blocks for r in rows if r["x0"] < MARGIN_X]
+    widest = max(body_x1, default=0)
+    # 오른쪽 3분의 1 안쪽에서만 찾는다. 짧은 제목끼리도 우연히 같은 자리에서 끝나는데,
+    # 그걸 단의 끝으로 삼으면 제목이 본문에 붙는다.
+    # 딱 떨어지는 값이 아니라 **오차 안에 몇 개가 모이는가**로 센다 — 글자 끝이
+    # 466.0·467.1처럼 흩어져 있어 값이 같기를 바라면 무리가 잡히지 않는다.
+    cand = sorted({round(x) for x in body_x1 if x >= widest * 0.66})
+    right_edges = [x for x in cand
+                   if sum(1 for v in body_x1 if abs(v - x) <= WRAP_SLACK) >= 3]
+    out = []
+    for rows in blocks:
+        for r in rows:
+            r["wrap"] = any(abs(r["x1"] - e) <= WRAP_SLACK for e in right_edges)
+        out += rows
     return sorted(out, key=lambda l: (round(l["y"] / 4), l["x0"]))
 
 
@@ -184,16 +217,33 @@ def extract():
             "pdfPages": [p0 + 1, max(p1, p0 + 1)],
             "pageGuessed": r["pageGuessed"],
             "rawHeader": head,
-            "problemText": norm("\n".join(
-                l["text"] for l in trim_head(clean(pages[0]["lines"][1:opening]))), r["no"]),
-            "outlineText": norm("\n".join(l["text"] for l in clean(pages[0]["lines"][opening:ans0])), r["no"]),
-            "answerText": norm("\n".join(
-                [l["text"] for l in clean(pages[0]["lines"][ans0:])] +
-                [l["text"] for pg in pages[1:] for l in clean(pg["lines"])]), r["no"]),
+            # 재조립(reflow)은 사전이 있어야 하고 사전은 본문 전체가 있어야 만들 수 있어서,
+            # 여기서는 줄과 wrap 표시를 그대로 담아 두고 마지막에 한꺼번에 잇는다.
+            "_problem": _rows(trim_head(clean(pages[0]["lines"][1:opening])), r["no"]),
+            "_outline": _rows(clean(pages[0]["lines"][opening:ans0]), r["no"]),
+            "_answer": _rows(clean(pages[0]["lines"][ans0:]) +
+                             [l for pg in pages[1:] for l in clean(pg["lines"])], r["no"]),
             "notes": [n for n in notes if not parkss_body_fixes.is_banner_noise(n)],
         }
     doc.close()
-    return out
+    return _reflow_all(out)
+
+
+def _rows(lines, no):
+    return [[norm(l["text"], no), bool(l.get("wrap"))] for l in lines]
+
+
+def _reflow_all(cases):
+    """조판 줄바꿈을 문단으로 되돌린다. 사전은 책 전체의 '줄 중간 토큰'으로 만든다."""
+    vocab = build_vocab([[t for t, _ in c[k]] for c in cases.values()
+                         for k in ("_problem", "_outline", "_answer")])
+    for c in cases.values():
+        for src, dst in (("_problem", "problemText"), ("_outline", "outlineText"),
+                         ("_answer", "answerText")):
+            rows = c.pop(src)
+            c[dst] = reflow([t for t, _ in rows], [w for _, w in rows], vocab,
+                            loose_item=True)
+    return cases
 
 
 def _monotonic(ps):

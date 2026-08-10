@@ -26,6 +26,10 @@ import re
 NEW_ITEM = re.compile(
     r"^\s*(?:[〈<【\[]|※|[①-⑳㉠-㉣]|[ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ]\s*[.．]|"
     r"[가-힣]\s*[.．)]\s|\d+\s*[.．)]\s|[-–—→▶▸■□●○*])")
+# 한 글자 + 마침표로 시작하는 줄(`가.`·`다.`)은 목차 표지일 수도 있고, 앞 줄에서
+# 잘린 어미(`…문제된` + `다. 판례는`)일 수도 있다. 앞 줄이 끝까지 찼고 종결부호도
+# 없으면 표지가 아니라 잘린 어미다 — `loose_item=True`면 그때 이어붙인다.
+CUT_TAIL = re.compile(r"^\s*[가-힣]\s*[.．]\s")
 # 종결부호로 끝난 줄은 문장이 끝난 것
 TERMINAL = re.compile(r"[.。?!:;]\s*$")
 WORD = re.compile(r"[가-힣A-Za-z0-9]")
@@ -68,8 +72,13 @@ def _decide(x, y, vocab):
     return None
 
 
-def reflow(lines, wraps, vocab):
-    """lines/wraps 는 같은 길이. wraps[i]가 True면 i번째 줄이 오른쪽 끝까지 찬 줄."""
+def reflow(lines, wraps, vocab, loose_item=False):
+    """lines/wraps 는 같은 길이. wraps[i]가 True면 i번째 줄이 오른쪽 끝까지 찬 줄.
+
+    `loose_item`을 켜면 `다.`처럼 한 글자+마침표로 시작하는 줄을, 앞 줄이 끝까지
+    찼고 종결부호도 없을 때에 한해 **잘린 어미로 보아 이어붙인다.**
+    로사정은 이미 검증된 결과가 있어 끄고 쓴다(기본값).
+    """
     out, out_wrap = [], []
     for ln, wr in zip(lines, wraps):
         s = ln.rstrip()
@@ -78,7 +87,11 @@ def reflow(lines, wraps, vocab):
             out_wrap.append(wr)
             continue
         prev = out[-1]
-        if not out_wrap[-1] or TERMINAL.search(prev) or NEW_ITEM.match(s) \
+        new_item = NEW_ITEM.match(s)
+        if new_item and loose_item and CUT_TAIL.match(s) \
+           and out_wrap[-1] and not TERMINAL.search(prev):
+            new_item = None
+        if not out_wrap[-1] or TERMINAL.search(prev) or new_item \
            or not WORD.search(prev[-1:]) or not WORD.search(s[:1]):
             out.append(s)
             out_wrap.append(wr)
