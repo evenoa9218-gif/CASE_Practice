@@ -27658,7 +27658,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -27667,10 +27667,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -27702,7 +27702,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -27711,10 +27711,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -27743,7 +27743,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -27752,10 +27752,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -27790,7 +27790,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -27799,10 +27799,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -27833,7 +27833,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -27842,10 +27842,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -27884,7 +27884,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -27893,10 +27893,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -27977,7 +27977,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -27986,10 +27986,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -28026,7 +28026,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -28035,10 +28035,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -28169,7 +28169,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -28178,10 +28178,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -28255,7 +28255,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -28264,10 +28264,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -28302,7 +28302,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -28311,10 +28311,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -28348,7 +28348,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -28357,10 +28357,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -28397,7 +28397,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -28406,10 +28406,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -28545,7 +28545,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -28554,10 +28554,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -28589,7 +28589,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -28598,10 +28598,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -28638,7 +28638,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -28647,10 +28647,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -28681,7 +28681,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -28690,10 +28690,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -28725,7 +28725,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -28734,10 +28734,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -28766,7 +28766,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -28775,10 +28775,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -28807,7 +28807,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -28816,10 +28816,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -28855,7 +28855,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -28864,10 +28864,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -28946,7 +28946,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -28955,10 +28955,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -29139,7 +29139,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": 15,
      "ask": ""
     }
    ],
@@ -29148,10 +29148,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 15
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 15,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -29161,7 +29161,7 @@
    "stars": 2,
    "bookPage": 117,
    "tag": null,
-   "pointsGuessed": true
+   "pointsGuessed": false
   },
   {
    "id": "민사법_박승수_035_사례",
@@ -29278,7 +29278,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -29287,10 +29287,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -29323,7 +29323,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -29332,10 +29332,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -29370,7 +29370,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -29379,10 +29379,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -29442,7 +29442,7 @@
    "stars": 3,
    "bookPage": 131,
    "tag": null,
-   "pointsGuessed": true
+   "pointsGuessed": false
   },
   {
    "id": "민사법_박승수_041_사례",
@@ -29903,7 +29903,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -29912,10 +29912,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -29946,7 +29946,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -29955,10 +29955,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -30030,7 +30030,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -30039,10 +30039,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -30073,7 +30073,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -30082,10 +30082,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -30319,7 +30319,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -30328,10 +30328,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -30364,7 +30364,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -30373,10 +30373,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -30409,7 +30409,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -30418,10 +30418,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -30641,7 +30641,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -30650,10 +30650,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -31145,7 +31145,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -31154,10 +31154,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -31237,7 +31237,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -31246,10 +31246,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -31327,7 +31327,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -31336,10 +31336,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -31555,7 +31555,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -31564,10 +31564,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -31601,7 +31601,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -31610,10 +31610,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -31688,7 +31688,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -31697,10 +31697,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -31732,7 +31732,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -31741,10 +31741,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -31777,7 +31777,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -31786,10 +31786,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -31908,7 +31908,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -31917,10 +31917,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -31952,7 +31952,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -31961,10 +31961,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -32040,7 +32040,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -32049,10 +32049,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -32217,7 +32217,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -32226,10 +32226,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -32262,7 +32262,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -32271,10 +32271,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -32350,7 +32350,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -32359,10 +32359,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -32632,7 +32632,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -32641,10 +32641,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -32678,7 +32678,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -32687,10 +32687,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -32769,7 +32769,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -32778,10 +32778,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -32813,7 +32813,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -32822,10 +32822,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -32902,7 +32902,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -32911,10 +32911,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -32991,7 +32991,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": 7,
      "ask": ""
     }
    ],
@@ -33000,10 +33000,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 7
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 7,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -33013,7 +33013,7 @@
    "stars": 3,
    "bookPage": 314,
    "tag": "법전협 ’24",
-   "pointsGuessed": true
+   "pointsGuessed": false
   },
   {
    "id": "민사법_박승수_118_사례",
@@ -33087,7 +33087,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": 2,
      "ask": ""
     }
    ],
@@ -33096,10 +33096,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 2
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 2,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -33109,7 +33109,7 @@
    "stars": 3,
    "bookPage": 320,
    "tag": null,
-   "pointsGuessed": true
+   "pointsGuessed": false
   },
   {
    "id": "민사법_박승수_120_사례",
@@ -33370,7 +33370,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -33379,10 +33379,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -33413,7 +33413,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": 35,
      "ask": ""
     }
    ],
@@ -33422,10 +33422,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 35
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 35,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -33435,7 +33435,7 @@
    "stars": 2,
    "bookPage": 338,
    "tag": null,
-   "pointsGuessed": true
+   "pointsGuessed": false
   },
   {
    "id": "민사법_박승수_127_사례",
@@ -33504,7 +33504,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -33513,10 +33513,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -33548,7 +33548,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -33557,10 +33557,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -33589,7 +33589,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -33598,10 +33598,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -33679,7 +33679,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -33688,10 +33688,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -33778,7 +33778,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -33787,10 +33787,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -33825,7 +33825,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -33834,10 +33834,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -33955,7 +33955,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -33964,10 +33964,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -34041,7 +34041,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -34050,10 +34050,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -34087,7 +34087,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -34096,10 +34096,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -34175,7 +34175,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -34184,10 +34184,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -34220,7 +34220,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -34229,10 +34229,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -34309,7 +34309,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -34318,10 +34318,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -34445,7 +34445,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -34454,10 +34454,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -34538,7 +34538,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -34547,10 +34547,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -34716,7 +34716,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -34725,10 +34725,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -34804,7 +34804,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -34813,10 +34813,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -35086,7 +35086,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -35095,10 +35095,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -35359,7 +35359,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -35368,10 +35368,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -35403,7 +35403,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -35412,10 +35412,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -35646,7 +35646,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -35655,10 +35655,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -35691,7 +35691,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -35700,10 +35700,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -35740,7 +35740,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -35749,10 +35749,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -35922,7 +35922,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -35931,10 +35931,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -35965,7 +35965,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -35974,10 +35974,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -36008,7 +36008,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": 15,
      "ask": ""
     }
    ],
@@ -36017,10 +36017,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 15
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 15,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -36030,7 +36030,7 @@
    "stars": 3,
    "bookPage": 506,
    "tag": "변호사 ’15",
-   "pointsGuessed": true
+   "pointsGuessed": false
   },
   {
    "id": "민사법_박승수_184_사례",
@@ -36051,7 +36051,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -36060,10 +36060,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -36140,7 +36140,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -36149,10 +36149,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -36232,7 +36232,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -36241,10 +36241,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -36275,7 +36275,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -36284,10 +36284,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -36378,7 +36378,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -36387,10 +36387,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -36425,7 +36425,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -36434,10 +36434,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -36874,7 +36874,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -36883,10 +36883,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -36923,7 +36923,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -36932,10 +36932,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -37027,7 +37027,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -37036,10 +37036,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -37115,7 +37115,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -37124,10 +37124,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -37251,7 +37251,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -37260,10 +37260,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -37386,7 +37386,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -37395,10 +37395,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -37431,7 +37431,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -37440,10 +37440,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -37684,7 +37684,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -37693,10 +37693,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -37879,7 +37879,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -37888,10 +37888,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -37970,7 +37970,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -37979,10 +37979,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -38058,7 +38058,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -38067,10 +38067,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -38103,7 +38103,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -38112,10 +38112,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -38521,7 +38521,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -38530,10 +38530,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -38744,7 +38744,7 @@
    "stars": 3,
    "bookPage": 677,
    "tag": null,
-   "pointsGuessed": true
+   "pointsGuessed": false
   },
   {
    "id": "민사법_박승수_240_사례",
@@ -39129,7 +39129,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -39138,10 +39138,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -39172,7 +39172,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -39181,10 +39181,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -39545,7 +39545,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -39554,10 +39554,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -39701,7 +39701,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -39710,10 +39710,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -39907,7 +39907,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -39916,10 +39916,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -39953,7 +39953,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -39962,10 +39962,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -39999,7 +39999,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -40008,10 +40008,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -40043,7 +40043,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -40052,10 +40052,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -40090,7 +40090,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -40099,10 +40099,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -40134,7 +40134,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -40143,10 +40143,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -40177,7 +40177,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -40186,10 +40186,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -40221,7 +40221,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -40230,10 +40230,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -40267,7 +40267,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -40276,10 +40276,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -40399,7 +40399,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -40408,10 +40408,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -40440,7 +40440,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -40449,10 +40449,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -40485,7 +40485,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -40494,10 +40494,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -40629,7 +40629,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -40638,10 +40638,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -40721,7 +40721,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": 10,
      "ask": ""
     }
    ],
@@ -40730,10 +40730,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 10
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 10,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -40743,7 +40743,7 @@
    "stars": 3,
    "bookPage": 789,
    "tag": null,
-   "pointsGuessed": true
+   "pointsGuessed": false
   },
   {
    "id": "민사법_박승수_281_사례",
@@ -40901,7 +40901,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -40910,10 +40910,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
@@ -40946,7 +40946,7 @@
    "questions": [
     {
      "no": 1,
-     "points": 20,
+     "points": null,
      "ask": ""
     }
    ],
@@ -40955,10 +40955,10 @@
      "key": "문1",
      "label": "문1",
      "count": 1,
-     "points": 20
+     "points": 0
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 0,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],

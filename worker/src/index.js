@@ -93,7 +93,10 @@ const SYSTEM = `당신은 대한민국 변호사시험 사례형 채점위원이
 function buildPrompt(exam, group, answer) {
   const parts = [];
   parts.push(`# 시험\n${exam.label}`);
-  parts.push(`# 채점할 문항\n${group.label} (배점 ${group.points}점)`);
+  // 배점이 없는 문항이 있다. 창작문제 사례집 중에는 책이 배점을 매기지 않은 것이
+  // 많은데, 없는 배점을 `0점`이라고 알려주면 채점이 엉뚱해진다 — 아예 빼고 보낸다.
+  parts.push(`# 채점할 문항\n${group.label}` +
+    (group.points > 0 ? ` (배점 ${group.points}점)` : ''));
 
   if (group.questions?.length) {
     const qs = group.questions

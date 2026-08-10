@@ -121,6 +121,45 @@ def trim_head(lines):
     return lines[i:] if i < len(lines) else lines
 
 
+def order_outline(rows, lo=45, hi=480):
+    """답안 개요(사례풀이구조 표)를 **단별로** 읽는 순서로 되돌린다.
+
+    이 표는 `요건 | 항변 | 소결` 3단이라 y순으로 읽으면 단이 가로로 섞여
+    문장이 통째로 뒤엉킨다. 그렇다고 x좌표를 고정 경계로 쓸 수는 없다 —
+    표 안의 들여쓰기(①·㉠·(ㄱ))가 겹쳐서 사례마다 경계가 다르다.
+
+    PDF가 스캔본이라 표 선이 벡터로 없다(`get_drawings()`가 비어 있다).
+    그래서 **글자가 한 자도 없는 세로 틈**을 단 경계로 삼는다.
+    경계가 안 잡히거나 엉뚱한 자리면 **손대지 않는다** — 잘못 자르면 지금보다 나쁘다.
+    """
+    if len(rows) < 6:
+        return rows
+    wide = (hi - lo) * 0.55
+    inner = [r for r in rows if r["x1"] - r["x0"] <= wide]   # 표 머리글은 가로로 걸친다
+    if len(inner) < 6:
+        return rows
+    occ = [False] * (hi - lo + 1)
+    for r in inner:
+        for x in range(max(lo, int(r["x0"])), min(hi, int(r["x1"])) + 1):
+            occ[x - lo] = True
+    cuts, s = [], None
+    for i, v in enumerate(occ + [True]):
+        if not v and s is None:
+            s = i
+        elif v and s is not None:
+            mid = (s + i) // 2 + lo
+            if i - s >= 5 and 180 <= mid <= 440:
+                cuts.append(mid)
+            s = None
+    if not 1 <= len(cuts) <= 2:
+        return rows
+    bands = [lo] + cuts + [hi + 1]
+    out = []
+    for a, b in zip(bands, bands[1:]):
+        out += [r for r in rows if a <= r["x0"] < b]
+    return out if len(out) == len(rows) else rows
+
+
 def split_columns(lines):
     """본문 / 여백 메모로 가른다."""
     body = [l for l in lines if l["x0"] < MARGIN_X]
@@ -228,7 +267,7 @@ def extract():
             # 재조립(reflow)은 사전이 있어야 하고 사전은 본문 전체가 있어야 만들 수 있어서,
             # 여기서는 줄과 wrap 표시를 그대로 담아 두고 마지막에 한꺼번에 잇는다.
             "_problem": _rows(trim_head(clean(pages[0]["lines"][1:opening])), r["no"]),
-            "_outline": _rows(clean(pages[0]["lines"][opening:ans0]), r["no"]),
+            "_outline": _rows(order_outline(clean(pages[0]["lines"][opening:ans0])), r["no"]),
             "_answer": _rows(clean(pages[0]["lines"][ans0:]) +
                              [l for pg in pages[1:] for l in clean(pg["lines"])], r["no"]),
             "notes": [n for n in notes if not parkss_body_fixes.is_banner_noise(n)],

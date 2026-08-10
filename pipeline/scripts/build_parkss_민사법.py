@@ -26,7 +26,6 @@ AUTHOR = "박승수"
 BOOK_KEY = "박승수 민법 기본사례"
 PREFIX = "민사법_박승수_"
 UID = "me"                       # ma/mb/mc/md는 이미 쓰고 있다
-DEFAULT_POINTS = 20              # 배점 표시가 없는 123건 — 표시된 163건의 중앙값
 
 MIN_LABEL = 4                    # 짧은 이름은 아무 데나 걸려 쟁점 매칭을 망친다
 MAX_ISSUES = 12
@@ -88,14 +87,23 @@ def issue_matcher():
 
 
 def questions_of(c):
-    """배점 표시로 설문을 나눈다. 표시가 없으면 사례 하나를 설문 하나로 본다."""
+    """배점 표시로 설문을 나눈다. 표시가 없으면 사례 하나를 설문 하나로 본다.
+
+    **없는 배점을 지어내지 않는다.** 이 책은 286개 중 115개 사례에 배점을 아예
+    매기지 않았다(`…서술하시오.1)`로 끝난다). 지면으로 확인한 사실이다.
+    그런 사례는 `points=None`으로 두면 앱도 채점기도 배점을 표시하지 않는다.
+    지문에 없더라도 답안·개요 소제목에 배점이 흩어져 있으면 그 합이 사례의 배점이다.
+    """
     found = PTS.findall(c["problemText"])
     if len(found) >= 2:
         return [{"no": i, "points": int(v), "ask": ""}
                 for i, v in enumerate(found, 1)], False
     if len(found) == 1:
         return [{"no": 1, "points": int(found[0]), "ask": ""}], False
-    return [{"no": 1, "points": DEFAULT_POINTS, "ask": ""}], True
+    spread = PTS.findall(c["answerText"]) or PTS.findall(c["outlineText"])
+    if spread:
+        return [{"no": 1, "points": sum(int(v) for v in spread), "ask": ""}], False
+    return [{"no": 1, "points": None, "ask": ""}], True
 
 
 def fact_summary(problem):
@@ -105,12 +113,24 @@ def fact_summary(problem):
 
 
 def answer_text(c):
-    """모범답안 + 답안 개요 + 여백 메모. 셋 다 채점에 쓸모가 있어 표지만 달아 붙인다."""
+    """모범답안 + 답안 개요 + 여백 메모. 셋 다 값어치가 있어 표지만 달아 붙인다.
+
+    **개요는 표다.** 책이 `요건 | 항변 | 소결` 3단으로 짜 놓은 사례풀이구조인데,
+    스캔본이라 표 선이 벡터로 없어(`get_drawings()`가 비어 있다) 단 경계를
+    글자 사이 빈 틈으로 짐작할 수밖에 없다. 113건은 단별로 되돌렸지만 나머지는
+    단이 섞인 채로 남는다 — 잘못 자르면 지금보다 나빠서 손대지 않았다.
+    본답안과 낱말이 절반만 겹쳐(중앙값 49%) 버릴 수도 없다. 그래서 **섞일 수
+    있다고 적어 둔다** — 읽는 사람이 알고 보면 표라는 걸 알아볼 수 있다.
+
+    여백 메모는 저자가 오른쪽 여백에 단 암기 포인트다("판례의 입장 숙지할 것!!").
+    본답안과 31%만 겹치는 고유한 내용이라 그대로 싣는다.
+    """
     t = c["answerText"]
     if c["outlineText"]:
-        t += "\n\n─── 답안 개요 ───\n" + c["outlineText"]
+        t += ("\n\n─── 답안 개요 (사례풀이구조 표 — 단이 섞여 보일 수 있음) ───\n"
+              + c["outlineText"])
     if c["notes"]:
-        t += "\n\n─── 여백 메모 ───\n" + "\n".join(c["notes"])
+        t += "\n\n─── 여백 메모 (저자의 암기 포인트) ───\n" + "\n".join(c["notes"])
     return t
 
 
@@ -135,8 +155,8 @@ def build():
 
         qs, guessed = questions_of(c)
         groups = [{"key": f"문{q['no']}", "label": f"문{q['no']}",
-                   "questions": [q], "points": q["points"]} for q in qs]
-        total = sum(q["points"] for q in qs)
+                   "questions": [q], "points": q["points"] or 0} for q in qs]
+        total = sum(q["points"] or 0 for q in qs)
         src = SRC.search(c["title"] + " " + c["rawHeader"])
         label = f"박승수 {int(no)} · {title}"
 
@@ -235,7 +255,7 @@ if __name__ == "__main__":
     print(f"박승수 기본사례 {len(ex)}건 반영 → 민사법 시험 총 {idx['meta']['examCount']}건")
     print("  편별: " + " · ".join(f"{k} {v}" for k, v in Counter(e["part"] for e in ex).items()))
     print(f"  설문 {sum(len(e['questions']) for e in ex)}개 "
-          f"(배점 추정 {sum(1 for e in ex if e['pointsGuessed'])}건)")
+          f"(책에 배점이 없는 사례 {sum(1 for e in ex if e['pointsGuessed'])}건 — 표시 안 함)")
     print(f"  쟁점 매칭 {sum(len(e['issueIds']) for e in ex)}건 "
           f"(사례당 평균 {sum(len(e['issueIds']) for e in ex)/len(ex):.1f})")
     noiss = [e["id"] for e in ex if not e["issueIds"]]
