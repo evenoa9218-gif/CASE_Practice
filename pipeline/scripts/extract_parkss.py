@@ -83,7 +83,11 @@ def page_lines(page):
         for r in rows:
             r["wrap"] = any(abs(r["x1"] - e) <= WRAP_SLACK for e in right_edges)
         out += rows
-    return sorted(out, key=lambda l: (round(l["y"] / 4), l["x0"]))
+    # y를 4pt로 뭉뚱그리면 **줄 순서가 뒤집힌다.** 3pt쯤 어긋난 이웃 두 줄이 같은
+    # 칸에 들어간 뒤 x0로 정렬돼 앞뒤가 바뀌는 자리가 있었다(사례285 지문).
+    # 1pt로 재도 같은 행의 여러 단은 기준선이 정확히 같아 함께 묶인다 — 실제로
+    # 한 칸에 두 줄 이상 들어가는 자리는 4,334곳 중 125곳(3%)뿐이고 전부 다단이다.
+    return sorted(out, key=lambda l: (round(l["y"]), l["x0"]))
 
 
 def strip_footer(lines):
@@ -108,7 +112,11 @@ def trim_head(lines):
     안 되는 줄이 앞에 붙어 있으면 본문이 아니다. 뒤쪽은 건드리지 않는다.
     """
     i = 0
-    while i < len(lines) and len(re.findall(r"[가-힣]", lines[i]["text"])) < 5:
+    while i < len(lines) and (
+            len(re.findall(r"[가-힣]", lines[i]["text"])) < 5
+            # 오른쪽에서 시작하는 짧은 줄도 본문이 아니다 — 지문 옆에 붙은
+            # 주석 상자다(`丁!사인증여계약임`). 지문은 그렇게 들여쓰지 않는다.
+            or (lines[i]["x0"] > 300 and len(lines[i]["text"]) < 30)):
         i += 1
     return lines[i:] if i < len(lines) else lines
 
