@@ -141,6 +141,19 @@ function buildPrompt(exam, group, answer) {
   return parts.join('\n\n');
 }
 
+/**
+ * Anthropic으로 나가는 요청의 **출구 지역**을 고정하기 위한 통로.
+ *
+ * 상태를 담지 않는다 — Durable Object를 쓰는 이유는 오로지 `locationHint`로
+ * 실행 지역을 지정할 수 있기 때문이다. 들어온 요청을 그대로 흘려보내면
+ * 이 DO가 있는 지역(미국 동부)에서 나간다.
+ */
+export class UsRelay {
+  async fetch(request) {
+    return fetch(request);
+  }
+}
+
 export default {
   async fetch(request, env, ctx) {
     const origin = request.headers.get('Origin') || '';
@@ -181,7 +194,20 @@ export default {
     const group = (exam.groups || []).find((x) => x.key === groupKey);
     if (!group) return bad(400, '알 수 없는 문항', origin);
 
-    const client = new Anthropic({ apiKey: env.ANTHROPIC_API_KEY });
+    // Anthropic 호출은 반드시 북미에서 나가게 한다.
+    //
+    // Worker는 요청자와 가까운 PoP에서 실행되는데, 한국에서 부르면 홍콩(HKG)에
+    // 걸리는 일이 잦다. Anthropic은 미지원 지역의 요청을 **키를 확인하기도 전에**
+    // 403 forbidden으로 끊는다. 그래서 어제 되던 채점이 오늘 안 되고 재시도하면
+    // 갑자기 되는 일이 반복됐다. `[placement] mode = "smart"`로는 안 잡혔다.
+    //
+    // Durable Object는 만들 때 지역을 지정할 수 있다. 그 안에서 fetch 하면
+    // 그 지역에서 나간다. 그래서 DO를 미국 동부에 하나 두고 통로로만 쓴다.
+    const relay = env.US.get(env.US.idFromName('anthropic'), { locationHint: 'enam' });
+    const client = new Anthropic({
+      apiKey: env.ANTHROPIC_API_KEY,
+      fetch: (input, init) => relay.fetch(new Request(input, init)),
+    });
 
     // 채점은 생각이 길어 응답까지 수십 초가 걸린다. 스트리밍으로 보내
     // 사용자가 진행 상황을 보게 하고, 연결이 끊기는 것도 막는다.

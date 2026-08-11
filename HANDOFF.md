@@ -426,11 +426,20 @@ Cloudflare Workers는 요청을 가까운 PoP에서 실행하는데, 한국에�
 가는 일이 있다. 그래서 증상이 **간헐적**이다 — 어제 되던 것이 오늘 안 되고, 재시도하면
 갑자기 된다. 이것 때문에 지난번에는 "일시적 장애"로 넘겨 짚었다.
 
-조치: `wrangler.toml`에 `[placement] mode = "smart"`를 넣어 Worker를 백엔드 가까이
-배치하게 했고, 403일 때 오류 메시지에 실행 PoP를 함께 보여주도록 했다
-(`request.cf.colo`). **다음에 또 403이 뜨면 크레딧을 의심하기 전에 그 지역 코드부터 볼 것.**
+**해결: Durable Object를 통로로 써서 출구 지역을 미국 동부로 고정했다.**
 
-여전히 막히면 남은 선택지는 AI Gateway 경유 또는 프록시를 다른 호스팅으로 옮기는 것이다.
+`[placement] mode = "smart"`로는 안 잡혔다 — 넣고 배포한 뒤에도 계속 HKG에서 나갔다.
+Durable Object는 만들 때 `locationHint`로 지역을 지정할 수 있고, **그 안에서 fetch 하면
+그 지역에서 나간다.** 그래서 상태를 담지 않는 DO(`UsRelay`)를 `enam`(미국 동부)에 하나
+두고 Anthropic SDK의 `fetch` 옵션이 그리로 가게 했다.
+
+```js
+const relay = env.US.get(env.US.idFromName('anthropic'), { locationHint: 'enam' });
+new Anthropic({ apiKey, fetch: (input, init) => relay.fetch(new Request(input, init)) });
+```
+
+곁들여 403일 때 오류 메시지에 실행 PoP를 함께 보여준다(`request.cf.colo`).
+**또 403이 뜨면 크레딧을 의심하기 전에 그 지역 코드부터 볼 것.**
 
 ---
 
