@@ -480,9 +480,10 @@
    "label": "관습법상법정지상권",
    "path": [
     "민사법",
-    "상법"
+    "민법"
    ],
-   "examCount": 11
+   "examCount": 11,
+   "pathSource": "목차+전용사례집"
   },
   {
    "id": "CIV-0046",
@@ -1002,9 +1003,10 @@
    "label": "명의개서",
    "path": [
     "민사법",
-    "민법"
+    "상법"
    ],
-   "examCount": 5
+   "examCount": 5,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CIV-0278",
@@ -1137,9 +1139,10 @@
    "label": "공시송달",
    "path": [
     "민사법",
-    "민법"
+    "민사소송법"
    ],
-   "examCount": 4
+   "examCount": 4,
+   "pathSource": "목차+전용사례집"
   },
   {
    "id": "CIV-0076",
@@ -1344,9 +1347,10 @@
    "label": "경업금지의무",
    "path": [
     "민사법",
-    "민법"
+    "상법"
    ],
-   "examCount": 3
+   "examCount": 3,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CIV-0113",
@@ -1506,18 +1510,20 @@
    "label": "이사의제3자에대한책임",
    "path": [
     "민사법",
-    "민법"
+    "상법"
    ],
-   "examCount": 2
+   "examCount": 2,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CIV-0096",
    "label": "신주발행무효",
    "path": [
     "민사법",
-    "민법"
+    "상법"
    ],
-   "examCount": 2
+   "examCount": 2,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CIV-0412",
@@ -1686,18 +1692,20 @@
    "label": "전속적관할합의",
    "path": [
     "민사법",
-    "민법"
+    "민사소송법"
    ],
-   "examCount": 2
+   "examCount": 2,
+   "pathSource": "목차+전용사례집"
   },
   {
    "id": "CIV-0119",
    "label": "참가적효력",
    "path": [
     "민사법",
-    "민법"
+    "민사소송법"
    ],
-   "examCount": 2
+   "examCount": 2,
+   "pathSource": "목차+전용사례집"
   },
   {
    "id": "CIV-0097",
@@ -2271,9 +2279,10 @@
    "label": "소송대리권",
    "path": [
     "민사법",
-    "민법"
+    "민사소송법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차+전용사례집"
   },
   {
    "id": "CIV-0262",
@@ -2289,9 +2298,10 @@
    "label": "신주인수권부사채",
    "path": [
     "민사법",
-    "민법"
+    "상법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CIV-0259",
@@ -2307,9 +2317,10 @@
    "label": "이사의보수",
    "path": [
     "민사법",
-    "민법"
+    "상법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CIV-0442",
@@ -2379,9 +2390,10 @@
    "label": "대표소송",
    "path": [
     "민사법",
-    "민법"
+    "상법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CIV-0189",
@@ -2460,9 +2472,10 @@
    "label": "신주인수권증서",
    "path": [
     "민사법",
-    "민법"
+    "상법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CIV-0287",
@@ -2649,9 +2662,10 @@
    "label": "신주발행무효의소",
    "path": [
     "민사법",
-    "민법"
+    "상법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CIV-0286",
@@ -2712,9 +2726,10 @@
    "label": "관할합의",
    "path": [
     "민사법",
-    "민법"
+    "민사소송법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차+전용사례집"
   },
   {
    "id": "CIV-0180",
@@ -2955,9 +2970,10 @@
    "label": "신주인수권",
    "path": [
     "민사법",
-    "민법"
+    "상법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CIV-0298",
@@ -3045,9 +3061,10 @@
    "label": "채권자보호절차",
    "path": [
     "민사법",
-    "민법"
+    "상법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CIV-0158",
@@ -3117,9 +3134,10 @@
    "label": "파기환송",
    "path": [
     "민사법",
-    "민법"
+    "민사소송법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CIV-0169",
@@ -3180,27 +3198,30 @@
    "label": "위법배당",
    "path": [
     "민사법",
-    "민법"
+    "상법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CIV-0386",
    "label": "제소전화해조서",
    "path": [
     "민사법",
-    "민법"
+    "민사소송법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차+전용사례집"
   },
   {
    "id": "CIV-0135",
    "label": "결의부존재확인",
    "path": [
     "민사법",
-    "민법"
+    "상법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CIV-0142",
@@ -3243,9 +3264,10 @@
    "label": "전환사채발행무효",
    "path": [
     "민사법",
-    "민법"
+    "상법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CIV-0382",
@@ -3504,9 +3526,10 @@
    "label": "승계참가",
    "path": [
     "민사법",
-    "민법"
+    "민사소송법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CIV-0334",
@@ -3558,9 +3581,10 @@
    "label": "의결권대리행사",
    "path": [
     "민사법",
-    "민법"
+    "상법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CIV-0368",
@@ -3612,9 +3636,10 @@
    "label": "자기주식취득",
    "path": [
     "민사법",
-    "민법"
+    "상법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차+전용사례집"
   },
   {
    "id": "CIV-0203",
@@ -3666,9 +3691,10 @@
    "label": "이사해임",
    "path": [
     "민사법",
-    "민법"
+    "상법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CIV-0462",
@@ -3684,9 +3710,10 @@
    "label": "회사기회유용금지",
    "path": [
     "민사법",
-    "민법"
+    "상법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CIV-0154",
@@ -3846,9 +3873,10 @@
    "label": "명의대여자의책임",
    "path": [
     "민사법",
-    "민법"
+    "상법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CIV-0357",
@@ -3945,9 +3973,10 @@
    "label": "전환사채발행",
    "path": [
     "민사법",
-    "민법"
+    "상법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CIV-0207",
@@ -3990,9 +4019,10 @@
    "label": "다중대표소송",
    "path": [
     "민사법",
-    "민법"
+    "상법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CIV-0371",
@@ -4233,9 +4263,10 @@
    "label": "변론종결후의승계인",
    "path": [
     "민사법",
-    "민법"
+    "민사소송법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CIV-0242",
@@ -4296,9 +4327,10 @@
    "label": "중복제소",
    "path": [
     "민사법",
-    "민법"
+    "민사소송법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차+전용사례집"
   },
   {
    "id": "CIV-0338",
@@ -4314,9 +4346,10 @@
    "label": "중간배당",
    "path": [
     "민사법",
-    "민법"
+    "상법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CIV-0480",

@@ -147,9 +147,10 @@
    "label": "공모관계이탈",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 4
+   "examCount": 4,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0017",
@@ -237,9 +238,10 @@
    "label": "개괄적고의",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 3
+   "examCount": 3,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0027",
@@ -300,18 +302,20 @@
    "label": "무고죄",
    "path": [
     "형사법",
-    "형사법일반"
+    "형사소송법"
    ],
-   "examCount": 3
+   "examCount": 3,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0034",
    "label": "방법의착오",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 3
+   "examCount": 3,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0035",
@@ -327,9 +331,10 @@
    "label": "부작위범",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 3
+   "examCount": 3,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0037",
@@ -345,9 +350,10 @@
    "label": "위증죄",
    "path": [
     "형사법",
-    "형사법일반"
+    "형사소송법"
    ],
-   "examCount": 3
+   "examCount": 3,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0039",
@@ -435,9 +441,10 @@
    "label": "공동피고인의증인적격",
    "path": [
     "형사법",
-    "형사법일반"
+    "형사소송법"
    ],
-   "examCount": 2
+   "examCount": 2,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0049",
@@ -462,9 +469,10 @@
    "label": "공범과신분",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 2
+   "examCount": 2,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0052",
@@ -498,27 +506,30 @@
    "label": "과잉방위",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 2
+   "examCount": 2,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0056",
    "label": "교사의착오",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 2
+   "examCount": 2,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0057",
    "label": "구체적사실의착오",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 2
+   "examCount": 2,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0058",
@@ -561,9 +572,10 @@
    "label": "부진정결과적가중범",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 2
+   "examCount": 2,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0063",
@@ -615,9 +627,10 @@
    "label": "상습범",
    "path": [
     "형사법",
-    "형사법일반"
+    "형사소송법"
    ],
-   "examCount": 2
+   "examCount": 2,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0069",
@@ -642,18 +655,20 @@
    "label": "신분범",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 2
+   "examCount": 2,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0072",
    "label": "실질적진정성립",
    "path": [
     "형사법",
-    "형사법일반"
+    "형사소송법"
    ],
-   "examCount": 2
+   "examCount": 2,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0073",
@@ -669,18 +684,20 @@
    "label": "오상방위",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 2
+   "examCount": 2,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0075",
    "label": "우연방위",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 2
+   "examCount": 2,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0076",
@@ -732,9 +749,10 @@
    "label": "자백의임의성",
    "path": [
     "형사법",
-    "형사법일반"
+    "형사소송법"
    ],
-   "examCount": 2
+   "examCount": 2,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0082",
@@ -786,9 +804,10 @@
    "label": "증거개시",
    "path": [
     "형사법",
-    "형사법일반"
+    "형사소송법"
    ],
-   "examCount": 2
+   "examCount": 2,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0088",
@@ -858,9 +877,10 @@
    "label": "간접교사",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0096",
@@ -1002,18 +1022,20 @@
    "label": "강도치상죄",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0112",
    "label": "강제채뇨의적법성",
    "path": [
     "형사법",
-    "형사법일반"
+    "형사소송법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0113",
@@ -1038,9 +1060,10 @@
    "label": "강제채혈의적법성",
    "path": [
     "형사법",
-    "형사법일반"
+    "형사소송법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0116",
@@ -1065,9 +1088,10 @@
    "label": "객체의착오",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0119",
@@ -1092,9 +1116,10 @@
    "label": "검증조서",
    "path": [
     "형사법",
-    "형사법일반"
+    "형사소송법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0122",
@@ -1110,18 +1135,20 @@
    "label": "결과적가중범의미수",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0124",
    "label": "경합범",
    "path": [
     "형사법",
-    "형사법일반"
+    "형사소송법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0125",
@@ -1218,18 +1245,20 @@
    "label": "공무집행방해",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0136",
    "label": "공무집행방해치상",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0137",
@@ -1272,9 +1301,10 @@
    "label": "공범인공동피고인의증인적격",
    "path": [
     "형사법",
-    "형사법일반"
+    "형사소송법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0142",
@@ -2082,18 +2112,20 @@
    "label": "모해위증교사",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0232",
    "label": "몰수·추징",
    "path": [
     "형사법",
-    "형사법일반"
+    "형사소송법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0233",
@@ -2136,9 +2168,10 @@
    "label": "미필적고의와인식있는과실의구별",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0238",
@@ -2271,9 +2304,10 @@
    "label": "범행재연",
    "path": [
     "형사법",
-    "형사법일반"
+    "형사소송법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0253",
@@ -2406,9 +2440,10 @@
    "label": "병합심리",
    "path": [
     "형사법",
-    "형사법일반"
+    "형사소송법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0268",
@@ -2433,18 +2468,20 @@
    "label": "보증인적지위",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0271",
    "label": "보증인지위",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0272",
@@ -2505,9 +2542,10 @@
    "label": "부작위에의한방조",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0279",
@@ -2541,9 +2579,10 @@
    "label": "부진정부작위범",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0283",
@@ -2559,18 +2598,20 @@
    "label": "부진정신분범",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0285",
    "label": "불가벌적사후행위",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0286",
@@ -2604,18 +2645,20 @@
    "label": "불능범",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0290",
    "label": "불법영득의사",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0291",
@@ -2631,18 +2674,20 @@
    "label": "불심검문",
    "path": [
     "형사법",
-    "형사법일반"
+    "형사소송법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0293",
    "label": "불심검문의적법성",
    "path": [
     "형사법",
-    "형사법일반"
+    "형사소송법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0294",
@@ -2757,9 +2802,10 @@
    "label": "사문서변조",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0307",
@@ -2802,9 +2848,10 @@
    "label": "사실의착오",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0312",
@@ -2829,9 +2876,10 @@
    "label": "사자의점유",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0315",
@@ -2847,9 +2895,10 @@
    "label": "사전자기록위작죄",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0317",
@@ -3018,9 +3067,10 @@
    "label": "신뢰의원칙",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0336",
@@ -3036,18 +3086,20 @@
    "label": "신용카드부정사용",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0338",
    "label": "실행의착수",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0339",
@@ -3207,9 +3259,10 @@
    "label": "양벌규정",
    "path": [
     "형사법",
-    "형사법일반"
+    "형사소송법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0357",
@@ -3450,9 +3503,10 @@
    "label": "위험성판단",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0384",
@@ -3495,9 +3549,10 @@
    "label": "이익변경금지원칙",
    "path": [
     "형사법",
-    "형사법일반"
+    "형사소송법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0389",
@@ -3540,9 +3595,10 @@
    "label": "인과관계와객관적귀속",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0394",
@@ -3810,9 +3866,10 @@
    "label": "전문진술",
    "path": [
     "형사법",
-    "형사법일반"
+    "형사소송법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0424",
@@ -3945,9 +4002,10 @@
    "label": "제314조",
    "path": [
     "형사법",
-    "형사법일반"
+    "형사소송법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0439",
@@ -4008,9 +4066,10 @@
    "label": "주거침입죄",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0446",
@@ -4044,9 +4103,10 @@
    "label": "준항고",
    "path": [
     "형사법",
-    "형사법일반"
+    "형사소송법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0450",
@@ -4089,18 +4149,20 @@
    "label": "증거동의",
    "path": [
     "형사법",
-    "형사법일반"
+    "형사소송법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0455",
    "label": "증거동의의철회",
    "path": [
     "형사법",
-    "형사법일반"
+    "형사소송법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0456",
@@ -4116,9 +4178,10 @@
    "label": "증거은닉죄",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0458",
@@ -4206,9 +4269,10 @@
    "label": "증인적격",
    "path": [
     "형사법",
-    "형사법일반"
+    "형사소송법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0468",
@@ -4224,9 +4288,10 @@
    "label": "직무유기죄",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "CRI-0470",
@@ -4242,9 +4307,10 @@
    "label": "직무집행의적법성",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0472",
@@ -4413,9 +4479,10 @@
    "label": "카메라등이용촬영죄",
    "path": [
     "형사법",
-    "형사법일반"
+    "형사소송법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0491",
@@ -4566,9 +4633,10 @@
    "label": "특허법위반죄",
    "path": [
     "형사법",
-    "형사법일반"
+    "형사소송법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0508",
@@ -4773,9 +4841,10 @@
    "label": "허위공문서작성죄",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0531",
@@ -4827,9 +4896,10 @@
    "label": "현주건조물방화치상죄",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   },
   {
    "id": "CRI-0537",
@@ -4953,9 +5023,10 @@
    "label": "효과없는교사",
    "path": [
     "형사법",
-    "형사법일반"
+    "형법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "전용사례집"
   }
  ],
  "byIssue": {

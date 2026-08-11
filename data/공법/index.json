@@ -165,9 +165,10 @@
    "label": "법률유보원칙",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 5
+   "examCount": 5,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0019",
@@ -264,9 +265,10 @@
    "label": "청구인능력",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 4
+   "examCount": 4,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0030",
@@ -309,9 +311,10 @@
    "label": "영장주의",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 3
+   "examCount": 3,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0035",
@@ -336,9 +339,10 @@
    "label": "이중처벌금지원칙",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 3
+   "examCount": 3,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0038",
@@ -363,9 +367,10 @@
    "label": "피청구인적격",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 3
+   "examCount": 3,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0041",
@@ -408,9 +413,10 @@
    "label": "공권력행사성",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 2
+   "examCount": 2,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0046",
@@ -471,9 +477,10 @@
    "label": "법률안심의표결권",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 2
+   "examCount": 2,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0053",
@@ -498,9 +505,10 @@
    "label": "변호인의조력을받을권리",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 2
+   "examCount": 2,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0056",
@@ -534,18 +542,20 @@
    "label": "부당결부금지원칙",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 2
+   "examCount": 2,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0060",
    "label": "부당이득반환청구",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 2
+   "examCount": 2,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0061",
@@ -561,27 +571,30 @@
    "label": "의회유보원칙",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 2
+   "examCount": 2,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0063",
    "label": "일반적행동자유권",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 2
+   "examCount": 2,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0064",
    "label": "자치사무",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 2
+   "examCount": 2,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0065",
@@ -597,9 +610,10 @@
    "label": "재판청구권",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 2
+   "examCount": 2,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0067",
@@ -624,18 +638,20 @@
    "label": "직업수행의자유",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 2
+   "examCount": 2,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0070",
    "label": "진술거부권",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 2
+   "examCount": 2,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0071",
@@ -687,9 +703,10 @@
    "label": "가구제",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0077",
@@ -714,9 +731,10 @@
    "label": "간접강제",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0080",
@@ -750,9 +768,10 @@
    "label": "개인정보자기결정권",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0084",
@@ -822,9 +841,10 @@
    "label": "검열금지원칙",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0092",
@@ -849,18 +869,20 @@
    "label": "경업자소송",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0095",
    "label": "경원자관계",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0096",
@@ -885,18 +907,20 @@
    "label": "계약의자유",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0099",
    "label": "계획변경청구권",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0100",
@@ -930,18 +954,20 @@
    "label": "공권력의행사",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0104",
    "label": "공무담임권",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0105",
@@ -1020,9 +1046,10 @@
    "label": "과징금",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0114",
@@ -1119,9 +1146,10 @@
    "label": "국가사무",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0125",
@@ -1281,9 +1309,10 @@
    "label": "권력적사실행위",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0143",
@@ -1398,18 +1427,20 @@
    "label": "근로의권리",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0156",
    "label": "기관위임사무",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0157",
@@ -1470,18 +1501,20 @@
    "label": "긴급재정경제명령",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0164",
    "label": "내부위임",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0165",
@@ -1605,9 +1638,10 @@
    "label": "동성혼의자유",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0179",
@@ -1650,9 +1684,10 @@
    "label": "면책특권",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0184",
@@ -1686,9 +1721,10 @@
    "label": "무효와취소의구별",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0188",
@@ -1749,9 +1785,10 @@
    "label": "법률안거부권",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0195",
@@ -1785,9 +1822,10 @@
    "label": "법적관련성",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0199",
@@ -1848,18 +1886,20 @@
    "label": "보도의자유",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0206",
    "label": "보상금증감청구소송",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0207",
@@ -1875,9 +1915,10 @@
    "label": "보완요구",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0209",
@@ -1929,9 +1970,10 @@
    "label": "부당이득반환청구소송",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0215",
@@ -2010,9 +2052,10 @@
    "label": "비밀선거원칙",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0224",
@@ -2028,18 +2071,20 @@
    "label": "사생활의비밀",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0226",
    "label": "사생활의비밀과자유",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0227",
@@ -2073,9 +2118,10 @@
    "label": "사전검열금지원칙",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0231",
@@ -2100,9 +2146,10 @@
    "label": "사정판결",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0234",
@@ -2154,9 +2201,10 @@
    "label": "선거공영제",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0240",
@@ -2172,9 +2220,10 @@
    "label": "선결문제",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0242",
@@ -2199,9 +2248,10 @@
    "label": "시정명령",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0245",
@@ -2253,27 +2303,30 @@
    "label": "심의·표결권",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0251",
    "label": "알권리",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0252",
    "label": "양심의자유",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0253",
@@ -2307,9 +2360,10 @@
    "label": "연좌제금지",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0257",
@@ -2343,9 +2397,10 @@
    "label": "예방적금지소송",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0261",
@@ -2388,9 +2443,10 @@
    "label": "위반사실공표",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0266",
@@ -2433,9 +2489,10 @@
    "label": "의견제출",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0271",
@@ -2460,9 +2517,10 @@
    "label": "의무이행심판",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0274",
@@ -2478,9 +2536,10 @@
    "label": "이유제시",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0276",
@@ -2559,27 +2618,30 @@
    "label": "인격권",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0285",
    "label": "일부취소재결",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0286",
    "label": "일사부재의원칙",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0287",
@@ -2622,9 +2684,10 @@
    "label": "자유위임원칙",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0292",
@@ -2640,18 +2703,20 @@
    "label": "자치사무와기관위임사무",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0294",
    "label": "자치재정권",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0295",
@@ -2730,9 +2795,10 @@
    "label": "재위임",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0304",
@@ -2748,9 +2814,10 @@
    "label": "재판을받을권리",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0306",
@@ -2955,9 +3022,10 @@
    "label": "종교의자유",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0329",
@@ -2973,9 +3041,10 @@
    "label": "주민감사청구",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0331",
@@ -2991,9 +3060,10 @@
    "label": "주민소송",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0333",
@@ -3099,18 +3169,20 @@
    "label": "직권심리주의",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0345",
    "label": "직위해제",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0346",
@@ -3144,9 +3216,10 @@
    "label": "집회의자유",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0350",
@@ -3189,18 +3262,20 @@
    "label": "책임과형벌의비례원칙",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0355",
    "label": "책임주의원칙",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0356",
@@ -3378,9 +3453,10 @@
    "label": "통신의비밀",
    "path": [
     "공법",
-    "공법일반"
+    "헌법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0376",
@@ -3486,9 +3562,10 @@
    "label": "피고적격",
    "path": [
     "공법",
-    "공법일반"
+    "행정법"
    ],
-   "examCount": 1
+   "examCount": 1,
+   "pathSource": "목차"
   },
   {
    "id": "PUB-0388",
