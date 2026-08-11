@@ -1,0 +1,4738 @@
+{
+ "subject": "국제법",
+ "prefix": "INT",
+ "count": 308,
+ "issues": [
+  {
+   "id": "INT-0001",
+   "label": "GATT내국민대우",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "GATT 내국민대우"
+   ],
+   "examCount": 16,
+   "statutes": [
+    "조약법 제20조",
+    "조약법 제36조",
+    "조약법 제19조",
+    "조약법 제7조",
+    "조약법 제8조"
+   ],
+   "cases": [
+    "2016헌마253"
+   ]
+  },
+  {
+   "id": "INT-0002",
+   "label": "대응조치",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 15,
+   "statutes": [
+    "조약법 제20조",
+    "조약법 제36조",
+    "조약법 제19조"
+   ],
+   "cases": [
+    "2016헌마253"
+   ]
+  },
+  {
+   "id": "INT-0003",
+   "label": "국가책임",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 14,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0004",
+   "label": "위법성조각사유",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 12,
+   "statutes": [
+    "조약법 제46조",
+    "조약법 제45조",
+    "조약법 제38조",
+    "조약법 제35조",
+    "조약법 제36조",
+    "조약법 제37조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0005",
+   "label": "최혜국대우",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [],
+   "examCount": 9,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0006",
+   "label": "강행규범",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 8,
+   "statutes": [
+    "조약법 제20조",
+    "조약법 제36조",
+    "조약법 제19조",
+    "국가책임법 제25조",
+    "조약법 제46조",
+    "조약법 제26조"
+   ],
+   "cases": [
+    "2016헌마253"
+   ]
+  },
+  {
+   "id": "INT-0007",
+   "label": "GATT제20조일반적예외",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "GATT 제20조 일반적 예외"
+   ],
+   "examCount": 7,
+   "statutes": [
+    "조약법 제20조",
+    "조약법 제36조",
+    "조약법 제19조",
+    "국가책임법 제25조",
+    "조약법 제46조",
+    "조약법 제26조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0008",
+   "label": "내국민대우",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [],
+   "examCount": 7,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0009",
+   "label": "불가항력",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 6,
+   "statutes": [
+    "조약법 제45조",
+    "조약법 제38조",
+    "조약법 제46조",
+    "조약법 제35조",
+    "조약법 제36조",
+    "조약법 제37조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0010",
+   "label": "외교적보호",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "외교적 보호"
+   ],
+   "examCount": 6,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0011",
+   "label": "조약법협약",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 6,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0012",
+   "label": "GATT최혜국대우",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "GATT 최혜국대우"
+   ],
+   "examCount": 5,
+   "statutes": [
+    "조약법 제20조",
+    "조약법 제36조",
+    "조약법 제19조",
+    "조약법 제7조",
+    "조약법 제8조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0013",
+   "label": "국내구제완료의원칙",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국내구제완료의 원칙"
+   ],
+   "examCount": 5,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0014",
+   "label": "조약의유보",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 유보"
+   ],
+   "examCount": 5,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0015",
+   "label": "행위의국가귀속",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "행위의 국가귀속"
+   ],
+   "examCount": 5,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0016",
+   "label": "GATT제20조",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "GATT 제20조"
+   ],
+   "examCount": 4,
+   "statutes": [
+    "조약법 제45조",
+    "조약법 제38조",
+    "조약법 제46조",
+    "조약법 제35조",
+    "조약법 제36조",
+    "조약법 제37조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0017",
+   "label": "GATT제20조일반예외",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "GATT 제20조 일반예외"
+   ],
+   "examCount": 4,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0018",
+   "label": "국가책임법(ILC초안)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 4,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0019",
+   "label": "국가책임의성립요건",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국가책임의 성립요건"
+   ],
+   "examCount": 4,
+   "statutes": [
+    "조약법 제25조",
+    "조약법 제7조",
+    "조약법 제8조"
+   ],
+   "cases": [
+    "2016헌마253"
+   ]
+  },
+  {
+   "id": "INT-0020",
+   "label": "국적계속의원칙",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국적계속의 원칙"
+   ],
+   "examCount": 4,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0021",
+   "label": "동종상품",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [],
+   "examCount": 4,
+   "statutes": [
+    "조약법 제7조",
+    "조약법 제8조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0022",
+   "label": "수량제한금지",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "수량제한 금지"
+   ],
+   "examCount": 4,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0023",
+   "label": "유보",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 4,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0024",
+   "label": "해석선언",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 4,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0025",
+   "label": "GATT제11조수량제한금지",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "GATT 제11조 수량제한금지"
+   ],
+   "examCount": 3,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0026",
+   "label": "GATT제3조내국민대우",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "GATT 제3조 내국민대우"
+   ],
+   "examCount": 3,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0027",
+   "label": "긴급피난",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 3,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0028",
+   "label": "대세적의무",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "대세적 의무"
+   ],
+   "examCount": 3,
+   "statutes": [
+    "조약법 제20조",
+    "조약법 제36조",
+    "조약법 제19조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0029",
+   "label": "무력사용금지원칙",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 3,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0030",
+   "label": "비례성",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 3,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0031",
+   "label": "손해배상(원상회복·금전배상·만족)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 3,
+   "statutes": [
+    "조약법 제36조",
+    "조약법 제45조",
+    "조약법 제38조",
+    "조약법 제46조",
+    "조약법 제35조",
+    "조약법 제37조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0032",
+   "label": "전권위임장",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 3,
+   "statutes": [
+    "조약법 제7조",
+    "조약법 제8조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0033",
+   "label": "조약의무효",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 무효"
+   ],
+   "examCount": 3,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0034",
+   "label": "GATT수량제한금지(제11조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "GATT 수량제한금지(제11조)"
+   ],
+   "examCount": 2,
+   "statutes": [
+    "조약법 제25조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0035",
+   "label": "GATT제20조(g)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "GATT 제20조(g)"
+   ],
+   "examCount": 2,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0036",
+   "label": "GATT최혜국대우·내국민대우·수량제한금지",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "GATT 최혜국대우·내국민대우·수량제한금지"
+   ],
+   "examCount": 2,
+   "statutes": [
+    "국가책임법 제25조",
+    "조약법 제46조",
+    "조약법 제26조",
+    "조약법 제27조",
+    "국가책임법 제26조",
+    "국가책임법 제41조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0037",
+   "label": "강행규범위반(제53조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "강행규범 위반(제53조)"
+   ],
+   "examCount": 2,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0038",
+   "label": "국가귀속성",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 2,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0039",
+   "label": "국가책임성립요건",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국가책임 성립요건"
+   ],
+   "examCount": 2,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0040",
+   "label": "국가책임의귀속",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국가책임의 귀속"
+   ],
+   "examCount": 2,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0041",
+   "label": "국가책임초안",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국가책임 초안"
+   ],
+   "examCount": 2,
+   "statutes": [
+    "조약법 제20조",
+    "조약법 제36조",
+    "조약법 제19조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0042",
+   "label": "국가책임초안(ARSIWA)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 2,
+   "statutes": [
+    "조약법 제45조",
+    "조약법 제38조",
+    "조약법 제46조",
+    "조약법 제35조",
+    "조약법 제36조",
+    "조약법 제37조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0043",
+   "label": "국내적구제완료",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국내적 구제완료"
+   ],
+   "examCount": 2,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0044",
+   "label": "기본적인권보호의무",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "기본적 인권 보호의무",
+    "기본적 인권보호의무"
+   ],
+   "examCount": 2,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0045",
+   "label": "발전적해석",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "발전적 해석"
+   ],
+   "examCount": 2,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0046",
+   "label": "상대적·절대적무효사유",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "상대적·절대적 무효사유"
+   ],
+   "examCount": 2,
+   "statutes": [
+    "국가책임법 제25조",
+    "조약법 제46조",
+    "조약법 제26조",
+    "조약법 제27조",
+    "국가책임법 제26조",
+    "국가책임법 제41조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0047",
+   "label": "외교공관불가침",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "외교공관 불가침"
+   ],
+   "examCount": 2,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0048",
+   "label": "외교관계에관한비엔나협약",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 2,
+   "statutes": [
+    "조약법 제25조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0049",
+   "label": "외교적보호권",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "외교적 보호권"
+   ],
+   "examCount": 2,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0050",
+   "label": "월경피해방지의무",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "월경피해 방지의무"
+   ],
+   "examCount": 2,
+   "statutes": [],
+   "cases": [
+    "2016헌마253"
+   ]
+  },
+  {
+   "id": "INT-0051",
+   "label": "유보에대한반대",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "유보에 대한 반대"
+   ],
+   "examCount": 2,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0052",
+   "label": "유보의철회",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "유보의 철회"
+   ],
+   "examCount": 2,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0053",
+   "label": "유보의허용성",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "유보의 허용성"
+   ],
+   "examCount": 2,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0054",
+   "label": "일반예외",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [],
+   "examCount": 2,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0055",
+   "label": "일반예외(GATT제20조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "일반예외(GATT 제20조)"
+   ],
+   "examCount": 2,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0056",
+   "label": "일반적예외(GATT제20조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "일반적 예외(GATT 제20조)"
+   ],
+   "examCount": 2,
+   "statutes": [
+    "조약법 제25조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0057",
+   "label": "조난",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 2,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0058",
+   "label": "조약법협약제20조",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약법협약 제20조"
+   ],
+   "examCount": 2,
+   "statutes": [
+    "조약법 제20조",
+    "조약법 제36조",
+    "조약법 제19조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0059",
+   "label": "조약법협약제30조",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약법협약 제30조"
+   ],
+   "examCount": 2,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0060",
+   "label": "조약의무효사유",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 무효사유"
+   ],
+   "examCount": 2,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0061",
+   "label": "조약의해석(제31조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 해석(제31조)"
+   ],
+   "examCount": 2,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0062",
+   "label": "조약체결권에관한국내법위반(제46조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약 체결권에 관한 국내법 위반(제46조)",
+    "조약체결권에 관한 국내법 위반(제46조)"
+   ],
+   "examCount": 2,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0063",
+   "label": "지시및통제",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "지시 및 통제"
+   ],
+   "examCount": 2,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0064",
+   "label": "필요성(긴급피난)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 2,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0065",
+   "label": "행위의국가귀속성",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "행위의 국가귀속성"
+   ],
+   "examCount": 2,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0066",
+   "label": "ELSI사건",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "ELSI 사건"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0067",
+   "label": "FTA특혜조치",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "FTA 특혜조치"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0068",
+   "label": "GATT내국민대우(제3조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "GATT 내국민대우(제3조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0069",
+   "label": "GATT내국민대우원칙",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "GATT 내국민대우원칙"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0070",
+   "label": "GATT수량제한",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "GATT 수량제한"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0071",
+   "label": "GATT수량제한금지",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "GATT 수량제한금지"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0072",
+   "label": "GATT제1조",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "GATT 제1조"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0073",
+   "label": "GATT제1조최혜국대우",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "GATT 제1조 최혜국대우"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0074",
+   "label": "GATT제20조(b)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "GATT 제20조(b)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0075",
+   "label": "GATT제20조(d)호",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "GATT 제20조(d)호"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0076",
+   "label": "GATT제20조예외",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "GATT 제20조 예외"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0077",
+   "label": "GATT제3조",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "GATT 제3조"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0078",
+   "label": "GATT제3조동종상품",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "GATT 제3조 동종상품"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0079",
+   "label": "GATT최혜국대우·내국민대우",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "GATT 최혜국대우·내국민대우"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0080",
+   "label": "GATT최혜국대우원칙",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "GATT 최혜국대우원칙"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0081",
+   "label": "SPS협정",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0082",
+   "label": "간접손해",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0083",
+   "label": "강박에의한위법성조각(불가항력)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "강박에 의한 위법성조각(불가항력)"
+   ],
+   "examCount": 1,
+   "statutes": [
+    "조약법 제7조",
+    "조약법 제8조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0084",
+   "label": "강박에의한조약무효",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "강박에 의한 조약무효"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0085",
+   "label": "강박에의한조약체결",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "강박에 의한 조약체결"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0086",
+   "label": "강제(Coercion)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0087",
+   "label": "강제(coercion)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [
+    "조약법 제45조",
+    "조약법 제38조",
+    "조약법 제46조",
+    "조약법 제35조",
+    "조약법 제36조",
+    "조약법 제37조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0088",
+   "label": "강제납치",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0089",
+   "label": "강제송환금지원칙",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0090",
+   "label": "강행규범위반",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "강행규범 위반"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0091",
+   "label": "강행규범의중대한위반에대한승인금지(제41조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "강행규범의 중대한 위반에 대한 승인금지(제41조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0092",
+   "label": "개정조약의효력(VCLT제40조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "개정조약의 효력(VCLT 제40조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0093",
+   "label": "경제적강박",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "경제적 강박"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0094",
+   "label": "고문금지",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0095",
+   "label": "고문방지",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0096",
+   "label": "고문방지협약",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0097",
+   "label": "공권력의흠결시행위",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "공권력의 흠결시 행위"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0098",
+   "label": "공정및생산방법(PPM)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "공정 및 생산방법(PPM)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": [
+    "2016헌마253"
+   ]
+  },
+  {
+   "id": "INT-0099",
+   "label": "공중도덕예외(GATT제20조(a))",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "공중도덕 예외(GATT 제20조(a))"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0100",
+   "label": "관세양허",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0101",
+   "label": "구속받겠다는의사표시(서명)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "구속받겠다는 의사표시(서명)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": [
+    "2016헌마253"
+   ]
+  },
+  {
+   "id": "INT-0102",
+   "label": "국가기관의월권행위(ultravires)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국가기관의 월권행위(ultra vires)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0103",
+   "label": "국가기관의월권행위(제7조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국가기관의 월권행위(제7조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0104",
+   "label": "국가기관의행위귀속",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국가기관의 행위귀속"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0105",
+   "label": "국가대표에대한강제(제51조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국가대표에 대한 강제(제51조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0106",
+   "label": "국가대표의권한제한",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국가대표의 권한 제한"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0107",
+   "label": "국가대표의부정",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국가대표의 부정"
+   ],
+   "examCount": 1,
+   "statutes": [
+    "조약법 제45조",
+    "조약법 제38조",
+    "조약법 제46조",
+    "조약법 제35조",
+    "조약법 제36조",
+    "조약법 제37조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0108",
+   "label": "국가대표의부패(제50조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국가대표의 부패(제50조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0109",
+   "label": "국가에대한강박",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국가에 대한 강박"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0110",
+   "label": "국가에대한강박에의한조약무효(VCLT제52조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국가에 대한 강박에 의한 조약무효(VCLT 제52조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0111",
+   "label": "국가에대한강제(제52조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국가에 대한 강제(제52조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0112",
+   "label": "국가의부작위",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국가의 부작위"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0113",
+   "label": "국가의승인과채택(제11조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국가의 승인과 채택(제11조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0114",
+   "label": "국가주권침해",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국가주권 침해"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0115",
+   "label": "국가책임의해제(원상회복·금전배상·사죄)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국가책임의 해제(원상회복·금전배상·사죄)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0116",
+   "label": "국가책임의해제방법(원상회복·금전배상·만족)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국가책임의 해제방법(원상회복·금전배상·만족)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0117",
+   "label": "국가책임추궁절차(통고)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국가책임 추궁절차(통고)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0118",
+   "label": "국가행위의귀속",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국가행위의 귀속"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0119",
+   "label": "국가행위의귀속(effectivecontrol/overallcontrol)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국가행위의 귀속(effective control/overall control)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0120",
+   "label": "국가행위의귀속(공권력부재시행위)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국가행위의 귀속(공권력 부재시 행위)"
+   ],
+   "examCount": 1,
+   "statutes": [
+    "조약법 제45조",
+    "조약법 제38조",
+    "조약법 제46조",
+    "조약법 제35조",
+    "조약법 제36조",
+    "조약법 제37조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0121",
+   "label": "국가행위의귀속(지방자치단체·사법기관)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국가행위의 귀속(지방자치단체·사법기관)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0122",
+   "label": "국내구제완료원칙",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0123",
+   "label": "국내문제불간섭의무",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0124",
+   "label": "국내법과조약의준수(제27조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국내법과 조약의 준수(제27조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0125",
+   "label": "국내법상제한과조약의무효(제46조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국내법상 제한과 조약의 무효(제46조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": [
+    "2016헌마253"
+   ]
+  },
+  {
+   "id": "INT-0126",
+   "label": "국내법원용금지(VCLT제27조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "국내법 원용 금지(VCLT 제27조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0127",
+   "label": "국내법원용금지(조약법제27조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국내법 원용 금지(조약법 제27조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0128",
+   "label": "국영기업의행위",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "국영기업의 행위"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0129",
+   "label": "국제관습법",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0130",
+   "label": "국제관습법으로의전환",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "국제관습법으로의 전환"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0131",
+   "label": "국제관습법의제3국효력",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "국제관습법의 제3국 효력"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0132",
+   "label": "국제사법재판소관할권",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "국제사법재판소 관할권"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0133",
+   "label": "국제위법행위",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0134",
+   "label": "국제위법행위에대한지원(초안제16조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "국제위법행위에 대한 지원(초안 제16조)"
+   ],
+   "examCount": 1,
+   "statutes": [
+    "조약법 제7조",
+    "조약법 제8조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0135",
+   "label": "국제인권법",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0136",
+   "label": "국제인권협약",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0137",
+   "label": "권리불행사로인한상실(제45조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "권리불행사로 인한 상실(제45조)"
+   ],
+   "examCount": 1,
+   "statutes": [
+    "국가책임법 제25조",
+    "조약법 제46조",
+    "조약법 제26조",
+    "조약법 제27조",
+    "국가책임법 제26조",
+    "국가책임법 제41조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0138",
+   "label": "권리상실(묵인)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [
+    "조약법 제45조",
+    "조약법 제38조",
+    "조약법 제46조",
+    "조약법 제35조",
+    "조약법 제36조",
+    "조약법 제37조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0139",
+   "label": "권한밖의행위(제7조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "권한 밖의 행위(제7조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0140",
+   "label": "권한없이수행한행위의추인",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "권한 없이 수행한 행위의 추인"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0141",
+   "label": "권한유월행위(ultravires)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "권한유월 행위(ultra vires)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0142",
+   "label": "기만에의한조약무효",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "기만에 의한 조약무효"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0143",
+   "label": "기속적동의표시방법(서명)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "기속적 동의 표시방법(서명)"
+   ],
+   "examCount": 1,
+   "statutes": [
+    "조약법 제7조",
+    "조약법 제8조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0144",
+   "label": "내국민대우원칙",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0145",
+   "label": "내정불간섭의무",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "내정불간섭 의무"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0146",
+   "label": "노예제도금지",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "노예제도 금지"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0147",
+   "label": "당사자간대세적의무",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "당사자간 대세적 의무"
+   ],
+   "examCount": 1,
+   "statutes": [
+    "조약법 제20조",
+    "조약법 제36조",
+    "조약법 제19조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0148",
+   "label": "대응조치(countermeasures)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0149",
+   "label": "대응조치(복구)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0150",
+   "label": "대응조치의내용적한계",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "대응조치의 내용적 한계"
+   ],
+   "examCount": 1,
+   "statutes": [
+    "조약법 제25조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0151",
+   "label": "대응조치의절차적한계",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "대응조치의 절차적 한계"
+   ],
+   "examCount": 1,
+   "statutes": [
+    "조약법 제25조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0152",
+   "label": "대응조치의정당성",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "대응조치의 정당성"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0153",
+   "label": "대응조치의제한(국가책임초안제50조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "대응조치의 제한(국가책임초안 제50조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0154",
+   "label": "동의(Consent)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0155",
+   "label": "동일사항에대한계승적조약(VCLT제30조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "동일사항에 대한 계승적 조약(VCLT 제30조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0156",
+   "label": "동일주제계승적조약(VCLT제30조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "동일주제 계승적 조약(VCLT 제30조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0157",
+   "label": "동종상품·직접경쟁대체상품",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0158",
+   "label": "동종상품판단기준",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "동종상품 판단기준"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0159",
+   "label": "동종상품판단기준(상품성질설·조치목적설)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "동종상품 판단기준(상품성질설·조치목적설)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0160",
+   "label": "만족의정당성요건",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "만족의 정당성 요건"
+   ],
+   "examCount": 1,
+   "statutes": [
+    "조약법 제45조",
+    "조약법 제38조",
+    "조약법 제46조",
+    "조약법 제35조",
+    "조약법 제36조",
+    "조약법 제37조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0161",
+   "label": "무권한자행위의추인",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "무권한자 행위의 추인"
+   ],
+   "examCount": 1,
+   "statutes": [
+    "조약법 제7조",
+    "조약법 제8조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0162",
+   "label": "무력복구",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0163",
+   "label": "무력사용금지",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [
+    "국가책임법 제25조",
+    "조약법 제46조",
+    "조약법 제26조",
+    "조약법 제27조",
+    "국가책임법 제26조",
+    "국가책임법 제41조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0164",
+   "label": "무력에의한강박",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "무력에 의한 강박"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0165",
+   "label": "무력에의한강제(제52조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "무력에 의한 강제(제52조)"
+   ],
+   "examCount": 1,
+   "statutes": [
+    "국가책임법 제25조",
+    "조약법 제46조",
+    "조약법 제26조",
+    "조약법 제27조",
+    "국가책임법 제26조",
+    "국가책임법 제41조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0166",
+   "label": "무효원용권의상실(제45조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "무효원용권의 상실(제45조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0167",
+   "label": "묵시적추인",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "묵시적 추인"
+   ],
+   "examCount": 1,
+   "statutes": [
+    "조약법 제25조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0168",
+   "label": "반란단체의국가행위귀속(제10조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "반란단체의 국가행위 귀속(제10조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0169",
+   "label": "방조책임",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0170",
+   "label": "범죄인인도의무",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0171",
+   "label": "법의일반원칙(ICJ헌장제38조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "법의 일반원칙(ICJ헌장 제38조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0172",
+   "label": "보충적해석수단(제32조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "보충적 해석수단(제32조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0173",
+   "label": "부당이득",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0174",
+   "label": "부작위에의한국가책임",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "부작위에 의한 국가책임"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0175",
+   "label": "분리이론",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0176",
+   "label": "불승인의무",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [
+    "국가책임법 제25조",
+    "조약법 제46조",
+    "조약법 제26조",
+    "조약법 제27조",
+    "국가책임법 제26조",
+    "국가책임법 제41조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0177",
+   "label": "비국가기관의행위",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "비국가기관의 행위"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0178",
+   "label": "비례성원칙",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "비례성 원칙"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0179",
+   "label": "비준",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0180",
+   "label": "비피해국의국가책임추궁",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "비피해국의 국가책임 추궁"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0181",
+   "label": "사인의행위",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "사인의 행위"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0182",
+   "label": "사인의행위귀속",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "사인의 행위 귀속"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0183",
+   "label": "사인의행위의국가귀속",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "사인의 행위의 국가귀속"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0184",
+   "label": "사인의행위의국가귀속(제8조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "사인의 행위의 국가귀속(제8조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0185",
+   "label": "사전주의원칙",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0186",
+   "label": "상당한주의의무",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "상당한 주의의무"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0187",
+   "label": "상당한주의의무(DueDiligence)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "상당한 주의의무(Due Diligence)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0188",
+   "label": "서명국의지위",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "서명국의 지위"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0189",
+   "label": "손해배상(중지·재발방지·배상)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0190",
+   "label": "손해배상과보상의구분",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "손해배상과 보상의 구분"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0191",
+   "label": "수량제한금지원칙",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0192",
+   "label": "수출제한조치(GATT제11조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "수출제한조치(GATT 제11조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0193",
+   "label": "실효적통제기준",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "실효적 통제기준"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0194",
+   "label": "양립성접근(compatibilitytest)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "양립성 접근(compatibility test)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0195",
+   "label": "양해(Understanding)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0196",
+   "label": "연속조약의적용",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "연속조약의 적용"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0197",
+   "label": "영토주권침해",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "영토주권 침해"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0198",
+   "label": "예방의무",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0199",
+   "label": "온실가스배출총량규제",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "온실가스 배출총량 규제"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0200",
+   "label": "외교공관및개인주거의불가침",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "외교공관 및 개인주거의 불가침"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0201",
+   "label": "외교공관보호의무",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "외교공관 보호의무"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0202",
+   "label": "원조또는지원",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "원조 또는 지원"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0203",
+   "label": "월경피해금지의무(no-harmprinciple)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "월경피해금지의무(no-harm principle)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0204",
+   "label": "위법성조각사유(긴급피난)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0205",
+   "label": "위법성조각사유(불가항력)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": [
+    "2016헌마253"
+   ]
+  },
+  {
+   "id": "INT-0206",
+   "label": "위법성조각사유(조난)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0207",
+   "label": "위법행위에대한원조및지원(제16조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "위법행위에 대한 원조 및 지원(제16조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0208",
+   "label": "유럽인권협약",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0209",
+   "label": "유보수락국/거절국",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0210",
+   "label": "유보에대한이의",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "유보에 대한 이의"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0211",
+   "label": "유보에대한이의(반대)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "유보에 대한 이의(반대)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0212",
+   "label": "유보에대한이의제기",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "유보에 대한 이의제기"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0213",
+   "label": "유보와해석선언의구별",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "유보와 해석선언의 구별"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0214",
+   "label": "유보의성립요건",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "유보의 성립요건"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0215",
+   "label": "유보의수락",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "유보의 수락"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0216",
+   "label": "유보의수락과이의",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "유보의 수락과 이의"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0217",
+   "label": "유보의양립가능성",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "유보의 양립가능성"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0218",
+   "label": "유보의유효성",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "유보의 유효성"
+   ],
+   "examCount": 1,
+   "statutes": [
+    "조약법 제20조",
+    "조약법 제36조",
+    "조약법 제19조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0219",
+   "label": "유보의형성가능성",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "유보의 형성가능성"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0220",
+   "label": "의사표시의철회",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "의사표시의 철회"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": [
+    "2016헌마253"
+   ]
+  },
+  {
+   "id": "INT-0221",
+   "label": "이행의무",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0222",
+   "label": "인정및채택(제11조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "인정 및 채택(제11조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0223",
+   "label": "일반적예외",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [
+    "일반적 예외"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0224",
+   "label": "자기완비적체제(self-containedregime)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "자기완비적 체제(self-contained regime)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0225",
+   "label": "자원고갈보호",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "자원고갈 보호"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0226",
+   "label": "자위권",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0227",
+   "label": "재정조치·비재정조치",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0228",
+   "label": "재판회부조항(유보)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0229",
+   "label": "전권위임장(대표권)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0230",
+   "label": "정부공백시사인의행위(제9조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "정부공백시 사인의 행위(제9조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0231",
+   "label": "제3국에대한의무·권리부여",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "제3국에 대한 의무·권리 부여"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0232",
+   "label": "제3국에대한조약효력",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "제3국에 대한 조약효력"
+   ],
+   "examCount": 1,
+   "statutes": [
+    "조약법 제20조",
+    "조약법 제36조",
+    "조약법 제19조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0233",
+   "label": "제3국에대한지시및통제(제17조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "제3국에 대한 지시 및 통제(제17조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0234",
+   "label": "제3국의권리",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "제3국의 권리"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0235",
+   "label": "제3국의책임추궁(대세적의무)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "제3국의 책임추궁(대세적 의무)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": [
+    "2016헌마253"
+   ]
+  },
+  {
+   "id": "INT-0236",
+   "label": "조난(distress)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0237",
+   "label": "조약경합(계승적조약)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약경합(계승적 조약)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0238",
+   "label": "조약경합(제30조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0239",
+   "label": "조약과제3국",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약과 제3국"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0240",
+   "label": "조약과제3국(VCLT제35~38조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약과 제3국(VCLT 제35~38조)"
+   ],
+   "examCount": 1,
+   "statutes": [
+    "조약법 제45조",
+    "조약법 제38조",
+    "조약법 제46조",
+    "조약법 제35조",
+    "조약법 제36조",
+    "조약법 제37조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0241",
+   "label": "조약관계의변경",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약관계의 변경"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0242",
+   "label": "조약관계의성립",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약관계의 성립"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0243",
+   "label": "조약발효전의무",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약 발효 전 의무"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0244",
+   "label": "조약발효전의무(조약법협약제18조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약 발효 전 의무(조약법협약 제18조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0245",
+   "label": "조약법에관한비엔나협약",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0246",
+   "label": "조약법협약상무효사유",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약법협약상 무효사유"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0247",
+   "label": "조약법협약의시간적적용범위",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약법협약의 시간적 적용범위"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0248",
+   "label": "조약법협약제19조",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약법협약 제19조"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0249",
+   "label": "조약상분쟁해결절차",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약상 분쟁해결절차"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0250",
+   "label": "조약의가분성",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 가분성"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0251",
+   "label": "조약의가분성(제44조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 가분성(제44조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0252",
+   "label": "조약의개정",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 개정"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0253",
+   "label": "조약의개정(변경)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 개정(변경)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0254",
+   "label": "조약의대상과목적",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 대상과 목적"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0255",
+   "label": "조약의대상과목적과의양립성",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 대상과 목적과의 양립성"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0256",
+   "label": "조약의대상과목적을해하지않을의무",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 대상과 목적을 해하지 않을 의무"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0257",
+   "label": "조약의대상및목적과의양립성",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 대상 및 목적과의 양립성"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0258",
+   "label": "조약의발효",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 발효"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0259",
+   "label": "조약의발효전의무(제18조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 발효 전 의무(제18조)"
+   ],
+   "examCount": 1,
+   "statutes": [
+    "조약법 제25조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0260",
+   "label": "조약의변경",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 변경"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0261",
+   "label": "조약의부적법화사유",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 부적법화 사유"
+   ],
+   "examCount": 1,
+   "statutes": [
+    "조약법 제45조",
+    "조약법 제38조",
+    "조약법 제46조",
+    "조약법 제35조",
+    "조약법 제36조",
+    "조약법 제37조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0262",
+   "label": "조약의상대적효력",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 상대적 효력"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0263",
+   "label": "조약의성립",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 성립"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0264",
+   "label": "조약의성립요건",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 성립요건"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": [
+    "2016헌마253"
+   ]
+  },
+  {
+   "id": "INT-0265",
+   "label": "조약의성실한이행(VCLT제26조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 성실한 이행(VCLT 제26조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0266",
+   "label": "조약의이행정지(VCLT제60조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 이행정지(VCLT 제60조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0267",
+   "label": "조약의일방적이행중단",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 일방적 이행중단"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0268",
+   "label": "조약의일부무효",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 일부무효"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0269",
+   "label": "조약의일부무효(분리가능성)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 일부무효(분리가능성)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0270",
+   "label": "조약의잠정적적용(제25조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 잠정적 적용(제25조)"
+   ],
+   "examCount": 1,
+   "statutes": [
+    "조약법 제25조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0271",
+   "label": "조약의저촉·우선순위",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 저촉·우선순위"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0272",
+   "label": "조약의절대적무효",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 절대적 무효"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0273",
+   "label": "조약의제3자효(제35조·제36조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 제3자효(제35조·제36조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0274",
+   "label": "조약의제3자효력",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 제3자효력"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0275",
+   "label": "조약의준수(제27조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 준수(제27조)"
+   ],
+   "examCount": 1,
+   "statutes": [
+    "국가책임법 제25조",
+    "조약법 제46조",
+    "조약법 제26조",
+    "조약법 제27조",
+    "국가책임법 제26조",
+    "국가책임법 제41조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0276",
+   "label": "조약의추인·묵인",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약의 추인·묵인"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0277",
+   "label": "조약체결권관련국내법규정위반(제46조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약체결권 관련 국내법규정 위반(제46조)"
+   ],
+   "examCount": 1,
+   "statutes": [
+    "국가책임법 제25조",
+    "조약법 제46조",
+    "조약법 제26조",
+    "조약법 제27조",
+    "국가책임법 제26조",
+    "국가책임법 제41조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0278",
+   "label": "조약체결권에대한국내법위반",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약체결권에 대한 국내법 위반"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0279",
+   "label": "조약체결권유월",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약체결권 유월"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0280",
+   "label": "조약체결권한",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [
+    "조약법 제7조",
+    "조약법 제8조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0281",
+   "label": "조약체결권한위반과무효(VCLT제46조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약체결권한 위반과 무효(VCLT 제46조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0282",
+   "label": "조약체결권한의제한",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약체결권한의 제한"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0283",
+   "label": "조약체결대표의매수(뇌물)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약체결대표의 매수(뇌물)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0284",
+   "label": "조약체결상사기(기망)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약체결상 사기(기망)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0285",
+   "label": "조약체결의사",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0286",
+   "label": "조약해석(비엔나협약제31·32조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "조약해석(비엔나협약 제31·32조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0287",
+   "label": "주권침해",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0288",
+   "label": "지원또는원조국의책임",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "지원 또는 원조국의 책임"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0289",
+   "label": "직무행위와사인의행위",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "직무행위와 사인의 행위"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0290",
+   "label": "직접경쟁대체상품(DCSP)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0291",
+   "label": "최소제한조치",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0292",
+   "label": "최혜국대우원칙",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제경제법"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0293",
+   "label": "타국의위법행위에대한원조·지원",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "타국의 위법행위에 대한 원조·지원"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0294",
+   "label": "통상적의미",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "통상적 의미"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0295",
+   "label": "통합적해석(제31조제3항(c))",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "통합적 해석(제31조 제3항(c))"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0296",
+   "label": "피해국의권리제한",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [
+    "피해국의 권리 제한"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0297",
+   "label": "피해국이외국가의책임추궁",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "피해국 이외 국가의 책임추궁"
+   ],
+   "examCount": 1,
+   "statutes": [
+    "조약법 제20조",
+    "조약법 제36조",
+    "조약법 제19조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0298",
+   "label": "필요성",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제법일반"
+   ],
+   "aliases": [],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0299",
+   "label": "행위의국가귀속(사실상국가기관)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "행위의 국가귀속(사실상 국가기관)"
+   ],
+   "examCount": 1,
+   "statutes": [
+    "조약법 제25조"
+   ],
+   "cases": []
+  },
+  {
+   "id": "INT-0300",
+   "label": "행위의귀속",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "행위의 귀속"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0301",
+   "label": "행위의귀속(지휘·통제)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "행위의 귀속(지휘·통제)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0302",
+   "label": "행위의귀속성",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "행위의 귀속성"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0303",
+   "label": "행위의승인과채택(국가책임초안제11조)",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "행위의 승인과 채택(국가책임초안 제11조)"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0304",
+   "label": "허용되지않는대응조치",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "허용되지 않는 대응조치"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0305",
+   "label": "허용되지않는유보",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "허용되지 않는 유보"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0306",
+   "label": "환경보호예외",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "환경보호 예외"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0307",
+   "label": "환경협정상의무위반",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "환경협정상 의무위반"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  },
+  {
+   "id": "INT-0308",
+   "label": "회사의국적",
+   "subject": "국제법",
+   "path": [
+    "국제법",
+    "국제공법"
+   ],
+   "aliases": [
+    "회사의 국적"
+   ],
+   "examCount": 1,
+   "statutes": [],
+   "cases": []
+  }
+ ]
+}

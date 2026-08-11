@@ -176,7 +176,11 @@ const SUBJECTS = [
   {id:"공법", label:"공법"},
   {id:"형사법", label:"형사법"},
   {id:"민사법", label:"민사법"},
+  // 선택과목 둘은 사례집이 없다. 표시해 두면 없는 파일을 부르지 않는다.
+  {id:"국제법", label:"국제법", noCasebook:true},
+  {id:"국제거래법", label:"국제거래법", noCasebook:true},
 ];
+const HAS_CASEBOOK = id => !SUBJECTS.find(s=>s.id===id)?.noCasebook;
 const ROUNDS = [1,2,3,4];
 
 // AI 채점 Worker 주소. 배포한 뒤 여기에 넣으면 채점 버튼이 켜진다.
@@ -394,8 +398,11 @@ function App(){
         if(INCOMING_GROUP && (ex.groups||[]).some(g=>g.key===INCOMING_GROUP))
           setFocusGroupKey(INCOMING_GROUP);
       }
-      fetch(`data/${subject}/casebook_toc.json`).then(r2=>r2.ok?r2.json():null)
-        .then(tj=>tj && setCasebookToc(tj)).catch(()=>{});
+      // 목차가 없는 과목(국제법·국제거래법)으로 옮겼을 때 null로 덮어야 한다.
+      // 예전에는 `tj && set…`이라 앞 과목의 목차가 그대로 남아 있었다.
+      if(!HAS_CASEBOOK(subject)) setCasebookToc(null);
+      else fetch(`data/${subject}/casebook_toc.json`).then(r2=>r2.ok?r2.json():null)
+        .then(tj=>setCasebookToc(tj)).catch(()=>setCasebookToc(null));
       setReady(true);
     }catch(e){ setErr(e.message); }
   })(); },[subject]);
@@ -507,6 +514,7 @@ function ExamList({subject,exams,issues,issueMap,prog,byIssue,casebookToc,mode,s
   const [fArea,setFArea] = useState(null);   // 쟁점 분야(헌법/행정법 …) 좁히기
   useEffect(()=>{ setFArea(null); setShowAll(false); },[subject]);
   const [issueSub,setIssueSub] = useState(fIssue ? "tag" : "toc");
+  useEffect(()=>{ if(!casebookToc && issueSub==="toc") setIssueSub("tag"); },[casebookToc]);
   // 사례집 본문은 2MB가 넘어서 목록에서 하나를 고를 때만 받는다.
   const [caseTexts,setCaseTexts] = useState(null);
   const [viewUid,setViewUid] = useState(null);
@@ -514,8 +522,9 @@ function ExamList({subject,exams,issues,issueMap,prog,byIssue,casebookToc,mode,s
     let m = caseTexts;
     if(!m){
       try{
-        const r = await fetch(`data/${subject}/casebook_cases.json`);
-        m = r.ok ? await r.json() : {};
+        const r = HAS_CASEBOOK(subject)
+          ? await fetch(`data/${subject}/casebook_cases.json`) : null;
+        m = r?.ok ? await r.json() : {};
       }catch{ m = {}; }
       setCaseTexts(m);
     }
@@ -544,8 +553,9 @@ function ExamList({subject,exams,issues,issueMap,prog,byIssue,casebookToc,mode,s
           <div className="banner"><b>{sel.label}</b> 쟁점으로 이동했습니다.
             <span className="muted"> (다른 페이지에서 연결)</span></div>}
 
+        {/* 사례집이 없는 과목(국제법·국제거래법)에서는 목차 탭을 아예 감춘다. */}
         <div className="row" style={{marginBottom:12}}>
-          {[["toc","사례집 목차로 풀기"],["tag","쟁점 검색"]].map(([k,l])=>
+          {[...(casebookToc?[["toc","사례집 목차로 풀기"]]:[]),["tag","쟁점 검색"]].map(([k,l])=>
             <span key={k} className={"tag click"+(issueSub===k?" on":"")}
               style={{padding:'7px 15px',fontSize:12.5}} onClick={()=>setIssueSub(k)}>{l}</span>)}
         </div>
@@ -749,6 +759,8 @@ function ExamCard({e,prog,issueMap,highlight,onPick}){
         <div className="muted"
           title={ESTIMATED(e)?"문항(제N문) 구분이 확인되지 않아 추정한 값입니다":undefined}>
           {e.groups?.length||0}문{ESTIMATED(e)?"(추정)":""} · {e.questions.length}설문{e.totalPoints>0?` · ${e.totalPoints}점`:""}
+          {e.hasProblem===false && <span className="tag" style={{marginLeft:6}}
+            title="과목별로 분리되지 않은 통합 파일만 남아 지문을 확보하지 못했습니다">지문 없음</span>}
         </div>
       </div>
       {e.factSummary &&
@@ -996,6 +1008,10 @@ function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSu
             <details className="prob" open={showProblem} onToggle={e=>setShowProblem(e.target.open)}>
               <summary>문제 지문 {showProblem? "접기":"펼치기"}</summary>
               <div>
+                {!detail.problemText?.trim() &&
+                  <div className="banner">이 회차는 <b>문제 지문을 확보하지 못했습니다.</b>
+                    <span className="muted"> 선택과목 모의고사 일부는 과목별로 분리되지 않은 통합
+                    파일만 남아 있습니다. 아래 설문과 채점기준표로만 연습할 수 있습니다.</span></div>}
                 {splitProblemText(detail.problemText, groups.map(g=>g.label)).map((b,i)=>
                   b.type==='caselabel'
                     ? <div key={i} className="caselabel">〈{b.text}〉</div>
