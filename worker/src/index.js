@@ -118,7 +118,14 @@ function buildPrompt(exam, group, answer) {
   if (exam.rubricText) {
     parts.push(`# 채점기준표\n${exam.rubricText}`);
   } else if (exam.casebookAnswers?.length) {
-    const model = exam.casebookAnswers.map((a) => a.text || a).join('\n\n---\n\n');
+    // 데이터의 본문 필드는 `answerText` 다. 예전에 `a.text` 만 보다가 undefined 가
+    // 되어, 채점기준표가 없는 494건(변시 30 + 창작문제 464)에서 모범답안이
+    // "[object Object]" 로 들어가고 있었다. `header` 에 문항 라벨이 있으니 같이 준다.
+    const model = exam.casebookAnswers
+      .map((a) => (typeof a === 'string' ? a
+        : [a.header, a.answerText || a.text].filter(Boolean).join('\n')))
+      .filter(Boolean)
+      .join('\n\n---\n\n');
     parts.push(
       `# 모범답안 (공식 채점기준표가 없어 사례집 모범답안을 기준으로 삼는다)\n${model}`,
     );
@@ -137,6 +144,7 @@ function buildPrompt(exam, group, answer) {
 export default {
   async fetch(request, env, ctx) {
     const origin = request.headers.get('Origin') || '';
+    const colo = request.cf?.colo || '?';   // 실행된 Cloudflare PoP. 403 진단에 쓴다.
 
     if (request.method === 'OPTIONS') {
       return new Response(null, { status: 204, headers: cors(origin) });
@@ -208,8 +216,16 @@ export default {
           // API 쪽에서 막힌 것인지 이쪽 잘못인지 나중에 가리려면 요청 ID가 있어야
           // 한다. Anthropic 지원에 문의할 때 이것부터 묻는다.
           const id = e?.request_id || e?.headers?.['request-id'];
-          console.error('grade failed', { status: e?.status, request_id: id, msg: e?.message });
-          send({ error: `채점 중 오류: ${e.message}` + (id ? ` (요청 ID ${id})` : '') });
+          console.error('grade failed',
+            { status: e?.status, colo, request_id: id, msg: e?.message });
+          // 403 은 거의 언제나 키나 요금 문제가 아니라 **실행 지역** 문제다.
+          // Worker가 어느 PoP에서 돌았는지 모르면 매번 크레딧을 의심하게 된다.
+          const where = e?.status === 403
+            ? `\n\n이 오류는 Worker가 실행된 지역(${colo}) 때문일 수 있습니다. `
+              + `Anthropic이 미지원 지역의 요청을 키 확인 전에 차단합니다. `
+              + `잠시 후 다시 시도하면 다른 지역에서 실행되어 통과하기도 합니다.`
+            : '';
+          send({ error: `채점 중 오류: ${e.message}` + (id ? ` (요청 ID ${id})` : '') + where });
         } finally {
           controller.close();
         }
