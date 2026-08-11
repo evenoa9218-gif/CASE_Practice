@@ -46,12 +46,9 @@ python -X utf8 clean_apply_민사법.py
 python -X utf8 build_issue_registry_민사법.py   # CIV
 python -X utf8 build_case_app_data_민사법.py
 
-# 문항 라벨을 실제 시험 표기(제1문/제1문의1)로 재부여 — 앱 데이터 생성 뒤 반드시 실행
-python -X utf8 relabel_groups.py             # 인자 없으면 공법·형사법·민사법 전부
-
-# 민사법은 원본 시험지에서 표제를 직접 읽어 덮어쓴다 — 아래 참고
-python -X utf8 extract_exam_plans.py 민사법          # hwp → exam_plans.json (몇 분 걸린다)
-python -X utf8 relabel_civil_from_paper.py 민사법 --write
+# 문항 라벨을 원본 시험지 표기로 재부여 — 앱 데이터 생성 뒤 반드시 실행
+python -X utf8 extract_exam_plans.py                # hwp → exam_plans.json (세 과목, 십수 분)
+for s in 공법 형사법 민사법; do python -X utf8 relabel_from_paper.py $s --write; done
 
 # 쟁점 분야(헌법/행정법, 형법/형사소송법, 민법/상법/민사소송법) 재분류
 python -X utf8 reclassify_issues.py --write   # 인자 없으면 세 과목 전부
@@ -60,13 +57,20 @@ python -X utf8 reclassify_issues.py --write   # 인자 없으면 세 과목 전�
 python -X utf8 add_cbt_answers.py --write
 ```
 
-`relabel_groups.py`의 100점 규칙은 **민사법에 성립하지 않는다**(제15회 실제 시험지로 확인:
-제1문 150 / 제2문 100 / 제3문 100). 그래서 민사법은 시험지 원본에서 문항 표제와 배점
-순서를 뽑아 한 번 더 덮어쓴다. 55건 전부 확정이라 `groupSource`는 모두 `"시험지"`다.
+문항 라벨은 이제 **원본 시험지가 정본이다.** 배점 누적으로 문 경계를 찾던
+`relabel_groups.py`의 100점 규칙은 민사법에 성립하지 않았고(제15회는 150/100/100),
+공법·형사법도 시험지 표기와 어긋난 라벨이 많았다(`사례1-`·`설문1..11`은 시험지에 없는
+표기다). 지금은 세 과목 165건 모두 시험지에서 읽어 확정하고 `groupSource`가 전부
+`"시험지"`다. `relabel_groups.py`는 시험지가 없는 새 과목용으로만 남겨 둔다.
 
 `extract_exam_plans.py`는 개인 자료 폴더의 hwp를 읽으므로 그 폴더가 없으면 건너뛴다.
 결과인 `pipeline/casebook/exam_plans.json`은 저장소에 있으니, hwp 없이도
-`relabel_civil_from_paper.py`만으로 재빌드된다. 인자만 주면 미리보기, `--write`를 붙여야 쓴다.
+`relabel_from_paper.py`만으로 재빌드된다. 인자만 주면 미리보기, `--write`를 붙여야 쓴다.
+
+**배점을 검산하는 기준은 만점이다** — 공법·형사법 200점, 민사법 350점. 시험지는
+「1. …답하시오. (45점)」 아래 「① …(10점) ② …(5점)」처럼 문항 총배점을 같이 적는 일이
+잦아, 그대로 더하면 두 번 세게 된다. 총합이 만점을 넘으면 소계로 보이는 배점을 걷어내
+맞추되, 답이 여럿이면 그 시험은 보류한다.
 
 `-X utf8`은 필수다. 윈도우 콘솔 기본 인코딩(cp949)으로는 한글 파일명·출력이 깨진다.
 
@@ -189,6 +193,6 @@ set HWP5TXT=C:\Python312\Scripts\hwp5txt.exe
 
 - **쟁점 자동분류 실패율**: 2026-08-11 `reclassify_issues.py`로 상당 부분 줄였다 — 공법 205→128(48%→30%), 형사법 227→156(41%→28%), 민사법 상법 27→48개. 사례집 목차와 **전용** 사례집 본문을 근거로 쓴다. 통합서를 코퍼스에 넣으면 안 된다 — 기판력·처분권주의가 "민법"으로 뒤집힌다. 남은 미분류는 사례집에도 없는 쟁점이라 근거가 없어 그대로 뒀다.
 - **채점근거 공백**: 형사법 변시 1~5회(조균석 책이 QR 온라인 제공으로 전환해 추출 불가). 민사법은 2026-08-11 `add_cbt_answers.py`로 메웠다 — 변시 1·2·3회가 정연석 요약(2~3천 자)뿐이었는데 박승수 CBT실전답안을 붙여 1.5만~1.6만 자가 됐다. **민사법 변시 15건 모두 채점 근거가 있다.**
-- **`relabel_groups.py`의 100점 규칙**은 공법 15회 실제 PDF로 검증했고 공법·형사법 110건 중 105건이 정확히 맞는다. **민사법에는 성립하지 않음이 제15회 시험지로 확인됐다**(문당 배점이 150/100/100로 제각각) — 민사법은 원본 시험지에서 표제를 직접 읽어 55건 전부 확정했다.
+- **문항 라벨**: 2026-08-11 세 과목 165건 모두 원본 시험지에서 표제를 읽어 확정했다. `relabel_groups.py`의 100점 규칙은 더 이상 쓰지 않는다.
 
 전체 이슈 목록은 [`../HANDOFF.md`](../HANDOFF.md)의 "미해결 이슈" 참고.

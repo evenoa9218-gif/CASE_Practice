@@ -39,7 +39,10 @@ SRC_DIRS = {
 
 HWP5PROC = r"C:\Users\82109\AppData\Local\Programs\Python\Python312\Scripts\hwp5proc.exe"
 
-HEAD = re.compile(r"제\s*(\d+)\s*문(?:\s*의\s*(\d+))?")
+# 문항 표제. 「제1문」·「제1문의 2」가 보통이지만 2013년 모의고사 두 회차는
+# 「〈 제 1-2 문 〉」처럼 붙임표를 쓴다. 이걸 못 잡으면 본문 표제가 통째로 사라지고,
+# 답안지 유의사항에 적힌 「제3문」이 기준으로 남아 뒤 표제가 전부 걸러진다.
+HEAD = re.compile(r"제\s*(\d+)\s*(?:[-–—]\s*(\d+)\s*)?문(?:\s*의\s*(\d+))?")
 # 배점 표기 네 가지를 다 받는다.
 #   (25점)                          보통
 #   (20점. 이자는 계산하지 말 것)      배점 뒤에 단서가 붙는 경우
@@ -98,8 +101,10 @@ def plan_of(text):
     """
     marks = []
     for m in HEAD.finditer(text):
-        rank = (int(m.group(1)), int(m.group(2) or 0))
-        marks.append((m.start(), "H", re.sub(r"\s+", "", m.group(0)), rank))
+        major, minor = int(m.group(1)), int(m.group(2) or m.group(3) or 0)
+        # 「제1-2문」도 「제1문의2」로 적어 회차끼리 표기를 맞춘다.
+        label = f"제{major}문" + (f"의{minor}" if minor else "")
+        marks.append((m.start(), "H", label, (major, minor)))
     for m in PTS.finditer(text):
         marks.append((m.start(), "P", int(m.group(1) or m.group(2)), m.start()))
     marks.sort(key=lambda x: x[0])
@@ -151,6 +156,16 @@ def main():
             tot = sum(q["points"] for _, qs in plan for q in qs)
             print(f"  {eid:28s} 문항 {len(plan):2d}  설문 "
                   f"{sum(len(qs) for _, qs in plan):2d}  총점 {tot}")
+
+    # 표제가 「제1문」으로 시작하지 않으면 앞쪽 표제를 놓친 것이다. 답안지
+    # 유의사항이 「제3문」까지 미리 들먹이기 때문에, 본문 표제를 못 잡으면
+    # 그게 기준으로 남아 뒤 표제가 전부 걸러지고 한 문항으로 뭉친다.
+    # 2013년 모의 두 회차가 실제로 그렇게 뭉쳐 있었다(「제 1-2 문」 표기).
+    odd = [e for e, v in index.items() if not v["plan"][0][0].startswith("제1문")]
+    if odd:
+        print(f"\n[확인 필요] 제1문으로 시작하지 않는 시험 {len(odd)}건:")
+        for e in odd:
+            print(f"   {e}  {[l for l, _ in index[e]['plan']]}")
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(index, ensure_ascii=False, indent=1), encoding="utf-8")

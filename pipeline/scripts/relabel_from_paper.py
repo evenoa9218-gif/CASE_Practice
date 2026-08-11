@@ -1,6 +1,6 @@
 """시험지에서 뽑은 문항 표제를 앱 데이터에 입힌다.
 
-앱의 민사법 기출은 문항 라벨이 `문1..문21` / `설문1..설문20` 같은 통짜
+앱의 기출은 문항 라벨이 `문1..문21` / `설문1..설문20` 같은 통짜
 일련번호였다. 실제 시험은 「제1문의 1」처럼 문항이 나뉘고 채점도 그 단위로
 한다. extract_exam_plans.py 가 원본 hwp에서 뽑아 둔 표제·배점 순서를 여기서
 앱 데이터에 맞춰 붙인다.
@@ -12,8 +12,9 @@
   않고 보류로 남긴다 — 억지로 맞추면 근거 없는 라벨이 다시 생긴다.
 
 사용
-  python pipeline/scripts/relabel_civil_from_paper.py 민사법 [--write]
+  python pipeline/scripts/relabel_from_paper.py {과목} [--write]
 """
+import itertools
 import json
 import re
 import sys
@@ -81,6 +82,84 @@ def align(paper, app):
         if order[i] is None and j not in used and s >= MIN_SIM:
             order[i], _ = j, used.add(j)
     return None if None in order else order
+
+
+# 문항이 「제1문」·「제2문」뿐일 때 설문 단위로 쪼갤 과목.
+# 민사법은 시험지가 이미 「제1문의1」까지 나눠 놓았고 그 기준으로 확정을 마쳤으므로
+# 넣지 않는다 — 넣으면 「제1문/제2문/제3문」으로만 된 옛 회차가 다시 흔들린다.
+EXPAND = {"공법", "형사법"}
+
+
+def expand(plan):
+    """시험지 문항이 「제1문」·「제2문」뿐이면 설문 하나하나를 답안 단위로 삼는다.
+
+    공법·형사법 시험지는 대개 문항이 둘뿐이고 그 아래를 나누지 않는다(공법은 최근
+    회차만 「제1문의1」이 실재한다). 그렇다고 그대로 두면 답안 칸이 100점짜리 둘로
+    끝나 연습이 안 된다. 그래서 문항은 시험지 표기를 그대로 쓰되 설문 번호를 붙여
+    「제1문-1」·「제1문-2」로 나눈다 — 소속 문항도 설문 순서도 시험지 근거가 있다.
+
+    하위 표제가 실재하는 시험(공법 9건)은 손대지 않는다. 거기서는 문항 자체가
+    이미 답안 단위다.
+    """
+    if any("의" in lab for lab, _ in plan):
+        return plan
+    out = []
+    for lab, units in plan:
+        if len(units) < 2:
+            out.append([lab, units])
+        else:
+            out += [[f"{lab}-{i}", [u]] for i, u in enumerate(units, 1)]
+    return out
+
+
+# 과목별 사례형 만점. 배점을 잘못 세었는지 가리는 유일한 외부 기준이다.
+FULL = {"공법": 200, "형사법": 200, "민사법": 350}
+
+
+def subtotal_idx(pts):
+    """뒤따르는 배점 둘 이상의 합과 같은 자리 — 소계로 적힌 것.
+
+    시험지는 「1. …에 답하시오. (45점)」 아래에 「① …(10점) ② …(5점) …」을
+    두는 일이 잦다. 45는 문항 총배점이라 그대로 더하면 두 번 세는 셈이 된다.
+    바로 뒤 하나와 값이 같은 경우는 제외한다 — 그건 우연히 같은 배점일 뿐이다.
+    """
+    out = []
+    for i, p in enumerate(pts):
+        s = 0
+        for j in range(i + 1, len(pts)):
+            s += pts[j]
+            if s > p:
+                break
+            if s == p and j > i + 1:
+                out.append(i)
+                break
+    return out
+
+
+def fit_total(plan, target):
+    """총합이 만점과 다르면 소계를 걷어내 맞춘다. 답이 하나뿐일 때만 고친다.
+
+    답이 없거나 여럿이면 None을 돌려 그 시험을 통째로 보류한다 — 어느 것을
+    빼야 할지 모르는 채로 고르면 근거 없는 배점이 생긴다.
+    """
+    pts = [u["points"] for _, us in plan for u in us]
+    if sum(pts) == target:
+        return plan
+    cand = subtotal_idx(pts)
+    hits = []
+    for r in range(1, len(cand) + 1):
+        hits = [set(c) for c in itertools.combinations(cand, r)
+                if sum(pts) - sum(pts[i] for i in c) == target]
+        if hits:
+            break                      # 가장 적게 빼는 답부터 본다
+    if len(hits) != 1:
+        return None
+    drop, out, k = hits[0], [], 0
+    for lab, us in plan:
+        keep = [u for u in us if (k := k + 1) and k - 1 not in drop]
+        if keep:
+            out.append([lab, keep])
+    return out
 
 
 def tail_ask(text):
@@ -181,8 +260,15 @@ def main():
         epath = ROOT / "data" / subj / "exams" / f"{eid}.json"
         exam = json.loads(epath.read_text(encoding="utf-8"))
 
+        base = fit_total(v["plan"], FULL.get(subj, 0))
+        if base is None:
+            held.append((eid, "총점이 만점과 어긋나는데 어느 배점이 소계인지 못 가림"))
+            continue
+        fixed = len(base) != len(v["plan"]) or any(
+            len(a[1]) != len(b[1]) for a, b in zip(base, v["plan"]))
+        base = expand(base) if subj in EXPAND else base
         groups, note = None, ""
-        for plan in variants(v["plan"]):
+        for plan in variants(base):
             paper = [u for _, units in plan for u in units]
             order = align(paper, exam["questions"])
             if order is None:
@@ -190,12 +276,12 @@ def main():
             groups = regroup(exam, plan, order)
             moved = sum(1 for i, j in enumerate(order) if i != j)
             note = (f"순서 {moved}개 교정" if moved else "")
-            if plan is not v["plan"]:
+            if plan is not base or fixed:
                 note = (note + " · " if note else "") + "총배점 중복 제거"
             break
         if groups is None:
             n_app = len(exam["questions"])
-            groups = rebuild(exam, v["plan"])
+            groups = rebuild(exam, base)
             note = f"시험지 기준 재구성 (앱 {n_app}설문 → {len(exam['questions'])}설문)"
         done.append((eid, len(groups), note))
         if write:
