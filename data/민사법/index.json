@@ -11941,7 +11941,8 @@
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
-   "groupSource": "시험지"
+   "groupSource": "시험지",
+   "casebookChars": 15901
   },
   {
    "id": "민사법_변시_2회_사례",
@@ -12210,7 +12211,8 @@
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
-   "groupSource": "시험지"
+   "groupSource": "시험지",
+   "casebookChars": 15111
   },
   {
    "id": "민사법_변시_1회_사례",
@@ -12446,7 +12448,8 @@
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
-   "groupSource": "시험지"
+   "groupSource": "시험지",
+   "casebookChars": 16385
   },
   {
    "id": "민사법_모의_2026_1차_사례",
