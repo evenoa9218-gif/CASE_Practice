@@ -194,6 +194,11 @@ const INCOMING_SUBJECT = INCOMING_EXAM ? INCOMING_EXAM.split("_")[0] : null;
 const INCOMING_GROUP = URLQ.get("group");
 let incomingExamUsed = false;
 
+// 문항 라벨의 근거. groupSource가 "시험지"면 원본 시험지에서 표제를 직접 읽은
+// 것이고, 그 밖의 값이 붙어 있으면 근거를 못 찾아 추정한 것이다. 표시가 아예
+// 없는 과목(공법·형사법·창작문제)은 아직 이 구분을 매기지 않았으므로 조용히 둔다.
+const ESTIMATED = e => !!e?.groupSource && e.groupSource !== "시험지";
+
 const fmtDate = ts => { const d=new Date(ts), p=n=>String(n).padStart(2,'0');
   return `${d.getFullYear()}.${p(d.getMonth()+1)}.${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())}`; };
 const mmss = s => `${String(Math.floor(s/60)).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`;
@@ -724,8 +729,8 @@ function ExamCard({e,prog,issueMap,highlight,onPick}){
           {prog[e.id] && <span className="tag ok">완료</span>}
         </div>
         <div className="muted"
-          title={e.groupSource==="estimated"?"문항(제N문) 구분이 확인되지 않아 추정한 값입니다":undefined}>
-          {e.groups?.length||0}문{e.groupSource==="estimated"?"(추정)":""} · {e.questions.length}설문{e.totalPoints>0?` · ${e.totalPoints}점`:""}
+          title={ESTIMATED(e)?"문항(제N문) 구분이 확인되지 않아 추정한 값입니다":undefined}>
+          {e.groups?.length||0}문{ESTIMATED(e)?"(추정)":""} · {e.questions.length}설문{e.totalPoints>0?` · ${e.totalPoints}점`:""}
         </div>
       </div>
       {e.factSummary &&
@@ -937,7 +942,7 @@ function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSu
                 {issueMap[i]?.label||i}</span>)}</div>
           </div>
 
-          {exam.groupSource==="estimated" &&
+          {ESTIMATED(exam) &&
             <div className="muted" style={{fontSize:12,margin:'0 0 7px'}}>
               ※ 이 회차는 실제 시험지의 문항 구분을 확인하지 못해 아래 문항 라벨이 추정값입니다.
             </div>}
