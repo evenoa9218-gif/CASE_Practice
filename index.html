@@ -504,6 +504,8 @@ function ExamList({subject,exams,issues,issueMap,prog,byIssue,casebookToc,mode,s
                    fType,setFType,fIssue,setFIssue,fDone,setFDone,incoming,onPick}){
   const [showAll,setShowAll] = useState(false);
   const [q,setQ] = useState("");
+  const [fArea,setFArea] = useState(null);   // 쟁점 분야(헌법/행정법 …) 좁히기
+  useEffect(()=>{ setFArea(null); setShowAll(false); },[subject]);
   const [issueSub,setIssueSub] = useState(fIssue ? "tag" : "toc");
   // 사례집 본문은 2MB가 넘어서 목록에서 하나를 고를 때만 받는다.
   const [caseTexts,setCaseTexts] = useState(null);
@@ -523,7 +525,15 @@ function ExamList({subject,exams,issues,issueMap,prog,byIssue,casebookToc,mode,s
   // ── 쟁점별 모드 ──
   if(mode==="issue"){
     const kw = q.trim();
-    const list = issues.filter(it=> !kw || it.label.includes(kw) || it.id.includes(kw));
+    const areaOf = it => it.path?.[1] || "기타";
+    const areaCount = {};
+    for(const it of issues) areaCount[areaOf(it)] = (areaCount[areaOf(it)]||0)+1;
+    // 미분류(`공법일반` 등)는 근거를 못 찾은 것이라 맨 뒤로 보낸다.
+    const areas = Object.entries(areaCount)
+      .sort((a,b)=> (a[0].endsWith("일반")-b[0].endsWith("일반")) || b[1]-a[1]);
+    const list = issues.filter(it=>
+      (!fArea || areaOf(it)===fArea) &&
+      (!kw || it.label.includes(kw) || it.id.includes(kw)));
     const sel = fIssue ? issueMap[fIssue] : null;
     const selExams = fIssue ? (byIssue[fIssue]||[]).map(id=>exams.find(e=>e.id===id)).filter(Boolean) : [];
 
@@ -579,6 +589,14 @@ function ExamList({subject,exams,issues,issueMap,prog,byIssue,casebookToc,mode,s
             <div className="title">쟁점 선택 <span className="muted" style={{fontWeight:400}}>— 한 쟁점만 골라 그 지문들만 풀 수 있습니다</span></div>
             <input type="text" placeholder="쟁점 검색 (예: 과잉금지, 원고적격)" value={q}
               onChange={e=>setQ(e.target.value)} style={{width:'100%',marginBottom:11}} />
+            {areas.length>1 &&
+              <div className="row" style={{marginBottom:11}}>
+                <span className="muted" style={{fontSize:12}}>분야</span>
+                {areas.map(([a,n])=>
+                  <span key={a} className={"tag click"+(fArea===a?" on":"")}
+                    title={a.endsWith("일반")?"사례집에 근거가 없어 분야를 못 매긴 쟁점입니다":undefined}
+                    onClick={()=>{setFArea(fArea===a?null:a); setShowAll(false);}}>{a} {n}</span>)}
+              </div>}
             <div className="row">
               {(showAll? list : list.slice(0,40)).map(it=>
                 <span key={it.id} className={"tag click"+(fIssue===it.id?" on":"")} title={it.id}
