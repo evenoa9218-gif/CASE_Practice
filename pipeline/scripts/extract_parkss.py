@@ -28,6 +28,7 @@ from paths import CASEBOOK
 from reflow_rosajeong import build_vocab, reflow   # 책과 무관한 일반 재조립기다
 import parkss_body_fixes
 import parkss_ocr_fixes
+import parkss_tables
 
 MARGIN_X = 393        # 이보다 오른쪽에서 시작하는 줄 = 여백 메모
 BODY_WIDE = 430       # 본답안 첫 줄은 쪽 폭을 다 쓴다(개요도 줄은 짧다)
@@ -268,8 +269,12 @@ def extract():
             # 여기서는 줄과 wrap 표시를 그대로 담아 두고 마지막에 한꺼번에 잇는다.
             "_problem": _rows(trim_head(clean(pages[0]["lines"][1:opening])), r["no"]),
             "_outline": _rows(order_outline(clean(pages[0]["lines"][opening:ans0])), r["no"]),
-            "_answer": _rows(clean(pages[0]["lines"][ans0:]) +
-                             [l for pg in pages[1:] for l in clean(pg["lines"])], r["no"]),
+            # 설문마다 개요 표가 하나씩 있어 둘째 쪽 이후에도 표가 나온다.
+            # 쪽마다 표를 찾아 단별 읽기 순서로 되돌린다(`parkss_tables`).
+            # 예전에는 첫 쪽 `_outline` 하나만 처리해서 나머지가 전부 뒤엉켰다.
+            "_answer": _rows(parkss_tables.order_tables(clean(pages[0]["lines"][ans0:])) +
+                             [l for pg in pages[1:]
+                              for l in parkss_tables.order_tables(clean(pg["lines"]))], r["no"]),
             "notes": [n for n in notes if not parkss_body_fixes.is_banner_noise(n)],
         }
     doc.close()
