@@ -18,6 +18,7 @@ from collections import Counter
 
 from parkss_titles import FIXED_TITLE
 from paths import APP, CASEBOOK, REGISTRY
+import parkss_text_fixes as F
 
 DATA = APP / "data" / "민사법"
 EXAMS = DATA / "exams"
@@ -87,23 +88,51 @@ def issue_matcher():
 
 
 def questions_of(c):
-    """배점 표시로 설문을 나눈다. 표시가 없으면 사례 하나를 설문 하나로 본다.
+    """설문을 나누고 «묻는 말»을 `ask` 에 채운다.
 
     **없는 배점을 지어내지 않는다.** 이 책은 286개 중 115개 사례에 배점을 아예
     매기지 않았다(`…서술하시오.1)`로 끝난다). 지면으로 확인한 사실이다.
     그런 사례는 `points=None`으로 두면 앱도 채점기도 배점을 표시하지 않는다.
     지문에 없더라도 답안·개요 소제목에 배점이 흩어져 있으면 그 합이 사례의 배점이다.
+
+    **`ask` 를 비워 두면 화면에 「문1」 밑에 번호 `1` 만 덩그러니 뜬다**(2026-08-13).
+    지문의 `(1)(2)(3)` 을 설문으로 갈라 채우고, 번호가 없는 사례는 마지막 물음
+    문장 하나를 넣는다. 물음을 못 찾으면 빈 값으로 둔다 — 지어내지 않는다.
     """
+    fact, split = F.split_questions(c["problemText"])
+    asks = {n: body for n, body in split}
+
+    def ask_for(n, total):
+        if asks:
+            return asks.get(n, "")
+        return F.tail_question(c["problemText"]) if total == 1 else ""
+
     found = PTS.findall(c["problemText"])
     if len(found) >= 2:
-        return [{"no": i, "points": int(v), "ask": ""}
+        # 설문 번호가 없고 배점만 여럿이면 배점 표시를 경계로 잘라 각 물음을 뽑는다
+        segs = []
+        if not asks:
+            prev = 0
+            for m in PTS.finditer(c["problemText"]):
+                segs.append(c["problemText"][prev:m.end()])
+                prev = m.end()
+        return [{"no": i, "points": int(v),
+                 "ask": ask_for(i, len(found)) or
+                        (F.tail_question(segs[i - 1]) if i - 1 < len(segs) else "")}
                 for i, v in enumerate(found, 1)], False
     if len(found) == 1:
-        return [{"no": 1, "points": int(found[0]), "ask": ""}], False
+        return [{"no": 1, "points": int(found[0]), "ask": ask_for(1, 1)}], False
+
+    # 배점이 없어도 설문 번호가 있으면 그대로 나눈다 — 화면의 「문1·문2」가 살아난다
+    if len(asks) >= 2:
+        return [{"no": n, "points": None, "ask": asks[n]}
+                for n in sorted(asks)], True
+
     spread = PTS.findall(c["answerText"]) or PTS.findall(c["outlineText"])
     if spread:
-        return [{"no": 1, "points": sum(int(v) for v in spread), "ask": ""}], False
-    return [{"no": 1, "points": None, "ask": ""}], True
+        return [{"no": 1, "points": sum(int(v) for v in spread),
+                 "ask": ask_for(1, 1)}], False
+    return [{"no": 1, "points": None, "ask": ask_for(1, 1)}], True
 
 
 def fact_summary(problem):
