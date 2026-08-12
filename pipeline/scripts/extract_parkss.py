@@ -293,8 +293,9 @@ def _reflow_all(cases):
         for src, dst in (("_problem", "problemText"), ("_outline", "outlineText"),
                          ("_answer", "answerText")):
             rows = c.pop(src)
-            c[dst] = reflow([t for t, _ in rows], [w for _, w in rows], vocab,
-                            loose_item=True)
+            c[dst] = parkss_body_fixes.apply_after_reflow(
+                reflow([t for t, _ in rows], [w for _, w in rows], vocab,
+                       loose_item=True))
     return cases
 
 
