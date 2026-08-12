@@ -21,7 +21,7 @@ n_num = n_join = n_pull = 0
 for no in sorted(cases, key=lambda x: int(x)):
     c = cases[no]
     p0, a0 = c.get("problemText") or "", c.get("answerText") or ""
-    p1, a1, moved = F.apply(p0, a0)
+    p1, a1, moved = F.apply(p0, a0, no)
 
     if F.fix_numbers(p0) != p0 or F.fix_numbers(a0) != a0:
         n_num += 1

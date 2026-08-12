@@ -189,6 +189,7 @@ def split_questions(problem):
         end = idx[k + 1] if k + 1 < len(idx) else len(lines)
         body = "\n".join(lines[i:end]).strip()
         body = QNUM.sub("", body, count=1).strip()
+        body = re.sub(r"^[|=·\-—\s]+", "", body)     # 설문 앞에 붙어 온 OCR 잡티
         qs.append((nums[k], body))
     return fact, qs
 
@@ -202,13 +203,14 @@ def tail_question(problem):
     if not t:
         return ""
     # `〈문제〉` 머리표 뒤가 곧 설문이다 — 있으면 거기서부터 본다
-    m = re.search(r"[〈<(（]\s*문\s*[제저][〉>)）,、]?\s*", t)
+    m = re.search(r"[〈<(（＜]\s*문\s*[제저]\s*\d*\s*[.．]?\s*[〉>)）＞,、]?\s*", t)
     if m:
         t = t[m.end():]
     sents = [s.strip() for s in re.split(r"(?<=[.。?!？！])\s+", t.replace("\n", " ")) if s.strip()]
     for s in reversed(sents):
         if Q_TERM.search(s):
-            return TAIL_JUNK.sub("", s).strip()
+            # OCR 잡티(`|`·`=`·`·`)가 문장 앞에 붙어 오는 곳이 있다
+            return re.sub(r"^[|=·\-—\s]+", "", TAIL_JUNK.sub("", s)).strip()
     # 묻는 말을 못 찾았어도 `〈문제〉` 뒤를 잘라 왔다면 그게 설문이다.
     # 지문이 문장 도중에 잘린 사례(34번 `…소를 제기한 경우,`)라도 번호만 띄우는 것보다 낫다.
     if m and t.strip():
@@ -216,11 +218,62 @@ def tail_question(problem):
     return ""
 
 
-def apply(problem, answer):
-    """지문·답안에 위 1~3을 한 번에 적용한다. 여러 번 돌려도 결과가 같다."""
+# ── 5. 지문 꼬리에 붙어 온 답안 잘라내기 ────────────────
+# 추출 경계가 뒤로 밀려 답안 앞부분이 지문 끝에 섞인 사례가 있다. 그 탓에
+# 답안 속 `(N점)` 까지 설문 배점으로 잡혀 **내용 없는 유령 「문N」**이 생겼다
+# (193·241·252·257). 답안이 시작되는 표지에서 자른다.
+# `〈문제 1.＞` 같은 «설문» 머리표는 꺾쇠라 걸리지 않는다 — 대괄호만 본다.
+ANSWER_IN_PROBLEM = re.compile(
+    # OCR 이 「관하여」를 `관6KH`·`관하몌`처럼 뭉갠다. 닫는 대괄호를 기준으로 잡는다.
+    r"\n\s*(?:\[\s*문\s*[제저]\s*\d*\s*[.．]?\s*[에메]?\s*관\S{0,5}\]"        # [문제 1.에 관하여]
+    r"|\[\s*설문"
+    r"|\(?\s*판례의?\s*입장만\s*서술"                                        # 답안 머리의 안내 문구
+    r"|[IVXⅠ-Ⅹ]{1,4}\s*[.．]\s*논점의?\s*정리"
+    r"|논점의\s*정리\s*[(（])")
+
+
+def cut_answer_tail(problem, answer):
+    """지문 끝에 딸려온 답안을 떼어 답안 앞으로 되돌린다."""
+    m = ANSWER_IN_PROBLEM.search(problem or "")
+    if not m:
+        return problem, answer, False
+    moved = problem[m.start():].strip()
+    return problem[:m.start()].rstrip(), (moved + "\n" + (answer or "")).strip(), True
+
+
+# ── 6. 지문과 답안이 통째로 밀린 사례 ─────────────────
+# 182 는 지문 자리에 답안 요약이, 답안 자리에 `〈사실관계〉` 가 들어가 있다.
+# 한 사례뿐이라 일반 규칙을 만들지 않고 이 사례만 명시해 되돌린다(2026-08-13 지면 확인).
+SWAPPED_CASES = {"182"}
+FACTS_HEAD = re.compile(r"[〈<]\s*사실관계\s*[〉>]")
+Q_HEAD = re.compile(r"[〈<]\s*문\s*[제저]\s*[〉>＞]?")
+
+
+def unswap(problem, answer):
+    """`〈사실관계〉…〈문제〉…?` 덩어리를 지문으로 되돌린다. 못 찾으면 그대로 둔다."""
+    whole = (problem or "").rstrip() + "\n" + (answer or "")
+    mf = FACTS_HEAD.search(whole)
+    if not mf:
+        return problem, answer, False
+    mq = Q_HEAD.search(whole, mf.end())
+    if not mq:
+        return problem, answer, False
+    # 설문은 물음표나 `…하시오.` 로 끝난다. 그 줄 끝까지가 지문이다.
+    nl = whole.find("\n", mq.end())
+    end = nl if nl != -1 else len(whole)
+    new_problem = whole[mf.start():end].strip()
+    new_answer = (whole[:mf.start()].strip() + "\n" + whole[end:].strip()).strip()
+    return new_problem, new_answer, True
+
+
+def apply(problem, answer, case_no=None):
+    """지문·답안에 위 1~6을 한 번에 적용한다. 여러 번 돌려도 결과가 같다."""
+    if case_no is not None and str(case_no) in SWAPPED_CASES:
+        problem, answer, _ = unswap(problem, answer)
     problem = join_wrapped(fix_numbers(problem or ""))
     answer = fix_numbers(answer or "")
+    problem, answer, cut = cut_answer_tail(problem, answer)
     problem, answer, n = pull_back_questions(problem, answer)
-    if n:
+    if n or cut:
         problem = join_wrapped(problem)
     return problem, answer, n
