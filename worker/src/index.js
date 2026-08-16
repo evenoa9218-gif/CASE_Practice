@@ -21,7 +21,7 @@ const ALLOWED_ORIGINS = [
 // 다르고, 어느 쪽인지는 시험 ID 꼬리(_사례/_기록)가 말해 준다.
 const DATA_BASES = {
   사례: 'https://evenoa9218-gif.github.io/CASE_Practice/data',
-  기록: 'https://evenoa9218-gif.github.io/RECORD/data',
+  기록: 'https://evenoa9218-gif.github.io/RECORD_Practice/data',   // 저장소 이름과 로컬 폴더명(RECORD)이 다르다
 };
 
 // 경로에 들어갈 값이므로 형식을 먼저 좁힌다. 과목은 목록으로, 시험 ID는
