@@ -93,6 +93,38 @@ select.btn{padding:7px 10px}
 .grade-card{border-color:var(--gold);max-height:52vh;overflow-y:auto}
 .grade-err{color:var(--no);font-size:13.5px;margin-bottom:9px}
 
+/* ── 채점 결과 보기 — 「빨간 펜으로 첨삭한 종이」 ──────────────
+   전에는 마크다운을 평문으로 뿌려서 표의 |, 제목의 ##, 강조의 ** 가
+   화면에 그대로 보였다. 아래 스타일은 그걸 사람이 읽는 모양으로 만든다. */
+.gv-h{font-weight:700;margin:16px 0 8px;color:var(--tx)}
+.gv-h2{font-size:15.5px;padding-bottom:5px;border-bottom:1px solid var(--bd2)}
+.gv-h3{font-size:14px} .gv-h4{font-size:13.5px;color:var(--tx2)}
+.gv-p{font-size:14.4px;line-height:1.85;margin:6px 0;color:var(--tx)}
+.gv-li{font-size:14.2px;line-height:1.8;margin:5px 0 5px 14px;position:relative;color:var(--tx)}
+.gv-li::before{content:"·";position:absolute;left:-11px;color:var(--tx3)}
+.gv-t{width:100%;border-collapse:collapse;margin:10px 0;font-size:13px}
+.gv-t th,.gv-t td{border:1px solid var(--bd2);padding:6px 8px;text-align:left;vertical-align:top}
+.gv-t th{background:var(--sf2);font-weight:600;color:var(--tx2);white-space:nowrap}
+
+/* 첨삭 카드 — 학생 문장 → 고칠 말 → 사유 */
+.gv-card{border-left:3px solid var(--no);background:var(--sf2);
+  border-radius:0 8px 8px 0;padding:10px 12px;margin:10px 0}
+.gv-said{font-size:14px;line-height:1.8;color:var(--tx2)}
+.gv-quote{color:var(--tx2)}
+.gv-fixline{font-size:14.2px;line-height:1.85;margin-top:5px;color:var(--tx)}
+.gv-del{color:var(--no);text-decoration:line-through;text-decoration-thickness:1.5px}
+.gv-fix{color:var(--no);font-weight:700}
+.gv-why{display:flex;gap:7px;align-items:baseline;margin-top:7px;
+  font-size:13.2px;line-height:1.75;color:var(--tx2)}
+.gv-tag{flex:none;font-size:11.5px;font-weight:700;padding:2px 7px;border-radius:6px;
+  background:var(--sf);border:1px solid var(--bd)}
+.gv-bad .gv-tag{color:var(--no);border-color:var(--no)}
+.gv-warn .gv-tag{color:var(--gold);border-color:var(--gold)}
+.gv-good .gv-tag{color:var(--ok);border-color:var(--ok)}
+.gv-mute .gv-tag{color:var(--tx3)}
+.gv-good{border-color:var(--ok)}
+
+
 textarea{width:100%;background:var(--sf);color:var(--tx);border:1px solid var(--bd);
   border-radius:10px;padding:14px;font-size:15px;line-height:1.9;font-family:inherit;
   resize:vertical;min-height:300px}
@@ -195,6 +227,115 @@ const ROUNDS = [1,2,3,4];
 
 // AI 채점 Worker 주소. 배포한 뒤 여기에 넣으면 채점 버튼이 켜진다.
 // 비워 두면 채점 기능만 숨고 나머지는 그대로 돌아간다. (worker/README.md 참고)
+// 채점 결과를 「선생님이 빨간 펜으로 첨삭한 종이」처럼 보이게 하는 뷰.
+//
+// 지금까지는 채점 결과(마크다운)를 <div class="pre"> 에 평문으로 뿌리고 있었다.
+// 그래서 표의 `|`, 제목의 `##`, 강조의 `**` 가 화면에 그대로 노출됐다.
+// 여기서 최소한의 마크다운만 직접 해석한다 — 라이브러리를 더 받지 않으려는 것이다
+// (첫 화면 속도를 위해 babel 2.7MB 를 걷어낸 마당에 다시 늘릴 이유가 없다).
+//
+// 해석하는 것: ## 제목 / 표 / 인용(>) / **굵게** / ~~취소선~~ / [사유] 꼬리표 / 목록
+// 첨삭 절의 세 줄 묶음(인용 → 고칠 말 → [사유])은 한 장의 「첨삭 카드」로 묶는다.
+
+function esc(s) {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+// 줄 안쪽 서식. 취소선은 지운 글자, 굵게는 고쳐 쓸 말로 쓴다.
+function inline(s) {
+  let t = esc(s);
+  t = t.replace(/~~(.+?)~~/g, '<span class="gv-del">$1</span>');
+  t = t.replace(/\*\*(.+?)\*\*/g, '<strong class="gv-fix">$1</strong>');
+  t = t.replace(/「(.+?)」/g, '<span class="gv-quote">「$1」</span>');
+  return t;
+}
+
+// [사유] 꼬리표 — 종류에 따라 색을 달리해 한눈에 구분되게 한다.
+const REASON_CLASS = {
+  '판례 근거 부족': 'warn', '판례 오기': 'bad', '조문 오기': 'bad',
+  '정확성 부족': 'warn', '포섭 누락': 'warn', '논리 비약': 'warn',
+  '결론 오류': 'bad', '불필요': 'mute', '좋음': 'good',
+};
+
+function renderGrade(md) {
+  const out = [];
+  const lines = String(md || '').split('\n');
+  let table = null;      // 표를 모으는 중인지
+  let card = null;       // 첨삭 카드를 모으는 중인지
+
+  const flushTable = () => {
+    if (!table) return;
+    const [head, ...body] = table;
+    out.push(
+      '<table class="gv-t"><thead><tr>' +
+      head.map((c) => `<th>${inline(c)}</th>`).join('') +
+      '</tr></thead><tbody>' +
+      body.map((r) => '<tr>' + r.map((c) => `<td>${inline(c)}</td>`).join('') + '</tr>').join('') +
+      '</tbody></table>',
+    );
+    table = null;
+  };
+  const flushCard = () => {
+    if (!card) return;
+    out.push(`<div class="gv-card">${card.join('')}</div>`);
+    card = null;
+  };
+
+  for (const raw of lines) {
+    const t = raw.trim();
+
+    // 표
+    if (t.startsWith('|') && t.endsWith('|')) {
+      const cells = t.slice(1, -1).split('|').map((c) => c.trim());
+      if (cells.every((c) => /^:?-{2,}:?$/.test(c))) continue;   // 구분줄
+      (table = table || []).push(cells);
+      continue;
+    }
+    flushTable();
+
+    if (!t) { flushCard(); continue; }
+
+    // 제목
+    const h = t.match(/^(#{2,4})\s+(.+)$/);
+    if (h) {
+      flushCard();
+      const lv = h[1].length;
+      out.push(`<div class="gv-h gv-h${lv}">${inline(h[2])}</div>`);
+      continue;
+    }
+
+    // [사유] 꼬리표 — 첨삭 카드의 마지막 줄
+    const r = t.match(/^>?\s*\[([^\]]+)\]\s*(.*)$/);
+    if (r) {
+      const kind = REASON_CLASS[r[1].trim()] || 'warn';
+      (card = card || []).push(
+        `<div class="gv-why gv-${kind}"><span class="gv-tag">${esc(r[1])}</span>` +
+        `<span>${inline(r[2])}</span></div>`,
+      );
+      continue;
+    }
+
+    // 인용줄 — 학생 문장 또는 고쳐 쓸 말
+    if (t.startsWith('>')) {
+      const body = t.replace(/^>\s?/, '');
+      const isFix = /→/.test(body);
+      (card = card || []).push(
+        `<div class="${isFix ? 'gv-fixline' : 'gv-said'}">${inline(body)}</div>`,
+      );
+      continue;
+    }
+    flushCard();
+
+    // 목록
+    const li = t.match(/^[-*]\s+(.+)$/) || t.match(/^(\d+\.\s+.+)$/);
+    if (li) { out.push(`<div class="gv-li">${inline(li[1])}</div>`); continue; }
+
+    out.push(`<div class="gv-p">${inline(t)}</div>`);
+  }
+  flushTable(); flushCard();
+  return out.join('');
+}
+
 const GRADER_URL = "https://case-grader.bar-exam.workers.dev";
 const SPLIT_MIN = 25, SPLIT_MAX = 75;   // 문제/답안 2단 폭 비율 한계(%)
 const URLQ = new URLSearchParams(location.search);
@@ -1084,7 +1225,7 @@ function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSu
               </div>
               {grade.error && <div className="grade-err">{grade.error}</div>}
               {grade.text
-                ? <div className="pre">{grade.text}</div>
+                ? <div className="gv" dangerouslySetInnerHTML={{__html: renderGrade(grade.text)}} />
                 : grade.running && <div className="muted">
                     채점기준표와 대조하고 있습니다. 30초쯤 걸립니다.</div>}
               {!grade.running && grade.text &&
