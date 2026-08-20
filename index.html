@@ -72,6 +72,16 @@ select.btn{padding:7px 10px}
 .tag.ok{background:var(--sf2);color:var(--ok);border-color:var(--ok)}
 .tag.click{cursor:pointer}
 .tag.click:hover{border-color:var(--gold)}
+
+/* 손가락으로 쓰는 기기에서 누를 것들을 키운다.
+   필터·구분 칩(.tag.click)이 27px, 상단 버튼이 33~35px 라 손끝으로 집기 어려웠다
+   (권장 44px). 마우스 화면은 지금 밀도가 알맞으므로 터치 기기에서만 손댄다. */
+@media (pointer:coarse){
+  .tag.click{min-height:36px;padding:8px 12px;display:inline-flex;align-items:center}
+  .btn{min-height:40px}
+  .btn.ghost{min-height:40px;padding:8px 13px}
+  select.btn{min-height:40px}
+}
 .muted{color:var(--tx3);font-size:12px}
 .title{font-size:14.5px;font-weight:700;margin:0 0 9px;color:var(--tx)}
 .pre{white-space:pre-wrap;word-break:break-word;font-size:14.8px;line-height:1.9;
