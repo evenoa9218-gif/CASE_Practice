@@ -1030,10 +1030,31 @@ function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSu
   // 뜨고 진도 집계의 득점률도 무너진다.
   const maxPts = g?.points > 0 ? g.points : 100;
 
+  // 답안은 600ms 쉬면 저장한다. 다만 그 사이에 탭을 닫거나 화면을 가리면
+  // 마지막 타이핑이 통째로 날아간다 — 긴 답안에서 제일 아픈 사고라 이탈 신호에
+  // 즉시 한 번 더 저장한다. (모바일에서는 visibilitychange 가 유일하게 믿을 만하다)
+  const pending = React.useRef(null);
+  const flushDraft = React.useCallback(()=>{
+    const p = pending.current;
+    if(!p) return;
+    pending.current = null;
+    clearTimeout(setAnswer._t);
+    Store.setDraft(p.k, p.v);
+  },[]);
+  React.useEffect(()=>{
+    const onHide = ()=>{ if(document.visibilityState === 'hidden') flushDraft(); };
+    document.addEventListener('visibilitychange', onHide);
+    window.addEventListener('pagehide', flushDraft);
+    return ()=>{ document.removeEventListener('visibilitychange', onHide);
+                 window.removeEventListener('pagehide', flushDraft); };
+  },[flushDraft]);
+
   const setAnswer = (key,val)=>{
     setAnswers(a=>({...a,[key]:val})); setSaved(false);
+    pending.current = { k:`${exam.id}::${key}`, v:val };
     clearTimeout(setAnswer._t);
-    setAnswer._t = setTimeout(()=>Store.setDraft(`${exam.id}::${key}`, val), 600);
+    setAnswer._t = setTimeout(()=>{ pending.current = null;
+      Store.setDraft(`${exam.id}::${key}`, val); }, 600);
   };
 
   if(err) return <div className="card" style={{borderColor:'var(--no)'}}>{err}
@@ -1383,6 +1404,24 @@ function Stats({exams,issues,prog,records,byIssue,onPickIssue}){
 }
 
 ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+</script>
+<script>
+// 오프라인 대응. 답안 초안은 IndexedDB 에 있으니 껍데기와 문제 데이터만 살려 두면
+// 신호가 끊긴 곳에서도 이어서 쓸 수 있다.
+if('serviceWorker' in navigator){
+  // 새 워커가 제어권을 넘겨받으면 한 번만 새로고침한다 — 없으면 배포 직후 방문자에게
+  // 캐시에 남은 옛 화면이 그대로 보이고 손으로 새로고침하기 전까지 회복하지 못한다.
+  const 최초등록 = !navigator.serviceWorker.controller;
+  let 새로고침함 = false;
+  navigator.serviceWorker.addEventListener('controllerchange',()=>{
+    if(최초등록 || 새로고침함) return;
+    새로고침함 = true; location.reload();
+  });
+  window.addEventListener('load',()=>{
+    // updateViaCache:'none' — sw.js 가 HTTP 캐시에 붙잡히면 새 배포를 못 본다.
+    navigator.serviceWorker.register('C:/Program Files/Git/CASE_Practice/sw.js',{updateViaCache:'none'}).catch(()=>{});
+  });
+}
 </script>
 </body>
 </html>
