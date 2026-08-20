@@ -2090,7 +2090,7 @@ if('serviceWorker' in navigator){
   });
   window.addEventListener('load',()=>{
     // updateViaCache:'none' — sw.js 가 HTTP 캐시에 붙잡히면 새 배포를 못 본다.
-    navigator.serviceWorker.register('C:/Program Files/Git/CASE_Practice/sw.js',{updateViaCache:'none'}).catch(()=>{});
+    navigator.serviceWorker.register('/CASE_Practice/sw.js',{updateViaCache:'none'}).catch(()=>{});
   });
 }
 </script>
