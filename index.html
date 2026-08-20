@@ -279,7 +279,9 @@ const REASON_CLASS = {
 };
 function renderGrade(md) {
   const out = [];
-  const lines = String(md || '').split('\n');
+  // 점수 마커는 앱이 배지로 쓰는 내부 표기다 — 본문에는 남기지 않는다.
+  //   (스트리밍 중에는 조각으로 오므로 미완성 형태도 함께 지운다)
+  const lines = String(md || '').replace(/\[\[SCORE:[^\]]*\]{0,2}/g, '').split('\n');
   let table = null; // 표를 모으는 중인지
   let card = null; // 첨삭 카드를 모으는 중인지
 
@@ -322,8 +324,25 @@ function renderGrade(md) {
     // [사유] 꼬리표 — 첨삭 카드의 마지막 줄
     const r = t.match(/^>?\s*\[([^\]]+)\]\s*(.*)$/);
     if (r) {
-      const kind = REASON_CLASS[r[1].trim()] || 'warn';
-      (card = card || []).push(`<div class="gv-why gv-${kind}"><span class="gv-tag">${esc(r[1])}</span>` + `<span>${inline(r[2])}</span></div>`);
+      let name = r[1].trim(),
+        rest = r[2];
+      // 모델이 형식을 어겨 「[사유] 결론 오류 — …」로 쓰는 일이 있다.
+      // 그대로 찍으면 「사유」라는 쓸모없는 딱지가 붙으므로 뒤에서 실제 사유를 끄집어낸다.
+      if (name === '사유') {
+        const m2 = rest.match(/^\s*([^—\-:]{2,12})\s*[—\-:]\s*(.*)$/);
+        if (m2 && REASON_CLASS[m2[1].trim()]) {
+          name = m2[1].trim();
+          rest = m2[2];
+        } else {
+          const k = Object.keys(REASON_CLASS).find(x => rest.startsWith(x));
+          if (k) {
+            name = k;
+            rest = rest.slice(k.length).replace(/^\s*[—\-:]\s*/, '');
+          }
+        }
+      }
+      const kind = REASON_CLASS[name] || 'warn';
+      (card = card || []).push(`<div class="gv-why gv-${kind}"><span class="gv-tag">${esc(name)}</span>` + `<span>${inline(rest)}</span></div>`);
       continue;
     }
 
