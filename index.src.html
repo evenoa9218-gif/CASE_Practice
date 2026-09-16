@@ -258,7 +258,7 @@ function inline(s) {
 const REASON_CLASS = {
   '판례 근거 부족': 'warn', '판례 오기': 'bad', '조문 오기': 'bad',
   '정확성 부족': 'warn', '포섭 누락': 'warn', '논리 비약': 'warn',
-  '결론 오류': 'bad', '불필요': 'mute', '좋음': 'good',
+  '결론 오류': 'bad', '불필요': 'mute', '좋음': 'good', '누락': 'warn',
 };
 
 function renderGrade(md) {
@@ -333,7 +333,10 @@ function renderGrade(md) {
     // 인용줄 — 학생 문장 또는 고쳐 쓸 말
     if (t.startsWith('>')) {
       const body = t.replace(/^>\s?/, '');
-      const isFix = /→/.test(body);
+      // 학생 문장은 「」로 시작한다. 화살표가 없어도 「」로 시작하지 않는 줄은
+      // 채점자가 쓴 고칠 말이다(누락 논점의 모범 문장, 덧붙일 문장).
+      // 예전엔 화살표만 봐서 이런 줄이 학생 문장과 똑같은 모양으로 찍혔다.
+      const isFix = /→/.test(body) || !/^「/.test(body.trim());
       (card = card || []).push(
         `<div class="${isFix ? 'gv-fixline' : 'gv-said'}">${inline(body)}</div>`,
       );
@@ -1118,7 +1121,8 @@ function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSu
       }
       // 총점은 마지막 줄의 [[SCORE:n]]에 온다. 꺼내고 화면에서는 지운다.
       const m = acc.match(/\[\[SCORE:\s*(\d+)\s*\]\]/);
-      const score = m ? Number(m[1]) : null;
+      // 모델이 만점을 넘겨 적어도 기록·진도 집계가 무너지지 않게 만점에서 자른다
+      const score = m ? Math.min(Number(m[1]), maxPts) : null;
       const body = acc.replace(/\[\[SCORE:[^\]]*\]\]/g, "").trim();
       setGrade({running:false, text:body, score, error:err});
       if(score !== null){
