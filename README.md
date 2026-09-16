@@ -194,6 +194,17 @@ python -m http.server 8000
 그 뒤 추가된 로사정 163건은 원본 PDF(`ROSAJEONG_PDF`)가 있어야 재생성됩니다 — PDF 없이 되돌리려면
 `pipeline/casebook/rosajeong_cases.json`(커밋되어 있음)에서 `parse_` 단계부터 다시 돌리면 됩니다.
 
+**⚠ 데이터를 다시 만든 뒤에는 반드시 마지막에 이것을 돌리세요** — AI 채점 비용이 되돌아갑니다:
+
+```
+node pipeline/scripts/slice_basis.js           # 보고만
+node pipeline/scripts/slice_basis.js --write   # 문항별 채점 근거 조각(groups[].basisSlice) 기록
+```
+
+채점 Worker는 문항 하나를 채점할 때 이 조각만 보냅니다(민사 모의 실측 입력 5.0만 → 1.6만 토큰, 비용 −48%).
+원문이 바뀌어 조각의 `sig`가 어긋나면 Worker는 자동으로 전체 근거를 보내므로 채점이 틀리지는 않지만,
+비용 절감이 사라집니다. 스크립트는 확실할 때만 자르고, JSON은 원래 형식 그대로 씁니다.
+
 ### 다른 앱과 함께 작업하려면
 
 허브(`evenoa9218-gif.github.io`) + 위성 앱 4개(선택형/사례형/암기장/기록형)의 공용 규약 —
@@ -206,6 +217,12 @@ python -m http.server 8000
 API 키를 정적 페이지에 둘 수 없으므로 Cloudflare Worker 프록시를 거칩니다 — 소스는 [`worker/`](worker/),
 엔드포인트는 `index.html`의 `GRADER_URL` 상수에 박혀 있습니다. 배포는 `wrangler deploy`.
 채점 근거가 없는 회차(위 표의 제외 회차)에서는 버튼이 동작하지 않습니다.
+
+- 문항별로 잘라 둔 근거가 있으면 그것만 보냅니다(`slice_basis.js`). 문제 전문은 공통 사실관계 때문에 통째로 보냅니다.
+- 사례집에 그 문항 답안이 아예 없는 경우(민사 변시 제3문 상법 등 23문항)는 다른 문항 답안으로 채점하지 않고
+  "근거 없이 평가한 결과"임을 첫 줄에 밝힙니다.
+- 점검: 요청 본문에 `"dry": true`를 넣으면 모델을 부르지 않고 보낼 근거의 글자 수와 자르기 적용 여부만 돌려줍니다.
+- Worker는 회차 JSON을 5분 캐시합니다. 데이터를 크게 바꾸면 `worker/src/index.js`의 `DATA_CACHE_VER`를 올리세요.
 
 ## 로사정 파이프라인
 
