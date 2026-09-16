@@ -319,6 +319,26 @@ function buildRecordPrompt(exam, task, answer) {
   return { basis: parts.join('\n\n'), answer: `# 수험생 답안(${task.title})\n${answer}` };
 }
 
+/**
+ * 문항별로 잘라 둔 채점 근거(pipeline/scripts/slice_basis.js 가 만든다).
+ * sig 가 지금 데이터와 다르면(데이터를 다시 만들고 자르기를 안 돌렸으면) null — 전체를 쓴다.
+ * 반환: { rubric } | { answers } | null
+ */
+function slicedBasis(exam, group) {
+  const bs = group.basisSlice;
+  if (!bs) return null;
+  if (bs.src === 'rubric' && exam.rubricText && bs.sig === exam.rubricText.length
+      && Array.isArray(bs.ranges) && bs.ranges.length) {
+    return { rubric: bs.ranges.map(([a, b]) => exam.rubricText.slice(a, b)).join('\n\n…\n\n') };
+  }
+  if (bs.src === 'casebook' && !exam.rubricText && exam.casebookAnswers?.length
+      && bs.sig === exam.casebookAnswers.map((x) => (x.answerText || '').length).join(',')
+      && Array.isArray(bs.idx) && bs.idx.every((i) => exam.casebookAnswers[i])) {
+    return { answers: bs.idx.map((i) => exam.casebookAnswers[i]) };
+  }
+  return null;
+}
+
 function buildPrompt(exam, group, answer) {
   const parts = [];
   parts.push(`# 시험\n${exam.label}`);
@@ -339,19 +359,34 @@ function buildPrompt(exam, group, answer) {
   if (exam.problemText) parts.push(`# 문제 전문\n${exam.problemText}`);
 
   // 채점 근거는 기준표가 정본, 없으면 사례집 모범답안으로 대신한다.
-  if (exam.rubricText) {
+  // 문항별로 잘라 둔 조각이 있으면 그것만 보낸다 — 문항 하나 채점에 회차 전체 근거(형사 변시
+  // 14회는 11만 자)를 보내던 것이 비용의 대부분이었다. 문제 전문은 공통 사실관계 때문에 통째로 둔다.
+  const cut = slicedBasis(exam, group);
+  if (cut?.rubric) {
+    parts.push(`# 채점기준표 (이 문항에 해당하는 부분만 발췌)\n${cut.rubric}`);
+  } else if (cut?.answers && !cut.answers.length) {
+    // 사례집에 이 문항의 답안이 아예 없다(민사 변시 제3문 상법 등). 예전엔 다른 문항의
+    // 모범답안을 근거로 채점하고 있었다.
+    parts.push(
+      `# 채점 근거 없음\n사례집에 이 문항의 모범답안이 실려 있지 않다. ` +
+        `일반적인 사례형 작성 기준(법리·포섭·결론의 완결성)으로 평가하고, ` +
+        `출력 맨 첫 줄(첫 ## 제목보다 위)에 "공식 채점기준표·모범답안 없이 평가한 결과"임을 한 줄로 밝혀라.`,
+    );
+  } else if (exam.rubricText) {
     parts.push(`# 채점기준표\n${exam.rubricText}`);
   } else if (exam.casebookAnswers?.length) {
     // 데이터의 본문 필드는 `answerText` 다. 예전에 `a.text` 만 보다가 undefined 가
     // 되어, 채점기준표가 없는 494건(변시 30 + 창작문제 464)에서 모범답안이
     // "[object Object]" 로 들어가고 있었다. `header` 에 문항 라벨이 있으니 같이 준다.
-    const model = exam.casebookAnswers
+    const model = (cut?.answers || exam.casebookAnswers)
       .map((a) => (typeof a === 'string' ? a
         : [a.header, a.answerText || a.text].filter(Boolean).join('\n')))
       .filter(Boolean)
       .join('\n\n---\n\n');
     parts.push(
-      `# 모범답안 (공식 채점기준표가 없어 사례집 모범답안을 기준으로 삼는다)\n${model}`,
+      `# 모범답안 (공식 채점기준표가 없어 사례집 모범답안을 기준으로 삼는다` +
+        (cut?.answers ? ' — 이 문항이 속한 문의 답안만 발췌했다. 같은 문의 다른 설문 몫이 섞여 있을 수 있다' : '') +
+        `)\n${model}`,
     );
   } else {
     parts.push(
