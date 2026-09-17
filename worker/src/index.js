@@ -41,7 +41,8 @@ const MAX_TOKENS = 16000;         // 생각 + 피드백 합계
 // 기록형 채점 근거(해설)는 3만 자를 넘기도 한다. 기준 잡는 데 필요한 만큼만 준다.
 const MAX_BASIS_CHARS = 28000;
 // 데이터를 크게 바꿨을 때 올린다(loadExam 캐시 키). 2: 문항별 근거 자르기(basisSlice) 추가
-const DATA_CACHE_VER = 2;
+// 3: 기록형 서면 목록·배점 바로잡기(fill_task_points)
+const DATA_CACHE_VER = 3;
 
 function cors(origin) {
   const allow = ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0];
@@ -299,8 +300,14 @@ const SYSTEM_RECORD = `당신은 대한민국 변호사시험 기록형 채점�
 function buildRecordPrompt(exam, task, answer) {
   const parts = [];
   parts.push(`# 시험\n${exam.label}`);
+  // 서면별 배점은 RECORD/pipeline/fill_task_points.js 가 원문에서 확정해 둔다(민사 소장 175 등).
+  // 서면이 여럿인데 배점이 비었으면 근거가 없어 비워 둔 회차다 — 100점 환산이라는 사실을 밝히게 한다.
+  const others = (exam.tasks || []).length > 1;
   parts.push(`# 채점할 서면\n${task.title}` +
-    (task.points > 0 ? ` (배점 ${task.points}점)` : ' (배점 미표시 — 100점 만점으로 채점한다)'));
+    (task.points > 0 ? ` (배점 ${task.points}점)`
+      : others ? ' (서면별 배점 미공개 — 기록형 만점을 여러 서면이 나누는데 이 서면 몫이 확인되지 않았다. ' +
+          '100점 만점으로 환산해 채점하고, 출력 맨 첫 줄(첫 ## 제목보다 위)에 "서면별 배점이 공개되지 않아 100점 환산으로 평가한 결과"임을 한 줄로 밝혀라)'
+      : ' (배점 미표시 — 100점 만점으로 채점한다)'));
   if (exam.problemBlock) parts.push(`# 작성 요령(문제 지시)\n${exam.problemBlock}`);
   if (exam.problemText) parts.push(`# 사건 기록 전문\n${exam.problemText}`);
 
