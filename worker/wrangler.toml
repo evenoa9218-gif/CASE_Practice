@@ -40,3 +40,11 @@ class_name = "UsRelay"
 [[migrations]]
 tag = "v1"
 new_sqlite_classes = ["UsRelay"]
+
+# 채점 사용량 기록(1건 1행). 월 비용 조회:
+#   npx wrangler d1 execute grade-usage --remote --command "SELECT substr(ts,1,7) m, count(*) n, round(sum(cost_usd),2) usd FROM usage GROUP BY m"
+[[d1_databases]]
+binding = "USAGE_DB"
+database_name = "grade-usage"
+database_id = "07a0d799-d8cc-4a29-8a54-1894bc82361a"
+migrations_dir = "migrations"

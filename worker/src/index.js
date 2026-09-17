@@ -44,6 +44,43 @@ const MAX_BASIS_CHARS = 28000;
 // 3: 기록형 서면 목록·배점 바로잡기(fill_task_points)
 const DATA_CACHE_VER = 3;
 
+// 비용 기록용 단가(달러/100만 토큰, claude-opus-5). 캐시 쓰기는 5분 캐시 기준 1.25배.
+// 단가가 바뀌면 여기만 고친다 — 이미 쌓인 행은 기록 당시 값으로 남는다.
+const PRICE = { input: 5, cacheWrite: 6.25, cacheRead: 0.5, output: 25 };
+
+function costOf(u) {
+  return ((u.input_tokens || 0) * PRICE.input
+    + (u.cache_creation_input_tokens || 0) * PRICE.cacheWrite
+    + (u.cache_read_input_tokens || 0) * PRICE.cacheRead
+    + (u.output_tokens || 0) * PRICE.output) / 1e6;
+}
+
+// 채점 1건을 D1에 남긴다. 기록이 실패해도 채점 응답에는 영향을 주지 않는다.
+async function logUsage(env, row) {
+  if (!env.USAGE_DB) return;
+  try {
+    const u = row.usage || {};
+    await env.USAGE_DB.prepare(
+      `INSERT INTO usage (mode, subject, exam_id, unit, status, input_tokens, cache_write_tokens,
+        cache_read_tokens, output_tokens, cost_usd, answer_chars, sliced, ip_hash)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+    ).bind(
+      row.mode, row.subject, row.examId, row.unit ?? null, row.status,
+      u.input_tokens ?? null, u.cache_creation_input_tokens ?? null,
+      u.cache_read_input_tokens ?? null, u.output_tokens ?? null,
+      row.usage ? costOf(u) : null, row.answerChars, row.sliced ? 1 : 0, row.ipHash,
+    ).run();
+  } catch (e) {
+    console.error('usage log failed', e?.message);
+  }
+}
+
+// 남용 추적용으로만 쓴다 — IP 원문은 저장하지 않는다.
+async function hashIp(ip) {
+  const d = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(`grade:${ip}`));
+  return [...new Uint8Array(d)].slice(0, 6).map((b) => b.toString(16).padStart(2, '0')).join('');
+}
+
 function cors(origin) {
   const allow = ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0];
   return {
@@ -521,12 +558,20 @@ export default {
     // 채점은 생각이 길어 응답까지 수십 초가 걸린다. 스트리밍으로 보내
     // 사용자가 진행 상황을 보게 하고, 연결이 끊기는 것도 막는다.
     const encoder = new TextEncoder();
+    const log = {
+      mode, subject, examId, unit: mode === '기록' ? String(taskNo) : groupKey,
+      answerChars: answer.length,
+      sliced: mode === '사례' && !!slicedBasis(exam, (exam.groups || []).find((x) => x.key === groupKey)),
+      ipHash: await hashIp(request.headers.get('CF-Connecting-IP') || 'unknown'),
+      status: 'error', usage: null,
+    };
+    let ms;
     const stream = new ReadableStream({
       async start(controller) {
         const send = (obj) =>
           controller.enqueue(encoder.encode(`data: ${JSON.stringify(obj)}\n\n`));
         try {
-          const ms = client.messages.stream({
+          ms = client.messages.stream({
             model: 'claude-opus-5',
             max_tokens: MAX_TOKENS,
             output_config: { effort: env.GRADE_EFFORT || 'high' },
@@ -551,6 +596,9 @@ export default {
           }
 
           const final = await ms.finalMessage();
+          log.usage = final.usage;
+          log.status = final.stop_reason === 'refusal' || final.stop_reason === 'max_tokens'
+            ? final.stop_reason : 'ok';
           if (final.stop_reason === 'refusal') {
             send({ error: '채점을 완료하지 못했습니다. 답안 내용을 확인해 주세요.' });
           } else if (final.stop_reason === 'max_tokens') {
@@ -558,6 +606,12 @@ export default {
           }
           send({ done: true, usage: final.usage });
         } catch (e) {
+          // 도중에 끊겨도 이미 쓴 토큰은 청구된다. 받은 데까지의 사용량이라도 남긴다
+          // (출력 토큰 집계는 끝에 오므로 끊긴 건은 실제보다 적게 찍힐 수 있다).
+          if (!log.usage) {
+            log.usage = ms?.currentMessage?.usage || null;
+            log.status = e?.name === 'TypeError' ? 'aborted' : 'error';
+          }
           // API 쪽에서 막힌 것인지 이쪽 잘못인지 나중에 가리려면 요청 ID가 있어야
           // 한다. Anthropic 지원에 문의할 때 이것부터 묻는다.
           const id = e?.request_id || e?.headers?.['request-id'];
@@ -572,7 +626,8 @@ export default {
             : '';
           send({ error: `채점 중 오류: ${e.message}` + (id ? ` (요청 ID ${id})` : '') + where });
         } finally {
-          controller.close();
+          ctx.waitUntil(logUsage(env, log));
+          try { controller.close(); } catch { /* 이미 끊긴 연결 */ }
         }
       },
     });
