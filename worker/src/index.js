@@ -37,7 +37,10 @@ const EXAM_ID_RE = /^[가-힣]{2,5}_[가-힣]{2,4}_[0-9가-힣]+(?:[-_][0-9가-�
 // 사례형 답안은 한 문항 1.2만 자면 넉넉하다. 기록형 서면(소장·변론요지서)은
 // 그 자체가 답안지 여러 장이라 상한을 따로 둔다.
 const MAX_ANSWER_CHARS = { 사례: 12000, 기록: 24000 };
-const MAX_TOKENS = 16000;         // 생각 + 피드백 합계
+// 생각 + 피드백 합계. 기록형은 청구·피고가 여럿이라 생각만으로 1.6만 토큰을 다 쓰고
+// 피드백을 한 글자도 못 낸 채 끊긴 적이 있다(민사 13회 소장, 2026-09-17 — 돈만 나감).
+// 상한은 넘을 때만 의미가 있으므로 올려도 평소 비용은 그대로다.
+const MAX_TOKENS = { 사례: 16000, 기록: 32000 };
 // 기록형 채점 근거(해설)는 3만 자를 넘기도 한다. 기준 잡는 데 필요한 만큼만 준다.
 const MAX_BASIS_CHARS = 28000;
 // 데이터를 크게 바꿨을 때 올린다(loadExam 캐시 키). 2: 문항별 근거 자르기(basisSlice) 추가
@@ -573,7 +576,7 @@ export default {
         try {
           ms = client.messages.stream({
             model: 'claude-opus-5',
-            max_tokens: MAX_TOKENS,
+            max_tokens: MAX_TOKENS[mode],
             output_config: { effort: env.GRADE_EFFORT || 'high' },
             // 채점 지침은 모든 호출에서 같다 — 캐시에 얹어 매번 다시 읽히지 않게 한다.
             system: [{ type: 'text', text: system, cache_control: { type: 'ephemeral' } }],
@@ -589,8 +592,10 @@ export default {
             }],
           });
 
+          let wrote = false;
           for await (const ev of ms) {
             if (ev.type === 'content_block_delta' && ev.delta.type === 'text_delta') {
+              wrote = true;
               send({ t: ev.delta.text });
             }
           }
@@ -602,7 +607,9 @@ export default {
           if (final.stop_reason === 'refusal') {
             send({ error: '채점을 완료하지 못했습니다. 답안 내용을 확인해 주세요.' });
           } else if (final.stop_reason === 'max_tokens') {
-            send({ error: '피드백이 길어 중간에 끊겼습니다. 답안을 나눠서 채점해 주세요.' });
+            send({ error: wrote
+              ? '피드백이 길어 중간에 끊겼습니다. 답안을 나눠서 채점해 주세요.'
+              : '채점 검토가 길어져 결과를 쓰기 전에 끊겼습니다. 잠시 후 다시 시도해 주세요.' });
           }
           send({ done: true, usage: final.usage });
         } catch (e) {
