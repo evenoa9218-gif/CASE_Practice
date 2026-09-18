@@ -403,6 +403,7 @@ function buildRecordPrompt(exam, task, answer) {
  * 문항별로 잘라 둔 채점 근거(pipeline/scripts/slice_basis.js 가 만든다).
  * sig 가 지금 데이터와 다르면(데이터를 다시 만들고 자르기를 안 돌렸으면) null — 전체를 쓴다.
  * 반환: { rubric } | { answers } | null
+ * (casebookText 는 잘라 낸 본문 한 조각을 답안 하나처럼 돌려준다)
  */
 function slicedBasis(exam, group) {
   const bs = group.basisSlice;
@@ -410,6 +411,15 @@ function slicedBasis(exam, group) {
   if (bs.src === 'rubric' && exam.rubricText && bs.sig === exam.rubricText.length
       && Array.isArray(bs.ranges) && bs.ranges.length) {
     return { rubric: bs.ranges.map(([a, b]) => exam.rubricText.slice(a, b)).join('\n\n…\n\n') };
+  }
+  // 답안이 회차당 한 덩어리인 사례집(로사정·박승수)은 본문 안의 「〈문제 1〉」「[설문 (1)」
+  // 표지 자리로 잘라 둔다 — 머리글이 회차 이름뿐이라 답안 단위로는 나눌 수 없다.
+  if (bs.src === 'casebookText' && !exam.rubricText && exam.casebookAnswers?.length
+      && bs.sig === exam.casebookAnswers.map((x) => (x.answerText || '').length).join(',')
+      && exam.casebookAnswers[bs.ai] && Array.isArray(bs.ranges) && bs.ranges.length) {
+    const a = exam.casebookAnswers[bs.ai];
+    const text = bs.ranges.map(([x, y]) => (a.answerText || '').slice(x, y)).join('\n\n…\n\n');
+    return { answers: [{ header: a.header, answerText: text }] };
   }
   if (bs.src === 'casebook' && !exam.rubricText && exam.casebookAnswers?.length
       && bs.sig === exam.casebookAnswers.map((x) => (x.answerText || '').length).join(',')
