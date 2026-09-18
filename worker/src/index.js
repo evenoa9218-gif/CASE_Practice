@@ -49,7 +49,7 @@ const MAX_TOKENS = { 사례: 16000, 기록: 32000 };
 const MAX_BASIS_CHARS = 60000;
 // 데이터를 크게 바꿨을 때 올린다(loadExam 캐시 키). 2: 문항별 근거 자르기(basisSlice) 추가
 // 3: 기록형 서면 목록·배점 바로잡기(fill_task_points)
-const DATA_CACHE_VER = 3;
+const DATA_CACHE_VER = 4;
 
 // 비용 기록용 단가(달러/100만 토큰, claude-opus-5). 캐시 쓰기는 5분 캐시 기준 1.25배.
 // 단가가 바뀌면 여기만 고친다 — 이미 쌓인 행은 기록 당시 값으로 남는다.
@@ -345,10 +345,15 @@ const SYSTEM_RECORD = `당신은 대한민국 변호사시험 기록형 채점�
 [[SCORE:정수]]`;
 
 /** 기록형 채점 근거: 기준표가 정본, 없으면 해설. 둘 다 없으면 그 사실을 밝힌다. */
-// 해설서 앞에 문제·기록이 다시 실려 있으면 떼어 낸다. 정연석 기출문제집은 쪽 머리에
-// "〈2024년도 제13회 변호사시험 문제〉"와 "…해설〉"이 붙어, 첫 해설 쪽부터가 답안이다.
-// 문제 전문은 따로 넣으므로 재수록은 중복일 뿐 아니라 상한을 잡아먹는다.
-function commentaryBody(text) {
+// 해설서 앞에 문제·기록이 다시 실려 있으면 떼어 낸다(정연석 민사 앞 3만 자, 노수환 형사 앞 4만 자).
+// 그 경계는 RECORD/pipeline/mark_answer_span.js 가 회차마다 미리 재어 answerAt 에 적어 둔다 —
+// 스캔 OCR 이라 표제로는 못 찾고, 문제 전문과 겹치는 구간을 세어야 잡힌다.
+// answerAt 이 없는(오래된) 데이터는 쪽 머리 "…해설〉"로라도 잘라 본다.
+function commentaryBody(c) {
+  const text = c.text || '';
+  if (Number.isInteger(c.answerAt) && c.answerAt > 0 && c.answerAt < text.length) {
+    return text.slice(c.answerAt);
+  }
   const i = text.search(/해\s*설\s*〉/);
   if (i <= 0) return text;
   const head = text.lastIndexOf('〈', i);
@@ -377,7 +382,7 @@ function buildRecordPrompt(exam, task, answer) {
     const chunks = [];
     for (const c of exam.commentaries) {
       if (budget <= 0) break;
-      const t = commentaryBody(c.text || '').slice(0, budget);
+      const t = commentaryBody(c).slice(0, budget);
       budget -= t.length;
       chunks.push(`[${c.author} — ${c.title}]\n${t}`);
     }
