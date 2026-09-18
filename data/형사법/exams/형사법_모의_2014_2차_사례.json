@@ -93,7 +93,17 @@
      "ask": "甲, 乙, 丙의 죄책"
     }
    ],
-   "points": 60
+   "points": 60,
+   "basisSlice": {
+    "src": "rubric",
+    "sig": 5658,
+    "ranges": [
+     [
+      0,
+      4323
+     ]
+    ]
+   }
   },
   {
    "key": "제1문-2",
@@ -165,7 +175,17 @@
      "ask": "乙의 공판정 증언의 증거능력"
     }
    ],
-   "points": 10
+   "points": 10,
+   "basisSlice": {
+    "src": "rubric",
+    "sig": 5658,
+    "ranges": [
+     [
+      4323,
+      4653
+     ]
+    ]
+   }
   },
   {
    "key": "제2문-5",
@@ -177,7 +197,17 @@
      "ask": "甲이 부동의한 검증조서의 증거능력"
     }
    ],
-   "points": 20
+   "points": 20,
+   "basisSlice": {
+    "src": "rubric",
+    "sig": 5658,
+    "ranges": [
+     [
+      4653,
+      5235
+     ]
+    ]
+   }
   },
   {
    "key": "제2문-6",
@@ -189,7 +219,17 @@
      "ask": "상습폭행죄 추가기소에 대해 법원이 취할 수 있는 조치"
     }
    ],
-   "points": 10
+   "points": 10,
+   "basisSlice": {
+    "src": "rubric",
+    "sig": 5658,
+    "ranges": [
+     [
+      5235,
+      5658
+     ]
+    ]
+   }
   }
  ],
  "issueIds": [

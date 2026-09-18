@@ -47,7 +47,8 @@ function overlap(askWords, text) {
 }
 
 // ── 기준표: 배점 표시 줄 세우기 ─────────────────────────────
-const MARK_RE = /[(（]\s*(\d{1,3})\s*점\s*[)）]/g;
+// 배점 표시. 괄호는 회차마다 다르다 — 「(15점)」「[50점]」「【20점】」, 앞에 「총점」이 붙기도 한다.
+const MARK_RE = /[(（\[［【]\s*(?:총\s*점\s*)?(\d{1,3})\s*점\s*[)）\]］】]/g;
 
 function markers(text) {
   const out = [];
@@ -150,13 +151,28 @@ function sliceRubric(exam) {
   // 검수: 조각마다 자기 문항 요지와 가장 잘 맞아야 한다
   const own = ranges.map(([a, b], gi) => overlap(gUnits[gi].askWords, text.slice(a, b)));
   const cross = ranges.map(([a, b], gi) => Math.max(0, ...gUnits.map((u, j) => (j === gi ? 0 : overlap(u.askWords, text.slice(a, b))))));
-  const weak = own.map((o, gi) => (o < 0.3 || o + 0.001 < cross[gi] ? gi : -1)).filter((x) => x >= 0);
-  const tiny = ranges.map(([a, b], gi) => (b - a < 150 ? gi : -1)).filter((x) => x >= 0);
-  if (tiny.length) return { ok: false, why: `너무 짧은 조각 ${tiny.map((i) => groups[i].key)}` };
-  if (weak.length > Math.max(0, Math.floor(groups.length / 5))) {
-    return { ok: false, why: `요지와 안 맞는 조각 ${weak.map((i) => `${groups[i].key}(${own[i].toFixed(2)}/${cross[i].toFixed(2)})`)}` };
+  // 못 믿을 조각: 너무 짧거나(경계가 붙어버린 것), 제 문항 요지보다 남의 요지와 더 맞는 것.
+  const bad = new Set();
+  ranges.forEach(([a, b], gi) => {
+    if (b - a < 150 || own[gi] < 0.3 || own[gi] + 0.001 < cross[gi]) bad.add(gi);
+  });
+  // 예전에는 하나만 이상해도 그 회차를 통째로 포기했다. 이제 이상한 문항만 근거 전체를 받고
+  // 나머지는 자른다 — 다만 그 조각의 내용이 사라지지 않게 **앞 문항 조각에 붙여** 둔다.
+  if (bad.size === groups.length) {
+    return { ok: false, why: `쓸 만한 조각 없음 ${[...bad].map((i) => groups[i].key)}` };
   }
-  return { ok: true, level, ranges, own, cross, weak };
+  const merged = ranges.map((r) => [...r]);
+  for (const gi of [...bad].sort((x, y) => x - y)) {
+    let host = gi - 1;
+    while (host >= 0 && bad.has(host)) host--;
+    if (host >= 0) merged[host][1] = Math.max(merged[host][1], merged[gi][1]);
+    else {
+      let next = gi + 1;
+      while (next < groups.length && bad.has(next)) next++;
+      if (next < groups.length) merged[next][0] = Math.min(merged[next][0], merged[gi][0]);
+    }
+  }
+  return { ok: true, level, ranges: merged, own, cross, bad: [...bad] };
 }
 
 // ── 모범답안: 머리글로 붙이기 ───────────────────────────────
@@ -309,6 +325,7 @@ for (const subj of fs.readdirSync(DATA)) {
     if (res.ok) {
       groups.forEach((g, gi) => {
         if (src === 'rubric') {
+          if (res.bad?.includes(gi)) { after += full; return; }   // 조각을 못 믿는 문항은 전체를 준다
           g.basisSlice = { src, sig: exam.rubricText.length, ranges: [res.ranges[gi]] };
           after += res.ranges[gi][1] - res.ranges[gi][0];
         } else {
@@ -325,7 +342,7 @@ for (const subj of fs.readdirSync(DATA)) {
     }
     report.push({ id: exam.id, src, ok: res.ok, why: res.why, level: res.level,
       ratio: res.ok ? +((src === 'rubric' ? res.ranges.reduce((a, [x, y]) => a + y - x, 0) : res.kept.reduce((a, b) => a + b, 0)) / (full * groups.length)).toFixed(2) : 1,
-      weak: res.weak && res.weak.map((i) => groups[i].key), unread: res.unread, orphan: res.orphan });
+      bad: res.bad && res.bad.map((i) => groups[i].key), unread: res.unread, orphan: res.orphan });
 
     if (SHOW > -1 && exam.id === process.argv[SHOW + 1]) {
       const gi = groups.findIndex((g) => g.key === process.argv[SHOW + 2]);
