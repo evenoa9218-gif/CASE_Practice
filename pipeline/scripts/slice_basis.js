@@ -90,7 +90,10 @@ function align(units, marks, text) {
  * 배점이라는 확실한 단서가 없으므로, 여기서 고른 자리는 반드시 조각 검수를 거친다.
  */
 function anchorByAsk(text, units) {
-  if (units.some((u) => u.askWords.length < 3)) return null;
+  // 낱말이 3개도 안 되는 문항("위 주장은 타당한가?" 같은 것)은 자리를 못 잡는다.
+  // 그런 문항이 섞였다고 회차 전체를 포기하지 않는다 — 그 문항은 겹침이 0으로 나와
+  // 아래 조각 검수에서 걸러지고, 근거 전체를 받는다.
+  if (units.filter((u) => u.askWords.length >= 3).length < Math.ceil(units.length / 2)) return null;
   const lines = [];
   for (let i = 0; i < text.length;) {
     lines.push(i);
@@ -126,8 +129,8 @@ const HEADING = /^\s*(<\s*문\s*제|〈\s*문\s*제|\[?\s*문\s*제\s*\d|제\s*\
 function sliceRubric(exam) {
   const text = exam.rubricText;
   const groups = exam.groups;
-  const marks = markers(text);
-  if (marks.length < groups.length) return { ok: false, why: `배점 표시 ${marks.length}개 < 문항 ${groups.length}개` };
+  // 배점 표시가 문항 수보다 적으면 배점으로는 못 맞춘다 — 뒤의 설문 자리 맞추기로 넘긴다.
+  const marks = markers(text).length >= groups.length ? markers(text) : [];
 
   // 문항(질문) 단위로 먼저 맞추고, 안 되면 그룹 단위로
   const qUnits = [], qGroup = [];

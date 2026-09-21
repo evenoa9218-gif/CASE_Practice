@@ -73,7 +73,17 @@
      "ask": "甲, 乙, 丙의 죄책"
     }
    ],
-   "points": 55
+   "points": 55,
+   "basisSlice": {
+    "src": "rubric",
+    "sig": 4358,
+    "ranges": [
+     [
+      0,
+      4358
+     ]
+    ]
+   }
   },
   {
    "key": "제1문-2",
