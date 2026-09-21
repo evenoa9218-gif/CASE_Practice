@@ -75,6 +75,7 @@ select.btn{padding:7px 10px}
 .tag.on{background:var(--gold);color:#fff;border-color:var(--gold);font-weight:600}
 .tag.gold{background:var(--sf2);color:var(--gold);border-color:var(--gold);font-weight:600}
 .tag.ok{background:var(--sf2);color:var(--ok);border-color:var(--ok)}
+.tag.warn{background:var(--sf2);color:var(--gold);border-color:var(--gold)}
 .tag.click{cursor:pointer}
 .tag.click:hover{border-color:var(--gold)}
 
@@ -1037,6 +1038,22 @@ function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSu
   // 뜨고 진도 집계의 득점률도 무너진다.
   const maxPts = g?.points > 0 ? g.points : 100;
 
+  // 채점 근거가 부실한 회차를 **채점 전에** 알린다. 예전에는 다 돌린 뒤 결과 첫 줄에서야
+  // "근거 없이 평가했다"는 걸 알 수 있어, 알고도 쓸 수 있었던 돈과 시간이 그냥 나갔다.
+  // 판정 기준은 Worker(buildPrompt)와 같아야 한다 — 한쪽만 고치면 화면과 채점이 어긋난다.
+  const basisNote = React.useMemo(()=>{
+    if (!detail || !g) return null;
+    const cut = g.basisSlice;
+    const noOwn = cut?.src === 'casebook' && Array.isArray(cut.idx) && cut.idx.length === 0;
+    const none = !detail.rubricText && !(detail.casebookAnswers||[]).length;
+    const why = [];
+    if (none) why.push('이 회차는 채점기준표도 모범답안도 없습니다');
+    else if (noOwn) why.push('사례집에 이 문항의 모범답안이 없습니다');
+    if (!detail.problemText) why.push('문제 지문(사실관계)이 없습니다');
+    if (!why.length) return null;
+    return why.join(' · ') + ' — AI 채점은 일반적인 작성 기준으로만 평가합니다.';
+  },[detail, g]);
+
   // 답안은 600ms 쉬면 저장한다. 다만 그 사이에 탭을 닫거나 화면을 가리면
   // 마지막 타이핑이 통째로 날아간다 — 긴 답안에서 제일 아픈 사고라 이탈 신호에
   // 즉시 한 번 더 저장한다. (모바일에서는 visibilitychange 가 유일하게 믿을 만하다)
@@ -1247,10 +1264,14 @@ function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSu
               <button className="btn" onClick={runGrade}
                 disabled={grade?.running || !(answers[g.key]||"").trim()}>
                 {grade?.running ? "채점 중…" : "AI 채점"}</button>}
+            {GRADER_URL && basisNote && <span className="tag warn">채점 근거 부족</span>}
             <button className="btn" onClick={async()=>{
               setAnswer(g.key,""); await Store.clearDraft(`${exam.id}::${g.key}`);
             }}>이 문제 비우기</button>
           </div>
+
+          {GRADER_URL && basisNote &&
+            <div className="muted" style={{marginTop:-4}}>{basisNote}</div>}
 
           {grade &&
             <div className="card grade-card">
