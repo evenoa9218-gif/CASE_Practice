@@ -85,6 +85,42 @@ function align(units, marks, text) {
   return { path, sims: path.map((j, k) => sim[k][j]) };
 }
 
+/**
+ * 설문 낱말이 가장 잘 맞는 줄머리를 문항 순서대로(겹치지 않게) 고른다. 동적계획법.
+ * 배점이라는 확실한 단서가 없으므로, 여기서 고른 자리는 반드시 조각 검수를 거친다.
+ */
+function anchorByAsk(text, units) {
+  if (units.some((u) => u.askWords.length < 3)) return null;
+  const lines = [];
+  for (let i = 0; i < text.length;) {
+    lines.push(i);
+    const nl = text.indexOf('\n', i);
+    if (nl < 0) break;
+    i = nl + 1;
+  }
+  const win = lines.map((a) => text.slice(a, a + 1200));
+  const K = units.length, M = lines.length;
+  if (M < K) return null;
+  const sim = units.map((u) => win.map((w) => overlap(u.askWords, w)));
+  const best = Array.from({ length: K }, () => new Array(M).fill(-Infinity));
+  const prev = Array.from({ length: K }, () => new Array(M).fill(-1));
+  for (let j = 0; j < M; j++) best[0][j] = sim[0][j];
+  for (let k = 1; k < K; k++) {
+    let run = -Infinity, runAt = -1;
+    for (let j = 0; j < M; j++) {
+      if (j > 0 && best[k - 1][j - 1] > run) { run = best[k - 1][j - 1]; runAt = j - 1; }
+      if (run > -Infinity) { best[k][j] = run + sim[k][j]; prev[k][j] = runAt; }
+    }
+  }
+  let end = -1, top = -Infinity;
+  for (let j = 0; j < M; j++) if (best[K - 1][j] > top) { top = best[K - 1][j]; end = j; }
+  if (end < 0) return null;
+  const idx = new Array(K);
+  for (let k = K - 1, j = end; k >= 0; k--) { idx[k] = j; j = prev[k][j]; }
+  if (idx.some((j) => j < 0)) return null;
+  return { starts: idx.map((j) => lines[j]) };
+}
+
 const HEADING = /^\s*(<\s*문\s*제|〈\s*문\s*제|\[?\s*문\s*제\s*\d|제\s*\d+\s*문|\[?\s*설\s*문|[IⅠⅡⅢⅣⅤ]\s*[.．]?\s*$)/;
 
 function sliceRubric(exam) {
@@ -109,7 +145,15 @@ function sliceRubric(exam) {
     const ga = gUnits.every((u) => u.pts > 0) ? align(gUnits, marks, text) : null;
     if (ga) { starts = ga.path.map((j) => marks[j]); level = '문항'; }
   }
-  if (!starts || starts.some((s) => !s)) return { ok: false, why: '배점 순서가 맞지 않음' };
+  if (!starts || starts.some((s) => !s)) {
+    // 배점 표시로는 못 맞추는 기준표가 47회차 있다 — 표시가 아예 없거나(총점만 적힌 회차),
+    // 세부 항목 점수만 붙어 순서가 어긋난다. 기준표는 대개 설문 문장을 그대로 옮겨 싣므로
+    // **설문 낱말이 가장 많이 겹치는 줄머리**를 대신 경계로 쓴다. 조각 검수는 아래에서 똑같이 한다.
+    const ga = anchorByAsk(text, gUnits);
+    if (!ga) return { ok: false, why: '배점 순서가 맞지 않음' };
+    starts = ga.starts.map((at) => ({ at, lineStart: at }));
+    level = '요지';
+  }
 
   // 조각 경계: 표시가 있는 줄에서, 바로 위의 짧은 머리글 줄(「<문제>」「문제 2.」)까지 끌어올린다
   const lines = (from) => text.slice(0, from).split('\n');
@@ -152,9 +196,12 @@ function sliceRubric(exam) {
   const own = ranges.map(([a, b], gi) => overlap(gUnits[gi].askWords, text.slice(a, b)));
   const cross = ranges.map(([a, b], gi) => Math.max(0, ...gUnits.map((u, j) => (j === gi ? 0 : overlap(u.askWords, text.slice(a, b))))));
   // 못 믿을 조각: 너무 짧거나(경계가 붙어버린 것), 제 문항 요지보다 남의 요지와 더 맞는 것.
+  // 배점으로 맞춘 조각(질문·문항)은 단서가 확실해 0.3까지 받아 주고,
+  // 요지로 맞춘 조각은 단서가 약하므로 절반 넘게 겹칠 때만 받는다.
+  const floor = level === '요지' ? 0.5 : 0.3;
   const bad = new Set();
   ranges.forEach(([a, b], gi) => {
-    if (b - a < 150 || own[gi] < 0.3 || own[gi] + 0.001 < cross[gi]) bad.add(gi);
+    if (b - a < 150 || own[gi] < floor || own[gi] + 0.001 < cross[gi]) bad.add(gi);
   });
   // 예전에는 하나만 이상해도 그 회차를 통째로 포기했다. 이제 이상한 문항만 근거 전체를 받고
   // 나머지는 자른다 — 다만 그 조각의 내용이 사라지지 않게 **앞 문항 조각에 붙여** 둔다.
