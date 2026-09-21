@@ -82,6 +82,26 @@ async function logUsage(env, row) {
   }
 }
 
+// 오늘·이번 달 쓴 돈을 D1 기록에서 더해 한도를 넘었는지 본다.
+// 분당 요청 제한(GRADE_LIMIT)은 한 사람이 연타하는 것만 막는다 — 기록형 한 건이 $1 가까이 되므로
+// 하루에 몇십 건만 돌아도 요금이 크게 뛴다. 돈 자체에도 상한을 둔다.
+// 기록이 없거나 조회가 실패하면 **채점은 막지 않는다** — 안전장치 때문에 앱이 멈추는 게 더 나쁘다.
+async function spentSoFar(env) {
+  if (!env.USAGE_DB) return null;
+  try {
+    const r = await env.USAGE_DB.prepare(
+      `SELECT
+         COALESCE(SUM(CASE WHEN ts >= date('now') THEN cost_usd END), 0) AS today,
+         COALESCE(SUM(CASE WHEN ts >= date('now', 'start of month') THEN cost_usd END), 0) AS month
+       FROM usage`,
+    ).first();
+    return { today: Number(r?.today || 0), month: Number(r?.month || 0) };
+  } catch (e) {
+    console.error('usage sum failed', e?.message);
+    return null;
+  }
+}
+
 // 남용 추적용으로만 쓴다 — IP 원문은 저장하지 않는다.
 async function hashIp(ip) {
   const d = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(`grade:${ip}`));
@@ -574,6 +594,17 @@ export default {
         mode, sliced: !!cut, noBasis: !!(cut?.answers && !cut.answers.length),
         systemChars: system.length, basisChars: prompt.basis.length, answerChars: prompt.answer.length,
       }), { headers: { 'Content-Type': 'application/json; charset=utf-8', ...cors(origin) } });
+    }
+
+    // 돈 한도. 넘으면 채점을 받지 않는다(설정이 없으면 하루 $5 / 한 달 $50).
+    const capDay = Number(env.DAILY_USD ?? 5);
+    const capMonth = Number(env.MONTHLY_USD ?? 50);
+    const spent = await spentSoFar(env);
+    if (spent && (spent.today >= capDay || spent.month >= capMonth)) {
+      const which = spent.today >= capDay
+        ? `오늘 채점에 쓴 금액이 한도($${capDay})에 닿았습니다 — 지금까지 $${spent.today.toFixed(2)}`
+        : `이번 달 채점에 쓴 금액이 한도($${capMonth})에 닿았습니다 — 지금까지 $${spent.month.toFixed(2)}`;
+      return bad(429, `${which}. 한도를 올리려면 worker/wrangler.toml 의 DAILY_USD·MONTHLY_USD 를 고치고 다시 배포하세요.`, origin);
     }
 
     // Anthropic 호출은 반드시 북미에서 나가게 한다.
