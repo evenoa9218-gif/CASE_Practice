@@ -108,6 +108,46 @@ async function hashIp(ip) {
   return [...new Uint8Array(d)].slice(0, 6).map((b) => b.toString(16).padStart(2, '0')).join('');
 }
 
+/**
+ * Anthropic SDK 오류를 화면에 띄울 한국어 문장으로 옮긴다.
+ *
+ * 예전에는 e.message 를 그대로 흘려보냈다. 그러면 화면에
+ *   400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit
+ *   balance is too low ..."}}
+ * 같은 영어 JSON 덩어리가 찍힌다. 답안을 쓴 사람은 자기 답안이 잘못된 줄 알지만
+ * 실제로는 대개 계정·혼잡 쪽 사정이고 답안과 무관하다. 무엇을 하면 되는지도 함께
+ * 적는다 — 읽고 나서 할 일을 모르는 오류 문구는 없는 것과 같다.
+ */
+function friendlyError(e, colo) {
+  const raw = String(e?.message || '');
+  const status = e?.status;
+  if (/credit balance is too low/i.test(raw)) {
+    return 'Anthropic 계정의 크레딧이 떨어져 채점을 할 수 없습니다. '
+      + 'console.anthropic.com 의 Plans & Billing 에서 충전하신 뒤 다시 시도해 주세요. '
+      + '작성하신 답안과 지금까지 받은 첨삭은 그대로 남아 있습니다.';
+  }
+  if (status === 401 || /authentication|invalid x-api-key/i.test(raw)) {
+    return 'Anthropic API 키가 거부되었습니다. 키가 만료되었거나 삭제되었을 수 있습니다.';
+  }
+  if (status === 429 || /rate.?limit/i.test(raw)) {
+    return '요청이 몰려 잠시 제한되었습니다. 1~2분 뒤에 다시 시도해 주세요.';
+  }
+  if (status === 529 || /overloaded/i.test(raw)) {
+    return 'Anthropic 서버가 혼잡합니다. 잠시 후 다시 시도해 주세요.';
+  }
+  // 이 상태코드는 대개 키나 요금이 아니라 실행 지역 때문에 난다.
+  // Worker 가 어느 PoP 에서 돌았는지 모르면 매번 크레딧을 의심하게 된다.
+  if (status === 403) {
+    return 'Worker 가 실행된 지역(' + colo + ') 때문에 요청이 차단되었습니다. '
+      + 'Anthropic 이 미지원 지역의 요청을 키 확인 전에 막습니다. '
+      + '잠시 후 다시 시도하시면 다른 지역에서 실행되어 통과하기도 합니다.';
+  }
+  if (status >= 500) {
+    return '채점 서버가 응답하지 못했습니다. 잠시 후 다시 시도해 주세요.';
+  }
+  return '채점 중 오류가 발생했습니다: ' + raw;
+}
+
 function cors(origin) {
   const allow = ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0];
   return {
@@ -704,14 +744,11 @@ export default {
           const id = e?.request_id || e?.headers?.['request-id'];
           console.error('grade failed',
             { status: e?.status, colo, request_id: id, msg: e?.message });
-          // 403 은 거의 언제나 키나 요금 문제가 아니라 **실행 지역** 문제다.
-          // Worker가 어느 PoP에서 돌았는지 모르면 매번 크레딧을 의심하게 된다.
-          const where = e?.status === 403
-            ? `\n\n이 오류는 Worker가 실행된 지역(${colo}) 때문일 수 있습니다. `
-              + `Anthropic이 미지원 지역의 요청을 키 확인 전에 차단합니다. `
-              + `잠시 후 다시 시도하면 다른 지역에서 실행되어 통과하기도 합니다.`
-            : '';
-          send({ error: `채점 중 오류: ${e.message}` + (id ? ` (요청 ID ${id})` : '') + where });
+          // 요청 ID 는 Anthropic 에 문의할 때 필요하지만 화면에서는 군더더기다.
+          // 원인이 계정·혼잡처럼 분명한 경우에는 붙이지 않는다.
+          const known = /credit balance|authentication|invalid x-api-key|rate.?limit|overloaded/i
+            .test(String(e?.message || '')) || e?.status === 403 || e?.status === 429;
+          send({ error: friendlyError(e, colo) + (id && !known ? ` (요청 ID ${id})` : '') });
         } finally {
           ctx.waitUntil(logUsage(env, log));
           try { controller.close(); } catch { /* 이미 끊긴 연결 */ }
