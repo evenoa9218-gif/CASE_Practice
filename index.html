@@ -347,7 +347,12 @@ function renderGrade(md) {
           }
         }
       }
-      const kind = REASON_CLASS[name] || 'warn';
+      // 꼬리표에는 감점이 붙는다 — "결론 오류 −3점", "좋음 감점 없음".
+      // 색은 사유로 정하므로 꼬리를 떼고 찾는다. 안 그러면 빨강이어야 할 배지가
+      // 전부 노랑이 된다. 점수 꼬리를 먼저 떼고, 그래도 없으면 접두어로 맞춘다
+      // (사유 이름끼리 서로의 접두어인 것은 없다).
+      const base = name.replace(/\s*[+\-−–—]?\s*\d+(?:\.\d+)?\s*점?\s*$/, '').trim() || name;
+      const kind = REASON_CLASS[base] || REASON_CLASS[name] || REASON_CLASS[Object.keys(REASON_CLASS).find(k => name.startsWith(k))] || 'warn';
       (card = card || []).push(`<div class="gv-why gv-${kind}"><span class="gv-tag">${esc(name)}</span>` + `<span>${inline(rest)}</span></div>`);
       continue;
     }
