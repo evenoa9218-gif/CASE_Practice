@@ -93,10 +93,21 @@ select.btn{padding:7px 10px}
 .pre{white-space:pre-wrap;word-break:break-word;font-size:14.8px;line-height:1.9;
   color:var(--tx)}
 
-/* AI 채점 결과. 채점은 흘러들어오므로 길이가 계속 늘어난다 — 카드 안에서만
-   스크롤하게 두어 답안 칸이 밀려나지 않게 한다. */
-.grade-card{border-color:var(--gold);max-height:52vh;overflow-y:auto}
+/* AI 채점 결과.
+   ⚠ 전에는 .grade-card 에 max-height:52vh + overflow-y:auto 를 걸어 두었다.
+   답안 칸이 밀려나지 않게 하려던 것인데, 오른쪽 칸(.solve-col)이 이미 제 스크롤을
+   갖고 있어서 **스크롤바가 두 겹**이 됐다. 첨삭이 길어 안쪽 좁은 창을 계속 굴려야 해
+   「너무 작아 보기 힘들다」는 말이 나왔다. 카드는 그냥 자라게 두고 바깥 칸만 굴린다. */
+.grade-card{border-color:var(--gold)}
 .grade-err{color:var(--no);font-size:13.5px;margin-bottom:9px}
+
+/* 크게 보기 — 첨삭 전문을 화면 가득 펴서 읽는다. 두 칸 레이아웃 밖으로 끌어낸다. */
+.grade-back{position:fixed;inset:0;z-index:70;background:rgba(0,0,0,.5)}
+.grade-card.wide{position:fixed;inset:22px;z-index:80;margin:0 auto;max-width:980px;
+  overflow-y:auto;box-shadow:0 18px 60px rgba(0,0,0,.4)}
+.grade-card.wide .gv-p,.grade-card.wide .gv-li{font-size:15.4px;line-height:1.95}
+.grade-card.wide .gv-said,.grade-card.wide .gv-fixline{font-size:15.2px}
+@media(max-width:860px){ .grade-card.wide{inset:8px} }
 
 /* ── 채점 결과 보기 — 「빨간 펜으로 첨삭한 종이」 ──────────────
    전에는 마크다운을 평문으로 뿌려서 표의 |, 제목의 ##, 강조의 ** 가
@@ -104,8 +115,8 @@ select.btn{padding:7px 10px}
 .gv-h{font-weight:700;margin:16px 0 8px;color:var(--tx)}
 .gv-h2{font-size:15.5px;padding-bottom:5px;border-bottom:1px solid var(--bd2)}
 .gv-h3{font-size:14px} .gv-h4{font-size:13.5px;color:var(--tx2)}
-.gv-p{font-size:14.4px;line-height:1.85;margin:6px 0;color:var(--tx)}
-.gv-li{font-size:14.2px;line-height:1.8;margin:5px 0 5px 14px;position:relative;color:var(--tx)}
+.gv-p{font-size:14.9px;line-height:1.9;margin:7px 0;color:var(--tx)}
+.gv-li{font-size:14.7px;line-height:1.85;margin:6px 0 6px 14px;position:relative;color:var(--tx)}
 .gv-li::before{content:"·";position:absolute;left:-11px;color:var(--tx3)}
 .gv-t{width:100%;border-collapse:collapse;margin:10px 0;font-size:13px}
 .gv-t th,.gv-t td{border:1px solid var(--bd2);padding:6px 8px;text-align:left;vertical-align:top}
@@ -507,6 +518,32 @@ function splitProblemText(text, groupLabels){
   });
   return injectCaseLabels(blocks, groupLabels);
 }
+
+// ── 벽처럼 붙은 글 줄 세우기 ─────────────────────────────
+// 사례집에 따라 원문 줄바꿈이 통째로 날아간 것이 있다 — 민사 정연석은 줄당 199자,
+// 형사 조균석은 1,487자라 한 덩이 벽으로 보인다(박승수 43자·류정모 86자는 멀쩡하다).
+// 글자는 **하나도 건드리지 않고**, 이미 글 안에 있는 표식 앞에서만 보이는 줄을 끊는다.
+//
+// ⚠ 「1.」 같은 숫자 표식으로는 끊으면 안 된다 — 「甲은 13. 10. 1. 자기 소유」처럼
+//   날짜가 통째로 조각난다. 날짜에 안 쓰이는 표식만 고른다.
+// ⚠ 가운뎃점 「·」도 안 된다. 「사용·수익·처분」처럼 낱말 사이에서 쓴다.
+//   글머리로 쓰는 것은 「•」(U+2022) 쪽이다.
+const WALL = 150;                      // 이보다 긴 줄만 손댄다 — 멀쩡한 사례집은 안 건드린다
+const WALL_MARK = /[ \t]+(?=(?:•|~[ \t]|[ⅠⅡⅢⅣⅤⅥⅦⅧ][ \t]?[.．]|[가나다라마바사아][ \t]?[.．][ \t]|[①-⑮]|[㉠-㉭]))/g;
+const WALL_DASH = /[ \t]+-[ \t]+/g;    // 사례집에서 작은 마디를 가르는 자리
+
+function reflowWall(text, dash){
+  if(!text) return text;
+  const cut = ln => {
+    if(ln.length < WALL) return ln;
+    ln = ln.replace(WALL_MARK, "\n");
+    if(!dash) return ln;
+    return ln.split("\n").map(p => p.length < WALL ? p : p.replace(WALL_DASH, "\n- ")).join("\n");
+  };
+  return text.split("\n").map(cut).join("\n");
+}
+const reflowAnswer = t => reflowWall(t, true);   // 사례집 모범답안
+const reflowPlain  = t => reflowWall(t, false);  // 문제 지문·채점기준표 (줄표는 문장 속 줄표일 수 있다)
 
 function useTheme(){
   const [theme,setTheme] = useState(()=>document.documentElement.getAttribute('data-theme')||'light');
@@ -969,6 +1006,7 @@ function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSu
   useEffect(()=>{ if(detail) setPane(detail.rubricText ? "rubric" : "casebook"); },[detail]);
   const [cbIdx,setCbIdx] = useState(0);
   const [grade,setGrade] = useState(null);   // {running, text, score, error}
+  const [wideGrade,setWideGrade] = useState(false);  // 채점 결과 크게 보기
   const [elapsed,setElapsed] = useState(0);
   const [saved,setSaved] = useState(false);
   const [showProblem,setShowProblem] = useState(true);
@@ -1232,7 +1270,7 @@ function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSu
                   b.type==='caselabel'
                     ? <div key={i} className="caselabel">〈{b.text}〉</div>
                     : <div key={i} className={"pre "+(b.type==='fact'?'factbox':b.type==='question'?'qtext':'refbox')}>
-                        {b.text}
+                        {reflowPlain(b.text)}
                       </div>)}
               </div>
             </details>
@@ -1281,8 +1319,10 @@ function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSu
           {GRADER_URL && basisNote &&
             <div className="muted" style={{marginTop:-4}}>{basisNote}</div>}
 
+          {grade && wideGrade &&
+            <div className="grade-back" onClick={()=>setWideGrade(false)} />}
           {grade &&
-            <div className="card grade-card">
+            <div className={"card grade-card"+(wideGrade?" wide":"")}>
               <div className="row" style={{justifyContent:'space-between',marginBottom:9}}>
                 <div className="row">
                   <strong>AI 채점</strong>
@@ -1290,7 +1330,11 @@ function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSu
                     <span className="tag gold">{grade.score} / {maxPts}점</span>}
                   {grade.running && <span className="muted">답안을 읽는 중…</span>}
                 </div>
-                <button className="btn" onClick={()=>setGrade(null)}>닫기</button>
+                <div className="row">
+                  <button className="btn" onClick={()=>setWideGrade(v=>!v)}>
+                    {wideGrade?"작게 보기":"크게 보기"}</button>
+                  <button className="btn" onClick={()=>{setWideGrade(false);setGrade(null);}}>닫기</button>
+                </div>
               </div>
               {grade.error && <div className="grade-err">{grade.error}</div>}
               {grade.text
@@ -1313,7 +1357,7 @@ function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSu
                     사례집 모범답안 ({cb.length})</div>}
               </div>
               {pane==="rubric" && (detail.rubricText
-                ? <div className="pre">{detail.rubricText}</div>
+                ? <div className="pre">{reflowPlain(detail.rubricText)}</div>
                 : <div className="empty">이 시험은 공식 채점기준표가 공개되지 않았습니다.<br/>
                     사례집 모범답안 탭을 참고하세요.</div>)}
               {pane==="casebook" && cb.length>0 &&
@@ -1323,7 +1367,7 @@ function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSu
                       onClick={()=>setCbIdx(i)}>{b.author} {b.caseNo}</span>)}
                   </div>
                   <div className="muted" style={{marginBottom:9}}>{cb[cbIdx].header}</div>
-                  <div className="pre">{cb[cbIdx].answerText}</div>
+                  <div className="pre">{reflowAnswer(cb[cbIdx].answerText)}</div>
                 </div>}
               {(detail.caseCitations?.length>0||detail.statutes?.length>0) &&
                 <div style={{marginTop:15,paddingTop:13,borderTop:'1px solid var(--bd2)'}}>

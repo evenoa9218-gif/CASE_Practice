@@ -14,7 +14,7 @@
  */
 'use strict';
 
-const VERSION = 'cp-v1';
+const VERSION = 'cp-v2';   // v2: 채점 결과 칸 크게 보기 · 벽처럼 붙은 사례집 줄 세우기
 const SHELL = `case-shell-${VERSION}`;
 const DATA = `case-data-${VERSION}`;
 const KEEP = new Set([SHELL, DATA]);
