@@ -14,7 +14,7 @@
  */
 'use strict';
 
-const VERSION = 'cp-v2';   // v2: 채점 결과 칸 크게 보기 · 벽처럼 붙은 사례집 줄 세우기
+const VERSION = 'cp-v3';   // v3: 공법 강성민 행정법 사례집 답안 새로 세움 (v2: 채점 결과 칸 · 사례집 줄 세우기)
 const SHELL = `case-shell-${VERSION}`;
 const DATA = `case-data-${VERSION}`;
 const KEEP = new Set([SHELL, DATA]);
