@@ -7,10 +7,25 @@
 //
 // 관리자 열쇠가 필요 없다 — wrangler 로그인이 곧 열쇠다.
 // (브라우저에서 보려면 허브의 /feedback-admin.html. 그쪽은 FEEDBACK_ADMIN_KEY 가 있어야 열린다)
-const { execSync } = require('child_process');
+const { execFileSync } = require('child_process');
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
+
+// ⚠ wrangler 를 `npx wrangler` 로 부르면 안 된다. npx 가 부를 때마다 패키지를 다시 살피느라
+//   **한 번에 18초**가 걸린다(직접 부르면 4.5초). 조회 둘을 따로 부르던 첫 판은 진짜 터미널에서
+//   1분 가까이 빈 화면이었고, 「보낸 의견이 안 보인다」는 말이 바로 나왔다 — 글은 와 있었다.
+//   설치된 wrangler 를 node 로 직접 돌리고, 조회는 한 번에 묶는다.
+// 셸을 거치지 않으므로(execFileSync) 따옴표·한글이 깨질 일도 없다.
+const WRANGLER = path.join(__dirname, '..', 'node_modules', 'wrangler', 'bin', 'wrangler.js');
+if (!fs.existsSync(WRANGLER)) {
+  console.error('wrangler 가 설치되어 있지 않습니다. 이 폴더(worker)에서 npm install 을 먼저 실행하세요.');
+  process.exit(1);
+}
+function d1(args, stdio) {
+  return execFileSync(process.execPath, [WRANGLER, 'd1', 'execute', 'grade-usage', '--remote', ...args],
+    { encoding: 'utf8', stdio, cwd: path.join(__dirname, '..') });
+}
 
 const [cmd = 'new', ...rest] = process.argv.slice(2);
 const KST = (ts) => {            // D1 은 UTC 로 적는다. 읽을 때만 한국 시각으로 옮긴다
@@ -18,19 +33,20 @@ const KST = (ts) => {            // D1 은 UTC 로 적는다. 읽을 때만 한�
   return isNaN(d) ? ts : new Date(d.getTime() + 9 * 3600e3).toISOString().slice(0, 16).replace('T', ' ');
 };
 
-// SELECT 는 --command 로 한 줄에 — --file 은 원격에서 진행 표시가 JSON 에 섞인다.
+// SELECT 는 --command 로 — --file 은 원격에서 진행 표시가 JSON 에 섞인다.
+// 문장을 ; 로 이어 한 번에 보내면 결과도 문장 수만큼 배열로 온다.
 function select(sql) {
-  const out = execSync(`npx wrangler d1 execute grade-usage --remote --json --command "${sql.replace(/\s+/g, ' ')}"`,
-    { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] });
-  return JSON.parse(out)[0].results;
+  const out = d1(['--json', '--command', sql.replace(/\s+/g, ' ')], ['ignore', 'pipe', 'ignore']);
+  return JSON.parse(out).map((r) => r.results);
 }
-// UPDATE 는 메모에 따옴표·한글이 들어가므로 파일로 넘긴다(셸 따옴표에 안 걸린다).
+// UPDATE 는 메모가 길 수 있어 파일로 넘긴다.
 function update(sql) {
   const f = path.join(os.tmpdir(), `fb_${Date.now()}.sql`);
   fs.writeFileSync(f, sql, 'utf8');
-  try {
-    execSync(`npx wrangler d1 execute grade-usage --remote --file "${f}"`, { stdio: ['ignore', 'ignore', 'inherit'] });
-  } finally { fs.unlinkSync(f); }
+  // wrangler 는 잘 돼도 경고 여러 줄을 쏟는다. 삼켜 두고, 실패했을 때만 보여 준다.
+  try { d1(['--file', f], ['ignore', 'ignore', 'pipe']); }
+  catch (e) { console.error(String(e.stderr || e.message)); process.exit(1); }
+  finally { fs.unlinkSync(f); }
 }
 const q = (s) => `'${String(s).replace(/'/g, "''")}'`;
 
@@ -45,9 +61,12 @@ if (cmd === 'seen' || cmd === 'done') {
 }
 
 const where = cmd === 'all' ? '' : "WHERE status = 'new'";
-const rows = select(`SELECT id, ts, app, kind, text, contact, user, ctx, status, note
-                     FROM feedback ${where} ORDER BY id DESC LIMIT 50`);
-const counts = select('SELECT status, count(*) n FROM feedback GROUP BY status');
+// 몇 초는 걸린다. 그동안 빈 화면이면 멈춘 줄 안다.
+process.stdout.write('의견함을 불러오는 중…');
+const [rows, counts] = select(`SELECT id, ts, app, kind, text, contact, user, ctx, status, note
+                               FROM feedback ${where} ORDER BY id DESC LIMIT 50;
+                               SELECT status, count(*) n FROM feedback GROUP BY status`);
+process.stdout.write('\r' + ' '.repeat(30) + '\r');
 const c = Object.fromEntries(counts.map((r) => [r.status, r.n]));
 console.log(`\n의견함 — 새 것 ${c.new || 0} · 읽음 ${c.seen || 0} · 처리함 ${c.done || 0}\n`);
 if (!rows.length) console.log(cmd === 'all' ? '아직 들어온 의견이 없습니다.' : '새 의견이 없습니다.  (전부 보려면: npm run feedback -- all)');

@@ -182,9 +182,10 @@ function bad(status, message, origin, list = ALLOWED_ORIGINS) {
 // (`npm run feedback` 으로는 열쇠 없이 읽을 수 있다 — wrangler 로그인이 열쇠다).
 // ══════════════════════════════════════════════════════════════
 
-// 율리(법조윤리)는 github.io 가 아니라 제 워커에서 서빙된다. 의견만 받고 채점은 안 받는다.
-const FEEDBACK_ORIGINS = [...ALLOWED_ORIGINS, 'https://ethics.bar-exam.workers.dev'];
-const FB_APPS = ['HUB', 'MCQ', 'CASE', 'RECORD', 'NOTES', 'ETHICS'];
+// 의견을 받는 출처. 지금은 채점과 같다 — 통합사이트(허브 + 위성 앱 넷)뿐이다.
+// ⚠ 율리(법조윤리)는 통합사이트와 **별개 앱**이다. 여기에 섞지 않는다(출처도 앱 이름도 넣지 않는다).
+const FEEDBACK_ORIGINS = [...ALLOWED_ORIGINS];
+const FB_APPS = ['HUB', 'MCQ', 'CASE', 'RECORD', 'NOTES'];
 const FB_KINDS = ['오류', '제안', '기타'];
 const FB_STATUS = ['new', 'seen', 'done'];
 const FB_MAX_TEXT = 3000;
@@ -783,7 +784,7 @@ export default {
     const origin = request.headers.get('Origin') || '';
     const colo = request.cf?.colo || '?';   // 실행된 Cloudflare PoP. 403 진단에 쓴다.
 
-    // 의견함은 채점과 길이 다르다 — 허용 출처도(율리 포함), 받는 방식도(GET·PATCH) 다르다.
+    // 의견함은 채점과 길이 다르다 — 받는 방식(GET·PATCH)도, 필요한 것(API 키 없음)도 다르다.
     const isFeedback = new URL(request.url).pathname.replace(/\/+$/, '') === '/feedback';
 
     if (request.method === 'OPTIONS') {
