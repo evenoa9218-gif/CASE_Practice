@@ -90,6 +90,9 @@ select.btn{padding:7px 10px}
 }
 .muted{color:var(--tx3);font-size:12px}
 .title{font-size:14.5px;font-weight:700;margin:0 0 9px;color:var(--tx)}
+/* 채점기준표 안의 판례 인용 — 음영 상자. 기준(본문)과 갈라 읽힌다 */
+.pan{background:var(--sf2);border-left:3px solid var(--gold);border-radius:0 7px 7px 0;
+  padding:8px 13px;margin:9px 0;font-size:.93em;line-height:1.8;color:var(--tx2)}
 .pre{white-space:pre-wrap;word-break:break-word;font-size:14.8px;line-height:1.9;
   color:var(--tx)}
 
@@ -544,6 +547,58 @@ function reflowWall(text, dash){
 }
 const reflowAnswer = t => reflowWall(t, true);   // 사례집 모범답안
 const reflowPlain  = t => reflowWall(t, false);  // 문제 지문·채점기준표 (줄표는 문장 속 줄표일 수 있다)
+// ── 채점기준표의 판례 인용을 음영 상자로 가른다 ──────────────────
+// 기준표는 채점기준과 판례 원문이 한 줄기로 섞여 있어 읽기 힘들다는 의견이 있었다.
+// 줄머리(불릿 떼고)가 「대법원 2020.」「헌재 2020.」「대판 2020」「[참고판례]」「<참조 판례>」면
+// 판례 덩어리를 연다. 그 뒤 줄은 빈 줄이나 기준표 줄머리(1. 가. ① - ○ 사안…)가 나올 때까지 판례다.
+// 「참조 판례」 꼬리표만 있는 줄 뒤는 판례 본문이 1. 2. 로 나뉘기도 해서 큰 제목·빈 줄에서만 끊는다.
+// 기록형 기준표에는 판례 전문(【판시사항】【결정요지】… 반대의견)이 통째로 붙는다 — 빈 줄을 넘어
+// 【…】·「재판관 …」·[1] 로 이어지는 동안은 한 상자로 둔다.
+// 판례를 놓치는 쪽이 기준을 판례로 가리는 쪽보다 낫다 — 애매하면 본문으로 둔다.
+const PAN_LEAD  = /^[\s\-–*※∙·•○◦]*/;
+const PAN_DOC   = /^【\s*(?:판시사항|판결요지|결정요지|원심판결|주\s*문|이\s*유|참조판례|관련판례|참조조문|전\s*문|원\s*고|피\s*고)[^】]*】/;
+const PAN_OPEN  = /^[\[(<【]?\s*(?:(?:참[고조]|관련)\s*판례|대법원\s*(?:\d{4}|판례\s*:)|대판\s*\d|헌재\s*\d{4}|헌법재판소\s*\d{4})/;
+const PAN_LABEL = /^[\[(<【]?\s*(?:참[고조]|관련)\s*판례\s*[\])>】]?\s*:?\s*$/;
+const PAN_STOP  = /^\s*(?:[ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ]|\d+\s*[.)]|\(\d+\)|[가-하]\s*[.)]|\([가-하]\)|[①-⑳]|[○●■□▶◆◇※*∙·•]|[-–]|<|【|문제|설문|사안|따라서|결론|검토|소결|[^\s:]{1,12}설\s*:)/;
+const PAN_HARD  = /^\s*(?:[ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ]|문제\s*\d|설문|[-–○]\s*(?:사안|따라서|결론)|<|.*\(\d+점\)\s*$|.*<\d+점>\s*$|.*\[기재사항[^\]]*\]\s*$)/;
+// 판결 전문의 【이 유】 본문은 1. 가. 로 나뉘고 빈 줄도 많다 — 대법관 서명 줄이나 <끝> 까지 통째로 판례다
+const PAN_JUDG  = /^【\s*이\s*유\s*】/;
+const PAN_SIGN  = /^\s*(?:대법관|재판장|재판관)\s/;
+const PAN_JEND  = /^\s*(?:<\s*끝\s*>|제\s*\d+\s*문\s*$)/;
+function splitPan(text){
+  const L = (text || '').split('\n'), out = [];
+  let cur = null, mode = '';           // '' 본문 · 'cite' 인용 · 'label' 꼬리표 뒤 · 'doc' 판례 전문 · 'judg' 판결 이유
+  const push = (pan, ln) => {
+    if (cur && cur.pan === pan) cur.lines.push(ln);
+    else { cur = { pan, lines: [ln] }; out.push(cur); }
+  };
+  for (let i = 0; i < L.length; i++) {
+    const ln = L[i], body = ln.replace(PAN_LEAD, '');
+    if (mode === 'judg') {
+      if (PAN_JEND.test(ln)) mode = '';
+      else { if (PAN_SIGN.test(ln)) mode = ''; push(true, ln); continue; }
+    }
+    if (PAN_DOC.test(ln.trim())) { mode = PAN_JUDG.test(ln.trim()) ? 'judg' : 'doc'; push(true, ln); continue; }
+    if (body && PAN_OPEN.test(body)) { mode = PAN_LABEL.test(body) ? 'label' : 'cite'; push(true, ln); continue; }
+    if (mode && !ln.trim()) {
+      // 판례 전문(【판시사항】 뒤)은 빈 줄을 넘어 이어진다 — 다음 줄이 기준표 큰 제목·배점 줄이면 끝난다
+      let j = i + 1; while (j < L.length && !L[j].trim()) j++;
+      if (mode === 'doc' && j < L.length && !PAN_HARD.test(L[j]) && !PAN_JEND.test(L[j])) { push(true, ln); continue; }
+      mode = '';
+    } else if (mode && !(mode === 'cite' ? PAN_STOP : PAN_HARD).test(ln)) { push(true, ln); continue; }
+    else mode = '';
+    push(false, ln);
+  }
+  // 상자 앞뒤의 빈 줄 하나는 상자 여백이 대신한다
+  return out.map(b => ({ pan: b.pan, t: b.pan ? b.lines.join('\n').trim()
+    : b.lines.join('\n').replace(/^\n/, '').replace(/\n$/, '') }))
+    .filter(b => b.t !== '');
+}
+function RubricText({text}){
+  return <div className="pre">{splitPan(text).map((b,i)=>
+    <div key={i} className={b.pan ? "pan" : undefined}>{b.t}</div>)}</div>;
+}
+
 
 function useTheme(){
   const [theme,setTheme] = useState(()=>document.documentElement.getAttribute('data-theme')||'light');
@@ -1357,7 +1412,7 @@ function Solve({exam,subject,issueMap,round,focusIssue,focusGroupKey,onBack,onSu
                     사례집 모범답안 ({cb.length})</div>}
               </div>
               {pane==="rubric" && (detail.rubricText
-                ? <div className="pre">{reflowPlain(detail.rubricText)}</div>
+                ? <RubricText text={reflowPlain(detail.rubricText)}/>
                 : <div className="empty">이 시험은 공식 채점기준표가 공개되지 않았습니다.<br/>
                     사례집 모범답안 탭을 참고하세요.</div>)}
               {pane==="casebook" && cb.length>0 &&
