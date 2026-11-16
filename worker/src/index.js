@@ -148,22 +148,154 @@ function friendlyError(e, colo) {
   return '채점 중 오류가 발생했습니다: ' + raw;
 }
 
-function cors(origin) {
-  const allow = ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0];
+function cors(origin, list = ALLOWED_ORIGINS) {
+  const allow = list.includes(origin) ? origin : list[0];
   return {
     'Access-Control-Allow-Origin': allow,
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Allow-Methods': 'GET, POST, PATCH, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
     'Access-Control-Max-Age': '86400',
     'Vary': 'Origin',
   };
 }
 
-function bad(status, message, origin) {
+function bad(status, message, origin, list = ALLOWED_ORIGINS) {
   return new Response(JSON.stringify({ error: message }), {
     status,
-    headers: { 'Content-Type': 'application/json; charset=utf-8', ...cors(origin) },
+    headers: { 'Content-Type': 'application/json; charset=utf-8', ...cors(origin, list) },
   });
+}
+
+// ══════════════════════════════════════════════════════════════
+// 의견함 — 앱에서 보낸 의견을 D1(feedback 표)에 쌓는다.
+//
+//   POST  /feedback   누구나(허용 출처에서). 의견 1건을 넣는다.
+//   GET   /feedback   관리자만. 쌓인 의견을 읽는다.
+//   PATCH /feedback   관리자만. 읽음·처리함 표시와 메모.
+//
+// 채점과 달리 **모델을 부르지 않는다** — 돈이 들지 않으므로 채점 한도와는 무관하다.
+// 대신 누구나 쓸 수 있는 창구라 도배를 막아야 한다: 분당 제한(IP별) + 하루 총량.
+//
+// 관리자 열쇠(FEEDBACK_ADMIN_KEY)는 여기 적지 않는다. 배포하는 사람이 직접 넣는다:
+//   npx wrangler secret put FEEDBACK_ADMIN_KEY
+// 넣지 않으면 읽기 창구(GET·PATCH)는 닫혀 있고, 그래도 의견은 쌓인다
+// (`npm run feedback` 으로는 열쇠 없이 읽을 수 있다 — wrangler 로그인이 열쇠다).
+// ══════════════════════════════════════════════════════════════
+
+// 율리(법조윤리)는 github.io 가 아니라 제 워커에서 서빙된다. 의견만 받고 채점은 안 받는다.
+const FEEDBACK_ORIGINS = [...ALLOWED_ORIGINS, 'https://ethics.bar-exam.workers.dev'];
+const FB_APPS = ['HUB', 'MCQ', 'CASE', 'RECORD', 'NOTES', 'ETHICS'];
+const FB_KINDS = ['오류', '제안', '기타'];
+const FB_STATUS = ['new', 'seen', 'done'];
+const FB_MAX_TEXT = 3000;
+const FB_DAILY_ROWS = 300;      // 하루에 이보다 많이 쌓이면 도배로 보고 닫는다
+
+function fbJson(obj, origin, status = 200) {
+  return new Response(JSON.stringify(obj), {
+    status,
+    headers: { 'Content-Type': 'application/json; charset=utf-8', ...cors(origin, FEEDBACK_ORIGINS) },
+  });
+}
+
+// 글자를 그대로 견주면 걸리는 시간으로 열쇠가 샌다. 둘 다 해시해서 견준다.
+async function sameSecret(a, b) {
+  const h = async (s) => new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s)));
+  const [x, y] = await Promise.all([h(a), h(b)]);
+  let diff = 0;
+  for (let i = 0; i < x.length; i++) diff |= x[i] ^ y[i];
+  return diff === 0;
+}
+
+const clip = (v, n) => (typeof v === 'string' ? v.trim().slice(0, n) : '');
+
+async function handleFeedback(request, env, origin) {
+  const fail = (status, msg) => bad(status, msg, origin, FEEDBACK_ORIGINS);
+  if (!FEEDBACK_ORIGINS.includes(origin)) return fail(403, '허용되지 않은 출처');
+  if (!env.USAGE_DB) return fail(500, '의견을 저장할 곳이 설정되지 않았다');
+  const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
+
+  // ── 넣기 ──
+  if (request.method === 'POST') {
+    if (env.GRADE_LIMIT) {
+      // 채점과 한도를 나눠 쓰지 않게 열쇠 앞에 표시를 붙인다
+      const { success } = await env.GRADE_LIMIT.limit({ key: `fb:${ip}` });
+      if (!success) return fail(429, '잠시 후 다시 보내 주세요');
+    }
+    let b;
+    try { b = await request.json(); } catch { return fail(400, '잘못된 요청 형식'); }
+    const app = clip(b?.app, 12).toUpperCase();
+    const kind = clip(b?.kind, 6);
+    const text = typeof b?.text === 'string' ? b.text.trim() : '';
+    if (!FB_APPS.includes(app)) return fail(400, '알 수 없는 앱');
+    if (!FB_KINDS.includes(kind)) return fail(400, '알 수 없는 종류');
+    if (text.length < 2) return fail(400, '내용이 비어 있다');
+    if (text.length > FB_MAX_TEXT) return fail(413, `내용이 너무 길다 (최대 ${FB_MAX_TEXT}자)`);
+
+    let ctx = null;
+    try { ctx = b?.ctx ? JSON.stringify(b.ctx).slice(0, 1500) : null; } catch { ctx = null; }
+
+    try {
+      const n = await env.USAGE_DB.prepare(
+        `SELECT count(*) AS n FROM feedback WHERE ts >= date('now')`,
+      ).first();
+      if (Number(n?.n || 0) >= FB_DAILY_ROWS) return fail(429, '오늘은 의견함이 가득 찼습니다. 내일 다시 보내 주세요');
+      const r = await env.USAGE_DB.prepare(
+        `INSERT INTO feedback (app, kind, text, contact, user, ctx, ua, ip_hash)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+      ).bind(
+        app, kind, text, clip(b?.contact, 120) || null, clip(b?.user, 60) || null, ctx,
+        clip(request.headers.get('User-Agent') || '', 300) || null, await hashIp(ip),
+      ).run();
+      return fbJson({ ok: true, id: r?.meta?.last_row_id ?? null }, origin);
+    } catch (e) {
+      console.error('feedback insert failed', e?.message);
+      return fail(500, '저장하지 못했습니다. 잠시 후 다시 보내 주세요');
+    }
+  }
+
+  // ── 아래부터는 관리자만 ──
+  if (request.method !== 'GET' && request.method !== 'PATCH') return fail(405, '지원하지 않는 방식');
+  if (!env.FEEDBACK_ADMIN_KEY) return fail(503, '관리자 열쇠가 아직 설정되지 않았다 (wrangler secret put FEEDBACK_ADMIN_KEY)');
+  if (env.GRADE_LIMIT) {
+    // 열쇠를 마구 찍어 보는 것을 늦춘다
+    const { success } = await env.GRADE_LIMIT.limit({ key: `fba:${ip}` });
+    if (!success) return fail(429, '잠시 후 다시 시도해 주세요');
+  }
+  const given = (request.headers.get('Authorization') || '').replace(/^Bearer\s+/i, '');
+  if (!given || !(await sameSecret(given, env.FEEDBACK_ADMIN_KEY))) return fail(401, '열쇠가 맞지 않는다');
+
+  try {
+    if (request.method === 'GET') {
+      const q = new URL(request.url).searchParams;
+      const status = q.get('status');
+      const limit = Math.min(Math.max(Number(q.get('limit')) || 100, 1), 300);
+      const where = FB_STATUS.includes(status) ? 'WHERE status = ?' : '';
+      const stmt = env.USAGE_DB.prepare(
+        `SELECT id, ts, app, kind, text, contact, user, ctx, ua, status, note, done_ts
+         FROM feedback ${where} ORDER BY id DESC LIMIT ${limit}`,
+      );
+      const rows = await (where ? stmt.bind(status) : stmt).all();
+      const cnt = await env.USAGE_DB.prepare(
+        `SELECT status, count(*) AS n FROM feedback GROUP BY status`,
+      ).all();
+      return fbJson({ rows: rows.results || [], counts: cnt.results || [] }, origin);
+    }
+    // PATCH
+    let b;
+    try { b = await request.json(); } catch { return fail(400, '잘못된 요청 형식'); }
+    const id = Number(b?.id);
+    if (!Number.isInteger(id) || id < 1) return fail(400, '알 수 없는 의견');
+    if (!FB_STATUS.includes(b?.status)) return fail(400, '알 수 없는 상태');
+    await env.USAGE_DB.prepare(
+      `UPDATE feedback SET status = ?, note = COALESCE(?, note),
+         done_ts = CASE WHEN ? = 'done' THEN datetime('now') ELSE done_ts END
+       WHERE id = ?`,
+    ).bind(b.status, typeof b?.note === 'string' ? b.note.trim().slice(0, 1000) : null, b.status, id).run();
+    return fbJson({ ok: true }, origin);
+  } catch (e) {
+    console.error('feedback admin failed', e?.message);
+    return fail(500, '의견함을 읽지 못했습니다');
+  }
 }
 
 /**
@@ -651,9 +783,16 @@ export default {
     const origin = request.headers.get('Origin') || '';
     const colo = request.cf?.colo || '?';   // 실행된 Cloudflare PoP. 403 진단에 쓴다.
 
+    // 의견함은 채점과 길이 다르다 — 허용 출처도(율리 포함), 받는 방식도(GET·PATCH) 다르다.
+    const isFeedback = new URL(request.url).pathname.replace(/\/+$/, '') === '/feedback';
+
     if (request.method === 'OPTIONS') {
-      return new Response(null, { status: 204, headers: cors(origin) });
+      return new Response(null, {
+        status: 204,
+        headers: cors(origin, isFeedback ? FEEDBACK_ORIGINS : ALLOWED_ORIGINS),
+      });
     }
+    if (isFeedback) return handleFeedback(request, env, origin);
     if (request.method !== 'POST') return bad(405, 'POST만 받는다', origin);
     if (!ALLOWED_ORIGINS.includes(origin)) return bad(403, '허용되지 않은 출처', origin);
     if (!env.ANTHROPIC_API_KEY) return bad(500, 'ANTHROPIC_API_KEY가 설정되지 않았다', origin);

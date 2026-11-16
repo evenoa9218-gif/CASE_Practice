@@ -7,7 +7,8 @@
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
     "tail": "wrangler tail",
-    "usage": "node scripts/usage.js"
+    "usage": "node scripts/usage.js",
+    "feedback": "node scripts/feedback.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.70.0"
