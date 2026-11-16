@@ -209,7 +209,160 @@ async function sameSecret(a, b) {
 
 const clip = (v, n) => (typeof v === 'string' ? v.trim().slice(0, n) : '');
 
-async function handleFeedback(request, env, origin) {
+// ── 새 의견을 관리자 폰으로 바로 보낸다 — 웹 푸시 ─────────────────
+// 노트북의 「의견함 보기.bat」은 wrangler 로그인이 있어야 열리고, 토큰이 떨어지면 나(Claude)도 못 읽는다.
+// 그래서 들어오는 순간 폰에 밀어 준다. 외부 알림 서비스(ntfy 등)를 거치지 않고 브라우저 표준 웹 푸시로
+// 직접 보낸다 — 본문은 기기 공개키로 암호화되어(RFC 8291) 푸시 서비스(구글·애플)도 읽지 못한다.
+//   ⚠ ntfy.sh 를 먼저 붙였다가 걷어 냈다: 워커에서 ntfy.sh 로 가는 연결이 늘 522(시간 초과)였다.
+//
+// 받을 기기: D1 push_subs 표의 status='active' 행. 허브 /feedback-admin.html 에서 신청하면 pending 으로
+// 들어오고, 관리자가 `npm run feedback -- push-ok N` 으로 승인한다.
+// 서명 열쇠(VAPID_PRIVATE_JWK)는 wrangler secret 으로만 넣는다. 공개키는 허브 쪽에 그대로 적혀 있다.
+const PUSH_HOSTS = /^(fcm\.googleapis\.com|[a-z0-9.-]+\.push\.apple\.com|updates\.push\.services\.mozilla\.com|[a-z0-9.-]+\.notify\.windows\.com|[a-z0-9.-]+\.push\.services\.mozilla\.com)$/;
+const PUSH_SUBJECT = 'https://evenoa9218-gif.github.io/feedback-admin.html';
+const PUSH_MAX_PENDING = 10;
+
+const b64u = {
+  enc(buf) {
+    let s = '';
+    for (const c of new Uint8Array(buf)) s += String.fromCharCode(c);
+    return btoa(s).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  },
+  dec(str) {
+    const s = atob(String(str).replace(/-/g, '+').replace(/_/g, '/') + '==='.slice((str.length + 3) % 4));
+    return Uint8Array.from(s, (c) => c.charCodeAt(0));
+  },
+};
+const cat = (...parts) => {
+  const out = new Uint8Array(parts.reduce((n, p) => n + p.length, 0));
+  let o = 0;
+  for (const p of parts) { out.set(p, o); o += p.length; }
+  return out;
+};
+const utf8 = (s) => new TextEncoder().encode(s);
+
+async function hkdf(salt, ikm, info, len) {
+  const key = await crypto.subtle.importKey('raw', ikm, 'HKDF', false, ['deriveBits']);
+  return new Uint8Array(await crypto.subtle.deriveBits({ name: 'HKDF', hash: 'SHA-256', salt, info }, key, len * 8));
+}
+
+// 푸시 서비스에 「이 서버가 보냈다」고 밝히는 서명(VAPID, RFC 8292). 공개키(x,y)는 JWK 에서 꺼낸다.
+async function vapidHeader(env, endpoint) {
+  const jwk = JSON.parse(env.VAPID_PRIVATE_JWK);
+  const key = await crypto.subtle.importKey('jwk', jwk, { name: 'ECDSA', namedCurve: 'P-256' }, false, ['sign']);
+  const head = b64u.enc(utf8(JSON.stringify({ typ: 'JWT', alg: 'ES256' })));
+  const body = b64u.enc(utf8(JSON.stringify({
+    aud: new URL(endpoint).origin, exp: Math.floor(Date.now() / 1000) + 12 * 3600, sub: PUSH_SUBJECT,
+  })));
+  const sig = await crypto.subtle.sign({ name: 'ECDSA', hash: 'SHA-256' }, key, utf8(`${head}.${body}`));
+  const pub = cat(new Uint8Array([4]), b64u.dec(jwk.x), b64u.dec(jwk.y));
+  return `vapid t=${head}.${body}.${b64u.enc(sig)}, k=${b64u.enc(pub)}`;
+}
+
+// 본문 암호화 (RFC 8291 + RFC 8188 aes128gcm, 레코드 하나)
+async function encryptPush(sub, plaintext) {
+  const uaPub = b64u.dec(sub.p256dh), auth = b64u.dec(sub.auth);
+  const eph = await crypto.subtle.generateKey({ name: 'ECDH', namedCurve: 'P-256' }, true, ['deriveBits']);
+  const asPub = new Uint8Array(await crypto.subtle.exportKey('raw', eph.publicKey));
+  const uaKey = await crypto.subtle.importKey('raw', uaPub, { name: 'ECDH', namedCurve: 'P-256' }, false, []);
+  const shared = new Uint8Array(await crypto.subtle.deriveBits({ name: 'ECDH', public: uaKey }, eph.privateKey, 256));
+  const ikm = await hkdf(auth, shared, cat(utf8('WebPush: info\0'), uaPub, asPub), 32);
+  const salt = crypto.getRandomValues(new Uint8Array(16));
+  const cek = await hkdf(salt, ikm, utf8('Content-Encoding: aes128gcm\0'), 16);
+  const nonce = await hkdf(salt, ikm, utf8('Content-Encoding: nonce\0'), 12);
+  const aes = await crypto.subtle.importKey('raw', cek, 'AES-GCM', false, ['encrypt']);
+  const ct = new Uint8Array(await crypto.subtle.encrypt({ name: 'AES-GCM', iv: nonce }, aes, cat(plaintext, new Uint8Array([2]))));
+  const rs = new Uint8Array([0, 0, 16, 0]);                 // 레코드 크기 4096
+  return cat(salt, rs, new Uint8Array([asPub.length]), asPub, ct);
+}
+
+async function sendPush(env, sub, payload) {
+  const body = await encryptPush(sub, utf8(JSON.stringify(payload)));
+  return fetch(sub.endpoint, {
+    method: 'POST',
+    headers: {
+      Authorization: await vapidHeader(env, sub.endpoint),
+      'Content-Encoding': 'aes128gcm',
+      'Content-Type': 'application/octet-stream',
+      TTL: '86400',            // 폰이 꺼져 있어도 하루 동안은 기다렸다 전한다
+      Urgency: 'high',
+    },
+    body,
+  });
+}
+
+// 승인된 기기 모두에 보낸다. 실패해도 의견 저장은 이미 끝났다.
+async function notifyPhone(env, f) {
+  if (!env.VAPID_PRIVATE_JWK || !env.USAGE_DB) return;
+  let subs = [];
+  try {
+    subs = (await env.USAGE_DB.prepare(
+      `SELECT id, endpoint, p256dh, auth FROM push_subs WHERE status = 'active'`).all()).results || [];
+  } catch (e) { console.error('push subs read failed', e?.message); return; }
+  if (!subs.length) return;
+  const where = [f.ctx?.title, ...(f.ctx?.heads || []).slice(0, 2)].filter(Boolean).join(' › ');
+  // 푸시 본문은 4KB 가 한도다(암호화 머리 포함). 글은 1,500자에서 자른다 — 전문은 의견함에 있다.
+  const payload = {
+    id: f.id, app: f.app, kind: f.kind, ts: new Date().toISOString(),
+    text: f.text.length > 1500 ? f.text.slice(0, 1500) + ' …(잘림)' : f.text,
+    user: f.user || '', contact: f.contact || '', where: where.slice(0, 200),
+  };
+  await Promise.all(subs.map(async (s) => {
+    let note = null, ok = false;
+    try {
+      const r = await sendPush(env, s, payload);
+      ok = r.ok;
+      if (!r.ok) note = `${r.status} ${(await r.text()).slice(0, 150)}`;
+      // 404·410 = 기기가 구독을 끊었다(앱 지움·권한 거둠). 지운다.
+      if (r.status === 404 || r.status === 410) {
+        await env.USAGE_DB.prepare(`DELETE FROM push_subs WHERE id = ?`).bind(s.id).run();
+        return;
+      }
+    } catch (e) { note = String(e?.message || e).slice(0, 150); }
+    if (note) console.error('push failed', s.id, note);
+    await env.USAGE_DB.prepare(ok
+      ? `UPDATE push_subs SET last_ok = datetime('now'), last_err = NULL WHERE id = ?`
+      : `UPDATE push_subs SET last_err = ? WHERE id = ?`).bind(...(ok ? [s.id] : [note, s.id])).run().catch(() => {});
+  }));
+}
+
+// 기기 신청 — 허브 /feedback-admin.html 의 「이 기기로 알림 받기」. 누구나 신청은 되지만 pending 이라
+// 관리자가 승인하기 전에는 아무것도 받지 못한다.
+async function handlePushSubscribe(request, env, origin) {
+  const fail = (status, msg) => bad(status, msg, origin, FEEDBACK_ORIGINS);
+  if (!FEEDBACK_ORIGINS.includes(origin)) return fail(403, '허용되지 않은 출처');
+  if (request.method !== 'POST') return fail(405, '지원하지 않는 방식');
+  if (!env.USAGE_DB) return fail(500, '저장할 곳이 설정되지 않았다');
+  const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
+  if (env.GRADE_LIMIT) {
+    const { success } = await env.GRADE_LIMIT.limit({ key: `push:${ip}` });
+    if (!success) return fail(429, '잠시 후 다시 시도해 주세요');
+  }
+  let b;
+  try { b = await request.json(); } catch { return fail(400, '잘못된 요청 형식'); }
+  const endpoint = clip(b?.sub?.endpoint, 800);
+  const p256dh = clip(b?.sub?.keys?.p256dh, 200);
+  const auth = clip(b?.sub?.keys?.auth, 100);
+  let host = '';
+  try { const u = new URL(endpoint); host = u.protocol === 'https:' ? u.hostname : ''; } catch { host = ''; }
+  if (!PUSH_HOSTS.test(host)) return fail(400, '알 수 없는 푸시 서비스');
+  if (b64u.dec(p256dh).length !== 65 || b64u.dec(auth).length !== 16) return fail(400, '구독 열쇠 형식이 틀렸다');
+  try {
+    const had = await env.USAGE_DB.prepare(`SELECT id, status FROM push_subs WHERE endpoint = ?`).bind(endpoint).first();
+    if (had) return fbJson({ ok: true, id: had.id, status: had.status }, origin);
+    const n = await env.USAGE_DB.prepare(`SELECT count(*) AS n FROM push_subs WHERE status = 'pending'`).first();
+    if (Number(n?.n || 0) >= PUSH_MAX_PENDING) return fail(429, '승인 대기 중인 신청이 너무 많습니다');
+    const r = await env.USAGE_DB.prepare(
+      `INSERT INTO push_subs (endpoint, p256dh, auth, label, ua) VALUES (?, ?, ?, ?, ?)`,
+    ).bind(endpoint, p256dh, auth, clip(b?.label, 40) || null, clip(request.headers.get('User-Agent') || '', 300) || null).run();
+    return fbJson({ ok: true, id: r?.meta?.last_row_id ?? null, status: 'pending' }, origin);
+  } catch (e) {
+    console.error('push subscribe failed', e?.message);
+    return fail(500, '저장하지 못했습니다');
+  }
+}
+
+async function handleFeedback(request, env, origin, waitUntil) {
   const fail = (status, msg) => bad(status, msg, origin, FEEDBACK_ORIGINS);
   if (!FEEDBACK_ORIGINS.includes(origin)) return fail(403, '허용되지 않은 출처');
   if (!env.USAGE_DB) return fail(500, '의견을 저장할 곳이 설정되지 않았다');
@@ -247,7 +400,13 @@ async function handleFeedback(request, env, origin) {
         app, kind, text, clip(b?.contact, 120) || null, clip(b?.user, 60) || null, ctx,
         clip(request.headers.get('User-Agent') || '', 300) || null, await hashIp(ip),
       ).run();
-      return fbJson({ ok: true, id: r?.meta?.last_row_id ?? null }, origin);
+      const id = r?.meta?.last_row_id ?? null;
+      let ctxObj = null;
+      try { ctxObj = ctx ? JSON.parse(ctx) : null; } catch { ctxObj = null; }
+      waitUntil(notifyPhone(env, {
+        id, app, kind, text, user: clip(b?.user, 60), contact: clip(b?.contact, 120), ctx: ctxObj,
+      }));
+      return fbJson({ ok: true, id }, origin);
     } catch (e) {
       console.error('feedback insert failed', e?.message);
       return fail(500, '저장하지 못했습니다. 잠시 후 다시 보내 주세요');
@@ -785,7 +944,8 @@ export default {
     const colo = request.cf?.colo || '?';   // 실행된 Cloudflare PoP. 403 진단에 쓴다.
 
     // 의견함은 채점과 길이 다르다 — 받는 방식(GET·PATCH)도, 필요한 것(API 키 없음)도 다르다.
-    const isFeedback = new URL(request.url).pathname.replace(/\/+$/, '') === '/feedback';
+    const fbPath = new URL(request.url).pathname.replace(/\/+$/, '');
+    const isFeedback = fbPath === '/feedback' || fbPath === '/feedback/push';
 
     if (request.method === 'OPTIONS') {
       return new Response(null, {
@@ -793,7 +953,8 @@ export default {
         headers: cors(origin, isFeedback ? FEEDBACK_ORIGINS : ALLOWED_ORIGINS),
       });
     }
-    if (isFeedback) return handleFeedback(request, env, origin);
+    if (fbPath === '/feedback/push') return handlePushSubscribe(request, env, origin);
+    if (isFeedback) return handleFeedback(request, env, origin, (p) => ctx.waitUntil(p));
     if (request.method !== 'POST') return bad(405, 'POST만 받는다', origin);
     if (!ALLOWED_ORIGINS.includes(origin)) return bad(403, '허용되지 않은 출처', origin);
     if (!env.ANTHROPIC_API_KEY) return bad(500, 'ANTHROPIC_API_KEY가 설정되지 않았다', origin);

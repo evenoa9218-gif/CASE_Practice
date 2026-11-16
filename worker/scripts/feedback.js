@@ -50,6 +50,31 @@ function update(sql) {
 }
 const q = (s) => `'${String(s).replace(/'/g, "''")}'`;
 
+// ── 폰 알림 기기 관리 ──
+//   npm run feedback -- push          신청된 기기 목록
+//   npm run feedback -- push-ok 3     3번 기기 승인 — 그때부터 새 의견이 그 기기로 간다
+//   npm run feedback -- push-del 3    3번 기기 지우기
+if (cmd === 'push-ok' || cmd === 'push-del') {
+  const ids = rest.filter((x) => /^\d+$/.test(x)).map(Number);
+  if (!ids.length) { console.error('번호를 적어 주세요. 예: npm run feedback -- push-ok 3'); process.exit(1); }
+  update(cmd === 'push-ok'
+    ? `UPDATE push_subs SET status = 'active' WHERE id IN (${ids.join(',')});`
+    : `DELETE FROM push_subs WHERE id IN (${ids.join(',')});`);
+  console.log(`${ids.join(', ')}번 기기 → ${cmd === 'push-ok' ? '승인 (이제 새 의견이 갑니다)' : '지움'}`);
+  process.exit(0);
+}
+if (cmd === 'push') {
+  const [subs] = select(`SELECT id, ts, label, ua, status, last_ok, last_err,
+                         substr(endpoint, 1, 40) AS ep FROM push_subs ORDER BY id`);
+  if (!subs.length) console.log('신청된 기기가 없습니다. 폰에서 /feedback-admin.html 을 열고 「알림 켜기」를 누르세요.');
+  for (const s of subs) {
+    console.log(`${s.status === 'active' ? '✓ 받음' : '… 대기'}  #${s.id}  ${s.label || '?'}  ${KST(s.ts)}  ${s.ep}…`);
+    if (s.last_ok) console.log(`      마지막 성공 ${KST(s.last_ok)}`);
+    if (s.last_err) console.log(`      마지막 실패: ${s.last_err}`);
+  }
+  process.exit(0);
+}
+
 if (cmd === 'seen' || cmd === 'done') {
   const ids = rest.filter((x) => /^\d+$/.test(x)).map(Number);
   const note = rest.filter((x) => !/^\d+$/.test(x)).join(' ').trim();
