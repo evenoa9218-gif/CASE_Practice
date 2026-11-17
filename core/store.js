@@ -210,6 +210,19 @@
       return reqP(s.delete(`draft:${_uid}:${key}`));
     },
 
+    // ── 본문 표시(형광펜·밑줄)와 고친 글 — core/richdoc.js 가 쓴다 ─────────
+    //   docId 예: "공법_변시_15회_사례:rubric". 값 {edited: string|null, marks: [...]}
+    //   기기 안(IndexedDB)에만 둔다. 표시도 고친 글도 없으면 지운다.
+    async getNote(docId) { return _uid ? await this._kvGet(`note:${_uid}:${docId}`) : null; },
+    async setNote(docId, v) {
+      if (!_uid) return;
+      if (!v || (typeof v.edited !== 'string' && !(v.marks || []).length)) {
+        const s = await tx(ST_KV, 'readwrite');
+        return reqP(s.delete(`note:${_uid}:${docId}`));
+      }
+      return this._kvSet(`note:${_uid}:${docId}`, { edited: typeof v.edited === 'string' ? v.edited : null, marks: v.marks || [] });
+    },
+
     // ── 내부 KV ──────────────────────────────────────
     async _kvGet(k) {
       const s = await tx(ST_KV, 'readonly');
