@@ -27,14 +27,15 @@
   const CSS = `
 .rd{position:relative;white-space:pre-wrap;word-break:break-word;font-size:14.8px;line-height:1.9;color:var(--tx)}
 .rd-l{min-height:1em}
-.rd-l + .rd-l{margin-top:.32em}
+.rd-l + .rd-l{margin-top:.55em}
+.rd-li + .rd-li{margin-top:.28em}
 .rd-blank{height:.55em}
 .rd-h1{font-weight:800;font-size:1.04em;color:var(--gold);margin-top:.9em}
 .rd-h2{font-weight:700;margin-top:.6em}
 .rd-h3{font-weight:650;margin-top:.35em}
 .rd-l:first-child,.rd-bar + .rd-l{margin-top:0}
 .rd-li{padding-left:1.05em;text-indent:-1.05em}
-.rd-box .rd-l + .rd-l{margin-top:.1em}
+.rd-box .rd-l + .rd-l{margin-top:.3em}
 .rd-pg{color:var(--tx3);font-size:.82em}
 .rd-doc{font-weight:800;text-align:center;font-size:1.05em;letter-spacing:.04em;margin-top:.5em}
 .rd-docstart{border-top:1px dashed var(--bd2);padding-top:1em;margin-top:1.7em !important}
@@ -45,6 +46,11 @@
 .rd-box{border-radius:0 7px 7px 0;padding:7px 12px;margin:8px 0}
 .rd-box.pan{background:var(--sf2);border-left:3px solid var(--gold);font-size:.93em;color:var(--tx2)}
 .rd-box.prob{background:var(--sf2);border-left:3px solid var(--bd2);border-radius:7px}
+.rd-box.q{background:var(--sf2);border:1px solid var(--bd2);border-left:3px solid var(--gold);border-radius:7px;padding:9px 13px;font-weight:600}
+.rd-box.q .rd-l + .rd-l{margin-top:.5em}
+.rd-box.ref{border-left:2px solid var(--bd2);border-radius:0;margin-left:.6em;padding:2px 0 2px 12px;font-size:.88em;line-height:1.75;color:var(--tx2)}
+.rd-box.ref .rd-h3{margin-top:.7em;color:var(--tx)}
+.rd-lead{font-weight:700;color:var(--tx)}
 .rd-box.foot{border-left:2px dashed var(--bd2);font-size:.86em;color:var(--tx2)}
 .rd-hl-y{background:rgba(255,213,0,.42)}
 .rd-hl-g{background:rgba(70,200,110,.34)}
@@ -182,21 +188,62 @@
   // 해설 PDF 를 옮기며 문장들이 줄바꿈도 빈칸도 없이 붙은 덩어리가 있다(「받아 보았습니다.귀하의 통지서에서…」).
   // 380자가 넘는 본문 줄은 문장 끝(「다.」「요.」…)에서 끊어 160자 이상씩 문단으로 그린다 — 역시 보여 줄 때만.
   const SENT_CUT = /(?:다|요|음|함|임|됨)\.["”’」』)]?\s*(?=\S)/g;
+  // 항목 머리가 앞 문장에 붙어 버린 자리(「…성립한다.(나) 배임수재죄…」 「…논하시오. (20점)2) (2)와 관련하여…」).
+  // 문장 끝·배점 바로 뒤에 빈칸 없이 오는 「(나)」「（4）」「2)」「2.」 앞에서 끊는다.
+  const MARK_CUT = /(?<=[.。?)）])(?=[(（](?:\d{1,2}|[가-하])[)）]\s?\S)|(?<=점\)|[다요]\.)(?=\d{1,2}[.)]\s?[^\d\s])/g;
   function splitWalls(lines, text) {
     const out = [];
     for (const ln of lines) {
       if (ln.cls || ln.e - ln.s <= 380) { out.push(ln); continue; }
       const seg = text.slice(ln.s, ln.e);
-      let start = 0, m;
+      const cuts = [];
+      let m;
       SENT_CUT.lastIndex = 0;
-      while ((m = SENT_CUT.exec(seg))) {
-        const cut = m.index + m[0].length;
-        if (cut - start >= 160 && seg.length - cut >= 60) {
+      while ((m = SENT_CUT.exec(seg))) cuts.push([m.index + m[0].length, 160]);
+      MARK_CUT.lastIndex = 0;
+      while ((m = MARK_CUT.exec(seg))) { cuts.push([m.index, 30]); if (m[0] === '') MARK_CUT.lastIndex++; }
+      cuts.sort((a, b) => a[0] - b[0]);
+      let start = 0;
+      for (const [cut, min] of cuts) {
+        if (cut - start >= min && seg.length - cut >= 40) {
           out.push(Object.assign({}, ln, { s: ln.s + start, e: ln.s + cut }, start ? { qa: '' } : {}));
           start = cut;
         }
       }
       out.push(Object.assign({}, ln, { s: ln.s + start, e: ln.e }, start ? { qa: '' } : {}));
+    }
+    return out;
+  }
+
+  // ── 본문에 붙은 각주 떼기 ───────────────────────────
+  // 쪽 아래 각주가 본문 줄 끝에 이어 붙은 책이 있다(형법 사례집):
+  //   「…업무상배임죄가 성립한다.1) 대법원 2012. 5. 10. 선고 2010도3532 판결.2) 대법원 2013. …」
+  // 「N) 대법원/헌재/본 사례…」가 번호 순서대로 두 번 이상 이어지면 그 앞에서 끊어 각주 상자로 보낸다.
+  const NOTE_CUT = /(?<=[.。)\]」』”"다])\s?(\d{1,3})\)\s?(?=대법원|대판|헌재|헌법재판소|서울|부산|대구|광주|대전|수원|同|동지|본 |이에 |다만|한편|참고|위 )/g;
+  function splitNotes(lines, text) {
+    const out = [];
+    for (const ln of lines) {
+      if (ln.cls || ln.box || ln.e - ln.s < 60) { out.push(ln); continue; }
+      const seg = text.slice(ln.s, ln.e);
+      const hits = [];
+      let m;
+      NOTE_CUT.lastIndex = 0;
+      while ((m = NOTE_CUT.exec(seg))) hits.push([m.index + (m[0].length - m[0].trimStart().length), +m[1]]);
+      // 번호가 차례로 늘어나는 꼬리만 각주로 본다(본문의 「1) 대법원은…」 같은 항목과 가르기 위해 두 개 이상)
+      let k = hits.length - 1;
+      while (k > 0 && hits[k][1] === hits[k - 1][1] + 1) k--;
+      const run = hits.slice(k);
+      if (run.length < 2) { out.push(ln); continue; }
+      out.push(Object.assign({}, ln, { e: ln.s + run[0][0] }));
+      // 마지막 각주는 첫 문장 끝에서 끝난다. 쪽이 넘어가며 잘린 각주는 다음 쪽 머리말(「사례 19 [26…」) 앞에서.
+      // 그 뒤는 다시 본문이다 — 한 줄로 붙은 글에서 각주 뒤 본문까지 각주 상자에 넣지 않도록.
+      const lastAt = run[run.length - 1][0], rest = seg.slice(lastAt);
+      const m1 = /(?:판결|결정|다|음|함|임)\.(?=\S|$)/.exec(rest), m2 = /\s?사례\s*\d+\s*[\[.]|\s?\d{2,4}\s*\S{0,6}사례형\s?해설/.exec(rest);
+      const ends = [m1 && m1.index + m1[0].length, m2 && m2.index].filter((x) => x != null && x > 0);
+      const lastEnd = ends.length ? lastAt + Math.min(...ends) : seg.length;
+      run.forEach(([at], i) => out.push(Object.assign({}, ln, {
+        s: ln.s + at, e: ln.s + (i + 1 < run.length ? run[i + 1][0] : lastEnd), box: 'foot', joined: false })));
+      if (lastEnd < seg.length) out.push(Object.assign({}, ln, { s: ln.s + lastEnd, joined: false }));
     }
     return out;
   }
@@ -256,8 +303,60 @@
   function classify(text, kind) {
     if (kind === 'record') return splitWalls(classifyRecord(text), text);
     let lines = classifyLines(text, kind === 'problem' ? 'plain' : kind);
-    if (kind === 'answer' || kind === 'problem') lines = joinWrapped(lines, text.split(NL));
+    const L0 = text.split(NL);
+    if (kind === 'problem') markArticles(lines, L0);     // 앱이 이미 사실관계·설문·참조조문 칸을 나눠 준다 — 조문 머리만 굵게
+    if (kind === 'answer') {
+      // 사례집 답안의 〈문제〉 구간
+      for (let i = 0; i < lines.length;) {
+        if (lines[i].box !== 'prob') { i++; continue; }
+        let j = i; while (j < lines.length && (lines[j].box === 'prob' || lines[j].cls === 'blank')) j++;
+        markProblem(lines, L0, i, j, false);
+        i = j;
+      }
+    }
+    if (kind === 'answer' || kind === 'problem') lines = joinWrapped(lines, L0);
+    if (kind === 'answer') lines = splitNotes(lines, text);
     return splitWalls(lines, text);
+  }
+
+  // ── 문제 안의 구조 ──────────────────────────────────
+  // 문제 글은 ① 사실관계 ② 설문(「1. … (20점)」) ③ 유의사항·참조 조문 순이다. 전에는 셋을 한 상자에
+  // 같은 모양으로 넣어 어디가 물음인지 안 보였다.
+  //   사실관계 = 본문 그대로(문단 띄움) / 설문 = 상자 / 유의사항·참조 조문 = 작게 들여 쓰고,
+  //   법령 이름은 굵게, 조문 머리 「제5조(사업의 허가 등)」만 굵게.
+  const REF_HEAD = /^\s*(?:※\s*유의\s*사항|[\[<〈【]?\s*참\s*[조고]\s*조\s*문\s*[\]>〉】]?|[\[<〈【]\s*관\s*[련계]\s*법\s*령[^\]>〉】]*[\]>〉】]|※\s*아래의?\s*(?:조문|법령)|아래\s*법령은)/;
+  const Q_HEAD = /^\s*(?:문제\s*)?\d{1,2}\s*[.．](?!\s*\d{1,2}\s*[.．](?!\s*\d))\s*\S/;
+  const ART_HEAD = /^\s*제\s*\d+\s*조(?:\s*의\s*\d+)?\s*[(（][^)）]{1,40}[)）]/;
+  const LAW_NAME = /^\s*[｢「]?[가-힣A-Za-z0-9·ㆍ\s]{2,40}(?:법|법률|시행령|시행규칙|규칙|조례|규정|협약|헌법)[｣」]?(?:\s*[(（][^)）]{1,30}[)）])?\s*$/;
+  function markArticles(lines, L) {
+    if (L.filter((l) => ART_HEAD.test(l)).length < 2) return;
+    for (let i = 0; i < lines.length; i++) {
+      const t = L[i].trim();
+      if (lines[i].cls) continue;
+      const m = ART_HEAD.exec(L[i]);
+      if (m) lines[i].lead = m[0].length;
+      else if (REF_HEAD.test(t) || (LAW_NAME.test(t) && t.length <= 44)) lines[i].cls = 'h3';
+    }
+  }
+  function markProblem(lines, L, a, b, boxFacts) {
+    let stage = 'fact';
+    for (let i = a; i < b; i++) {
+      const ln = lines[i], t = L[i].trim();
+      if (ln.cls === 'blank') { ln.box = ''; continue; }
+      if (ln.cls === 'h1') continue;
+      if (REF_HEAD.test(t)) stage = 'ref';
+      else if (stage !== 'ref' && Q_HEAD.test(t) && /점\s*[)）]|[?？]\s*$|시오|인가|는가/.test(L.slice(i, i + 6).join(' '))) stage = 'q';
+      else if (stage === 'q' && /^\s*[<〈\[【]/.test(t) && !/점\s*[)）]/.test(t)) stage = 'fact';   // 〈추가된 사실관계〉로 돌아감
+      if (stage === 'ref') {
+        ln.box = 'ref';
+        if (REF_HEAD.test(t) && t.length <= 30) ln.cls = 'h3';
+        else if (REF_HEAD.test(t)) { /* 유의 문구가 본문과 한 줄 — 그대로 */ }
+        else if (LAW_NAME.test(t) && t.length <= 44) ln.cls = 'h3';
+        else { const m = ART_HEAD.exec(L[i]); if (m) ln.lead = m[0].length; }
+      } else if (stage === 'q') { ln.box = 'q'; }
+      else { ln.box = boxFacts ? 'prob' : ''; if (/^\s*[<〈\[【][^>〉\]】]{1,20}[>〉\]】]\s*$/.test(t)) ln.cls = 'h3'; }
+    }
+    return lines;
   }
   function classifyLines(text, kind) {
     const L = text.split('\n');
@@ -425,6 +524,7 @@
         POINT_RE.lastIndex = 0; const seg = body.slice(ln.s, ln.e); let mm;
         while ((mm = POINT_RE.exec(seg))) { const a = ln.s + mm.index, b = a + mm[0].length; pts.push([a, b]); cuts.add(a); cuts.add(b); }
       }
+      if (ln.lead && ln.s + ln.lead < ln.e) cuts.add(ln.s + ln.lead);
       let qa = null;
       if (ln.qa) { const k = ln.s + (body.slice(ln.s, ln.e).length - body.slice(ln.s, ln.e).trimStart().length); qa = [k, k + 1]; cuts.add(k); cuts.add(k + 1); }
       const cs = [...cuts].sort((a, b) => a - b);
@@ -435,6 +535,7 @@
         for (const m of ms) if (m.s <= a && m.e >= b) cl += m.t === 'ul' ? ' rd-ul' : ' rd-hl-' + (m.c || 'y');
         if (pts.some((p) => p[0] <= a && p[1] >= b)) cl += ' rd-pt';
         if (qa && qa[0] <= a && qa[1] >= b) cl += ' rd-qa rd-qa-' + ln.qa;
+        if (ln.lead && b <= ln.s + ln.lead) cl += ' rd-lead';
         const seg = body.slice(a, b);
         kids.push(h('span', { key: a, 'data-o': a, className: cl.trim() || undefined }, ln.joined ? seg.split(NL).join(' ') : seg));
       }
