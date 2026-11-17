@@ -14,7 +14,7 @@
  */
 'use strict';
 
-const VERSION = 'cp-v9';   // v9: 정연석 민사 해설편 340답안을 지면 그대로 다시 세움(richdoc v5: 문단으로 짜인 글은 줄을 잇지 않음) · v8: 강성민 행정법 답안 — 여러 해상도 다수결·시험지 대조·닮은 글자 교정 · v7: 민사 15회 정연석 원문 재구축 · v6: 문제 구조·각주 떼기(richdoc v3) · v5: 2026년 2·3차 모의(8모·10모) 사례형 · v4: 본문 꾸밈·형광펜(core/richdoc.js) · v3: 공법 강성민 행정법 사례집 답안 새로 세움 (v2: 채점 결과 칸 · 사례집 줄 세우기)
+const VERSION = 'cp-v10';   // v10: 조균석 형사법 사례형 해설 30답안을 지면 그대로 다시 세움(richdoc v6: ▣ 곁상자) · v9: 정연석 민사 해설편 340답안을 지면 그대로 다시 세움(richdoc v5: 문단으로 짜인 글은 줄을 잇지 않음) · v8: 강성민 행정법 답안 — 여러 해상도 다수결·시험지 대조·닮은 글자 교정 · v7: 민사 15회 정연석 원문 재구축 · v6: 문제 구조·각주 떼기(richdoc v3) · v5: 2026년 2·3차 모의(8모·10모) 사례형 · v4: 본문 꾸밈·형광펜(core/richdoc.js) · v3: 공법 강성민 행정법 사례집 답안 새로 세움 (v2: 채점 결과 칸 · 사례집 줄 세우기)
 const SHELL = `case-shell-${VERSION}`;
 const DATA = `case-data-${VERSION}`;
 const KEEP = new Set([SHELL, DATA]);
@@ -24,7 +24,7 @@ self.addEventListener('install', (e) => {
   e.waitUntil((async () => {
     const c = await caches.open(SHELL);
     // 개별 실패가 설치 전체를 막지 않게 하나씩 넣는다.
-    await Promise.all([BASE, BASE + 'index.html', BASE + 'core/store.js?v=2', BASE + 'core/richdoc.js?v=5'].map(
+    await Promise.all([BASE, BASE + 'index.html', BASE + 'core/store.js?v=2', BASE + 'core/richdoc.js?v=6'].map(
       (u) => c.add(new Request(u, { cache: 'reload' })).catch(() => {}),
     ));
     self.skipWaiting();

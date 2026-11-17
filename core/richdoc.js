@@ -54,6 +54,7 @@
 .rd-lead-pan{font-weight:700;color:var(--gold)}
 .rd-ind{margin-left:1.05em}
 .rd-l + .rd-ind{margin-top:.3em}
+.rd-box.side{background:var(--sf2);border:1px dashed var(--bd2);border-radius:7px;font-size:.93em}
 .rd-box.foot{border-left:2px dashed var(--bd2);font-size:.86em;color:var(--tx2)}
 .rd-hl-y{background:rgba(255,213,0,.42)}
 .rd-hl-g{background:rgba(70,200,110,.34)}
@@ -145,11 +146,17 @@
     if (kind === 'rubric' && POINTS.test(t) && n <= 80) return 'h2';
     if (kind === 'answer' && /^(?:\d+번\s*)?[(（]\d+점[)）](?:\s*—|\s*$)/.test(t) && n <= 120) return 'h2';   // 「1번 (20점) — 키워드」
     if (/^\d+\)\s*-\s*[①-⑳]/.test(t) && n <= 70) return 'h2';
+    // 마침표 없이 짧은 번호 줄은 「임·음·함」으로 끝나도 제목이다(「2. 甲의 형사책임」「(1) 강도상해죄의 성립」)
+    if (n <= 30 && !/[.。?!]\s*$/.test(t)) {
+      if (/^\d{1,2}\s*[.．]\s*\S/.test(t) && !/^\d{1,2}\s*[.．]\s*\d/.test(t)) return 'h2';
+      if (/^[가-하]\s*[.．]\s*\S/.test(t) || /^\(\d{1,2}\)\s*\S/.test(t) || /^\([가-하]\)\s*\S/.test(t)) return 'h3';
+    }
     if (SENT_END.test(t)) return '';
     if (/^\d{1,2}\s*[.．]\s*\S/.test(t) && !/^\d{1,2}\s*[.．]\s*\d/.test(t) && n <= 45) return 'h2';
     if (n > 40) return '';
     if (/^[가-하]\s*[.．]\s*\S/.test(t)) return 'h3';
     if (/^\(\d{1,2}\)\s*\S/.test(t)) return 'h3';
+    if (/^\([가-하]\)\s*\S/.test(t)) return 'h3';
     if (/^\d{1,2}\)\s*\S/.test(t) && !/대법원|헌재|선고|판결|결정/.test(t)) return 'h3';
     // ①② 는 기준표에서만 제목이다. 답안에서는 문장 속 나열이 줄머리로 잘린 것이 많다(「사안에서 甲은 / ① 확정된 원금…」)
     if (kind === 'rubric' && /^[①-⑳]\s*\S/.test(t) && n <= 30) return 'h3';
@@ -397,6 +404,7 @@
     const pan = kind === 'plain' ? L.map(() => false) : panFlags(L);
     const hasJudge = kind === 'answer' && /〈해설/.test(text);
     let sec = '';                       // '' · 'prob'(〈문제〉 뒤) · 'foot'(〈각주〉 뒤)
+    let side = false;                   // 「▣ 제목」부터 빈 줄까지 = 책의 곁상자(관련쟁점 따위)
     return L.map((ln, i) => {
       const t = ln.trim();
       let cls = '', box = '';
@@ -407,7 +415,12 @@
           if (/^〈[^〉]{1,12}〉/.test(t) || /^─{2,}.*─{2,}$/.test(t)) sec = '';
           if (PAGE_NOISE.some((r) => r.test(t)) && t.length <= 40) cls = 'pg';
         }
+        if (kind === 'answer' && !sec) {
+          if (/^▣\s/.test(t)) { side = true; return { s: pos[i], e: pos[i] + ln.length, cls: 'h3', box: 'side' }; }
+          if (side && !t) side = false;
+        } else side = false;
         if (sec) box = sec;
+        else if (side) box = 'side';
         else if (pan[i]) box = 'pan';
         if (!cls && !box) cls = headLevel(t, kind);
       }
