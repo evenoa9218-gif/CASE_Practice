@@ -362,6 +362,52 @@ async function handlePushSubscribe(request, env, origin) {
   }
 }
 
+// ── 답장 ──────────────────────────────────────────────
+// 의견을 보낸 브라우저의 표식(cid). 아무 글이나 받지 않는다 — 영숫자 16~40자만.
+const fbCid = (v) => (typeof v === 'string' && /^[a-z0-9]{16,40}$/.test(v) ? v : null);
+
+// 보낸 사람이 사이트에 들어왔을 때 feedback.js 가 묻는다: 「내 의견에 온 답장이 있나?」
+//   GET  /feedback/inbox?cid=…&uid=…   아직 확인 안 한 답장
+//   POST /feedback/inbox {id,cid,uid}  「확인」 — 다시 띄우지 않는다
+// cid 가 맞는 답장, 또는 cid 가 없는 옛 의견(표식을 만들기 전 #1~)은 로그인 ID 가 맞는 답장만 준다.
+// ⚠ 로그인 ID 는 누구나 칠 수 있는 이름이다. 그래서 cid 가 있는 의견은 ID 로는 내주지 않는다.
+async function handleFeedbackInbox(request, env, origin) {
+  const fail = (status, msg) => bad(status, msg, origin, FEEDBACK_ORIGINS);
+  if (!FEEDBACK_ORIGINS.includes(origin)) return fail(403, '허용되지 않은 출처');
+  if (!env.USAGE_DB) return fail(500, '설정되지 않았다');
+  const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
+  if (env.GRADE_LIMIT) {
+    const { success } = await env.GRADE_LIMIT.limit({ key: `inbox:${ip}` });
+    if (!success) return fail(429, '잠시 후 다시 시도해 주세요');
+  }
+  let p;
+  if (request.method === 'GET') p = Object.fromEntries(new URL(request.url).searchParams);
+  else if (request.method === 'POST') { try { p = await request.json(); } catch { return fail(400, '잘못된 요청 형식'); } }
+  else return fail(405, '지원하지 않는 방식');
+  const cid = fbCid(p?.cid) || '';
+  const uid = clip(p?.uid, 60);
+  if (!cid && !uid) return fbJson({ replies: [] }, origin);
+  const mine = `(cid = ?1 OR (cid IS NULL AND ?2 != '' AND user = ?2))`;
+  try {
+    if (request.method === 'GET') {
+      const rows = await env.USAGE_DB.prepare(
+        `SELECT id, ts, kind, substr(text, 1, 300) AS text, reply, reply_ts FROM feedback
+         WHERE reply IS NOT NULL AND reply_seen IS NULL AND ${mine} ORDER BY id LIMIT 10`,
+      ).bind(cid, uid).all();
+      return fbJson({ replies: rows.results || [] }, origin);
+    }
+    const id = Number(p?.id);
+    if (!Number.isInteger(id) || id < 1) return fail(400, '알 수 없는 의견');
+    await env.USAGE_DB.prepare(
+      `UPDATE feedback SET reply_seen = datetime('now') WHERE id = ?3 AND ${mine}`,
+    ).bind(cid, uid, id).run();
+    return fbJson({ ok: true }, origin);
+  } catch (e) {
+    console.error('feedback inbox failed', e?.message);
+    return fail(500, '답장을 읽지 못했습니다');
+  }
+}
+
 async function handleFeedback(request, env, origin, waitUntil) {
   const fail = (status, msg) => bad(status, msg, origin, FEEDBACK_ORIGINS);
   if (!FEEDBACK_ORIGINS.includes(origin)) return fail(403, '허용되지 않은 출처');
@@ -394,11 +440,11 @@ async function handleFeedback(request, env, origin, waitUntil) {
       ).first();
       if (Number(n?.n || 0) >= FB_DAILY_ROWS) return fail(429, '오늘은 의견함이 가득 찼습니다. 내일 다시 보내 주세요');
       const r = await env.USAGE_DB.prepare(
-        `INSERT INTO feedback (app, kind, text, contact, user, ctx, ua, ip_hash)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+        `INSERT INTO feedback (app, kind, text, contact, user, ctx, ua, ip_hash, cid)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       ).bind(
         app, kind, text, clip(b?.contact, 120) || null, clip(b?.user, 60) || null, ctx,
-        clip(request.headers.get('User-Agent') || '', 300) || null, await hashIp(ip),
+        clip(request.headers.get('User-Agent') || '', 300) || null, await hashIp(ip), fbCid(b?.cid),
       ).run();
       const id = r?.meta?.last_row_id ?? null;
       let ctxObj = null;
@@ -431,7 +477,8 @@ async function handleFeedback(request, env, origin, waitUntil) {
       const limit = Math.min(Math.max(Number(q.get('limit')) || 100, 1), 300);
       const where = FB_STATUS.includes(status) ? 'WHERE status = ?' : '';
       const stmt = env.USAGE_DB.prepare(
-        `SELECT id, ts, app, kind, text, contact, user, ctx, ua, status, note, done_ts
+        `SELECT id, ts, app, kind, text, contact, user, ctx, ua, status, note, done_ts,
+                cid IS NOT NULL AS has_cid, reply, reply_ts, reply_seen
          FROM feedback ${where} ORDER BY id DESC LIMIT ${limit}`,
       );
       const rows = await (where ? stmt.bind(status) : stmt).all();
@@ -445,6 +492,15 @@ async function handleFeedback(request, env, origin, waitUntil) {
     try { b = await request.json(); } catch { return fail(400, '잘못된 요청 형식'); }
     const id = Number(b?.id);
     if (!Number.isInteger(id) || id < 1) return fail(400, '알 수 없는 의견');
+    // 답장 — 쓰면 보낸 사람이 다음에 들어올 때 뜬다(reply_seen 을 비운다). 빈 글이면 답장을 거둔다.
+    if (typeof b?.reply === 'string') {
+      const reply = b.reply.trim().slice(0, 2000);
+      await env.USAGE_DB.prepare(reply
+        ? `UPDATE feedback SET reply = ?, reply_ts = datetime('now'), reply_seen = NULL WHERE id = ?`
+        : `UPDATE feedback SET reply = NULL, reply_ts = NULL, reply_seen = NULL WHERE id = ?`,
+      ).bind(...(reply ? [reply, id] : [id])).run();
+      if (b?.status === undefined) return fbJson({ ok: true }, origin);
+    }
     if (!FB_STATUS.includes(b?.status)) return fail(400, '알 수 없는 상태');
     await env.USAGE_DB.prepare(
       `UPDATE feedback SET status = ?, note = COALESCE(?, note),
@@ -945,7 +1001,7 @@ export default {
 
     // 의견함은 채점과 길이 다르다 — 받는 방식(GET·PATCH)도, 필요한 것(API 키 없음)도 다르다.
     const fbPath = new URL(request.url).pathname.replace(/\/+$/, '');
-    const isFeedback = fbPath === '/feedback' || fbPath === '/feedback/push';
+    const isFeedback = fbPath === '/feedback' || fbPath === '/feedback/push' || fbPath === '/feedback/inbox';
 
     if (request.method === 'OPTIONS') {
       return new Response(null, {
@@ -954,6 +1010,7 @@ export default {
       });
     }
     if (fbPath === '/feedback/push') return handlePushSubscribe(request, env, origin);
+    if (fbPath === '/feedback/inbox') return handleFeedbackInbox(request, env, origin);
     if (isFeedback) return handleFeedback(request, env, origin, (p) => ctx.waitUntil(p));
     if (request.method !== 'POST') return bad(405, 'POST만 받는다', origin);
     if (!ALLOWED_ORIGINS.includes(origin)) return bad(403, '허용되지 않은 출처', origin);

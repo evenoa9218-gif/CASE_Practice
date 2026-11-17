@@ -4,6 +4,7 @@
 //   npm run feedback -- all          최근 50건 (상태 무관)
 //   npm run feedback -- seen 12 13   12·13번을 「읽음」으로
 //   npm run feedback -- done 12 "채점 칸을 넓혔다 (7a8e504)"   처리함 + 메모
+//   npm run feedback -- reply 12 "답장"     보낸 사람이 다음에 들어오면 화면에 뜬다
 //
 // 관리자 열쇠가 필요 없다 — wrangler 로그인이 곧 열쇠다.
 // (브라우저에서 보려면 허브의 /feedback-admin.html. 그쪽은 FEEDBACK_ADMIN_KEY 가 있어야 열린다)
@@ -50,6 +51,20 @@ function update(sql) {
 }
 const q = (s) => `'${String(s).replace(/'/g, "''")}'`;
 
+// ── 답장 ──
+//   npm run feedback -- reply 4 "8모·10모 넣었습니다. 고맙습니다!"
+//   보낸 사람이 다음에 사이트(어느 앱이든)에 들어오면 화면에 뜬다. 빈 글("")이면 답장을 거둔다.
+if (cmd === 'reply') {
+  const id = Number(rest[0]);
+  const text = rest.slice(1).join(' ').trim();
+  if (!Number.isInteger(id) || id < 1) { console.error('예: npm run feedback -- reply 4 "답장 내용"'); process.exit(1); }
+  update(text
+    ? `UPDATE feedback SET reply = ${q(text)}, reply_ts = datetime('now'), reply_seen = NULL WHERE id = ${id};`
+    : `UPDATE feedback SET reply = NULL, reply_ts = NULL, reply_seen = NULL WHERE id = ${id};`);
+  console.log(text ? `${id}번에 답장 — 보낸 사람이 다음에 들어오면 뜹니다` : `${id}번 답장을 거뒀습니다`);
+  process.exit(0);
+}
+
 // ── 폰 알림 기기 관리 ──
 //   npm run feedback -- push          신청된 기기 목록
 //   npm run feedback -- push-ok 3     3번 기기 승인 — 그때부터 새 의견이 그 기기로 간다
@@ -88,7 +103,8 @@ if (cmd === 'seen' || cmd === 'done') {
 const where = cmd === 'all' ? '' : "WHERE status = 'new'";
 // 몇 초는 걸린다. 그동안 빈 화면이면 멈춘 줄 안다.
 process.stdout.write('의견함을 불러오는 중…');
-const [rows, counts] = select(`SELECT id, ts, app, kind, text, contact, user, ctx, status, note
+const [rows, counts] = select(`SELECT id, ts, app, kind, text, contact, user, ctx, status, note,
+                               cid IS NOT NULL AS has_cid, reply, reply_ts, reply_seen
                                FROM feedback ${where} ORDER BY id DESC LIMIT 50;
                                SELECT status, count(*) n FROM feedback GROUP BY status`);
 process.stdout.write('\r' + ' '.repeat(30) + '\r');
@@ -107,5 +123,7 @@ for (const r of rows.reverse()) {          // 오래된 것부터 — 맨 아래
   if (ctx.vw) console.log(`    ↳ 기기: ${ctx.vw}×${ctx.vh}${ctx.theme ? ` · ${ctx.theme}` : ''}`);
   if (r.contact) console.log(`    ↳ 연락처: ${r.contact}`);
   if (r.note) console.log(`    ↳ 메모: ${r.note}`);
+  if (r.reply) console.log(`    ↳ 답장(${KST(r.reply_ts)}${r.reply_seen ? ' · 읽음' : ' · 아직 안 봄'}): ${r.reply}`);
+  else console.log(`    ↳ 답장 가능: ${r.has_cid ? '예(그 브라우저)' : r.user ? `예(로그인 ID ${r.user})` : '아니오 — 보낸 사람을 찾을 표식이 없다'}`);
   console.log('');
 }
