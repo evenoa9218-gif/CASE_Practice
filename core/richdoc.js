@@ -172,6 +172,11 @@
   // **보여 줄 때만** 잇는다 — 원문의 줄바꿈 글자는 그대로 두고 그 자리를 빈칸으로 그린다(글 위치가 안 어긋난다).
   const WRAP_END = /[.。?!:;」』)\]>〉】]\s*$|(?:다|음|함|임|됨|요)\s*$/;
   const WRAP_HEAD = /^\s*(?:[ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ]|\d+\s*[.)]|\(\d+\)|[가-하]\s*[.)]|\([가-하]\)|[①-⑳]|[○●■□▶◆◇※*∙·•ㆍ\-–]|〈|【|\[|─)/;
+  function looksWrapped(L) {
+    const n = L.map((x) => x.trim().length).filter((x) => x > 0).sort((p, q) => p - q);
+    return !n.length || (n[n.length - 1] <= 200 && n[Math.floor(n.length * 0.9)] <= 90);
+  }
+
   function joinWrapped(lines, L) {
     const out = [];
     for (let i = 0; i < lines.length; i++) {
@@ -319,7 +324,9 @@
       }
     }
     if (kind === 'answer') markLeads(lines, L0);
-    if (kind === 'answer' || kind === 'problem') lines = joinWrapped(lines, L0);
+    // 이미 문단으로 짜인 글(책 지면대로 다시 세운 답안)은 잇지 않는다 — 그 글에서는 줄바꿈이 곧 문단이다.
+    // OCR 줄바꿈이 남은 글은 줄이 60자쯤에서 끊긴다: 200자 넘는 줄이 없고 줄 열에 아홉이 90자 안쪽일 때만 잇는다.
+    if ((kind === 'answer' || kind === 'problem') && looksWrapped(L0)) lines = joinWrapped(lines, L0);
     if (kind === 'answer') lines = splitNotes(lines, text);
     return splitWalls(lines, text);
   }
