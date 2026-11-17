@@ -51,6 +51,9 @@
 .rd-box.ref{border-left:2px solid var(--bd2);border-radius:0;margin-left:.6em;padding:2px 0 2px 12px;font-size:.88em;line-height:1.75;color:var(--tx2)}
 .rd-box.ref .rd-h3{margin-top:.7em;color:var(--tx)}
 .rd-lead{font-weight:700;color:var(--tx)}
+.rd-lead-pan{font-weight:700;color:var(--gold)}
+.rd-ind{margin-left:1.05em}
+.rd-l + .rd-ind{margin-top:.3em}
 .rd-box.foot{border-left:2px dashed var(--bd2);font-size:.86em;color:var(--tx2)}
 .rd-hl-y{background:rgba(255,213,0,.42)}
 .rd-hl-g{background:rgba(70,200,110,.34)}
@@ -140,6 +143,7 @@
     if (/^\[사례\s*\d+\]/.test(t)) return 'h1';
     if (/^─{2,}.*─{2,}$/.test(t)) return 'h1';
     if (kind === 'rubric' && POINTS.test(t) && n <= 80) return 'h2';
+    if (kind === 'answer' && /^(?:\d+번\s*)?[(（]\d+점[)）](?:\s*—|\s*$)/.test(t) && n <= 120) return 'h2';   // 「1번 (20점) — 키워드」
     if (/^\d+\)\s*-\s*[①-⑳]/.test(t) && n <= 70) return 'h2';
     if (SENT_END.test(t)) return '';
     if (/^\d{1,2}\s*[.．]\s*\S/.test(t) && !/^\d{1,2}\s*[.．]\s*\d/.test(t) && n <= 45) return 'h2';
@@ -314,6 +318,7 @@
         i = j;
       }
     }
+    if (kind === 'answer') markLeads(lines, L0);
     if (kind === 'answer' || kind === 'problem') lines = joinWrapped(lines, L0);
     if (kind === 'answer') lines = splitNotes(lines, text);
     return splitWalls(lines, text);
@@ -356,7 +361,28 @@
       } else if (stage === 'q') { ln.box = 'q'; }
       else { ln.box = boxFacts ? 'prob' : ''; if (/^\s*[<〈\[【][^>〉\]】]{1,20}[>〉\]】]\s*$/.test(t)) ln.cls = 'h3'; }
     }
+    // 설문 번호도 참조 조문도 없는 문제(저자가 사실관계와 물음을 요약해 적은 책)는 통째로 문제 상자
+    let any = false;
+    for (let i = a; i < b; i++) if (lines[i].box === 'q' || lines[i].box === 'ref') any = true;
+    if (!any) for (let i = a; i < b; i++) if (lines[i].cls !== 'blank' && lines[i].cls !== 'h1') lines[i].box = 'prob';
     return lines;
+  }
+  // 항목 머리 꾸밈: 「● 문제점 : …」의 제목 부분은 굵게, 「[判例2023]」 꼬리표는 색으로
+  const BUL_LABEL = /^\s*●\s[^:：]{1,48}?\s?[:：](?=\s|$)/;
+  const PAN_TAG = /^\s*\[判例[^\]]{0,10}\]/;
+  function markLeads(lines, L) {
+    let under = false;                    // ● 항목 아래에 딸린 줄([判例]…, 사안에서…)은 한 칸 들여 쓴다
+    for (let i = 0; i < lines.length; i++) {
+      if (lines[i].cls && lines[i].cls !== 'blank') under = false;
+      if (lines[i].box) under = false;
+      if (lines[i].cls || lines[i].lead) continue;
+      if (/^\s*●/.test(L[i])) under = true;
+      else if (under && !lines[i].box) lines[i].ind = true;
+      let m = BUL_LABEL.exec(L[i]);
+      if (m) { lines[i].lead = m[0].length; continue; }
+      m = PAN_TAG.exec(L[i]);
+      if (m) { lines[i].lead = m[0].length; lines[i].leadCls = 'pan'; }
+    }
   }
   function classifyLines(text, kind) {
     const L = text.split('\n');
@@ -535,12 +561,12 @@
         for (const m of ms) if (m.s <= a && m.e >= b) cl += m.t === 'ul' ? ' rd-ul' : ' rd-hl-' + (m.c || 'y');
         if (pts.some((p) => p[0] <= a && p[1] >= b)) cl += ' rd-pt';
         if (qa && qa[0] <= a && qa[1] >= b) cl += ' rd-qa rd-qa-' + ln.qa;
-        if (ln.lead && b <= ln.s + ln.lead) cl += ' rd-lead';
+        if (ln.lead && b <= ln.s + ln.lead) cl += ln.leadCls === 'pan' ? ' rd-lead-pan' : ' rd-lead';
         const seg = body.slice(a, b);
         kids.push(h('span', { key: a, 'data-o': a, className: cl.trim() || undefined }, ln.joined ? seg.split(NL).join(' ') : seg));
       }
-      const li = !ln.cls && !ln.qa && /^\s*(?:[-–∙·•ㆍ*○◦]|[①-⑳]|\(\d{1,2}\)|\d{1,2}\))\s*/.test(body.slice(ln.s, ln.s + 6));
-      return h('div', { key: i, className: 'rd-l' + (ln.cls ? ' rd-' + ln.cls : '') + (li ? ' rd-li' : '') + (ln.qa ? ' rd-qline' : ''),
+      const li = !ln.cls && !ln.qa && /^\s*(?:[-–∙·•ㆍ*○◦●■]|[①-⑳]|\(\d{1,2}\)|\d{1,2}\))\s*/.test(body.slice(ln.s, ln.s + 6));
+      return h('div', { key: i, className: 'rd-l' + (ln.cls ? ' rd-' + ln.cls : '') + (li ? ' rd-li' : '') + (ln.qa ? ' rd-qline' : '') + (ln.ind ? ' rd-ind' : ''),
         'data-o': ln.s, 'data-e': ln.e }, kids);
     };
     const out = [];
