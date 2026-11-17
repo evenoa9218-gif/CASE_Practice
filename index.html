@@ -56,6 +56,21 @@ body{margin:0;background:var(--bg);color:var(--tx);
   position:sticky;top:0;z-index:30}
 .hd h1{margin:0;font-size:16.5px;letter-spacing:-.02em;font-weight:700}
 .hd .sub{font-size:11.5px;opacity:.72;margin-top:2px}
+/* 폰(≤700px): 머리를 두 줄로 정돈한다.
+     첫 줄  — 제목·진도 | ◀앱 · 테마
+     둘째 줄 — 과목 · 회독 고르기 | 나가기
+   전에는 제목이 '사례형 연습 / · 공법' 으로 꺾이고 단추 다섯 개가 두 줄로 흩어졌다.
+   .row 를 display:contents 로 풀어 단추들을 .hd 의 직접 자식처럼 놓고, ::after 를 줄바꿈으로 쓴다. */
+@media(max-width:700px){
+  .hd{flex-wrap:wrap;padding:10px 14px;gap:7px}
+  .hd > div:first-child{order:1;flex:1 1 0;min-width:0}
+  .hd h1,.hd .sub{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .hd > .row{display:contents}
+  .hd > .row > a.btn,.hd > .row > button.btn[title]{order:2}
+  .hd::after{content:"";order:3;flex:0 0 100%;height:0}
+  .hd > .row > select.btn{order:4}
+  .hd > .row > button.btn:not([title]){order:5;margin-left:auto}
+}
 
 .btn{background:var(--sf);color:var(--tx);border:1px solid var(--bd);
   border-radius:8px;padding:8px 13px;font-size:13px;cursor:pointer;font-family:inherit}
@@ -66,6 +81,10 @@ body{margin:0;background:var(--bg);color:var(--tx);
 .btn.ghost{background:transparent;color:#cfe3f5;border-color:rgba(255,255,255,.22)}
 .btn.ghost:hover{border-color:#9acce8}
 select.btn{padding:7px 10px}
+/* ◀ 앱 처럼 링크로 된 단추 — 밑줄 없이 다른 단추와 같은 모양·높이로 */
+a.btn{text-decoration:none;display:inline-flex;align-items:center}
+/* 한글은 낱말 단위로 줄을 바꾼다(「쟁 / 점만」 처럼 낱말 가운데서 꺾이지 않게). 긴 영문·주소는 넘치지 않게 끊는다. */
+.card,.title,.muted{word-break:keep-all;overflow-wrap:break-word}
 
 .card{background:var(--sf);border:1px solid var(--bd);border-radius:12px;
   padding:15px;margin-bottom:11px;box-shadow:var(--shadow)}
@@ -204,6 +223,11 @@ input[type=text]:focus{outline:none;border-color:var(--gold)}
   padding:10px 13px;margin-bottom:11px;position:sticky;top:0;z-index:20;
   box-shadow:var(--shadow)}
 .pagedots{display:flex;gap:5px;flex-wrap:wrap;justify-content:center;flex:1}
+/* 좁은 폰: 이전·다음 사이 칸이 좁아 문항 단추가 세로로 쌓였다 → 문항 단추를 아랫줄 전체 폭으로 내린다 */
+@media(max-width:350px){
+  .pager{flex-wrap:wrap}
+  .pagedots{order:3;flex:0 0 100%}
+}
 .dot{min-width:34px;text-align:center;font-size:12px;padding:5px 9px;border-radius:7px;
   border:1px solid var(--bd);background:var(--sf2);color:var(--tx2);cursor:pointer}
 .dot.on{background:var(--gold);border-color:var(--gold);color:#fff;font-weight:700}
@@ -582,6 +606,7 @@ function splitProblemText(text, groupLabels) {
   });
   return injectCaseLabels(blocks, groupLabels);
 }
+
 // ── 벽처럼 붙은 글 줄 세우기 ─────────────────────────────
 // 사례집에 따라 원문 줄바꿈이 통째로 날아간 것이 있다 — 민사 정연석은 줄당 199자,
 // 형사 조균석은 1,487자라 한 덩이 벽으로 보인다(박승수 43자·류정모 86자는 멀쩡하다).
@@ -607,7 +632,6 @@ function reflowWall(text, dash) {
 }
 const reflowAnswer = t => reflowWall(t, true); // 사례집 모범답안
 const reflowPlain = t => reflowWall(t, false); // 문제 지문·채점기준표 (줄표는 문장 속 줄표일 수 있다)
-
 
 function useTheme() {
   const [theme, setTheme] = useState(() => document.documentElement.getAttribute('data-theme') || 'light');
