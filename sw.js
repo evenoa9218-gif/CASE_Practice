@@ -14,7 +14,7 @@
  */
 'use strict';
 
-const VERSION = 'cp-v4';   // v4: 본문 꾸밈·형광펜(core/richdoc.js) · v3: 공법 강성민 행정법 사례집 답안 새로 세움 (v2: 채점 결과 칸 · 사례집 줄 세우기)
+const VERSION = 'cp-v5';   // v5: 2026년 2·3차 모의(8모·10모) 사례형 · v4: 본문 꾸밈·형광펜(core/richdoc.js) · v3: 공법 강성민 행정법 사례집 답안 새로 세움 (v2: 채점 결과 칸 · 사례집 줄 세우기)
 const SHELL = `case-shell-${VERSION}`;
 const DATA = `case-data-${VERSION}`;
 const KEEP = new Set([SHELL, DATA]);
