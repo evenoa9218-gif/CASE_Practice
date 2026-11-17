@@ -14,7 +14,7 @@
  */
 'use strict';
 
-const VERSION = 'cp-v7';   // v7: 민사 15회 정연석 원문 재구축 · v6: 문제 구조·각주 떼기(richdoc v3) · v5: 2026년 2·3차 모의(8모·10모) 사례형 · v4: 본문 꾸밈·형광펜(core/richdoc.js) · v3: 공법 강성민 행정법 사례집 답안 새로 세움 (v2: 채점 결과 칸 · 사례집 줄 세우기)
+const VERSION = 'cp-v8';   // v8: 강성민 행정법 답안 — 여러 해상도 다수결·시험지 대조·닮은 글자 교정 · v7: 민사 15회 정연석 원문 재구축 · v6: 문제 구조·각주 떼기(richdoc v3) · v5: 2026년 2·3차 모의(8모·10모) 사례형 · v4: 본문 꾸밈·형광펜(core/richdoc.js) · v3: 공법 강성민 행정법 사례집 답안 새로 세움 (v2: 채점 결과 칸 · 사례집 줄 세우기)
 const SHELL = `case-shell-${VERSION}`;
 const DATA = `case-data-${VERSION}`;
 const KEEP = new Set([SHELL, DATA]);
