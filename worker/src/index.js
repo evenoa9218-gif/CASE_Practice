@@ -473,6 +473,33 @@ async function handleFeedback(request, env, origin, waitUntil) {
   try {
     if (request.method === 'GET') {
       const q = new URL(request.url).searchParams;
+      // ── 관리자 앱의 다른 탭들 (view=…) ──
+      const view = q.get('view');
+      if (view === 'inventory') {
+        // 반영 자료 목록 — scripts/inventory.js 가 데이터에서 세어 admin_kv 에 올린 것
+        const r = await env.USAGE_DB.prepare(`SELECT v, ts FROM admin_kv WHERE k = 'inventory'`).first().catch(() => null);
+        let inv = null;
+        try { inv = r ? JSON.parse(r.v) : null; } catch { inv = null; }
+        return fbJson({ inventory: inv, ts: r?.ts || null }, origin);
+      }
+      if (view === 'push') {
+        const r = await env.USAGE_DB.prepare(
+          `SELECT id, ts, label, substr(ua, 1, 120) AS ua, status, last_ok, last_err FROM push_subs ORDER BY id`).all();
+        return fbJson({ subs: r.results || [] }, origin);
+      }
+      if (view === 'usage') {
+        // AI 채점 사용량 — 돈이 나가는 곳이라 관리자가 폰에서도 볼 수 있게
+        const [month, recent, today] = await Promise.all([
+          env.USAGE_DB.prepare(`SELECT substr(ts,1,7) AS m, count(*) AS n, round(sum(cost_usd),2) AS usd FROM usage GROUP BY 1 ORDER BY 1 DESC LIMIT 6`).all(),
+          env.USAGE_DB.prepare(`SELECT mode, subject, count(*) AS n, round(sum(cost_usd),2) AS usd, round(avg(cost_usd),3) AS per,
+                                sum(CASE WHEN status <> 'ok' THEN 1 ELSE 0 END) AS bad
+                                FROM usage WHERE ts >= datetime('now','-30 days') GROUP BY 1, 2 ORDER BY 4 DESC`).all(),
+          env.USAGE_DB.prepare(`SELECT count(*) AS n, round(coalesce(sum(cost_usd),0),2) AS usd, count(DISTINCT ip_hash) AS people
+                                FROM usage WHERE ts >= datetime('now','-1 day')`).first(),
+        ]);
+        return fbJson({ month: month.results || [], recent: recent.results || [], today,
+          cap: { daily: Number(env.DAILY_USD) || null, monthly: Number(env.MONTHLY_USD) || null } }, origin);
+      }
       const status = q.get('status');
       const limit = Math.min(Math.max(Number(q.get('limit')) || 100, 1), 300);
       const where = FB_STATUS.includes(status) ? 'WHERE status = ?' : '';
@@ -490,6 +517,16 @@ async function handleFeedback(request, env, origin, waitUntil) {
     // PATCH
     let b;
     try { b = await request.json(); } catch { return fail(400, '잘못된 요청 형식'); }
+    // 알림 받을 기기 승인·해제·삭제 — 전에는 노트북 스크립트(push-ok)로만 됐다
+    if (b?.push) {
+      const pid = Number(b.push.id);
+      if (!Number.isInteger(pid) || pid < 1) return fail(400, '알 수 없는 기기');
+      if (b.push.status === 'delete') await env.USAGE_DB.prepare(`DELETE FROM push_subs WHERE id = ?`).bind(pid).run();
+      else if (b.push.status === 'active' || b.push.status === 'pending') {
+        await env.USAGE_DB.prepare(`UPDATE push_subs SET status = ? WHERE id = ?`).bind(b.push.status, pid).run();
+      } else return fail(400, '알 수 없는 상태');
+      return fbJson({ ok: true }, origin);
+    }
     const id = Number(b?.id);
     if (!Number.isInteger(id) || id < 1) return fail(400, '알 수 없는 의견');
     // 답장 — 쓰면 보낸 사람이 다음에 들어올 때 뜬다(reply_seen 을 비운다). 빈 글이면 답장을 거둔다.
