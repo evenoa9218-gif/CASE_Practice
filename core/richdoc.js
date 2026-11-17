@@ -36,6 +36,11 @@
 .rd-li{padding-left:1.05em;text-indent:-1.05em}
 .rd-box .rd-l + .rd-l{margin-top:.1em}
 .rd-pg{color:var(--tx3);font-size:.82em}
+.rd-doc{font-weight:800;text-align:center;font-size:1.05em;letter-spacing:.04em;margin-top:.5em}
+.rd-docstart{border-top:1px dashed var(--bd2);padding-top:1em;margin-top:1.7em !important}
+.rd-qline{padding-left:1.75em;text-indent:-1.75em}
+.rd-qa{display:inline-block;text-indent:0;min-width:1.35em;margin-right:.4em;font-weight:800;color:var(--gold)}
+.rd-qa-a{color:var(--tx2)}
 .rd-pt{color:var(--gold);font-weight:700}
 .rd-box{border-radius:0 7px 7px 0;padding:7px 12px;margin:8px 0}
 .rd-box.pan{background:var(--sf2);border-left:3px solid var(--gold);font-size:.93em;color:var(--tx2)}
@@ -49,6 +54,12 @@
 .rd-edit-btn{font-size:12px;padding:2px 9px;border-radius:7px;border:1px solid var(--bd2);background:var(--sf);
   color:var(--tx2);cursor:pointer;opacity:.75}
 .rd-edit-btn:hover{opacity:1}
+/* 마우스가 있는 기기에서는 「✎ 수정」을 글에 올렸을 때만 띄운다 — 블록마다 한 줄씩 먹던 여백을 없앤다 */
+@media (hover:hover){
+  .rd-bar{position:absolute;top:-6px;right:-2px;margin:0;z-index:3;opacity:0;transition:opacity .12s;pointer-events:none}
+  .rd:hover > .rd-bar,.rd-bar:focus-within{opacity:1;pointer-events:auto}
+  .rd-bar:has(.rd-edited){position:static;opacity:1;pointer-events:auto;margin:-2px 0 4px}
+}
 .rd-edited{font-size:11.5px;color:var(--gold)}
 .rd-ta{width:100%;min-height:340px;font:inherit;font-size:14.5px;line-height:1.8;padding:10px;border-radius:8px;
   border:1px solid var(--bd2);background:var(--sf);color:var(--tx);resize:vertical;white-space:pre-wrap}
@@ -181,19 +192,71 @@
       while ((m = SENT_CUT.exec(seg))) {
         const cut = m.index + m[0].length;
         if (cut - start >= 160 && seg.length - cut >= 60) {
-          out.push(Object.assign({}, ln, { s: ln.s + start, e: ln.s + cut }));
+          out.push(Object.assign({}, ln, { s: ln.s + start, e: ln.s + cut }, start ? { qa: '' } : {}));
           start = cut;
         }
       }
-      out.push(Object.assign({}, ln, { s: ln.s + start, e: ln.e }));
+      out.push(Object.assign({}, ln, { s: ln.s + start, e: ln.e }, start ? { qa: '' } : {}));
     }
     return out;
   }
 
+  // ── 기록(기록형 시험의 사건 기록) ─────────────────────
+  // 기록은 공소장·조서·판결·고소장이 이어 붙은 문서 묶음이다. 서식 줄(「주소 ⏎ 성명」)이 많아
+  // 잘린 줄 잇기는 하지 않는다. 대신 문서 경계와 머리말·발언자·문답을 드러낸다.
+  //   · 문서 이름(「공 판 조 서」 「처벌불원서」 「이한방에 대한 고소취소장(사본)」) → 가운데 굵게,
+  //     새 문서가 시작되는 첫 줄에는 점선 구분선
+  //   · 【…】 [작성요령] <범죄일람표> 「제목 : …」 Ⅱ. → 굵은 머리말 / 2글자 띄어 쓴 「주 문」「이 유」 → 머리말
+  //   · 공판조서의 「재판장」「검 사」「피고인 김갑동의 변호인」 → 발언자(굵게)
+  //   · 조서의 「문…」「답…」 → 첫 글자를 꼬리표로
+  const DOC_SUFFIX = /(?:조서|신청서|불원서|취소장|공소장|고소장|고발장|진술서|보고서?|의견서|요지서|청구서|결정서?|판결문?|소장|답변서|준비서면|확인서|계약서|내용증명|통지서|증명서|등본|각서|합의서|영수증|진단서|감정서|사실조회회신|회신서?|명령|약정서|차용증|위임장)(?:\s*\((?:사본|생략|요약)\))?$/;
+  const SPEAKER = /^(?:재판장|검\s*사|소송관계인|피고인(?:들)?(?:\s+\S{2,4})?(?:의\s*변호인)?|변\s*호\s*인|증\s*인(?:\s+\S{2,4})?|원고\s*소송대리인|피고\s*소송대리인|원\s*고|피\s*고)$/;
+  function recordLevel(t) {
+    const n = t.length;
+    if (!t || n > 34) return '';
+    if (/^(?:[가-힣]\s+){2,}[가-힣]$/.test(t)) {
+      // 띄어 쓴 줄: 문서 이름(공 판 조 서)·기관(부 산 지 방 법 원)이면 문서, 아니면(범 죄 사 실 · 피 고 인 이 을 남) 머리말
+      const c = t.replace(/\s+/g, '');
+      return DOC_SUFFIX.test(c) || /(?:법원|지원|검찰청|경찰서|위원회|헌법재판소|구청|시청)$/.test(c) || c === '판결' ? 'doc' : 'h2';
+    }
+    if (!/[:：]|^\s*[\d(①-⑳○※\-]/.test(t) && n <= 26 && DOC_SUFFIX.test(t)) return 'doc';
+    if (/^[가-힣]\s+[가-힣]$/.test(t)) return 'h2';                                // 주 문 · 이 유 · 다 음
+    if (/^【[^】]{1,20}】$|^\[[^\]]{1,20}\]$|^<[^>]{1,20}>$|^〈[^〉]{1,20}〉$/.test(t)) return 'h2';
+    if (/^제\s*목\s*[:：]/.test(t)) return 'h2';
+    if (ROMAN.test(t)) return 'h2';
+    if (SPEAKER.test(t)) return 'h3';
+    if (/^[-─━=_~·]{8,}$/.test(t)) return 'pg';
+    return '';
+  }
+  function classifyRecord(text) {
+    const L = text.split('\n');
+    const pos = []; { let o = 0; for (const l of L) { pos.push(o); o += l.length + 1; } }
+    let josa = false, prevDoc = true;
+    return L.map((ln, i) => {
+      const t = ln.trim();
+      const e = { s: pos[i], e: pos[i] + ln.length, cls: '', box: '' };
+      if (!t) { e.cls = 'blank'; return e; }
+      let lv = recordLevel(t);
+      // 문단 머리글(「가. 특정범죄…」)은 사례 문제와 같은 규칙으로
+      if (!lv && /^[가-하]\s*[.．]\s*\S/.test(t) && t.length <= 40 && !SENT_END.test(t)) lv = 'h3';
+      if (lv === 'doc') {
+        e.cls = 'doc' + (prevDoc ? '' : ' rd-docstart');
+        josa = /조서$/.test(t.replace(/\s+/g, ''));
+        prevDoc = true;
+        return e;
+      }
+      prevDoc = false;
+      if (lv) { e.cls = lv; return e; }
+      if (josa && /^\s*[문답](?=\S)/.test(ln)) e.qa = /^\s*문/.test(ln) ? 'q' : 'a';
+      return e;
+    });
+  }
+
   /** 줄(또는 이어 붙인 문단)마다 {s,e,cls,box} — s,e 는 전체 글에서의 위치 */
   function classify(text, kind) {
-    let lines = classifyLines(text, kind);
-    if (kind === 'answer') lines = joinWrapped(lines, text.split(NL));
+    if (kind === 'record') return splitWalls(classifyRecord(text), text);
+    let lines = classifyLines(text, kind === 'problem' ? 'plain' : kind);
+    if (kind === 'answer' || kind === 'problem') lines = joinWrapped(lines, text.split(NL));
     return splitWalls(lines, text);
   }
   function classifyLines(text, kind) {
@@ -362,6 +425,8 @@
         POINT_RE.lastIndex = 0; const seg = body.slice(ln.s, ln.e); let mm;
         while ((mm = POINT_RE.exec(seg))) { const a = ln.s + mm.index, b = a + mm[0].length; pts.push([a, b]); cuts.add(a); cuts.add(b); }
       }
+      let qa = null;
+      if (ln.qa) { const k = ln.s + (body.slice(ln.s, ln.e).length - body.slice(ln.s, ln.e).trimStart().length); qa = [k, k + 1]; cuts.add(k); cuts.add(k + 1); }
       const cs = [...cuts].sort((a, b) => a - b);
       const kids = [];
       for (let k = 0; k < cs.length - 1; k++) {
@@ -369,11 +434,13 @@
         let cl = '';
         for (const m of ms) if (m.s <= a && m.e >= b) cl += m.t === 'ul' ? ' rd-ul' : ' rd-hl-' + (m.c || 'y');
         if (pts.some((p) => p[0] <= a && p[1] >= b)) cl += ' rd-pt';
+        if (qa && qa[0] <= a && qa[1] >= b) cl += ' rd-qa rd-qa-' + ln.qa;
         const seg = body.slice(a, b);
         kids.push(h('span', { key: a, 'data-o': a, className: cl.trim() || undefined }, ln.joined ? seg.split(NL).join(' ') : seg));
       }
-      const li = !ln.cls && /^\s*(?:[-–∙·•ㆍ*]|[①-⑳]|\(\d{1,2}\)|\d{1,2}\))\s*/.test(body.slice(ln.s, ln.s + 6));
-      return h('div', { key: i, className: 'rd-l' + (ln.cls ? ' rd-' + ln.cls : '') + (li ? ' rd-li' : ''), 'data-o': ln.s, 'data-e': ln.e }, kids);
+      const li = !ln.cls && !ln.qa && /^\s*(?:[-–∙·•ㆍ*○◦]|[①-⑳]|\(\d{1,2}\)|\d{1,2}\))\s*/.test(body.slice(ln.s, ln.s + 6));
+      return h('div', { key: i, className: 'rd-l' + (ln.cls ? ' rd-' + ln.cls : '') + (li ? ' rd-li' : '') + (ln.qa ? ' rd-qline' : ''),
+        'data-o': ln.s, 'data-e': ln.e }, kids);
     };
     const out = [];
     // 빈 줄이 겹치면 하나만 그린다(원문 글자는 그대로 — 그리기만 건너뛴다). 상자 맨 앞·뒤의 빈 줄도 건너뛴다.
