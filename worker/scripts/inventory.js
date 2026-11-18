@@ -105,6 +105,7 @@ const span = (a) => { a = a.filter((x) => x != null).sort((x, y) => x - y); retu
         add('선택형', subj, '5지선다', '상법 · 5지선다 원문 (회차별)', count('상법5지.json'), '문항', '법무부·법전협 원본 문제지');
         continue;
       }
+      if (/모의26$/.test(id)) { add('선택형', subj, '5지선다', `${label} · ${sub}`, n, '문항', '법전협 모의시험 원본 문제지·정답표 (8월 민사·공법은 스캔본을 옮긴 것, 해설 없음)'); continue; }
       if (n === null && !sub) continue;
       add('선택형', subj, 'OX', `${label}${sub && sub !== label ? ' · ' + sub : ''}`, n, '문항', status === 'soon' ? '준비 중 — 아직 문항 없음' : (SRC[subj] || ''));
     }
