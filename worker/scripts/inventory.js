@@ -75,6 +75,17 @@ const span = (a) => { a = a.filter((x) => x != null).sort((x, y) => x - y); retu
       }
     }
     for (const b of Object.values(books)) add('기록형', s, '해설', `${b.author} 「${b.title}」`, b.n, '회차', b.cut ? `분량이 많아 앞부분만 실은 회차 ${b.cut}` : '');
+    // 회차에 붙지 않는 참고자료(목록 위 「참고자료」 칸)
+    const rf = path.join(dir, s, 'refs.json');
+    if (fs.existsSync(rf)) {
+      const byBook = {};
+      for (const r of J(rf).refs || []) {
+        const k = (r.author || '') + '|' + (r.book || r.title || '');
+        (byBook[k] = byBook[k] || { author: r.author || '', book: r.book || r.title || '', n: 0, chars: 0 });
+        byBook[k].n++; byBook[k].chars += (r.text || '').length;
+      }
+      for (const b of Object.values(byBook)) add('기록형', s, '참고자료', `${b.author} 「${b.book}」`, b.n, '꼭지', `${Math.round(b.chars / 1000)}천 자 · 회차에 붙지 않는 일반론`);
+    }
   }
 }
 
