@@ -94,7 +94,8 @@ const span = (a) => { a = a.filter((x) => x != null).sort((x, y) => x - y); retu
   const dir = P('MCQ_check');
   const PAGES = [['index.src.html', '민사법'], ['criminal.html', '형사법'], ['public-law.html', '공법']];
   // 앱 화면에 적힌 출처 그대로(쪽 제목·안내문)
-  const SRC = { 민사법: '「3000제 OX」 민법·민소법 선택형 기출', 형사법: '「반반OX」 형사법 선택형 기출 최신빈출지문' };
+  const SRC = { 민사법: '「3000제 OX」 민법·민소법 선택형 기출', 형사법: '「반반OX」 형사법 선택형 기출 최신빈출지문',
+    공법: '「유니온 변시기출 선택형」 제14판 대비 — 기출편 + 모의편 (5지선다 선지를 OX 로)' };
   const count = (f) => { try { const d = J(path.join(dir, 'data', f)); return Array.isArray(d) ? d.length : Object.keys(d).length; } catch (e) { return null; } };
   for (const [page, subj] of PAGES) {
     const s = fs.readFileSync(path.join(dir, page), 'utf8');
