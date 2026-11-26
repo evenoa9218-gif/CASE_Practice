@@ -42645,6 +42645,11 @@
      "no": 1,
      "points": 15,
      "ask": "乙의 등기가 무효인 경우와 유효인 경우로 나누어, 丙의 乙에 대한 소유권이전등기청구는 인용될 수 있는지 여부를 논거와 함께 서술하시오."
+    },
+    {
+     "no": 2,
+     "points": 15,
+     "ask": "이러한 경우 丁은 취득시효가 완성되었음을 근거로 甲에게 소유권이전등기청구권을 행사할 수 있는지 여부를 그 모든 근거와 함께 서술하시오."
     }
    ],
    "groups": [
@@ -42653,9 +42658,15 @@
      "label": "문1",
      "count": 1,
      "points": 15
+    },
+    {
+     "key": "문2",
+     "label": "문2",
+     "count": 1,
+     "points": 15
     }
    ],
-   "totalPoints": 15,
+   "totalPoints": 30,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
