@@ -45210,6 +45210,11 @@
      "no": 1,
      "points": 20,
      "ask": "A은행의 丙에 대한 청구가 이유 있는지 판단하고 근거를 서술하시오."
+    },
+    {
+     "no": 2,
+     "points": 20,
+     "ask": "법원은 乙과 丁에 대한 이 사건 소송에 관하여 어떠한 판단을 하여야 하는지 ① 결론(소 각하/청구 기각/청구 인용)과 ② 근거를 서술하시오."
     }
    ],
    "groups": [
@@ -45218,9 +45223,15 @@
      "label": "문1",
      "count": 1,
      "points": 20
+    },
+    {
+     "key": "문2",
+     "label": "문2",
+     "count": 1,
+     "points": 20
     }
    ],
-   "totalPoints": 20,
+   "totalPoints": 40,
    "hasRubric": false,
    "hasCasebook": true,
    "unmappedKeywords": [],
